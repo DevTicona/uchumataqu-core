@@ -1,0 +1,977 @@
+{
+  "achasi": [
+    "achasi+N+ID=p_achasi"
+  ],
+  "achasinaka": [
+    "achasi+N+ID=p_achasinaka+SUF=naka"
+  ],
+  "achichay": [
+    "achichay+N+ID=p_achichay"
+  ],
+  "achuchay": [
+    "achuchay+V+ID=p_achuchay"
+  ],
+  "am": [
+    "am+PRON+ID=p_am"
+  ],
+  "amaruskchay": [
+    "amaruskchay+V+ID=p_amaruskchay"
+  ],
+  "amchuki": [
+    "amchuki+PRON+ID=p_amchuki"
+  ],
+  "amthü": [
+    "amthü+EXPR+ID=p_amthu"
+  ],
+  "ana": [
+    "ana+ADV+ID=p_ana"
+  ],
+  "anachhulu": [
+    "anachhulu+N+ID=p_anachhulu"
+  ],
+  "anachhuñi": [
+    "anachhuñi+N+ID=p_anachhuni"
+  ],
+  "anapini": [
+    "ana+ADV+ID=p_anapini+SUF=pini"
+  ],
+  "apay": [
+    "apay+N+ID=p_apay"
+  ],
+  "apichuy": [
+    "apichuy+N+ID=p_apichuy"
+  ],
+  "arusha": [
+    "arusha+N+ID=p_arusha"
+  ],
+  "ataluy": [
+    "ataluy+N+ID=p_ataluy"
+  ],
+  "ataluychay": [
+    "ataluy+N+ID=p_ataluychay+SUF=chay"
+  ],
+  "axtal": [
+    "axtal+ADJ+ID=p_axtal"
+  ],
+  "aymilla": [
+    "aymilla+N+ID=p_aymilla"
+  ],
+  "ch'atschay": [
+    "ch'atschay+V+ID=p_chatschay"
+  ],
+  "ch'atschaypini": [
+    "ch'atschay+V+ID=p_chatschaypini+SUF=pini"
+  ],
+  "ch'atuchay": [
+    "ch'atuchay+V+ID=p_chatuchay"
+  ],
+  "ch'axana": [
+    "ch'axana+N+ID=p_chaxana"
+  ],
+  "ch'isi": [
+    "ch'isi+N+ID=p_chisi"
+  ],
+  "ch'iwa": [
+    "ch'iwa+N+ID=p_chiwa"
+  ],
+  "ch'uraña": [
+    "ch'uraña+N+ID=p_churana"
+  ],
+  "ch'uru": [
+    "ch'uru+N+ID=p_churu"
+  ],
+  "ch'üwicha": [
+    "ch'üwicha+ADJ+ID=p_chuwicha"
+  ],
+  "cheqallachay": [
+    "cheqallachay+V+ID=p_cheqallachay"
+  ],
+  "chers": [
+    "chers+N+ID=p_chers"
+  ],
+  "chhaq": [
+    "chhaq+ADJ+ID=p_chhaq"
+  ],
+  "chhaqchay": [
+    "chhaq+ADJ+ID=p_chhaqchay+SUF=chay"
+  ],
+  "chhaqpinichay": [
+    "chhaq+ADJ+ID=p_chhaqpinichay+SUF=pini+SUF=chay"
+  ],
+  "chhaqway": [
+    "chhaqway+ADJ+ID=p_chhaqway"
+  ],
+  "chhaqwaypini": [
+    "chhaqway+ADJ+ID=p_chhaqwaypini+SUF=pini"
+  ],
+  "chhasi": [
+    "chhasi+ADJ+ID=p_chhasi"
+  ],
+  "chhata": [
+    "chhata+N+ID=p_chhata"
+  ],
+  "chhatanaka": [
+    "chhata+N+ID=p_chhatanaka+SUF=naka"
+  ],
+  "chhaxraña": [
+    "chhaxraña+N+ID=p_chhaxrana"
+  ],
+  "chhaxrañanaka": [
+    "chhaxraña+N+ID=p_chhaxrananaka+SUF=naka"
+  ],
+  "chhep": [
+    "chhep+NUM+ID=p_chhep"
+  ],
+  "chhepyës": [
+    "chhepyës+N+ID=p_chhepyes"
+  ],
+  "chheqets": [
+    "chheqets+N+ID=p_chheqets"
+  ],
+  "chheqhoñi": [
+    "chheqhoñi+N+ID=p_chheqhoni"
+  ],
+  "chherchher": [
+    "chherchher+ADJ+ID=p_chherchher"
+  ],
+  "chherchherpinichay": [
+    "chherchher+ADJ+ID=p_chherchherpinichay+SUF=pini+SUF=chay"
+  ],
+  "chhi": [
+    "chhi+NUM+ID=p_chhi"
+  ],
+  "chhikhits": [
+    "chhikhits+N+ID=p_chhikhits"
+  ],
+  "chhikhitsnaka": [
+    "chhikhits+N+ID=p_chhikhitsnaka+SUF=naka"
+  ],
+  "chhiqha": [
+    "chhiqha+N+ID=p_chhiqha"
+  ],
+  "chhiqhanaka": [
+    "chhiqha+N+ID=p_chhiqhanaka+SUF=naka"
+  ],
+  "chhiri": [
+    "chhiri+N+ID=p_chhiri"
+  ],
+  "chhuk": [
+    "chhuk+ADJ+ID=p_chhuk"
+  ],
+  "chhukchay": [
+    "chhuk+ADJ+ID=p_chhukchay+SUF=chay"
+  ],
+  "chhuljama": [
+    "chhuljama+ADVINT+ID=p_chhuljama"
+  ],
+  "chhuljamachay": [
+    "chhuljama+ADVINT+ID=p_chhuljamachay+SUF=chay"
+  ],
+  "chhullayku": [
+    "chhullayku+ADVINT+ID=p_chhullayku"
+  ],
+  "chhulurasa": [
+    "chhulurasa+ADVINT+ID=p_chhulurasa"
+  ],
+  "chhurpikchay": [
+    "chhurpikchay+V+ID=p_chhurpikchay"
+  ],
+  "chhurpikchaypini": [
+    "chhurpikchay+V+ID=p_chhurpikchaypini+SUF=pini"
+  ],
+  "chhuñi": [
+    "chhuñi+N+ID=p_chhuni"
+  ],
+  "chhuñipinichay": [
+    "chhuñi+N+ID=p_chhunipinichay+SUF=pini+SUF=chay"
+  ],
+  "chhuñiqasi": [
+    "chhuñiqasi+N+ID=p_chhuniqasi"
+  ],
+  "chhuñiqasichay": [
+    "chhuñiqasi+N+ID=p_chhuniqasichay+SUF=chay"
+  ],
+  "chichalay": [
+    "chichalay+N+ID=p_chichalay"
+  ],
+  "chimay": [
+    "chimay+N+ID=p_chimay"
+  ],
+  "chirsnachay": [
+    "chirsnachay+V+ID=p_chirsnachay"
+  ],
+  "chisawa": [
+    "chisawa+N+ID=p_chisawa"
+  ],
+  "chisñi": [
+    "chisñi+N+ID=p_chisni"
+  ],
+  "chisñipinichay": [
+    "chisñi+N+ID=p_chisnipinichay+SUF=pini+SUF=chay"
+  ],
+  "chiw": [
+    "chiw+ADJ+ID=p_chiw"
+  ],
+  "chiwkis": [
+    "chiwkis+N+ID=p_chiwkis"
+  ],
+  "chiwkisnaka": [
+    "chiwkis+N+ID=p_chiwkisnaka+SUF=naka"
+  ],
+  "chiwliks": [
+    "chiwliks+N+ID=p_chiwliks"
+  ],
+  "chiwqeri": [
+    "chiwqeri+N+ID=p_chiwqeri"
+  ],
+  "chiyacharku": [
+    "chiyacharku+N+ID=p_chiyacharku"
+  ],
+  "choq": [
+    "choq+ADJ+ID=p_choq"
+  ],
+  "chukichay": [
+    "chukichay+V+ID=p_chukichay"
+  ],
+  "chusi": [
+    "chusi+N+ID=p_chusi"
+  ],
+  "chuwa": [
+    "chuwa+N+ID=p_chuwa"
+  ],
+  "chuwanaka": [
+    "chuwa+N+ID=p_chuwanaka+SUF=naka"
+  ],
+  "chuñipaku": [
+    "chuñipaku+N+ID=p_chunipaku"
+  ],
+  "chälachay": [
+    "chälachay+V+ID=p_chalachay"
+  ],
+  "echs": [
+    "echs+ADJ+ID=p_echs"
+  ],
+  "eskhara": [
+    "eskhara+N+ID=p_eskhara"
+  ],
+  "ew": [
+    "ew+ADJ+ID=p_ew"
+  ],
+  "ewchay": [
+    "ew+ADJ+ID=p_ewchay+SUF=chay"
+  ],
+  "ira": [
+    "ira+N+ID=p_ira"
+  ],
+  "irohito": [
+    "irohito+UNK+ID=o_da274ac86e1548cf"
+  ],
+  "iwaltaki": [
+    "iwaltaki+EXPR+ID=p_iwaltaki"
+  ],
+  "iwisa": [
+    "iwisa+N+ID=p_iwisa"
+  ],
+  "iwisanaka": [
+    "iwisa+N+ID=p_iwisanaka+SUF=naka"
+  ],
+  "jakilta": [
+    "jakilta+PRONINT+ID=p_jakilta"
+  ],
+  "jasiktam": [
+    "jasiktam+ADVINT+ID=p_jasiktam"
+  ],
+  "jaxchay": [
+    "jaxchay+V+ID=p_jaxchay"
+  ],
+  "jilaynacha": [
+    "jilaynacha+ADJ+ID=p_jilaynacha"
+  ],
+  "jilli": [
+    "jilli+N+ID=p_jilli"
+  ],
+  "jipu": [
+    "jipu+N+ID=p_jipu"
+  ],
+  "juana": [
+    "juana+UNK+ID=o_cc501eaf8615e4b5"
+  ],
+  "julsnay": [
+    "julsnay+N+ID=p_julsnay"
+  ],
+  "julsni": [
+    "julsni+N+ID=p_julsni"
+  ],
+  "juwa": [
+    "juwa+N+ID=p_juwa"
+  ],
+  "k'ana": [
+    "k'ana+N+ID=p_kana"
+  ],
+  "k'asa": [
+    "k'asa+N+ID=p_kasa"
+  ],
+  "k'ayuy": [
+    "k'ayuy+N+ID=p_kayuy"
+  ],
+  "k'uli": [
+    "k'uli+N+ID=p_kuli"
+  ],
+  "k'ullku": [
+    "k'ullku+ADJ+ID=p_kullku"
+  ],
+  "k'usikasi": [
+    "k'usikasi+ADJ+ID=p_kusikasi"
+  ],
+  "k'usikasichay": [
+    "k'usikasi+ADJ+ID=p_kusikasichay+SUF=chay"
+  ],
+  "k'uti": [
+    "k'uti+N+ID=p_kuti"
+  ],
+  "karpinisa": [
+    "karpinisa+N+ID=p_karpinisa"
+  ],
+  "karpinisanaka": [
+    "karpinisa+N+ID=p_karpinisanaka+SUF=naka"
+  ],
+  "khera": [
+    "khera+N+ID=p_khera"
+  ],
+  "khirchula": [
+    "khirchula+N+ID=p_khirchula"
+  ],
+  "khirchulanaka": [
+    "khirchula+N+ID=p_khirchulanaka+SUF=naka"
+  ],
+  "khitschay": [
+    "khitschay+V+ID=p_khitschay"
+  ],
+  "khuchhi": [
+    "khuchhi+N+ID=p_khuchhi"
+  ],
+  "kula": [
+    "kula+N+ID=p_kula"
+  ],
+  "kurwina": [
+    "kurwina+N+ID=p_kurwina"
+  ],
+  "kurwinanaka": [
+    "kurwina+N+ID=p_kurwinanaka+SUF=naka"
+  ],
+  "kuskuts": [
+    "kuskuts+N+ID=p_kuskuts"
+  ],
+  "kuwarerno": [
+    "kuwarerno+N+ID=p_kuwarerno"
+  ],
+  "kuwarernonaka": [
+    "kuwarerno+N+ID=p_kuwarernonaka+SUF=naka"
+  ],
+  "lasnuchay": [
+    "lasnuchay+V+ID=p_lasnuchay"
+  ],
+  "layschay": [
+    "layschay+V+ID=p_layschay"
+  ],
+  "likschay": [
+    "likschay+V+ID=p_likschay"
+  ],
+  "lloqa": [
+    "lloqa+N+ID=p_lloqa"
+  ],
+  "lorenzo": [
+    "lorenzo+UNK+ID=o_03fd72f81572805d"
+  ],
+  "lowalowa": [
+    "lowalowa+ADJ+ID=p_lowalowa"
+  ],
+  "lowalowapini": [
+    "lowalowa+ADJ+ID=p_lowalowapini+SUF=pini"
+  ],
+  "lulschay": [
+    "lulschay+V+ID=p_lulschay"
+  ],
+  "lusi": [
+    "lusi+N+ID=p_lusi"
+  ],
+  "makchi": [
+    "makchi+N+ID=p_makchi"
+  ],
+  "malaqoy": [
+    "malaqoy+N+ID=p_malaqoy"
+  ],
+  "maría": [
+    "maría+UNK+ID=o_edd82ab3ecfe1ad7"
+  ],
+  "masota": [
+    "masota+N+ID=p_masota"
+  ],
+  "maxsi": [
+    "maxsi+N+ID=p_maxsi"
+  ],
+  "maxsinaka": [
+    "maxsi+N+ID=p_maxsinaka+SUF=naka"
+  ],
+  "murchula": [
+    "murchula+N+ID=p_murchula"
+  ],
+  "mäska": [
+    "mäska+N+ID=p_maska"
+  ],
+  "nis": [
+    "nis+DETPOSS+ID=p_nis"
+  ],
+  "nonschay": [
+    "nonschay+V+ID=p_nonschay"
+  ],
+  "nï": [
+    "nï+PRON+ID=p_ni"
+  ],
+  "nïnaka": [
+    "nï+PRON+ID=p_ninaka+SUF=naka"
+  ],
+  "ochapara": [
+    "ochapara+N+ID=p_ochapara"
+  ],
+  "oqlaychay": [
+    "oqlaychay+V+ID=p_oqlaychay"
+  ],
+  "oqschay": [
+    "oqschay+V+ID=p_oqschay"
+  ],
+  "p'api": [
+    "p'api+N+ID=p_papi"
+  ],
+  "p'esaqa": [
+    "p'esaqa+N+ID=p_pesaqa"
+  ],
+  "p'itkchay": [
+    "p'itkchay+V+ID=p_pitkchay"
+  ],
+  "p'oa": [
+    "p'oa+N+ID=p_poa"
+  ],
+  "p'uschay": [
+    "p'uschay+V+ID=p_puschay"
+  ],
+  "p'usu": [
+    "p'usu+ADJ+ID=p_pusu"
+  ],
+  "pakschay": [
+    "pakschay+V+ID=p_pakschay"
+  ],
+  "palitak": [
+    "palitak+N+ID=p_palitak"
+  ],
+  "palitakchay": [
+    "palitak+N+ID=p_palitakchay+SUF=chay"
+  ],
+  "palitaknaka": [
+    "palitak+N+ID=p_palitaknaka+SUF=naka"
+  ],
+  "papila": [
+    "papila+N+ID=p_papila"
+  ],
+  "parentiña": [
+    "parentiña+N+ID=p_parentina"
+  ],
+  "parina": [
+    "parina+N+ID=p_parina"
+  ],
+  "paxpiku": [
+    "paxpiku+NUM+ID=p_paxpiku"
+  ],
+  "pedro": [
+    "pedro+UNK+ID=o_ee5cd7d5d96c8874"
+  ],
+  "peske": [
+    "peske+NUM+ID=p_peske"
+  ],
+  "phawschay": [
+    "phawschay+V+ID=p_phawschay"
+  ],
+  "phesqoña": [
+    "phesqoña+N+ID=p_phesqona"
+  ],
+  "pheta": [
+    "pheta+N+ID=p_pheta"
+  ],
+  "phetanaka": [
+    "pheta+N+ID=p_phetanaka+SUF=naka"
+  ],
+  "phiki": [
+    "phiki+N+ID=p_phiki"
+  ],
+  "pichuchay": [
+    "pichuchay+V+ID=p_pichuchay"
+  ],
+  "piwachay": [
+    "piwachay+V+ID=p_piwachay"
+  ],
+  "potschay": [
+    "potschay+V+ID=p_potschay"
+  ],
+  "potsi": [
+    "potsi+N+ID=p_potsi"
+  ],
+  "purchay": [
+    "purchay+V+ID=p_purchay"
+  ],
+  "päku": [
+    "päku+N+ID=p_paku"
+  ],
+  "päkunaka": [
+    "päku+N+ID=p_pakunaka+SUF=naka"
+  ],
+  "q'alluchay": [
+    "q'alluchay+V+ID=p_qalluchay"
+  ],
+  "q'echa": [
+    "q'echa+N+ID=p_qecha"
+  ],
+  "q'eja": [
+    "q'eja+N+ID=p_qeja"
+  ],
+  "q'elaq'ela": [
+    "q'elaq'ela+N+ID=p_qelaqela"
+  ],
+  "q'ämirizoñi": [
+    "q'ämirizoñi+N+ID=p_qamirizoni"
+  ],
+  "qachina": [
+    "qachina+N+ID=p_qachina"
+  ],
+  "qala": [
+    "qala+N+ID=p_qala"
+  ],
+  "qawi": [
+    "qawi+N+ID=p_qawi"
+  ],
+  "qañawi": [
+    "qañawi+N+ID=p_qanawi"
+  ],
+  "qeri": [
+    "qeri+N+ID=p_qeri"
+  ],
+  "qerjiña": [
+    "qerjiña+N+ID=p_qerjina"
+  ],
+  "qeru": [
+    "qeru+N+ID=p_qeru"
+  ],
+  "qerwakha": [
+    "qerwakha+N+ID=p_qerwakha"
+  ],
+  "qeschhäla": [
+    "qeschhäla+N+ID=p_qeschhala"
+  ],
+  "qetsi": [
+    "qetsi+N+ID=p_qetsi"
+  ],
+  "qhalu": [
+    "qhalu+NUM+ID=p_qhalu"
+  ],
+  "qhasi": [
+    "qhasi+N+ID=p_qhasi"
+  ],
+  "qhasumpek": [
+    "qhasumpek+PRONINT+ID=p_qhasumpek"
+  ],
+  "qhathu": [
+    "qhathu+N+ID=p_qhathu"
+  ],
+  "qhawschay": [
+    "qhawschay+V+ID=p_qhawschay"
+  ],
+  "qhorskchay": [
+    "qhorskchay+V+ID=p_qhorskchay"
+  ],
+  "qhoya": [
+    "qhoya+N+ID=p_qhoya"
+  ],
+  "qhoychay": [
+    "qhoychay+V+ID=p_qhoychay"
+  ],
+  "qola": [
+    "qola+N+ID=p_qola"
+  ],
+  "qolanakapini": [
+    "qola+N+ID=p_qolanakapini+SUF=naka+SUF=pini"
+  ],
+  "qonqo": [
+    "qonqo+NUM+ID=p_qonqo"
+  ],
+  "qoq": [
+    "qoq+N+ID=p_qoq"
+  ],
+  "qoqnaka": [
+    "qoq+N+ID=p_qoqnaka+SUF=naka"
+  ],
+  "qotñi": [
+    "qotñi+ADJ+ID=p_qotni"
+  ],
+  "qälpu": [
+    "qälpu+N+ID=p_qalpu"
+  ],
+  "salskama": [
+    "salskama+EXPR+ID=p_salskama"
+  ],
+  "sanqo": [
+    "sanqo+NUM+ID=p_sanqo"
+  ],
+  "satschay": [
+    "satschay+V+ID=p_satschay"
+  ],
+  "saxoni": [
+    "saxoni+ADJ+ID=p_saxoni"
+  ],
+  "saxonichay": [
+    "saxoni+ADJ+ID=p_saxonichay+SUF=chay"
+  ],
+  "selschay": [
+    "selschay+V+ID=p_selschay"
+  ],
+  "serx": [
+    "serx+ADJ+ID=p_serx"
+  ],
+  "serxchay": [
+    "serx+ADJ+ID=p_serxchay+SUF=chay"
+  ],
+  "seschay": [
+    "seschay+N+ID=p_seschay"
+  ],
+  "shachkuchay": [
+    "shachkuchay+N+ID=p_shachkuchay"
+  ],
+  "shatachay": [
+    "shatachay+V+ID=p_shatachay"
+  ],
+  "shaxara": [
+    "shaxara+N+ID=p_shaxara"
+  ],
+  "shikacha": [
+    "shikacha+N+ID=p_shikacha"
+  ],
+  "shila": [
+    "shila+ADV+ID=p_shila"
+  ],
+  "shuwani": [
+    "shuwani+N+ID=p_shuwani"
+  ],
+  "siluchay": [
+    "siluchay+N+ID=p_siluchay"
+  ],
+  "siqetschay": [
+    "siqetschay+V+ID=p_siqetschay"
+  ],
+  "sischay": [
+    "sischay+V+ID=p_sischay"
+  ],
+  "sisuchay": [
+    "sisuchay+V+ID=p_sisuchay"
+  ],
+  "sisñi": [
+    "sisñi+N+ID=p_sisni"
+  ],
+  "sisñichay": [
+    "sisñi+N+ID=p_sisnichay+SUF=chay"
+  ],
+  "sitsñi": [
+    "sitsñi+N+ID=p_sitsni"
+  ],
+  "sitsñinaka": [
+    "sitsñi+N+ID=p_sitsninaka+SUF=naka"
+  ],
+  "sitsñinakachay": [
+    "sitsñi+N+ID=p_sitsninakachay+SUF=naka+SUF=chay"
+  ],
+  "sitsñizoñi": [
+    "sitsñizoñi+N+ID=p_sitsnizoni"
+  ],
+  "sitsñizoñipinichay": [
+    "sitsñizoñi+N+ID=p_sitsnizonipinichay+SUF=pini+SUF=chay"
+  ],
+  "siñi": [
+    "siñi+N+ID=p_sini"
+  ],
+  "siñinaka": [
+    "siñi+N+ID=p_sininaka+SUF=naka"
+  ],
+  "soqna": [
+    "soqna+N+ID=p_soqna"
+  ],
+  "suwa": [
+    "suwa+N+ID=p_suwa"
+  ],
+  "säna": [
+    "säna+N+ID=p_sana"
+  ],
+  "t'alla": [
+    "t'alla+N+ID=p_talla"
+  ],
+  "t'apha": [
+    "t'apha+ADJ+ID=p_tapha"
+  ],
+  "t'ijut'iju": [
+    "t'ijut'iju+N+ID=p_tijutiju"
+  ],
+  "t'uku": [
+    "t'uku+N+ID=p_tuku"
+  ],
+  "t'upsincha": [
+    "t'upsincha+N+ID=p_tupsincha"
+  ],
+  "t'uqschay": [
+    "t'uqschay+V+ID=p_tuqschay"
+  ],
+  "t'utu": [
+    "t'utu+N+ID=p_tutu"
+  ],
+  "taki": [
+    "taki+DET+ID=p_taki"
+  ],
+  "tanachay": [
+    "tanachay+V+ID=p_tanachay"
+  ],
+  "tanschay": [
+    "tanschay+V+ID=p_tanschay"
+  ],
+  "tapa": [
+    "tapa+N+ID=p_tapa"
+  ],
+  "taxacharku": [
+    "taxacharku+N+ID=p_taxacharku"
+  ],
+  "taxchuku": [
+    "taxchuku+NUM+ID=p_taxchuku"
+  ],
+  "taxchukyës": [
+    "taxchukyës+N+ID=p_taxchukyes"
+  ],
+  "taxsnakichay": [
+    "taxsnakichay+V+ID=p_taxsnakichay"
+  ],
+  "taxsnuku": [
+    "taxsnuku+NUM+ID=p_taxsnuku"
+  ],
+  "tekschay": [
+    "tekschay+V+ID=p_tekschay"
+  ],
+  "teskana": [
+    "teskana+N+ID=p_teskana"
+  ],
+  "thaxchay": [
+    "thaxchay+V+ID=p_thaxchay"
+  ],
+  "thikuchay": [
+    "thikuchay+N+ID=p_thikuchay"
+  ],
+  "thosa": [
+    "thosa+N+ID=p_thosa"
+  ],
+  "thuñi": [
+    "thuñi+N+ID=p_thuni"
+  ],
+  "thö": [
+    "thö+UNK+ID=o_9e010de9722a80d2"
+  ],
+  "thü": [
+    "thü+N+ID=p_thu"
+  ],
+  "tichu": [
+    "tichu+DET+ID=p_tichu"
+  ],
+  "tiku": [
+    "tiku+N+ID=p_tiku"
+  ],
+  "tila": [
+    "tila+DET+ID=p_tila"
+  ],
+  "tololay": [
+    "tololay+N+ID=p_tololay"
+  ],
+  "tuchay": [
+    "tuchay+V+ID=p_tuchay"
+  ],
+  "tuncharku": [
+    "tuncharku+PRON+ID=p_tuncharku"
+  ],
+  "tësha": [
+    "tësha+N+ID=p_tesha"
+  ],
+  "tï": [
+    "tï+PRON+ID=p_ti"
+  ],
+  "tïtomxe": [
+    "tïtomxe+N+ID=p_titomxe"
+  ],
+  "tüki": [
+    "tüki+N+ID=p_tuki"
+  ],
+  "tüsi": [
+    "tüsi+N+ID=p_tusi"
+  ],
+  "tüwqo": [
+    "tüwqo+NUM+ID=p_tuwqo"
+  ],
+  "uchpü": [
+    "uchpü+N+ID=p_uchpu"
+  ],
+  "uchs": [
+    "uchs+ADJ+ID=p_uchs"
+  ],
+  "uchspinichay": [
+    "uchs+ADJ+ID=p_uchspinichay+SUF=pini+SUF=chay"
+  ],
+  "uchumik": [
+    "uchumik+PRON+ID=p_uchumik"
+  ],
+  "uchums": [
+    "uchums+DETPOSS+ID=p_uchums"
+  ],
+  "ulanchay": [
+    "ulanchay+V+ID=p_ulanchay"
+  ],
+  "untu": [
+    "untu+ADJ+ID=p_untu"
+  ],
+  "urkhu": [
+    "urkhu+N+ID=p_urkhu"
+  ],
+  "urus": [
+    "urus+UNK+ID=o_6270fe359522a1f4"
+  ],
+  "usa": [
+    "usa+N+ID=p_usa"
+  ],
+  "usachay": [
+    "usa+N+ID=p_usachay+SUF=chay"
+  ],
+  "uwapinichay": [
+    "uwapinichay+EXPR+ID=p_uwapinichay"
+  ],
+  "uyuwichay": [
+    "uyuwichay+V+ID=p_uyuwichay"
+  ],
+  "uñi": [
+    "uñi+N+ID=p_uni"
+  ],
+  "uñinaka": [
+    "uñi+N+ID=p_uninaka+SUF=naka"
+  ],
+  "wakha": [
+    "wakha+N+ID=p_wakha"
+  ],
+  "wakhanaka": [
+    "wakha+N+ID=p_wakhanaka+SUF=naka"
+  ],
+  "waki": [
+    "waki+UNK+ID=o_b70f4e53e4a7808d"
+  ],
+  "wakpacha": [
+    "wakpacha+N+ID=p_wakpacha"
+  ],
+  "walchay": [
+    "walchay+N+ID=p_walchay"
+  ],
+  "wallpa": [
+    "wallpa+N+ID=p_wallpa"
+  ],
+  "wallpanaka": [
+    "wallpa+N+ID=p_wallpanaka+SUF=naka"
+  ],
+  "warirachay": [
+    "warirachay+N+ID=p_warirachay"
+  ],
+  "watha": [
+    "watha+N+ID=p_watha"
+  ],
+  "wilk": [
+    "wilk+PRON+ID=p_wilk"
+  ],
+  "wisnaks": [
+    "wisnaks+DETPOSS+ID=p_wisnaks"
+  ],
+  "wisnakti": [
+    "wisnakti+PRON+ID=p_wisnakti"
+  ],
+  "wist": [
+    "wist+DETPOSS+ID=p_wist"
+  ],
+  "wistakchay": [
+    "wistakchay+V+ID=p_wistakchay"
+  ],
+  "wiwi": [
+    "wiwi+N+ID=p_wiwi"
+  ],
+  "wiyani": [
+    "wiyani+N+ID=p_wiyani"
+  ],
+  "wiyanichay": [
+    "wiyani+N+ID=p_wiyanichay+SUF=chay"
+  ],
+  "wiyantam": [
+    "wiyantam+EXPR+ID=p_wiyantam"
+  ],
+  "wësla": [
+    "wësla+N+ID=p_wesla"
+  ],
+  "wëslanaka": [
+    "wësla+N+ID=p_weslanaka+SUF=naka"
+  ],
+  "xala": [
+    "xala+N+ID=p_xala"
+  ],
+  "xalanaka": [
+    "xala+N+ID=p_xalanaka+SUF=naka"
+  ],
+  "xalsmäsi": [
+    "xalsmäsi+N+ID=p_xalsmasi"
+  ],
+  "xalwari": [
+    "xalwari+N+ID=p_xalwari"
+  ],
+  "xanacharku": [
+    "xanacharku+N+ID=p_xanacharku"
+  ],
+  "xanacharkuchay": [
+    "xanacharku+N+ID=p_xanacharkuchay+SUF=chay"
+  ],
+  "xawariski": [
+    "xawariski+N+ID=p_xawariski"
+  ],
+  "xorcha": [
+    "xorcha+N+ID=p_xorcha"
+  ],
+  "xorchachay": [
+    "xorcha+N+ID=p_xorchachay+SUF=chay"
+  ],
+  "xürs": [
+    "xürs+N+ID=p_xurs"
+  ],
+  "yachiri": [
+    "yachiri+N+ID=p_yachiri"
+  ],
+  "yachirichay": [
+    "yachiri+N+ID=p_yachirichay+SUF=chay"
+  ],
+  "yiku": [
+    "yiku+N+ID=p_yiku"
+  ],
+  "yikupinichay": [
+    "yiku+N+ID=p_yikupinichay+SUF=pini+SUF=chay"
+  ],
+  "yoqa": [
+    "yoqa+N+ID=p_yoqa"
+  ],
+  "yës": [
+    "yës+N+ID=p_yes"
+  ],
+  "yïs": [
+    "yïs+N+ID=p_yis"
+  ],
+  "zoñchhiji": [
+    "zoñchhiji+N+ID=p_zonchhiji"
+  ]
+}

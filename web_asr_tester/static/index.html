@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASR INT8 Tester — Diagnóstico Fonético en Tiempo Real</title>
+  <meta name="description" content="Sistema interactivo de evaluación y diagnóstico fonético en tiempo real para el modelo ASR INT8 en Uchumataqu (Uru de Irohito).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Encabezado Principal -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <div class="brand-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+            <line x1="8" y1="22" x2="16" y2="22"></line>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">ASR INT8 <span class="badge-accent">Uchumataqu</span></h1>
+          <p class="brand-subtitle">Laboratorio de Diagnóstico Fonético y Evaluación en Tiempo Real</p>
+        </div>
+      </div>
+
+      <div class="header-status-group">
+        <div class="status-pill status-online" id="modelStatusPill" title="Modelo Sherpa-ONNX Zipformer CTC INT8">
+          <span class="status-dot"></span>
+          <span class="status-text" id="modelStatusText">Cargando modelo...</span>
+        </div>
+        <button id="btnMobileModal" class="btn-outline-sm" title="Ver enlace y QR para celular">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+          <span>Celular Android</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenedor Principal de la Aplicación -->
+  <main class="main-layout">
+    
+    <!-- Barra de Navegación de Pestañas -->
+    <nav class="app-tabs" aria-label="Secciones principales">
+      <button class="tab-btn active" id="tabEvaluacion" data-tab="seccion-evaluacion">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polygon points="10 8 16 12 10 16 10 8"></polygon>
+        </svg>
+        Prueba en Vivo y Diagnóstico
+      </button>
+      <button class="tab-btn" id="tabHistorial" data-tab="seccion-historial">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        Historial y Reporte (<span id="historyBadgeCount">0</span>)
+      </button>
+      <button class="tab-btn" id="tabModelo" data-tab="seccion-modelo">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+        </svg>
+        Ficha Técnica y Guía
+      </button>
+    </nav>
+
+    <!-- SECCIÓN 1: EVALUACIÓN EN VIVO -->
+    <section id="seccion-evaluacion" class="tab-content active">
+      <div class="grid-two-columns">
+
+        <!-- Columna Izquierda: Entradas de Audio y Texto Objetivo -->
+        <div class="panel-card input-card">
+          <h2 class="panel-heading">
+            <span class="heading-step">1</span>
+            Fuente de Audio y Configuración
+          </h2>
+
+          <!-- Configuración del Motor ASR: Modelo y Modo de Decodificación -->
+          <div class="engine-config-card">
+            <div class="config-header">
+              <span class="config-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 20h9"></path>
+                  <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                </svg>
+                Configuración del Motor ASR
+              </span>
+            </div>
+
+            <div class="config-grid">
+              <div class="config-field">
+                <label for="selectModel" class="config-label">
+                  <span>Modelo de Red Neuronal:</span>
+                </label>
+                <select id="selectModel" class="config-select">
+                  <option value="scratch_int8">⚡ Scratch INT8 (70 MB - Recomendado)</option>
+                  <option value="scratch_fp32">🏋️ Scratch FP32 Pesado (250 MB)</option>
+                  <option value="finetune_int8">🎯 Fine-Tuning INT8 (70 MB)</option>
+                  <option value="finetune_fp32">🚀 Fine-Tuning FP32 Pesado (250 MB)</option>
+                </select>
+                <div class="config-desc" id="modelDescriptionText">
+                  Cargando catálogo de modelos...
+                </div>
+              </div>
+
+              <div class="config-field">
+                <label for="selectDecodingMode" class="config-label">
+                  <span>Estrategia de Decodificación:</span>
+                </label>
+                <select id="selectDecodingMode" class="config-select">
+                  <option value="greedy_search">🔤 Greedy Search (CTC Puro frame a frame)</option>
+                  <option value="con_restricciones">📖 Restricciones Léxicas (Corrige oraciones)</option>
+                </select>
+                <div class="config-desc" id="decodingDescriptionText">
+                  Decodificación frame a frame estándar directa de la red acústica.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Métodos de Entrada de Audio -->
+          <div class="input-method-selector">
+            <button type="button" class="method-btn active" id="btnMethodMic" data-method="mic">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+              Micrófono
+            </button>
+            <button type="button" class="method-btn" id="btnMethodUpload" data-method="upload">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Subir Audio
+            </button>
+            <button type="button" class="method-btn" id="btnMethodCorpus" data-method="corpus">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Corpus Pregrabado
+            </button>
+          </div>
+
+          <!-- MODO 1: GRABADOR EN VIVO -->
+          <div id="containerMic" class="input-container active">
+            <div class="mic-recorder-box">
+              <div class="canvas-wrapper">
+                <canvas id="liveVisualizerCanvas" width="480" height="90"></canvas>
+                <div class="vu-meter-bar">
+                  <div class="vu-meter-fill" id="vuMeterFill"></div>
+                </div>
+              </div>
+              <div class="recorder-controls">
+                <button type="button" id="btnRecordToggle" class="btn-record">
+                  <span class="record-icon"></span>
+                  <span id="recordBtnLabel">Iniciar Grabación</span>
+                </button>
+                <div class="record-timer" id="recordTimer">00:00.0</div>
+              </div>
+              <p class="input-hint" id="micHint">Presiona el botón para hablar (palabras sueltas, expresiones compuestas u oraciones).</p>
+            </div>
+          </div>
+
+          <!-- MODO 2: SUBIDA DE ARCHIVOS -->
+          <div id="containerUpload" class="input-container">
+            <div class="upload-dropzone" id="uploadDropzone">
+              <input type="file" id="fileAudioInput" accept="audio/*,.wav,.mp3,.m4a,.ogg,.flac,.webm" class="visually-hidden">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="upload-icon">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="17 8 12 3 7 8"></polyline>
+                <line x1="12" y1="3" x2="12" y2="15"></line>
+              </svg>
+              <p class="dropzone-title">Arrastra aquí el audio o <span class="link-label">selecciona un archivo</span></p>
+              <p class="dropzone-subtitle">Soporta WAV (16kHz), MP3, M4A, OGG, WebM de otras personas o celular.</p>
+              <div id="selectedFileInfo" class="selected-file-info hidden">
+                <span class="file-name" id="selectedFileName"></span>
+                <span class="file-size" id="selectedFileSize"></span>
+                <button type="button" id="btnClearFile" class="btn-clear-file" title="Quitar archivo">×</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODO 3: CORPUS PREGRABADO -->
+          <div id="containerCorpus" class="input-container">
+            <div class="corpus-selector-group">
+              <div class="selector-row">
+                <label for="selectCorpusType">Tipo:</label>
+                <select id="selectCorpusType" class="form-select">
+                  <option value="oraciones">Oraciones y Frases Compuestas</option>
+                  <option value="palabras">Palabras Aisladas</option>
+                </select>
+              </div>
+
+              <div class="selector-row">
+                <label for="selectCorpusItem">Muestra:</label>
+                <select id="selectCorpusItem" class="form-select">
+                  <option value="">Cargando catálogo...</option>
+                </select>
+              </div>
+
+              <div class="selector-row" id="rowCorpusSpeaker">
+                <label for="selectCorpusSpeaker">Hablante / Audio:</label>
+                <select id="selectCorpusSpeaker" class="form-select">
+                  <option value="">Selecciona una muestra</option>
+                </select>
+              </div>
+
+              <div class="corpus-preview-card" id="corpusPreviewCard">
+                <div class="preview-item">
+                  <span class="preview-tag">Uchumataqu:</span>
+                  <strong id="corpusPreviewUch">-</strong>
+                </div>
+                <div class="preview-item">
+                  <span class="preview-tag">Traducción:</span>
+                  <span id="corpusPreviewEs">-</span>
+                </div>
+              </div>
+
+              <button type="button" id="btnLoadCorpusSample" class="btn-secondary-full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Cargar Audio y Texto para Prueba
+              </button>
+            </div>
+          </div>
+
+          <!-- Reproductor de Audio Cargado -->
+          <div class="audio-preview-section" id="audioPreviewSection">
+            <div class="audio-player-bar">
+              <audio id="audioPlayback" controls class="app-audio-player"></audio>
+            </div>
+          </div>
+
+          <!-- Formulario de Texto Objetivo -->
+          <div class="target-text-section">
+            <div class="target-text-header">
+              <label for="inputTargetText" class="target-label">
+                Texto Objetivo (Uchumataqu / Expresión Esperada):
+              </label>
+              <button type="button" id="btnClearTargetText" class="btn-link-xs">Limpiar</button>
+            </div>
+            <textarea id="inputTargetText" class="form-textarea" rows="2" placeholder="Ej: Tï wiyanichay wakpacha o Wilk thö lorenzo..."></textarea>
+
+            <!-- Previsualización G2P Automática -->
+            <div class="g2p-live-preview" id="g2pLivePreview">
+              <div class="g2p-preview-header">
+                <span class="g2p-title">Fonemas Canónicos G2P (38 Fonemas):</span>
+                <span class="g2p-count" id="g2pPhonemeCount">0 fonemas</span>
+              </div>
+              <div class="g2p-tokens-container" id="g2pTokensContainer">
+                <span class="placeholder-tag">Escribe texto para ver fonemas automáticos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón de Evaluación Principal -->
+          <div class="action-section">
+            <button type="button" id="btnEvaluate" class="btn-primary-action">
+              <span class="btn-spinner hidden" id="evaluateSpinner"></span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" id="evaluateIcon">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+              <span id="evaluateBtnText">Evaluar con Modelo INT8</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- Columna Derecha: Resultados y Diagnóstico Visual -->
+        <div class="panel-card results-card" id="resultsPanel">
+          <h2 class="panel-heading">
+            <span class="heading-step">2</span>
+            Diagnóstico Fonético y Métricas
+          </h2>
+
+          <!-- Estado inicial cuando no hay resultados -->
+          <div id="emptyResultsState" class="empty-state-box">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 12h20"></path>
+              <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"></path>
+              <path d="M9 22V12h6v10"></path>
+            </svg>
+            <h3>Esperando evaluación de audio</h3>
+            <p>Graba tu voz o sube un audio, escribe o selecciona el texto esperado y presiona <strong>Evaluar con Modelo INT8</strong>.</p>
+          </div>
+
+          <!-- Contenedor de Resultados Activos -->
+          <div id="activeResultsContainer" class="results-container hidden">
+
+            <!-- Badges de Configuración Activa -->
+            <div class="results-meta-bar">
+              <span class="meta-chip chip-model" id="resultModelChip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                <span id="resultModelChipText">Modelo: Scratch INT8</span>
+              </span>
+              <span class="meta-chip chip-decoding" id="resultDecodingChip">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                <span id="resultDecodingChipText">Decodificación: Greedy Search</span>
+              </span>
+            </div>
+
+            <!-- Banner de Decisión 85% -->
+            <div id="bannerDecision" class="decision-banner banner-passed">
+              <div class="decision-content">
+                <div class="decision-badge" id="decisionBadgeText">APROBADO</div>
+                <div class="decision-info">
+                  <div class="decision-title" id="decisionTitle">Cumple con el criterio pedagógico (≥ 85 %)</div>
+                  <div class="decision-subtitle" id="decisionSubtitle">Precisión fonética calculada: 94.4 %</div>
+                </div>
+              </div>
+              <div class="decision-meter">
+                <div class="meter-bar-bg">
+                  <div class="meter-threshold-line" title="Umbral 85%"></div>
+                  <div class="meter-bar-fill" id="meterBarFill"></div>
+                </div>
+                <span class="meter-legend">Umbral objetivo: 85%</span>
+              </div>
+            </div>
+
+            <!-- Resumen de Métricas Clave -->
+            <div class="metrics-grid">
+              <div class="metric-card metric-highlight">
+                <div class="metric-label">PER (Phoneme Error Rate)</div>
+                <div class="metric-value" id="valPER">0.0%</div>
+                <div class="metric-foot">(S + D + I) / N</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Precisión Fonética</div>
+                <div class="metric-value color-emerald" id="valPrecision">100%</div>
+                <div class="metric-foot">Tasa Neta de Acierto</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Aciertos (Hits)</div>
+                <div class="metric-value color-emerald" id="valHits">0</div>
+                <div class="metric-foot" id="footHits">de 0 fonemas</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Sustituciones</div>
+                <div class="metric-value color-amber" id="valSubstitutions">0</div>
+                <div class="metric-foot">Fonemas cambiados</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Eliminaciones</div>
+                <div class="metric-value color-rose" id="valDeletions">0</div>
+                <div class="metric-foot">Omitidos por modelo</div>
+              </div>
+
+              <div class="metric-card">
+                <div class="metric-label">Inserciones</div>
+                <div class="metric-value color-indigo" id="valInsertions">0</div>
+                <div class="metric-foot">Fonemas extra</div>
+              </div>
+            </div>
+
+            <!-- Palabras Reconocidas del Léxico (visible cuando se usa decodificación con restricciones) -->
+            <div class="section-box hidden" id="boxLexiconWords">
+              <div class="section-box-header">
+                <h3 class="section-box-title">📖 Palabras Reconocidas del Léxico Pedagógico</h3>
+                <span class="badge-accent" id="countLexiconWords">0 palabras</span>
+              </div>
+              <div class="lexicon-words-container" id="containerLexiconWords">
+                <!-- Se llena dinámicamente con chips seguros -->
+              </div>
+              <p class="section-box-desc">Segmentación y recuperación léxica Viterbi para subsanar elisiones de coarticulación en oraciones continuas.</p>
+            </div>
+
+            <!-- Tira de Alineación Fonética Visual -->
+            <div class="section-box">
+              <div class="section-box-header">
+                <h3 class="section-box-title">Alineación Fonética Comparada</h3>
+                <div class="alignment-legend">
+                  <span class="legend-chip chip-match">Coincidencia</span>
+                  <span class="legend-chip chip-sub">Sustitución</span>
+                  <span class="legend-chip chip-del">Eliminado</span>
+                  <span class="legend-chip chip-ins">Insertado</span>
+                </div>
+              </div>
+
+              <div class="alignment-visualizer" id="alignmentVisualizer">
+                <!-- Se llena dinámicamente con JS seguro -->
+              </div>
+
+              <div class="alignment-raw-details">
+                <div class="raw-row">
+                  <span class="raw-label">Esperado (G2P):</span>
+                  <code class="raw-code" id="rawExpectedPhonemes">-</code>
+                </div>
+                <div class="raw-row">
+                  <span class="raw-label">Fonemas Evaluados:</span>
+                  <code class="raw-code" id="rawPredictedPhonemes">-</code>
+                </div>
+                <div class="raw-row">
+                  <span class="raw-label">Salida Cruda CTC:</span>
+                  <code class="raw-code code-raw-ctc" id="rawCtcString">-</code>
+                </div>
+                <div class="raw-row">
+                  <span class="raw-label">Modelo Activo:</span>
+                  <code class="raw-code" id="rawModelName">-</code>
+                </div>
+                <div class="raw-row">
+                  <span class="raw-label">Decodificación:</span>
+                  <code class="raw-code" id="rawDecodingMode">-</code>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diagnóstico Acústico y Errores Detallados -->
+            <div class="section-box">
+              <h3 class="section-box-title">Diagnóstico de Grabación y Audio</h3>
+              <div class="acoustic-grid">
+                <div class="acoustic-item">
+                  <span class="ac-label">Frecuencia / Canales:</span>
+                  <span class="ac-value" id="acRate">16000 Hz (Mono)</span>
+                </div>
+                <div class="acoustic-item">
+                  <span class="ac-label">Duración:</span>
+                  <span class="ac-value" id="acDuration">0.0 s</span>
+                </div>
+                <div class="acoustic-item">
+                  <span class="ac-label">Silencio Inicial:</span>
+                  <span class="ac-value" id="acSilStart">0 ms</span>
+                </div>
+                <div class="acoustic-item">
+                  <span class="ac-label">Silencio Final:</span>
+                  <span class="ac-value" id="acSilEnd">0 ms</span>
+                </div>
+                <div class="acoustic-item">
+                  <span class="ac-label">Nivel de Energía:</span>
+                  <span class="ac-value" id="acRms">- dB</span>
+                </div>
+                <div class="acoustic-item">
+                  <span class="ac-label">Saturación (Clipping):</span>
+                  <span class="ac-value" id="acClipping">No</span>
+                </div>
+              </div>
+
+              <!-- Lista explicativa de discrepancias -->
+              <div class="error-breakdown-box">
+                <h4 class="error-breakdown-title">Desglose Explicativo de Discrepancias:</h4>
+                <div id="errorExplanationList" class="error-list">
+                  <!-- Se llena dinámicamente -->
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: HISTORIAL Y REPORTES -->
+    <section id="seccion-historial" class="tab-content">
+      <div class="panel-card full-width-card">
+        <div class="history-header">
+          <div>
+            <h2 class="panel-heading">Historial Acumulativo de Pruebas</h2>
+            <p class="panel-subtitle">Registro cronológico de evaluaciones en PC y Celular con opción de descarga de informe.</p>
+          </div>
+          <div class="history-actions">
+            <button type="button" id="btnExportCSV" class="btn-outline-sm">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Descargar Reporte CSV
+            </button>
+            <button type="button" id="btnClearHistory" class="btn-outline-sm btn-danger-sm">
+              Limpiar Historial
+            </button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="history-table" id="historyTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Hora</th>
+                <th>Modelo</th>
+                <th>Decodificación</th>
+                <th>Tipo</th>
+                <th>Texto Objetivo</th>
+                <th>Salida Cruda / Léxico</th>
+                <th>PER</th>
+                <th>Precisión</th>
+                <th>Aprobado (≥85%)</th>
+                <th>Duración</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
+            <tbody id="historyTableBody">
+              <tr class="empty-row">
+                <td colspan="12">No hay pruebas registradas en esta sesión todavía.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: FICHA TÉCNICA Y GUÍA MÓVIL -->
+    <section id="seccion-modelo" class="tab-content">
+      <div class="panel-card full-width-card">
+        <h2 class="panel-heading">Ficha Técnica de Modelos y Estrategias ASR</h2>
+        
+        <!-- Tabla comparativa de modelos -->
+        <div class="tech-card mb-4">
+          <h3>Comparativa de Modelos Disponibles (Sherpa-ONNX Zipformer CTC)</h3>
+          <p class="panel-subtitle">Puedes alternar entre estos 4 modelos en tiempo real desde el selector en la pestaña de evaluación.</p>
+          <div class="table-responsive">
+            <table class="models-compare-table">
+              <thead>
+                <tr>
+                  <th>Modelo</th>
+                  <th>Origen / Épocas</th>
+                  <th>Precisión</th>
+                  <th>Tamaño</th>
+                  <th>Uso Recomendado</th>
+                  <th>Hash SHA256</th>
+                </tr>
+              </thead>
+              <tbody id="modelsTableBody">
+                <tr>
+                  <td><strong>Scratch INT8</strong> <span class="badge-model-rec">Recomendado</span></td>
+                  <td>Entrenamiento de 0 (Época 100)</td>
+                  <td>INT8 Dinámica</td>
+                  <td>~70.0 MB</td>
+                  <td>Android, Unity y baja latencia en CPU</td>
+                  <td><code>58dd82c764...</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Scratch FP32</strong></td>
+                  <td>Entrenamiento de 0 (Época 100)</td>
+                  <td>Float32 Pesado</td>
+                  <td>~250.0 MB</td>
+                  <td>Referencia acústica de punto flotante</td>
+                  <td><code>892cf5da3e...</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Fine-Tuning INT8</strong></td>
+                  <td>Checkpoint Adaptado (Época 50)</td>
+                  <td>INT8 Dinámica</td>
+                  <td>~70.0 MB</td>
+                  <td>Transfer learning multilingüe en móvil</td>
+                  <td><code>a16d0061e8...</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Fine-Tuning FP32</strong></td>
+                  <td>Checkpoint Adaptado (Época 50)</td>
+                  <td>Float32 Pesado</td>
+                  <td>~250.0 MB</td>
+                  <td>Transfer learning Float32 completo</td>
+                  <td><code>1cf0d635c0...</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tech-grid">
+          <div class="tech-card">
+            <h3>Estrategias de Decodificación</h3>
+            <ul class="tech-list">
+              <li><strong>1. Greedy Search (CTC Puro):</strong>
+                Argmax frame a frame directo de la red neuronal. Rápido y sin restricciones de vocabulario. En oraciones continuas sufre de <em>elisiones fonéticas</em> en fronteras de palabras debido a la coarticulación natural y al desbalance del corpus (93% palabras aisladas vs 7% oraciones).
+              </li>
+              <li><strong>2. Restricciones Léxicas (Lexicón Cerrado):</strong>
+                Algoritmo Viterbi de programación dinámica sobre el vocabulario pedagógico cerrado (326 palabras del Uchumataqu). Segmenta y reconstruye palabras canónicas, recuperando semiconsonantes (`W`, `Y`), oclusivas y fricativas elididas en las transiciones de habla fluida.
+              </li>
+            </ul>
+          </div>
+
+          <div class="tech-card">
+            <h3>Criterio de Entrega y Tolerancia</h3>
+            <p>El criterio formal pedagógico establece un <strong>85 % de aceptación fonética</strong> en condiciones reales.</p>
+            <p>Hallazgos clave de evaluación:</p>
+            <ul class="tech-list">
+              <li><strong>Palabras aisladas:</strong> Los modelos Scratch alcanzan 100% de precisión en condiciones limpias.</li>
+              <li><strong>Oraciones compuestas:</strong> El 80.4% de los errores en greedy search corresponden a elisiones (deletions) en límites de palabra.</li>
+              <li><strong>Préstamos del español:</strong> Palabras como nombres propios ("primo", "dilver") contienen grupos consonánticos ausentes en Uchumataqu (`PR-`), tratándose con fallback fonético directo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tech-card mt-4">
+          <h3>Integridad del Sistema y Vocabulario</h3>
+          <div class="hash-row">
+            <span class="hash-label">Inventario Fonológico:</span>
+            <span>38 fonemas canónicos Uchumataqu + 4 tokens de control CTC (<code>blank</code>, <code>&lt;unk&gt;</code>, <code>&lt;sos/eos&gt;</code>)</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-label">Vocabulario Pedagógico:</span>
+            <span>326 unidades léxicas canónicas (<code>lexicon.txt</code>)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal de Conexión Móvil / Android -->
+  <div class="modal-overlay hidden" id="mobileModalOverlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title">📱 Conectar Celular Android</h3>
+        <button type="button" class="btn-close-modal" id="btnCloseMobileModal">×</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">
+          Para probar en tiempo real desde tu celular en la misma red Wi-Fi:
+        </p>
+
+        <div class="qr-container">
+          <div id="qrCodeWrapper" class="qr-box">
+            <!-- QR generado dinámicamente -->
+          </div>
+          <div class="qr-text-info">
+            <p class="qr-url-label">Abre en el navegador del celular:</p>
+            <a href="#" target="_blank" class="qr-url-link" id="mobileUrlLink">http://...</a>
+          </div>
+        </div>
+
+        <div class="mobile-tips-box">
+          <h4>💡 Opciones en el Celular:</h4>
+          <ol class="mobile-steps">
+            <li><strong>Opción 1 (Subir audios):</strong> Puedes grabar notas de voz con la app de grabadora de Android y subirlas directamente desde el botón "Subir Audio" (funciona sin configuración adicional).</li>
+            <li><strong>Opción 2 (Micrófono en Chrome Android):</strong> Si deseas usar el botón de micrófono en vivo desde HTTP, escribe en Chrome del celular <code>chrome://flags/#unsafely-treat-insecure-origin-as-secure</code>, añade tu IP (<code id="mobileIpBadge">http://...</code>), pon <strong>Enabled</strong> y reinicia Chrome.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-primary-sm" id="btnOkMobileModal">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

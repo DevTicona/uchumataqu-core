@@ -1,0 +1,7111 @@
+[
+  {
+    "id": "o_03fd72f81572805d",
+    "surface": "lorenzo",
+    "original": "lorenzo",
+    "lemma": "lorenzo",
+    "family_id": "o_03fd72f81572805d",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "lorenzo"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_004",
+      "O_006",
+      "O_033",
+      "O_055",
+      "O_069",
+      "O_085",
+      "O_101",
+      "O_119"
+    ],
+    "context_ids": [
+      "O_004",
+      "O_006",
+      "O_033",
+      "O_055",
+      "O_069",
+      "O_085",
+      "O_101",
+      "O_119"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_6270fe359522a1f4",
+    "surface": "urus",
+    "original": "urus",
+    "lemma": "urus",
+    "family_id": "o_6270fe359522a1f4",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "urus"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_016",
+      "O_018"
+    ],
+    "context_ids": [
+      "O_016",
+      "O_018"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_9e010de9722a80d2",
+    "surface": "thö",
+    "original": "thö",
+    "lemma": "thö",
+    "family_id": "o_9e010de9722a80d2",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "thö"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_004"
+    ],
+    "context_ids": [
+      "O_004"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_b70f4e53e4a7808d",
+    "surface": "waki",
+    "original": "waki",
+    "lemma": "waki",
+    "family_id": "o_b70f4e53e4a7808d",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "waki"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_017"
+    ],
+    "context_ids": [
+      "O_017"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_cc501eaf8615e4b5",
+    "surface": "juana",
+    "original": "juana",
+    "lemma": "juana",
+    "family_id": "o_cc501eaf8615e4b5",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "juana"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_078",
+      "O_084",
+      "O_100"
+    ],
+    "context_ids": [
+      "O_078",
+      "O_084",
+      "O_100"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_da274ac86e1548cf",
+    "surface": "irohito",
+    "original": "irohito",
+    "lemma": "irohito",
+    "family_id": "o_da274ac86e1548cf",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "irohito"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_016",
+      "O_018"
+    ],
+    "context_ids": [
+      "O_016",
+      "O_018"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_edd82ab3ecfe1ad7",
+    "surface": "maría",
+    "original": "maría",
+    "lemma": "maría",
+    "family_id": "o_edd82ab3ecfe1ad7",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "maría"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_043",
+      "O_064",
+      "O_077",
+      "O_082",
+      "O_089"
+    ],
+    "context_ids": [
+      "O_043",
+      "O_064",
+      "O_077",
+      "O_082",
+      "O_089"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "o_ee5cd7d5d96c8874",
+    "surface": "pedro",
+    "original": "pedro",
+    "lemma": "pedro",
+    "family_id": "o_ee5cd7d5d96c8874",
+    "pos": "UNK",
+    "translation": null,
+    "segments": [
+      "pedro"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "oraciones.json",
+    "source_id": [
+      "O_008",
+      "O_015",
+      "O_019",
+      "O_030",
+      "O_031",
+      "O_058",
+      "O_066",
+      "O_097"
+    ],
+    "context_ids": [
+      "O_008",
+      "O_015",
+      "O_019",
+      "O_030",
+      "O_031",
+      "O_058",
+      "O_066",
+      "O_097"
+    ],
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted"
+  },
+  {
+    "id": "p_achasi",
+    "surface": "achasi",
+    "original": "Achasi",
+    "lemma": "achasi",
+    "family_id": "achasi",
+    "pos": "N",
+    "translation": "Almohada",
+    "segments": [
+      "achasi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "achasi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_achasinaka",
+    "surface": "achasinaka",
+    "original": "Achasinaka",
+    "lemma": "achasi",
+    "family_id": "achasi",
+    "pos": "N",
+    "translation": "Almohadas",
+    "segments": [
+      "achasi",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "achasinaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_058",
+      "O_134"
+    ]
+  },
+  {
+    "id": "p_achichay",
+    "surface": "achichay",
+    "original": "Achichay",
+    "lemma": "achichay",
+    "family_id": "achichay",
+    "pos": "N",
+    "translation": "Abuelo",
+    "segments": [
+      "achichay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "achichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_039",
+      "O_086",
+      "O_118"
+    ]
+  },
+  {
+    "id": "p_achuchay",
+    "surface": "achuchay",
+    "original": "Achuchay",
+    "lemma": "achuchay",
+    "family_id": "achuchay",
+    "pos": "V",
+    "translation": "Cultivar",
+    "segments": [
+      "achuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "achuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_107"
+    ]
+  },
+  {
+    "id": "p_am",
+    "surface": "am",
+    "original": "Am",
+    "lemma": "am",
+    "family_id": "am",
+    "pos": "PRON",
+    "translation": "Tú",
+    "segments": [
+      "am"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "am",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_005",
+      "O_027",
+      "O_032",
+      "O_045",
+      "O_054",
+      "O_060",
+      "O_079",
+      "O_120",
+      "O_122"
+    ]
+  },
+  {
+    "id": "p_amaruskchay",
+    "surface": "amaruskchay",
+    "original": "Amaruskchay",
+    "lemma": "amaruskchay",
+    "family_id": "amaruskchay",
+    "pos": "V",
+    "translation": "Cerrar",
+    "segments": [
+      "amaruskchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "amaruskchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_051",
+      "O_133"
+    ]
+  },
+  {
+    "id": "p_amchuki",
+    "surface": "amchuki",
+    "original": "Amchuki",
+    "lemma": "amchuki",
+    "family_id": "amchuki",
+    "pos": "PRON",
+    "translation": "Ustedes",
+    "segments": [
+      "amchuki"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "amchuki",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_022",
+      "O_080"
+    ]
+  },
+  {
+    "id": "p_amthu",
+    "surface": "amthü",
+    "original": "Amthü",
+    "lemma": "amthü",
+    "family_id": "amthu",
+    "pos": "EXPR",
+    "translation": "Y ¿tú?",
+    "segments": [
+      "amthü"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "amthu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_009"
+    ]
+  },
+  {
+    "id": "p_ana",
+    "surface": "ana",
+    "original": "Ana",
+    "lemma": "ana",
+    "family_id": "ana",
+    "pos": "ADV",
+    "translation": "No",
+    "segments": [
+      "ana"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_013",
+      "O_023",
+      "O_036",
+      "O_051",
+      "O_075",
+      "O_077",
+      "O_108",
+      "O_113"
+    ]
+  },
+  {
+    "id": "p_anachhulu",
+    "surface": "anachhulu",
+    "original": "Anachhulu",
+    "lemma": "anachhulu",
+    "family_id": "anachhulu",
+    "pos": "N",
+    "translation": "Ninguno",
+    "segments": [
+      "anachhulu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "anachhulu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_113"
+    ]
+  },
+  {
+    "id": "p_anachhuni",
+    "surface": "anachhuñi",
+    "original": "Anachhuñi",
+    "lemma": "anachhuñi",
+    "family_id": "anachhuni",
+    "pos": "N",
+    "translation": "No estoy bien",
+    "segments": [
+      "anachhuñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "anachhuni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_013"
+    ]
+  },
+  {
+    "id": "p_anapini",
+    "surface": "anapini",
+    "original": "Anapini",
+    "lemma": "ana",
+    "family_id": "ana",
+    "pos": "ADV",
+    "translation": "Nunca",
+    "segments": [
+      "ana",
+      "pini"
+    ],
+    "suffixes": [
+      "pini"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "anapini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_093"
+    ]
+  },
+  {
+    "id": "p_apay",
+    "surface": "apay",
+    "original": "Apay",
+    "lemma": "apay",
+    "family_id": "apay",
+    "pos": "N",
+    "translation": "Papá",
+    "segments": [
+      "apay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "apay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_025",
+      "O_056",
+      "O_103"
+    ]
+  },
+  {
+    "id": "p_apichuy",
+    "surface": "apichuy",
+    "original": "Apichuy",
+    "lemma": "apichuy",
+    "family_id": "apichuy",
+    "pos": "N",
+    "translation": "Abuela",
+    "segments": [
+      "apichuy"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "apichuy",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_040",
+      "O_090"
+    ]
+  },
+  {
+    "id": "p_arusha",
+    "surface": "arusha",
+    "original": "Arusha",
+    "lemma": "arusha",
+    "family_id": "arusha",
+    "pos": "N",
+    "translation": "Arroz",
+    "segments": [
+      "arusha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "arusha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_080"
+    ]
+  },
+  {
+    "id": "p_ataluy",
+    "surface": "ataluy",
+    "original": "Ataluy",
+    "lemma": "ataluy",
+    "family_id": "ataluy",
+    "pos": "N",
+    "translation": "Mamá",
+    "segments": [
+      "ataluy"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ataluy",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_028",
+      "O_050",
+      "O_102"
+    ]
+  },
+  {
+    "id": "p_ataluychay",
+    "surface": "ataluychay",
+    "original": "Ataluychay",
+    "lemma": "ataluy",
+    "family_id": "ataluy",
+    "pos": "N",
+    "translation": "Es mamá",
+    "segments": [
+      "ataluy",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ataluychay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_024"
+    ]
+  },
+  {
+    "id": "p_axtal",
+    "surface": "axtal",
+    "original": "Axtal",
+    "lemma": "axtal",
+    "family_id": "axtal",
+    "pos": "ADJ",
+    "translation": "Lejos",
+    "segments": [
+      "axtal"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "axtal",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_037",
+      "O_094"
+    ]
+  },
+  {
+    "id": "p_aymilla",
+    "surface": "aymilla",
+    "original": "Aymilla",
+    "lemma": "aymilla",
+    "family_id": "aymilla",
+    "pos": "N",
+    "translation": "Camisa",
+    "segments": [
+      "aymilla"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "aymilla",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_030"
+    ]
+  },
+  {
+    "id": "p_chalachay",
+    "surface": "chälachay",
+    "original": "Chälachay",
+    "lemma": "chälachay",
+    "family_id": "chalachay",
+    "pos": "V",
+    "translation": "Sembrar",
+    "segments": [
+      "chälachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chalachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_069",
+      "O_125"
+    ]
+  },
+  {
+    "id": "p_chatschay",
+    "surface": "ch'atschay",
+    "original": "Chʼatschay",
+    "lemma": "ch'atschay",
+    "family_id": "chatschay",
+    "pos": "V",
+    "translation": "Ladrar",
+    "segments": [
+      "ch'atschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chatschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chatschaypini",
+    "surface": "ch'atschaypini",
+    "original": "Chʼatschaypini",
+    "lemma": "ch'atschay",
+    "family_id": "chatschay",
+    "pos": "V",
+    "translation": "Ladra mucho",
+    "segments": [
+      "ch'atschay",
+      "pini"
+    ],
+    "suffixes": [
+      "pini"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chatschaypini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_081"
+    ]
+  },
+  {
+    "id": "p_chatuchay",
+    "surface": "ch'atuchay",
+    "original": "Chʼatuchay",
+    "lemma": "ch'atuchay",
+    "family_id": "chatuchay",
+    "pos": "V",
+    "translation": "picar",
+    "segments": [
+      "ch'atuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chatuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chaxana",
+    "surface": "ch'axana",
+    "original": "Chʼaxana",
+    "lemma": "ch'axana",
+    "family_id": "chaxana",
+    "pos": "N",
+    "translation": "Pez amarillo",
+    "segments": [
+      "ch'axana"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chaxana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_102"
+    ]
+  },
+  {
+    "id": "p_cheqallachay",
+    "surface": "cheqallachay",
+    "original": "Cheqallachay",
+    "lemma": "cheqallachay",
+    "family_id": "cheqallachay",
+    "pos": "V",
+    "translation": "Remar",
+    "segments": [
+      "cheqallachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "cheqallachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_120"
+    ]
+  },
+  {
+    "id": "p_chers",
+    "surface": "chers",
+    "original": "Chers",
+    "lemma": "chers",
+    "family_id": "chers",
+    "pos": "N",
+    "translation": "Espejo",
+    "segments": [
+      "chers"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chers",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhaq",
+    "surface": "chhaq",
+    "original": "Chhaq",
+    "lemma": "chhaq",
+    "family_id": "chhaq",
+    "pos": "ADJ",
+    "translation": "Grande",
+    "segments": [
+      "chhaq"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaq",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_055",
+      "O_118",
+      "O_132"
+    ]
+  },
+  {
+    "id": "p_chhaqchay",
+    "surface": "chhaqchay",
+    "original": "Chhaqchay",
+    "lemma": "chhaq",
+    "family_id": "chhaq",
+    "pos": "ADJ",
+    "translation": "Es/esta grande",
+    "segments": [
+      "chhaq",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaqchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_029"
+    ]
+  },
+  {
+    "id": "p_chhaqpinichay",
+    "surface": "chhaqpinichay",
+    "original": "Chhaqpinichay",
+    "lemma": "chhaq",
+    "family_id": "chhaq",
+    "pos": "ADJ",
+    "translation": "Es/está muy grande",
+    "segments": [
+      "chhaq",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaqpinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_032",
+      "O_046"
+    ]
+  },
+  {
+    "id": "p_chhaqway",
+    "surface": "chhaqway",
+    "original": "Chhaqway",
+    "lemma": "chhaqway",
+    "family_id": "chhaqway",
+    "pos": "ADJ",
+    "translation": "Alto",
+    "segments": [
+      "chhaqway"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaqway",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhaqwaypini",
+    "surface": "chhaqwaypini",
+    "original": "Chhaqwaypini",
+    "lemma": "chhaqway",
+    "family_id": "chhaqway",
+    "pos": "ADJ",
+    "translation": "Muy alto",
+    "segments": [
+      "chhaqway",
+      "pini"
+    ],
+    "suffixes": [
+      "pini"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaqwaypini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_096"
+    ]
+  },
+  {
+    "id": "p_chhasi",
+    "surface": "chhasi",
+    "original": "Chhasi",
+    "lemma": "chhasi",
+    "family_id": "chhasi",
+    "pos": "ADJ",
+    "translation": "Faja",
+    "segments": [
+      "chhasi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhasi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_044"
+    ]
+  },
+  {
+    "id": "p_chhata",
+    "surface": "chhata",
+    "original": "Chhata",
+    "lemma": "chhata",
+    "family_id": "chhata",
+    "pos": "N",
+    "translation": "Abarca",
+    "segments": [
+      "chhata"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhata",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhatanaka",
+    "surface": "chhatanaka",
+    "original": "Chhatanaka",
+    "lemma": "chhata",
+    "family_id": "chhata",
+    "pos": "N",
+    "translation": "Abarcas",
+    "segments": [
+      "chhata",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhatanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_028"
+    ]
+  },
+  {
+    "id": "p_chhaxrana",
+    "surface": "chhaxraña",
+    "original": "Chhaxraña",
+    "lemma": "chhaxraña",
+    "family_id": "chhaxrana",
+    "pos": "N",
+    "translation": "Peine",
+    "segments": [
+      "chhaxraña"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaxrana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhaxrananaka",
+    "surface": "chhaxrañanaka",
+    "original": "Chhaxrañanaka",
+    "lemma": "chhaxraña",
+    "family_id": "chhaxrana",
+    "pos": "N",
+    "translation": "Peines",
+    "segments": [
+      "chhaxraña",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhaxrananaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhep",
+    "surface": "chhep",
+    "original": "Chhep",
+    "lemma": "chhep",
+    "family_id": "chhep",
+    "pos": "NUM",
+    "translation": "Tres",
+    "segments": [
+      "chhep"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhep",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_048",
+      "O_058",
+      "O_134"
+    ]
+  },
+  {
+    "id": "p_chhepyes",
+    "surface": "chhepyës",
+    "original": "Chhepyës",
+    "lemma": "chhepyës",
+    "family_id": "chhepyes",
+    "pos": "N",
+    "translation": "Trimestre",
+    "segments": [
+      "chhepyës"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhepyes",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chheqets",
+    "surface": "chheqets",
+    "original": "Chheqets",
+    "lemma": "chheqets",
+    "family_id": "chheqets",
+    "pos": "N",
+    "translation": "Ropa",
+    "segments": [
+      "chheqets"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chheqets",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_054",
+      "O_122"
+    ]
+  },
+  {
+    "id": "p_chheqhoni",
+    "surface": "chheqhoñi",
+    "original": "Chheqhoñi",
+    "lemma": "chheqhoñi",
+    "family_id": "chheqhoni",
+    "pos": "N",
+    "translation": "Liwi",
+    "segments": [
+      "chheqhoñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chheqhoni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_031"
+    ]
+  },
+  {
+    "id": "p_chherchher",
+    "surface": "chherchher",
+    "original": "Chherchher",
+    "lemma": "chherchher",
+    "family_id": "chherchher",
+    "pos": "ADJ",
+    "translation": "Bonito",
+    "segments": [
+      "chherchher"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chherchher",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_082"
+    ]
+  },
+  {
+    "id": "p_chherchherpinichay",
+    "surface": "chherchherpinichay",
+    "original": "Chherchherpinichay",
+    "lemma": "chherchher",
+    "family_id": "chherchher",
+    "pos": "ADJ",
+    "translation": "Es/está muy bonito",
+    "segments": [
+      "chherchher",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chherchherpinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_073"
+    ]
+  },
+  {
+    "id": "p_chhi",
+    "surface": "chhi",
+    "original": "Chhi",
+    "lemma": "chhi",
+    "family_id": "chhi",
+    "pos": "NUM",
+    "translation": "Uno",
+    "segments": [
+      "chhi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_031"
+    ]
+  },
+  {
+    "id": "p_chhikhits",
+    "surface": "chhikhits",
+    "original": "Chhikhits",
+    "lemma": "chhikhits",
+    "family_id": "chhikhits",
+    "pos": "N",
+    "translation": "Lápiz",
+    "segments": [
+      "chhikhits"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhikhits",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhikhitsnaka",
+    "surface": "chhikhitsnaka",
+    "original": "Chhikhitsnaka",
+    "lemma": "chhikhits",
+    "family_id": "chhikhits",
+    "pos": "N",
+    "translation": "Lápices",
+    "segments": [
+      "chhikhits",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhikhitsnaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_060"
+    ]
+  },
+  {
+    "id": "p_chhiqha",
+    "surface": "chhiqha",
+    "original": "Chhiqha",
+    "lemma": "chhiqha",
+    "family_id": "chhiqha",
+    "pos": "N",
+    "translation": "Escoba",
+    "segments": [
+      "chhiqha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhiqha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhiqhanaka",
+    "surface": "chhiqhanaka",
+    "original": "Chhiqhanaka",
+    "lemma": "chhiqha",
+    "family_id": "chhiqha",
+    "pos": "N",
+    "translation": "Escobas",
+    "segments": [
+      "chhiqha",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhiqhanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_057"
+    ]
+  },
+  {
+    "id": "p_chhiri",
+    "surface": "chhiri",
+    "original": "Chhiri",
+    "lemma": "chhiri",
+    "family_id": "chhiri",
+    "pos": "N",
+    "translation": "Nube",
+    "segments": [
+      "chhiri"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhiri",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_113"
+    ]
+  },
+  {
+    "id": "p_chhuk",
+    "surface": "chhuk",
+    "original": "Chhuk",
+    "lemma": "chhuk",
+    "family_id": "chhuk",
+    "pos": "ADJ",
+    "translation": "Sucio",
+    "segments": [
+      "chhuk"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhuk",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhukchay",
+    "surface": "chhukchay",
+    "original": "Chhukchay",
+    "lemma": "chhuk",
+    "family_id": "chhuk",
+    "pos": "ADJ",
+    "translation": "Está sucio/a",
+    "segments": [
+      "chhuk",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhukchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_045",
+      "O_063"
+    ]
+  },
+  {
+    "id": "p_chhuljama",
+    "surface": "chhuljama",
+    "original": "Chhuljama",
+    "lemma": "chhuljama",
+    "family_id": "chhuljama",
+    "pos": "ADVINT",
+    "translation": "¿Cómo?",
+    "segments": [
+      "chhuljama"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhuljama",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhuljamachay",
+    "surface": "chhuljamachay",
+    "original": "Chhuljamachay",
+    "lemma": "chhuljama",
+    "family_id": "chhuljama",
+    "pos": "ADVINT",
+    "translation": "¿Cómo estás?",
+    "segments": [
+      "chhuljama",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhuljamachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_008"
+    ]
+  },
+  {
+    "id": "p_chhullayku",
+    "surface": "chhullayku",
+    "original": "Chhullayku",
+    "lemma": "chhullayku",
+    "family_id": "chhullayku",
+    "pos": "ADVINT",
+    "translation": "¿Por qué?",
+    "segments": [
+      "chhullayku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhullayku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_108"
+    ]
+  },
+  {
+    "id": "p_chhulurasa",
+    "surface": "chhulurasa",
+    "original": "Chhulurasa",
+    "lemma": "chhulurasa",
+    "family_id": "chhulurasa",
+    "pos": "ADVINT",
+    "translation": "¿Cuándo?",
+    "segments": [
+      "chhulurasa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhulurasa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_054"
+    ]
+  },
+  {
+    "id": "p_chhuni",
+    "surface": "chhuñi",
+    "original": "Chhuñi",
+    "lemma": "chhuñi",
+    "family_id": "chhuni",
+    "pos": "N",
+    "translation": "Bueno/a o Bien",
+    "segments": [
+      "chhuñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhuni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_018",
+      "O_022"
+    ]
+  },
+  {
+    "id": "p_chhunipinichay",
+    "surface": "chhuñipinichay",
+    "original": "Chhuñipinichay",
+    "lemma": "chhuñi",
+    "family_id": "chhuni",
+    "pos": "N",
+    "translation": "Es/está muy bueno/a",
+    "segments": [
+      "chhuñi",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhunipinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_038"
+    ]
+  },
+  {
+    "id": "p_chhuniqasi",
+    "surface": "chhuñiqasi",
+    "original": "Chhuñiqasi",
+    "lemma": "chhuñiqasi",
+    "family_id": "chhuniqasi",
+    "pos": "N",
+    "translation": "Estoy bien",
+    "segments": [
+      "chhuñiqasi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhuniqasi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_009",
+      "O_010",
+      "O_012"
+    ]
+  },
+  {
+    "id": "p_chhuniqasichay",
+    "surface": "chhuñiqasichay",
+    "original": "Chhuñiqasichay",
+    "lemma": "chhuñiqasi",
+    "family_id": "chhuniqasi",
+    "pos": "N",
+    "translation": "¿Estás bien?",
+    "segments": [
+      "chhuñiqasi",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhuniqasichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_011"
+    ]
+  },
+  {
+    "id": "p_chhurpikchay",
+    "surface": "chhurpikchay",
+    "original": "Chhurpikchay",
+    "lemma": "chhurpikchay",
+    "family_id": "chhurpikchay",
+    "pos": "V",
+    "translation": "Brillar",
+    "segments": [
+      "chhurpikchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhurpikchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chhurpikchaypini",
+    "surface": "chhurpikchaypini",
+    "original": "Chhurpikchaypini",
+    "lemma": "chhurpikchay",
+    "family_id": "chhurpikchay",
+    "pos": "V",
+    "translation": "Brilla mucho",
+    "segments": [
+      "chhurpikchay",
+      "pini"
+    ],
+    "suffixes": [
+      "pini"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chhurpikchaypini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_109"
+    ]
+  },
+  {
+    "id": "p_chichalay",
+    "surface": "chichalay",
+    "original": "Chichalay",
+    "lemma": "chichalay",
+    "family_id": "chichalay",
+    "pos": "N",
+    "translation": "Hermano",
+    "segments": [
+      "chichalay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chichalay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_027",
+      "O_034"
+    ]
+  },
+  {
+    "id": "p_chimay",
+    "surface": "chimay",
+    "original": "Chimay",
+    "lemma": "chimay",
+    "family_id": "chimay",
+    "pos": "N",
+    "translation": "Mesa",
+    "segments": [
+      "chimay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chimay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_055",
+      "O_132"
+    ]
+  },
+  {
+    "id": "p_chirsnachay",
+    "surface": "chirsnachay",
+    "original": "Chirsnachay",
+    "lemma": "chirsnachay",
+    "family_id": "chirsnachay",
+    "pos": "V",
+    "translation": "Ver",
+    "segments": [
+      "chirsnachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chirsnachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_036",
+      "O_093",
+      "O_094",
+      "O_110",
+      "O_111",
+      "O_129",
+      "O_130"
+    ]
+  },
+  {
+    "id": "p_chisawa",
+    "surface": "chisawa",
+    "original": "Chisawa",
+    "lemma": "chisawa",
+    "family_id": "chisawa",
+    "pos": "N",
+    "translation": "Miji",
+    "segments": [
+      "chisawa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chisawa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_103"
+    ]
+  },
+  {
+    "id": "p_chisi",
+    "surface": "ch'isi",
+    "original": "Chʼisi",
+    "lemma": "ch'isi",
+    "family_id": "chisi",
+    "pos": "N",
+    "translation": "Pez gato",
+    "segments": [
+      "ch'isi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chisi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chisni",
+    "surface": "chisñi",
+    "original": "Chisñi",
+    "lemma": "chisñi",
+    "family_id": "chisni",
+    "pos": "N",
+    "translation": "Lluvia",
+    "segments": [
+      "chisñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chisni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chisnipinichay",
+    "surface": "chisñipinichay",
+    "original": "Chisñipinichay",
+    "lemma": "chisñi",
+    "family_id": "chisni",
+    "pos": "N",
+    "translation": "Hay mucha lluvia",
+    "segments": [
+      "chisñi",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chisnipinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_112"
+    ]
+  },
+  {
+    "id": "p_chiw",
+    "surface": "chiw",
+    "original": "Chiw",
+    "lemma": "chiw",
+    "family_id": "chiw",
+    "pos": "ADJ",
+    "translation": "Blanco",
+    "segments": [
+      "chiw"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiw",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_087"
+    ]
+  },
+  {
+    "id": "p_chiwa",
+    "surface": "ch'iwa",
+    "original": "Chʼiwa",
+    "lemma": "ch'iwa",
+    "family_id": "chiwa",
+    "pos": "N",
+    "translation": "Planta acuatica",
+    "segments": [
+      "ch'iwa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiwa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chiwkis",
+    "surface": "chiwkis",
+    "original": "Chiwkis",
+    "lemma": "chiwkis",
+    "family_id": "chiwkis",
+    "pos": "N",
+    "translation": "Queso",
+    "segments": [
+      "chiwkis"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiwkis",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chiwkisnaka",
+    "surface": "chiwkisnaka",
+    "original": "Chiwkisnaka",
+    "lemma": "chiwkis",
+    "family_id": "chiwkis",
+    "pos": "N",
+    "translation": "Quesos",
+    "segments": [
+      "chiwkis",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiwkisnaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_070"
+    ]
+  },
+  {
+    "id": "p_chiwliks",
+    "surface": "chiwliks",
+    "original": "Chiwliks",
+    "lemma": "chiwliks",
+    "family_id": "chiwliks",
+    "pos": "N",
+    "translation": "Leche",
+    "segments": [
+      "chiwliks"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiwliks",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_067",
+      "O_072"
+    ]
+  },
+  {
+    "id": "p_chiwqeri",
+    "surface": "chiwqeri",
+    "original": "Chiwqeri",
+    "lemma": "chiwqeri",
+    "family_id": "chiwqeri",
+    "pos": "N",
+    "translation": "Pejerrey",
+    "segments": [
+      "chiwqeri"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiwqeri",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_100"
+    ]
+  },
+  {
+    "id": "p_chiyacharku",
+    "surface": "chiyacharku",
+    "original": "Chiyacharku",
+    "lemma": "chiyacharku",
+    "family_id": "chiyacharku",
+    "pos": "N",
+    "translation": "Norte",
+    "segments": [
+      "chiyacharku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chiyacharku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_116"
+    ]
+  },
+  {
+    "id": "p_choq",
+    "surface": "choq",
+    "original": "Choq",
+    "lemma": "choq",
+    "family_id": "choq",
+    "pos": "ADJ",
+    "translation": "Negro",
+    "segments": [
+      "choq"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "choq",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_090"
+    ]
+  },
+  {
+    "id": "p_chukichay",
+    "surface": "chukichay",
+    "original": "Chukichay",
+    "lemma": "chukichay",
+    "family_id": "chukichay",
+    "pos": "V",
+    "translation": "Traer",
+    "segments": [
+      "chukichay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chukichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_079"
+    ]
+  },
+  {
+    "id": "p_chunipaku",
+    "surface": "chuñipaku",
+    "original": "Chuñipaku",
+    "lemma": "chuñipaku",
+    "family_id": "chunipaku",
+    "pos": "N",
+    "translation": "Zorrino",
+    "segments": [
+      "chuñipaku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chunipaku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_093"
+    ]
+  },
+  {
+    "id": "p_churana",
+    "surface": "ch'uraña",
+    "original": "Chʼuraña",
+    "lemma": "ch'uraña",
+    "family_id": "churana",
+    "pos": "N",
+    "translation": "Ave pequeña zambullidora",
+    "segments": [
+      "ch'uraña"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "churana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_churu",
+    "surface": "ch'uru",
+    "original": "Chʼuru",
+    "lemma": "ch'uru",
+    "family_id": "churu",
+    "pos": "N",
+    "translation": "caracol",
+    "segments": [
+      "ch'uru"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "churu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chusi",
+    "surface": "chusi",
+    "original": "Chusi",
+    "lemma": "chusi",
+    "family_id": "chusi",
+    "pos": "N",
+    "translation": "Cama",
+    "segments": [
+      "chusi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chusi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_049",
+      "O_134"
+    ]
+  },
+  {
+    "id": "p_chuwa",
+    "surface": "chuwa",
+    "original": "Chuwa",
+    "lemma": "chuwa",
+    "family_id": "chuwa",
+    "pos": "N",
+    "translation": "Plato",
+    "segments": [
+      "chuwa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chuwa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_chuwanaka",
+    "surface": "chuwanaka",
+    "original": "Chuwanaka",
+    "lemma": "chuwa",
+    "family_id": "chuwa",
+    "pos": "N",
+    "translation": "Platos",
+    "segments": [
+      "chuwa",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chuwanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_064"
+    ]
+  },
+  {
+    "id": "p_chuwicha",
+    "surface": "ch'üwicha",
+    "original": "Chʼüwicha",
+    "lemma": "ch'üwicha",
+    "family_id": "chuwicha",
+    "pos": "ADJ",
+    "translation": "Chueco",
+    "segments": [
+      "ch'üwicha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "chuwicha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_echs",
+    "surface": "echs",
+    "original": "Echs",
+    "lemma": "echs",
+    "family_id": "echs",
+    "pos": "ADJ",
+    "translation": "Verde",
+    "segments": [
+      "echs"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "echs",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_047"
+    ]
+  },
+  {
+    "id": "p_eskhara",
+    "surface": "eskhara",
+    "original": "Eskhara",
+    "lemma": "eskhara",
+    "family_id": "eskhara",
+    "pos": "N",
+    "translation": "Sombrero",
+    "segments": [
+      "eskhara"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "eskhara",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_029"
+    ]
+  },
+  {
+    "id": "p_ew",
+    "surface": "ew",
+    "original": "Ew",
+    "lemma": "ew",
+    "family_id": "ew",
+    "pos": "ADJ",
+    "translation": "Nuevo",
+    "segments": [
+      "ew"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ew",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_ewchay",
+    "surface": "ewchay",
+    "original": "Ewchay",
+    "lemma": "ew",
+    "family_id": "ew",
+    "pos": "ADJ",
+    "translation": "Es/está nuevo",
+    "segments": [
+      "ew",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ewchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_042",
+      "O_044"
+    ]
+  },
+  {
+    "id": "p_ira",
+    "surface": "ira",
+    "original": "Ira",
+    "lemma": "ira",
+    "family_id": "ira",
+    "pos": "N",
+    "translation": "Poncho uru",
+    "segments": [
+      "ira"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ira",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_032"
+    ]
+  },
+  {
+    "id": "p_iwaltaki",
+    "surface": "iwaltaki",
+    "original": "Iwaltaki",
+    "lemma": "iwaltaki",
+    "family_id": "iwaltaki",
+    "pos": "EXPR",
+    "translation": "Igualmente",
+    "segments": [
+      "iwaltaki"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "iwaltaki",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_010"
+    ]
+  },
+  {
+    "id": "p_iwisa",
+    "surface": "iwisa",
+    "original": "Iwisa",
+    "lemma": "iwisa",
+    "family_id": "iwisa",
+    "pos": "N",
+    "translation": "Oveja",
+    "segments": [
+      "iwisa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "iwisa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_iwisanaka",
+    "surface": "iwisanaka",
+    "original": "Iwisanaka",
+    "lemma": "iwisa",
+    "family_id": "iwisa",
+    "pos": "N",
+    "translation": "Ovejas",
+    "segments": [
+      "iwisa",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "iwisanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_087"
+    ]
+  },
+  {
+    "id": "p_jakilta",
+    "surface": "jakilta",
+    "original": "Jakilta",
+    "lemma": "jakilta",
+    "family_id": "jakilta",
+    "pos": "PRONINT",
+    "translation": "¿Cuál?",
+    "segments": [
+      "jakilta"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "jakilta",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_005"
+    ]
+  },
+  {
+    "id": "p_jasiktam",
+    "surface": "jasiktam",
+    "original": "Jasiktam",
+    "lemma": "jasiktam",
+    "family_id": "jasiktam",
+    "pos": "ADVINT",
+    "translation": "¿De dónde?",
+    "segments": [
+      "jasiktam"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "jasiktam",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_015"
+    ]
+  },
+  {
+    "id": "p_jaxchay",
+    "surface": "jaxchay",
+    "original": "Jaxchay",
+    "lemma": "jaxchay",
+    "family_id": "jaxchay",
+    "pos": "V",
+    "translation": "Lavar",
+    "segments": [
+      "jaxchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "jaxchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_054",
+      "O_071",
+      "O_123"
+    ]
+  },
+  {
+    "id": "p_jilaynacha",
+    "surface": "jilaynacha",
+    "original": "Jilaynacha",
+    "lemma": "jilaynacha",
+    "family_id": "jilaynacha",
+    "pos": "ADJ",
+    "translation": "Demasiado",
+    "segments": [
+      "jilaynacha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "jilaynacha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_088"
+    ]
+  },
+  {
+    "id": "p_jilli",
+    "surface": "jilli",
+    "original": "Jilli",
+    "lemma": "jilli",
+    "family_id": "jilli",
+    "pos": "N",
+    "translation": "Carne",
+    "segments": [
+      "jilli"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "jilli",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_071",
+      "O_076"
+    ]
+  },
+  {
+    "id": "p_jipu",
+    "surface": "jipu",
+    "original": "Jipu",
+    "lemma": "jipu",
+    "family_id": "jipu",
+    "pos": "N",
+    "translation": "Viento",
+    "segments": [
+      "jipu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "jipu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_116"
+    ]
+  },
+  {
+    "id": "p_julsnay",
+    "surface": "julsnay",
+    "original": "Julsnay",
+    "lemma": "julsnay",
+    "family_id": "julsnay",
+    "pos": "N",
+    "translation": "Sentarse",
+    "segments": [
+      "julsnay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "julsnay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_056"
+    ]
+  },
+  {
+    "id": "p_julsni",
+    "surface": "julsni",
+    "original": "Julsni",
+    "lemma": "julsni",
+    "family_id": "julsni",
+    "pos": "N",
+    "translation": "Silla",
+    "segments": [
+      "julsni"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "julsni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_056"
+    ]
+  },
+  {
+    "id": "p_juwa",
+    "surface": "juwa",
+    "original": "Juwa",
+    "lemma": "juwa",
+    "family_id": "juwa",
+    "pos": "N",
+    "translation": "Totora",
+    "segments": [
+      "juwa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "juwa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_106"
+    ]
+  },
+  {
+    "id": "p_kana",
+    "surface": "k'ana",
+    "original": "Kʼana",
+    "lemma": "k'ana",
+    "family_id": "kana",
+    "pos": "N",
+    "translation": "Soga de paja",
+    "segments": [
+      "k'ana"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_128"
+    ]
+  },
+  {
+    "id": "p_karpinisa",
+    "surface": "karpinisa",
+    "original": "Karpinisa",
+    "lemma": "karpinisa",
+    "family_id": "karpinisa",
+    "pos": "N",
+    "translation": "Medias",
+    "segments": [
+      "karpinisa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "karpinisa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_123"
+    ]
+  },
+  {
+    "id": "p_karpinisanaka",
+    "surface": "karpinisanaka",
+    "original": "Karpinisanaka",
+    "lemma": "karpinisa",
+    "family_id": "karpinisa",
+    "pos": "N",
+    "translation": "Medias (plural)",
+    "segments": [
+      "karpinisa",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "karpinisanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": []
+  },
+  {
+    "id": "p_kasa",
+    "surface": "k'asa",
+    "original": "Kʼasa",
+    "lemma": "k'asa",
+    "family_id": "kasa",
+    "pos": "N",
+    "translation": "Ala",
+    "segments": [
+      "k'asa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kasa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kayuy",
+    "surface": "k'ayuy",
+    "original": "Kʼayuy",
+    "lemma": "k'ayuy",
+    "family_id": "kayuy",
+    "pos": "N",
+    "translation": "Hermana",
+    "segments": [
+      "k'ayuy"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kayuy",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_026"
+    ]
+  },
+  {
+    "id": "p_khera",
+    "surface": "khera",
+    "original": "Khera",
+    "lemma": "khera",
+    "family_id": "khera",
+    "pos": "N",
+    "translation": "Cucharón",
+    "segments": [
+      "khera"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "khera",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_074"
+    ]
+  },
+  {
+    "id": "p_khirchula",
+    "surface": "khirchula",
+    "original": "Khirchula",
+    "lemma": "khirchula",
+    "family_id": "khirchula",
+    "pos": "N",
+    "translation": "Cuchara",
+    "segments": [
+      "khirchula"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "khirchula",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_khirchulanaka",
+    "surface": "khirchulanaka",
+    "original": "Khirchulanaka",
+    "lemma": "khirchula",
+    "family_id": "khirchula",
+    "pos": "N",
+    "translation": "Cucharas",
+    "segments": [
+      "khirchula",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "khirchulanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_065"
+    ]
+  },
+  {
+    "id": "p_khitschay",
+    "surface": "khitschay",
+    "original": "Khitschay",
+    "lemma": "khitschay",
+    "family_id": "khitschay",
+    "pos": "V",
+    "translation": "Abrir",
+    "segments": [
+      "khitschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "khitschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_052"
+    ]
+  },
+  {
+    "id": "p_khuchhi",
+    "surface": "khuchhi",
+    "original": "Khuchhi",
+    "lemma": "khuchhi",
+    "family_id": "khuchhi",
+    "pos": "N",
+    "translation": "Chancho",
+    "segments": [
+      "khuchhi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "khuchhi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_085"
+    ]
+  },
+  {
+    "id": "p_kula",
+    "surface": "kula",
+    "original": "Kula",
+    "lemma": "kula",
+    "family_id": "kula",
+    "pos": "N",
+    "translation": "Quinua",
+    "segments": [
+      "kula"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kula",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_069"
+    ]
+  },
+  {
+    "id": "p_kuli",
+    "surface": "k'uli",
+    "original": "Kʼuli",
+    "lemma": "k'uli",
+    "family_id": "kuli",
+    "pos": "N",
+    "translation": "Pez pequeño con bigotes",
+    "segments": [
+      "k'uli"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kuli",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kullku",
+    "surface": "k'ullku",
+    "original": "Kʼullku",
+    "lemma": "k'ullku",
+    "family_id": "kullku",
+    "pos": "ADJ",
+    "translation": "Angosto",
+    "segments": [
+      "k'ullku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kullku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kurwina",
+    "surface": "kurwina",
+    "original": "Kurwina",
+    "lemma": "kurwina",
+    "family_id": "kurwina",
+    "pos": "N",
+    "translation": "Trucha",
+    "segments": [
+      "kurwina"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kurwina",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kurwinanaka",
+    "surface": "kurwinanaka",
+    "original": "Kurwinanaka",
+    "lemma": "kurwina",
+    "family_id": "kurwina",
+    "pos": "N",
+    "translation": "Truchas",
+    "segments": [
+      "kurwina",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kurwinanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_101"
+    ]
+  },
+  {
+    "id": "p_kusikasi",
+    "surface": "k'usikasi",
+    "original": "Kʼusikasi",
+    "lemma": "k'usikasi",
+    "family_id": "kusikasi",
+    "pos": "ADJ",
+    "translation": "Contento",
+    "segments": [
+      "k'usikasi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kusikasi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kusikasichay",
+    "surface": "k'usikasichay",
+    "original": "Kʼusikasichay",
+    "lemma": "k'usikasi",
+    "family_id": "kusikasi",
+    "pos": "ADJ",
+    "translation": "Está contento/a",
+    "segments": [
+      "k'usikasi",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kusikasichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_026"
+    ]
+  },
+  {
+    "id": "p_kuskuts",
+    "surface": "kuskuts",
+    "original": "Kuskuts",
+    "lemma": "kuskuts",
+    "family_id": "kuskuts",
+    "pos": "N",
+    "translation": "Mochila",
+    "segments": [
+      "kuskuts"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kuskuts",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_062"
+    ]
+  },
+  {
+    "id": "p_kuti",
+    "surface": "k'uti",
+    "original": "Kʼuti",
+    "lemma": "k'uti",
+    "family_id": "kuti",
+    "pos": "N",
+    "translation": "Pulga",
+    "segments": [
+      "k'uti"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kuti",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kuwarerno",
+    "surface": "kuwarerno",
+    "original": "Kuwarerno",
+    "lemma": "kuwarerno",
+    "family_id": "kuwarerno",
+    "pos": "N",
+    "translation": "Cuaderno",
+    "segments": [
+      "kuwarerno"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kuwarerno",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_kuwarernonaka",
+    "surface": "kuwarernonaka",
+    "original": "Kuwarernonaka",
+    "lemma": "kuwarerno",
+    "family_id": "kuwarerno",
+    "pos": "N",
+    "translation": "Cuadernos",
+    "segments": [
+      "kuwarerno",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "kuwarernonaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_059"
+    ]
+  },
+  {
+    "id": "p_lasnuchay",
+    "surface": "lasnuchay",
+    "original": "Lasnuchay",
+    "lemma": "lasnuchay",
+    "family_id": "lasnuchay",
+    "pos": "V",
+    "translation": "Saltar",
+    "segments": [
+      "lasnuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "lasnuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_037"
+    ]
+  },
+  {
+    "id": "p_layschay",
+    "surface": "layschay",
+    "original": "Layschay",
+    "lemma": "layschay",
+    "family_id": "layschay",
+    "pos": "V",
+    "translation": "Volar",
+    "segments": [
+      "layschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "layschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_096"
+    ]
+  },
+  {
+    "id": "p_likschay",
+    "surface": "likschay",
+    "original": "Likschay",
+    "lemma": "likschay",
+    "family_id": "likschay",
+    "pos": "V",
+    "translation": "Beber",
+    "segments": [
+      "likschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "likschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_067",
+      "O_072"
+    ]
+  },
+  {
+    "id": "p_lloqa",
+    "surface": "lloqa",
+    "original": "Lloqa",
+    "lemma": "lloqa",
+    "family_id": "lloqa",
+    "pos": "N",
+    "translation": "Orilla",
+    "segments": [
+      "lloqa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "lloqa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_095"
+    ]
+  },
+  {
+    "id": "p_lowalowa",
+    "surface": "lowalowa",
+    "original": "Lowalowa",
+    "lemma": "lowalowa",
+    "family_id": "lowalowa",
+    "pos": "ADJ",
+    "translation": "Rápido",
+    "segments": [
+      "lowalowa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "lowalowa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_lowalowapini",
+    "surface": "lowalowapini",
+    "original": "Lowalowapini",
+    "lemma": "lowalowa",
+    "family_id": "lowalowa",
+    "pos": "ADJ",
+    "translation": "Muy rápido",
+    "segments": [
+      "lowalowa",
+      "pini"
+    ],
+    "suffixes": [
+      "pini"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "lowalowapini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_033",
+      "O_091"
+    ]
+  },
+  {
+    "id": "p_lulschay",
+    "surface": "lulschay",
+    "original": "Lulschay",
+    "lemma": "lulschay",
+    "family_id": "lulschay",
+    "pos": "V",
+    "translation": "Comer",
+    "segments": [
+      "lulschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "lulschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_077",
+      "O_088",
+      "O_124"
+    ]
+  },
+  {
+    "id": "p_lusi",
+    "surface": "lusi",
+    "original": "Lusi",
+    "lemma": "lusi",
+    "family_id": "lusi",
+    "pos": "N",
+    "translation": "Cántaro",
+    "segments": [
+      "lusi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "lusi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_073",
+      "O_079"
+    ]
+  },
+  {
+    "id": "p_makchi",
+    "surface": "makchi",
+    "original": "Makchi",
+    "lemma": "makchi",
+    "family_id": "makchi",
+    "pos": "N",
+    "translation": "Pantalón",
+    "segments": [
+      "makchi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "makchi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_045"
+    ]
+  },
+  {
+    "id": "p_malaqoy",
+    "surface": "malaqoy",
+    "original": "Malaqoy",
+    "lemma": "malaqoy",
+    "family_id": "malaqoy",
+    "pos": "N",
+    "translation": "Tía",
+    "segments": [
+      "malaqoy"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "malaqoy",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_038",
+      "O_070",
+      "O_107"
+    ]
+  },
+  {
+    "id": "p_maska",
+    "surface": "mäska",
+    "original": "Mäska",
+    "lemma": "mäska",
+    "family_id": "maska",
+    "pos": "N",
+    "translation": "Olla",
+    "segments": [
+      "mäska"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "maska",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_063"
+    ]
+  },
+  {
+    "id": "p_masota",
+    "surface": "masota",
+    "original": "Masota",
+    "lemma": "masota",
+    "family_id": "masota",
+    "pos": "N",
+    "translation": "Gato",
+    "segments": [
+      "masota"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "masota",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_082"
+    ]
+  },
+  {
+    "id": "p_maxsi",
+    "surface": "maxsi",
+    "original": "Maxsi",
+    "lemma": "maxsi",
+    "family_id": "maxsi",
+    "pos": "N",
+    "translation": "Zapato",
+    "segments": [
+      "maxsi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "maxsi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_maxsinaka",
+    "surface": "maxsinaka",
+    "original": "Maxsinaka",
+    "lemma": "maxsi",
+    "family_id": "maxsi",
+    "pos": "N",
+    "translation": "Zapatos",
+    "segments": [
+      "maxsi",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "maxsinaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_043"
+    ]
+  },
+  {
+    "id": "p_murchula",
+    "surface": "murchula",
+    "original": "Murchula",
+    "lemma": "murchula",
+    "family_id": "murchula",
+    "pos": "N",
+    "translation": "Burro",
+    "segments": [
+      "murchula"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "murchula",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_086"
+    ]
+  },
+  {
+    "id": "p_ni",
+    "surface": "nï",
+    "original": "Nï",
+    "lemma": "nï",
+    "family_id": "ni",
+    "pos": "PRON",
+    "translation": "Él o Ella",
+    "segments": [
+      "nï"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_007",
+      "O_024",
+      "O_037",
+      "O_049",
+      "O_065",
+      "O_067",
+      "O_072",
+      "O_083",
+      "O_087",
+      "O_124",
+      "O_125",
+      "O_126"
+    ]
+  },
+  {
+    "id": "p_ninaka",
+    "surface": "nïnaka",
+    "original": "Nïnaka",
+    "lemma": "nï",
+    "family_id": "ni",
+    "pos": "PRON",
+    "translation": "Ellos o Ellas",
+    "segments": [
+      "nï",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ninaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_023",
+      "O_104"
+    ]
+  },
+  {
+    "id": "p_nis",
+    "surface": "nis",
+    "original": "Nis",
+    "lemma": "nis",
+    "family_id": "nis",
+    "pos": "DETPOSS",
+    "translation": "Su (de él/ella)",
+    "segments": [
+      "nis"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "nis",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_026",
+      "O_030",
+      "O_040",
+      "O_041",
+      "O_044"
+    ]
+  },
+  {
+    "id": "p_nonschay",
+    "surface": "nonschay",
+    "original": "Nonschay",
+    "lemma": "nonschay",
+    "family_id": "nonschay",
+    "pos": "V",
+    "translation": "Escuchar",
+    "segments": [
+      "nonschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "nonschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_035",
+      "O_127"
+    ]
+  },
+  {
+    "id": "p_ochapara",
+    "surface": "ochapara",
+    "original": "Ochapara",
+    "lemma": "ochapara",
+    "family_id": "ochapara",
+    "pos": "N",
+    "translation": "Bote",
+    "segments": [
+      "ochapara"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ochapara",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_118"
+    ]
+  },
+  {
+    "id": "p_oqlaychay",
+    "surface": "oqlaychay",
+    "original": "Oqlaychay",
+    "lemma": "oqlaychay",
+    "family_id": "oqlaychay",
+    "pos": "V",
+    "translation": "Caminar",
+    "segments": [
+      "oqlaychay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "oqlaychay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_034",
+      "O_095"
+    ]
+  },
+  {
+    "id": "p_oqschay",
+    "surface": "oqschay",
+    "original": "Oqschay",
+    "lemma": "oqschay",
+    "family_id": "oqschay",
+    "pos": "V",
+    "translation": "Ir",
+    "segments": [
+      "oqschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "oqschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_021",
+      "O_023",
+      "O_104"
+    ]
+  },
+  {
+    "id": "p_pakschay",
+    "surface": "pakschay",
+    "original": "Pakschay",
+    "lemma": "pakschay",
+    "family_id": "pakschay",
+    "pos": "V",
+    "translation": "Crecer",
+    "segments": [
+      "pakschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pakschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_105",
+      "O_106"
+    ]
+  },
+  {
+    "id": "p_paku",
+    "surface": "päku",
+    "original": "Päku",
+    "lemma": "päku",
+    "family_id": "paku",
+    "pos": "N",
+    "translation": "Perro",
+    "segments": [
+      "päku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "paku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_pakunaka",
+    "surface": "päkunaka",
+    "original": "Päkunaka",
+    "lemma": "päku",
+    "family_id": "paku",
+    "pos": "N",
+    "translation": "Perros",
+    "segments": [
+      "päku",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pakunaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_081"
+    ]
+  },
+  {
+    "id": "p_palitak",
+    "surface": "palitak",
+    "original": "Palitak",
+    "lemma": "palitak",
+    "family_id": "palitak",
+    "pos": "N",
+    "translation": "Amigo",
+    "segments": [
+      "palitak"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "palitak",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_001",
+      "O_014"
+    ]
+  },
+  {
+    "id": "p_palitakchay",
+    "surface": "palitakchay",
+    "original": "Palitakchay",
+    "lemma": "palitak",
+    "family_id": "palitak",
+    "pos": "N",
+    "translation": "Es amigo",
+    "segments": [
+      "palitak",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "palitakchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_007",
+      "O_027"
+    ]
+  },
+  {
+    "id": "p_palitaknaka",
+    "surface": "palitaknaka",
+    "original": "Palitaknaka",
+    "lemma": "palitak",
+    "family_id": "palitak",
+    "pos": "N",
+    "translation": "Amigos",
+    "segments": [
+      "palitak",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "palitaknaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_022"
+    ]
+  },
+  {
+    "id": "p_papi",
+    "surface": "p'api",
+    "original": "Pʼapi",
+    "lemma": "p'api",
+    "family_id": "papi",
+    "pos": "N",
+    "translation": "Pescado tostado",
+    "segments": [
+      "p'api"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "papi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_124"
+    ]
+  },
+  {
+    "id": "p_papila",
+    "surface": "papila",
+    "original": "Papila",
+    "lemma": "papila",
+    "family_id": "papila",
+    "pos": "N",
+    "translation": "Papel",
+    "segments": [
+      "papila"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "papila",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_061"
+    ]
+  },
+  {
+    "id": "p_parentina",
+    "surface": "parentiña",
+    "original": "Parentiña",
+    "lemma": "parentiña",
+    "family_id": "parentina",
+    "pos": "N",
+    "translation": "Familia",
+    "segments": [
+      "parentiña"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "parentina",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_080"
+    ]
+  },
+  {
+    "id": "p_parina",
+    "surface": "parina",
+    "original": "Parina",
+    "lemma": "parina",
+    "family_id": "parina",
+    "pos": "N",
+    "translation": "Flamenco",
+    "segments": [
+      "parina"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "parina",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_095"
+    ]
+  },
+  {
+    "id": "p_paxpiku",
+    "surface": "paxpiku",
+    "original": "Paxpiku",
+    "lemma": "paxpiku",
+    "family_id": "paxpiku",
+    "pos": "NUM",
+    "translation": "Cuatro",
+    "segments": [
+      "paxpiku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "paxpiku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_057"
+    ]
+  },
+  {
+    "id": "p_pesaqa",
+    "surface": "p'esaqa",
+    "original": "Pʼesaqa",
+    "lemma": "p'esaqa",
+    "family_id": "pesaqa",
+    "pos": "N",
+    "translation": "Perdiz",
+    "segments": [
+      "p'esaqa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pesaqa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_peske",
+    "surface": "peske",
+    "original": "Peske",
+    "lemma": "peske",
+    "family_id": "peske",
+    "pos": "NUM",
+    "translation": "Dos",
+    "segments": [
+      "peske"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "peske",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_043",
+      "O_135"
+    ]
+  },
+  {
+    "id": "p_phawschay",
+    "surface": "phawschay",
+    "original": "Phawschay",
+    "lemma": "phawschay",
+    "family_id": "phawschay",
+    "pos": "V",
+    "translation": "Fabricar",
+    "segments": [
+      "phawschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "phawschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_119"
+    ]
+  },
+  {
+    "id": "p_phesqona",
+    "surface": "phesqoña",
+    "original": "Phesqoña",
+    "lemma": "phesqoña",
+    "family_id": "phesqona",
+    "pos": "N",
+    "translation": "Lagarto",
+    "segments": [
+      "phesqoña"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "phesqona",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_091"
+    ]
+  },
+  {
+    "id": "p_pheta",
+    "surface": "pheta",
+    "original": "Pheta",
+    "lemma": "pheta",
+    "family_id": "pheta",
+    "pos": "N",
+    "translation": "Ventana",
+    "segments": [
+      "pheta"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pheta",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_051",
+      "O_133"
+    ]
+  },
+  {
+    "id": "p_phetanaka",
+    "surface": "phetanaka",
+    "original": "Phetanaka",
+    "lemma": "pheta",
+    "family_id": "pheta",
+    "pos": "N",
+    "translation": "Ventanas",
+    "segments": [
+      "pheta",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "phetanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_048",
+      "O_135"
+    ]
+  },
+  {
+    "id": "p_phiki",
+    "surface": "phiki",
+    "original": "Phiki",
+    "lemma": "phiki",
+    "family_id": "phiki",
+    "pos": "N",
+    "translation": "Paja brava",
+    "segments": [
+      "phiki"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "phiki",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_105"
+    ]
+  },
+  {
+    "id": "p_pichuchay",
+    "surface": "pichuchay",
+    "original": "Pichuchay",
+    "lemma": "pichuchay",
+    "family_id": "pichuchay",
+    "pos": "V",
+    "translation": "Venir",
+    "segments": [
+      "pichuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pichuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_015",
+      "O_017",
+      "O_018",
+      "O_022",
+      "O_116"
+    ]
+  },
+  {
+    "id": "p_pitkchay",
+    "surface": "p'itkchay",
+    "original": "Pʼitkchay",
+    "lemma": "p'itkchay",
+    "family_id": "pitkchay",
+    "pos": "V",
+    "translation": "Tejer",
+    "segments": [
+      "p'itkchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pitkchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_128"
+    ]
+  },
+  {
+    "id": "p_piwachay",
+    "surface": "piwachay",
+    "original": "Piwachay",
+    "lemma": "piwachay",
+    "family_id": "piwachay",
+    "pos": "V",
+    "translation": "Limpiar",
+    "segments": [
+      "piwachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "piwachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_053",
+      "O_055",
+      "O_132"
+    ]
+  },
+  {
+    "id": "p_poa",
+    "surface": "p'oa",
+    "original": "Pʼoa",
+    "lemma": "p'oa",
+    "family_id": "poa",
+    "pos": "N",
+    "translation": "Tambor",
+    "segments": [
+      "p'oa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "poa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_127"
+    ]
+  },
+  {
+    "id": "p_potschay",
+    "surface": "potschay",
+    "original": "Potschay",
+    "lemma": "potschay",
+    "family_id": "potschay",
+    "pos": "V",
+    "translation": "Cortar",
+    "segments": [
+      "potschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "potschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_066"
+    ]
+  },
+  {
+    "id": "p_potsi",
+    "surface": "potsi",
+    "original": "Potsi",
+    "lemma": "potsi",
+    "family_id": "potsi",
+    "pos": "N",
+    "translation": "Cuchillo",
+    "segments": [
+      "potsi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "potsi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_066"
+    ]
+  },
+  {
+    "id": "p_purchay",
+    "surface": "purchay",
+    "original": "Purchay",
+    "lemma": "purchay",
+    "family_id": "purchay",
+    "pos": "V",
+    "translation": "Poder",
+    "segments": [
+      "purchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "purchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_036",
+      "O_051"
+    ]
+  },
+  {
+    "id": "p_puschay",
+    "surface": "p'uschay",
+    "original": "Pʼuschay",
+    "lemma": "p'uschay",
+    "family_id": "puschay",
+    "pos": "V",
+    "translation": "Está enfermo/a",
+    "segments": [
+      "p'uschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "puschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_040"
+    ]
+  },
+  {
+    "id": "p_pusu",
+    "surface": "p'usu",
+    "original": "Pʼusu",
+    "lemma": "p'usu",
+    "family_id": "pusu",
+    "pos": "ADJ",
+    "translation": "Hinchado",
+    "segments": [
+      "p'usu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "pusu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qachina",
+    "surface": "qachina",
+    "original": "Qachina",
+    "lemma": "qachina",
+    "family_id": "qachina",
+    "pos": "N",
+    "translation": "Vela de la balsa",
+    "segments": [
+      "qachina"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qachina",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_119"
+    ]
+  },
+  {
+    "id": "p_qala",
+    "surface": "qala",
+    "original": "Qala",
+    "lemma": "qala",
+    "family_id": "qala",
+    "pos": "N",
+    "translation": "Gaviota",
+    "segments": [
+      "qala"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qala",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_096"
+    ]
+  },
+  {
+    "id": "p_qalluchay",
+    "surface": "q'alluchay",
+    "original": "Qʼalluchay",
+    "lemma": "q'alluchay",
+    "family_id": "qalluchay",
+    "pos": "V",
+    "translation": "Pagar",
+    "segments": [
+      "q'alluchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qalluchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qalpu",
+    "surface": "qälpu",
+    "original": "Qälpu",
+    "lemma": "qälpu",
+    "family_id": "qalpu",
+    "pos": "N",
+    "translation": "Tikitiki",
+    "segments": [
+      "qälpu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qalpu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qamirizoni",
+    "surface": "q'ämirizoñi",
+    "original": "Qʼämirizoñi",
+    "lemma": "q'ämirizoñi",
+    "family_id": "qamirizoni",
+    "pos": "N",
+    "translation": "Persona adinerada",
+    "segments": [
+      "q'ämirizoñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qamirizoni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qanawi",
+    "surface": "qañawi",
+    "original": "Qañawi",
+    "lemma": "qañawi",
+    "family_id": "qanawi",
+    "pos": "N",
+    "translation": "Cañawa",
+    "segments": [
+      "qañawi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qanawi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_107"
+    ]
+  },
+  {
+    "id": "p_qawi",
+    "surface": "qawi",
+    "original": "Qawi",
+    "lemma": "qawi",
+    "family_id": "qawi",
+    "pos": "N",
+    "translation": "Cóndor",
+    "segments": [
+      "qawi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qawi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_129"
+    ]
+  },
+  {
+    "id": "p_qecha",
+    "surface": "q'echa",
+    "original": "Qʼecha",
+    "lemma": "q'echa",
+    "family_id": "qecha",
+    "pos": "N",
+    "translation": "Oro",
+    "segments": [
+      "q'echa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qecha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qeja",
+    "surface": "q'eja",
+    "original": "Qʼeja",
+    "lemma": "q'eja",
+    "family_id": "qeja",
+    "pos": "N",
+    "translation": "Relampago",
+    "segments": [
+      "q'eja"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qeja",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qelaqela",
+    "surface": "q'elaq'ela",
+    "original": "Qʼelaqʼela",
+    "lemma": "q'elaq'ela",
+    "family_id": "qelaqela",
+    "pos": "N",
+    "translation": "Hierba para el parto",
+    "segments": [
+      "q'elaq'ela"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qelaqela",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_126"
+    ]
+  },
+  {
+    "id": "p_qeri",
+    "surface": "qeri",
+    "original": "Qeri",
+    "lemma": "qeri",
+    "family_id": "qeri",
+    "pos": "N",
+    "translation": "Pez",
+    "segments": [
+      "qeri"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qeri",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_099"
+    ]
+  },
+  {
+    "id": "p_qerjina",
+    "surface": "qerjiña",
+    "original": "Qerjiña",
+    "lemma": "qerjiña",
+    "family_id": "qerjina",
+    "pos": "N",
+    "translation": "Wallake",
+    "segments": [
+      "qerjiña"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qerjina",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_102"
+    ]
+  },
+  {
+    "id": "p_qeru",
+    "surface": "qeru",
+    "original": "Qeru",
+    "lemma": "qeru",
+    "family_id": "qeru",
+    "pos": "N",
+    "translation": "Vaso",
+    "segments": [
+      "qeru"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qeru",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_072"
+    ]
+  },
+  {
+    "id": "p_qerwakha",
+    "surface": "qerwakha",
+    "original": "Qerwakha",
+    "lemma": "qerwakha",
+    "family_id": "qerwakha",
+    "pos": "N",
+    "translation": "Toro",
+    "segments": [
+      "qerwakha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qerwakha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_088"
+    ]
+  },
+  {
+    "id": "p_qeschhala",
+    "surface": "qeschhäla",
+    "original": "Qeschhäla",
+    "lemma": "qeschhäla",
+    "family_id": "qeschhala",
+    "pos": "N",
+    "translation": "Sembradío",
+    "segments": [
+      "qeschhäla"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qeschhala",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_104"
+    ]
+  },
+  {
+    "id": "p_qetsi",
+    "surface": "qetsi",
+    "original": "Qetsi",
+    "lemma": "qetsi",
+    "family_id": "qetsi",
+    "pos": "N",
+    "translation": "Zorro",
+    "segments": [
+      "qetsi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qetsi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_092"
+    ]
+  },
+  {
+    "id": "p_qhalu",
+    "surface": "qhalu",
+    "original": "Qhalu",
+    "lemma": "qhalu",
+    "family_id": "qhalu",
+    "pos": "NUM",
+    "translation": "Diez",
+    "segments": [
+      "qhalu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhalu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_101"
+    ]
+  },
+  {
+    "id": "p_qhasi",
+    "surface": "qhasi",
+    "original": "Qhasi",
+    "lemma": "qhasi",
+    "family_id": "qhasi",
+    "pos": "N",
+    "translation": "Agua",
+    "segments": [
+      "qhasi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhasi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_079"
+    ]
+  },
+  {
+    "id": "p_qhasumpek",
+    "surface": "qhasumpek",
+    "original": "Qhasumpek",
+    "lemma": "qhasumpek",
+    "family_id": "qhasumpek",
+    "pos": "PRONINT",
+    "translation": "¿Cuánto?",
+    "segments": [
+      "qhasumpek"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhasumpek",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qhathu",
+    "surface": "qhathu",
+    "original": "Qhathu",
+    "lemma": "qhathu",
+    "family_id": "qhathu",
+    "pos": "N",
+    "translation": "Mercado",
+    "segments": [
+      "qhathu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhathu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_100"
+    ]
+  },
+  {
+    "id": "p_qhawschay",
+    "surface": "qhawschay",
+    "original": "Qhawschay",
+    "lemma": "qhawschay",
+    "family_id": "qhawschay",
+    "pos": "V",
+    "translation": "Comprar",
+    "segments": [
+      "qhawschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhawschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_028",
+      "O_043",
+      "O_064"
+    ]
+  },
+  {
+    "id": "p_qhorskchay",
+    "surface": "qhorskchay",
+    "original": "Qhorskchay",
+    "lemma": "qhorskchay",
+    "family_id": "qhorskchay",
+    "pos": "V",
+    "translation": "Buscar",
+    "segments": [
+      "qhorskchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhorskchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_097",
+      "O_126"
+    ]
+  },
+  {
+    "id": "p_qhoya",
+    "surface": "qhoya",
+    "original": "Qhoya",
+    "lemma": "qhoya",
+    "family_id": "qhoya",
+    "pos": "N",
+    "translation": "Casa",
+    "segments": [
+      "qhoya"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhoya",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_046",
+      "O_048",
+      "O_121",
+      "O_135"
+    ]
+  },
+  {
+    "id": "p_qhoychay",
+    "surface": "qhoychay",
+    "original": "Qhoychay",
+    "lemma": "qhoychay",
+    "family_id": "qhoychay",
+    "pos": "V",
+    "translation": "Construir",
+    "segments": [
+      "qhoychay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qhoychay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_121"
+    ]
+  },
+  {
+    "id": "p_qola",
+    "surface": "qola",
+    "original": "Qola",
+    "lemma": "qola",
+    "family_id": "qola",
+    "pos": "N",
+    "translation": "Estrella",
+    "segments": [
+      "qola"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qola",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qolanakapini",
+    "surface": "qolanakapini",
+    "original": "Qolanakapini",
+    "lemma": "qola",
+    "family_id": "qola",
+    "pos": "N",
+    "translation": "Muchas estrellas",
+    "segments": [
+      "qola",
+      "naka",
+      "pini"
+    ],
+    "suffixes": [
+      "naka",
+      "pini"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qolanakapini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_111"
+    ]
+  },
+  {
+    "id": "p_qonqo",
+    "surface": "qonqo",
+    "original": "Qonqo",
+    "lemma": "qonqo",
+    "family_id": "qonqo",
+    "pos": "NUM",
+    "translation": "Ocho",
+    "segments": [
+      "qonqo"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qonqo",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_083",
+      "O_090"
+    ]
+  },
+  {
+    "id": "p_qoq",
+    "surface": "qoq",
+    "original": "Qoq",
+    "lemma": "qoq",
+    "family_id": "qoq",
+    "pos": "N",
+    "translation": "Árbol",
+    "segments": [
+      "qoq"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qoq",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_qoqnaka",
+    "surface": "qoqnaka",
+    "original": "Qoqnaka",
+    "lemma": "qoq",
+    "family_id": "qoq",
+    "pos": "N",
+    "translation": "Árboles",
+    "segments": [
+      "qoq",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qoqnaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_108"
+    ]
+  },
+  {
+    "id": "p_qotni",
+    "surface": "qotñi",
+    "original": "Qotñi",
+    "lemma": "qotñi",
+    "family_id": "qotni",
+    "pos": "ADJ",
+    "translation": "Caliente",
+    "segments": [
+      "qotñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "qotni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_078"
+    ]
+  },
+  {
+    "id": "p_salskama",
+    "surface": "salskama",
+    "original": "Salskama",
+    "lemma": "salskama",
+    "family_id": "salskama",
+    "pos": "EXPR",
+    "translation": "Hasta luego",
+    "segments": [
+      "salskama"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "salskama",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_019",
+      "O_131"
+    ]
+  },
+  {
+    "id": "p_sana",
+    "surface": "säna",
+    "original": "Säna",
+    "lemma": "säna",
+    "family_id": "sana",
+    "pos": "N",
+    "translation": "Puerta",
+    "segments": [
+      "säna"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_047",
+      "O_052"
+    ]
+  },
+  {
+    "id": "p_sanqo",
+    "surface": "sanqo",
+    "original": "Sanqo",
+    "lemma": "sanqo",
+    "family_id": "sanqo",
+    "pos": "NUM",
+    "translation": "Nueve",
+    "segments": [
+      "sanqo"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sanqo",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_084",
+      "O_087"
+    ]
+  },
+  {
+    "id": "p_satschay",
+    "surface": "satschay",
+    "original": "Satschay",
+    "lemma": "satschay",
+    "family_id": "satschay",
+    "pos": "V",
+    "translation": "Correr",
+    "segments": [
+      "satschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "satschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_033",
+      "O_091"
+    ]
+  },
+  {
+    "id": "p_saxoni",
+    "surface": "saxoni",
+    "original": "Saxoni",
+    "lemma": "saxoni",
+    "family_id": "saxoni",
+    "pos": "ADJ",
+    "translation": "Azul",
+    "segments": [
+      "saxoni"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "saxoni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_saxonichay",
+    "surface": "saxonichay",
+    "original": "Saxonichay",
+    "lemma": "saxoni",
+    "family_id": "saxoni",
+    "pos": "ADJ",
+    "translation": "Es/está azul",
+    "segments": [
+      "saxoni",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "saxonichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_062"
+    ]
+  },
+  {
+    "id": "p_selschay",
+    "surface": "selschay",
+    "original": "Selschay",
+    "lemma": "selschay",
+    "family_id": "selschay",
+    "pos": "V",
+    "translation": "Existir o Hay",
+    "segments": [
+      "selschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "selschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_057",
+      "O_068",
+      "O_108",
+      "O_113"
+    ]
+  },
+  {
+    "id": "p_serx",
+    "surface": "serx",
+    "original": "Serx",
+    "lemma": "serx",
+    "family_id": "serx",
+    "pos": "ADJ",
+    "translation": "Viejo",
+    "segments": [
+      "serx"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "serx",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_serxchay",
+    "surface": "serxchay",
+    "original": "Serxchay",
+    "lemma": "serx",
+    "family_id": "serx",
+    "pos": "ADJ",
+    "translation": "Es/está viejo",
+    "segments": [
+      "serx",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "serxchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_074"
+    ]
+  },
+  {
+    "id": "p_seschay",
+    "surface": "seschay",
+    "original": "Seschay",
+    "lemma": "seschay",
+    "family_id": "seschay",
+    "pos": "N",
+    "translation": "Tarde",
+    "segments": [
+      "seschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "seschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_003"
+    ]
+  },
+  {
+    "id": "p_shachkuchay",
+    "surface": "shachkuchay",
+    "original": "Shachkuchay",
+    "lemma": "shachkuchay",
+    "family_id": "shachkuchay",
+    "pos": "N",
+    "translation": "Terreno",
+    "segments": [
+      "shachkuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "shachkuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_shatachay",
+    "surface": "shatachay",
+    "original": "Shatachay",
+    "lemma": "shatachay",
+    "family_id": "shatachay",
+    "pos": "V",
+    "translation": "Escapar",
+    "segments": [
+      "shatachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "shatachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_shaxara",
+    "surface": "shaxara",
+    "original": "Shaxara",
+    "lemma": "shaxara",
+    "family_id": "shaxara",
+    "pos": "N",
+    "translation": "Víbora",
+    "segments": [
+      "shaxara"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "shaxara",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_130"
+    ]
+  },
+  {
+    "id": "p_shikacha",
+    "surface": "shikacha",
+    "original": "Shikacha",
+    "lemma": "shikacha",
+    "family_id": "shikacha",
+    "pos": "N",
+    "translation": "Sapo",
+    "segments": [
+      "shikacha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "shikacha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_shila",
+    "surface": "shila",
+    "original": "Shila",
+    "lemma": "shila",
+    "family_id": "shila",
+    "pos": "ADV",
+    "translation": "Sí",
+    "segments": [
+      "shila"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "shila",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_012",
+      "O_035"
+    ]
+  },
+  {
+    "id": "p_shuwani",
+    "surface": "shuwani",
+    "original": "Shuwani",
+    "lemma": "shuwani",
+    "family_id": "shuwani",
+    "pos": "N",
+    "translation": "Niñez",
+    "segments": [
+      "shuwani"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "shuwani",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_siluchay",
+    "surface": "siluchay",
+    "original": "Siluchay",
+    "lemma": "siluchay",
+    "family_id": "siluchay",
+    "pos": "N",
+    "translation": "Residir o Vivir",
+    "segments": [
+      "siluchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "siluchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_sini",
+    "surface": "siñi",
+    "original": "Siñi",
+    "lemma": "siñi",
+    "family_id": "sini",
+    "pos": "N",
+    "translation": "Huevo",
+    "segments": [
+      "siñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sini",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_sininaka",
+    "surface": "siñinaka",
+    "original": "Siñinaka",
+    "lemma": "siñi",
+    "family_id": "sini",
+    "pos": "N",
+    "translation": "Huevos",
+    "segments": [
+      "siñi",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sininaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_068",
+      "O_097"
+    ]
+  },
+  {
+    "id": "p_siqetschay",
+    "surface": "siqetschay",
+    "original": "Siqetschay",
+    "lemma": "siqetschay",
+    "family_id": "siqetschay",
+    "pos": "V",
+    "translation": "Escribir",
+    "segments": [
+      "siqetschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "siqetschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_061"
+    ]
+  },
+  {
+    "id": "p_sischay",
+    "surface": "sischay",
+    "original": "Sischay",
+    "lemma": "sischay",
+    "family_id": "sischay",
+    "pos": "V",
+    "translation": "Saber",
+    "segments": [
+      "sischay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sischay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_sisni",
+    "surface": "sisñi",
+    "original": "Sisñi",
+    "lemma": "sisñi",
+    "family_id": "sisni",
+    "pos": "N",
+    "translation": "Curandero",
+    "segments": [
+      "sisñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sisni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_sisnichay",
+    "surface": "sisñichay",
+    "original": "Sisñichay",
+    "lemma": "sisñi",
+    "family_id": "sisni",
+    "pos": "N",
+    "translation": "Es/está curandero",
+    "segments": [
+      "sisñi",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sisnichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_041"
+    ]
+  },
+  {
+    "id": "p_sisuchay",
+    "surface": "sisuchay",
+    "original": "Sisuchay",
+    "lemma": "sisuchay",
+    "family_id": "sisuchay",
+    "pos": "V",
+    "translation": "Aprender",
+    "segments": [
+      "sisuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sisuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_sitsni",
+    "surface": "sitsñi",
+    "original": "Sitsñi",
+    "lemma": "sitsñi",
+    "family_id": "sitsni",
+    "pos": "N",
+    "translation": "Profesor",
+    "segments": [
+      "sitsñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sitsni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_003",
+      "O_035",
+      "O_061"
+    ]
+  },
+  {
+    "id": "p_sitsninaka",
+    "surface": "sitsñinaka",
+    "original": "Sitsñinaka",
+    "lemma": "sitsñi",
+    "family_id": "sitsni",
+    "pos": "N",
+    "translation": "Profesores",
+    "segments": [
+      "sitsñi",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sitsninaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_131"
+    ]
+  },
+  {
+    "id": "p_sitsninakachay",
+    "surface": "sitsñinakachay",
+    "original": "Sitsñinakachay",
+    "lemma": "sitsñi",
+    "family_id": "sitsni",
+    "pos": "N",
+    "translation": "Somos profesores",
+    "segments": [
+      "sitsñi",
+      "naka",
+      "chay"
+    ],
+    "suffixes": [
+      "naka",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sitsninakachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_020"
+    ]
+  },
+  {
+    "id": "p_sitsnizoni",
+    "surface": "sitsñizoñi",
+    "original": "Sitsñizoñi",
+    "lemma": "sitsñizoñi",
+    "family_id": "sitsnizoni",
+    "pos": "N",
+    "translation": "Sabio",
+    "segments": [
+      "sitsñizoñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sitsnizoni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_sitsnizonipinichay",
+    "surface": "sitsñizoñipinichay",
+    "original": "Sitsñizoñipinichay",
+    "lemma": "sitsñizoñi",
+    "family_id": "sitsnizoni",
+    "pos": "N",
+    "translation": "Es muy sabio",
+    "segments": [
+      "sitsñizoñi",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "sitsnizonipinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_039"
+    ]
+  },
+  {
+    "id": "p_soqna",
+    "surface": "soqna",
+    "original": "Soqna",
+    "lemma": "soqna",
+    "family_id": "soqna",
+    "pos": "N",
+    "translation": "Pato",
+    "segments": [
+      "soqna"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "soqna",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_097"
+    ]
+  },
+  {
+    "id": "p_suwa",
+    "surface": "suwa",
+    "original": "Suwa",
+    "lemma": "suwa",
+    "family_id": "suwa",
+    "pos": "N",
+    "translation": "Niño",
+    "segments": [
+      "suwa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "suwa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_067",
+      "O_072"
+    ]
+  },
+  {
+    "id": "p_taki",
+    "surface": "taki",
+    "original": "Taki",
+    "lemma": "taki",
+    "family_id": "taki",
+    "pos": "DET",
+    "translation": "Ese o Esa",
+    "segments": [
+      "taki"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "taki",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_042",
+      "O_062",
+      "O_063",
+      "O_073",
+      "O_081",
+      "O_088",
+      "O_091",
+      "O_092",
+      "O_096",
+      "O_099"
+    ]
+  },
+  {
+    "id": "p_talla",
+    "surface": "t'alla",
+    "original": "Tʼalla",
+    "lemma": "t'alla",
+    "family_id": "talla",
+    "pos": "N",
+    "translation": "Bañador",
+    "segments": [
+      "t'alla"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "talla",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_tanachay",
+    "surface": "tanachay",
+    "original": "Tanachay",
+    "lemma": "tanachay",
+    "family_id": "tanachay",
+    "pos": "V",
+    "translation": "Atrapar",
+    "segments": [
+      "tanachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tanachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_098"
+    ]
+  },
+  {
+    "id": "p_tanschay",
+    "surface": "tanschay",
+    "original": "Tanschay",
+    "lemma": "tanschay",
+    "family_id": "tanschay",
+    "pos": "V",
+    "translation": "Pescar",
+    "segments": [
+      "tanschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tanschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_101",
+      "O_103"
+    ]
+  },
+  {
+    "id": "p_tapa",
+    "surface": "tapa",
+    "original": "Tapa",
+    "lemma": "tapa",
+    "family_id": "tapa",
+    "pos": "N",
+    "translation": "Ají",
+    "segments": [
+      "tapa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tapa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_077"
+    ]
+  },
+  {
+    "id": "p_tapha",
+    "surface": "t'apha",
+    "original": "Tʼapha",
+    "lemma": "t'apha",
+    "family_id": "tapha",
+    "pos": "ADJ",
+    "translation": "Desabrido",
+    "segments": [
+      "t'apha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tapha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_taxacharku",
+    "surface": "taxacharku",
+    "original": "Taxacharku",
+    "lemma": "taxacharku",
+    "family_id": "taxacharku",
+    "pos": "N",
+    "translation": "Oeste",
+    "segments": [
+      "taxacharku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "taxacharku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_115"
+    ]
+  },
+  {
+    "id": "p_taxchuku",
+    "surface": "taxchuku",
+    "original": "Taxchuku",
+    "lemma": "taxchuku",
+    "family_id": "taxchuku",
+    "pos": "NUM",
+    "translation": "Seis",
+    "segments": [
+      "taxchuku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "taxchuku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_060",
+      "O_065"
+    ]
+  },
+  {
+    "id": "p_taxchukyes",
+    "surface": "taxchukyës",
+    "original": "Taxchukyës",
+    "lemma": "taxchukyës",
+    "family_id": "taxchukyes",
+    "pos": "N",
+    "translation": "Semestre",
+    "segments": [
+      "taxchukyës"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "taxchukyes",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_taxsnakichay",
+    "surface": "taxsnakichay",
+    "original": "Taxsnakichay",
+    "lemma": "taxsnakichay",
+    "family_id": "taxsnakichay",
+    "pos": "V",
+    "translation": "Cocinar",
+    "segments": [
+      "taxsnakichay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "taxsnakichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_050",
+      "O_080",
+      "O_102"
+    ]
+  },
+  {
+    "id": "p_taxsnuku",
+    "surface": "taxsnuku",
+    "original": "Taxsnuku",
+    "lemma": "taxsnuku",
+    "family_id": "taxsnuku",
+    "pos": "NUM",
+    "translation": "Cinco",
+    "segments": [
+      "taxsnuku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "taxsnuku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_059"
+    ]
+  },
+  {
+    "id": "p_tekschay",
+    "surface": "tekschay",
+    "original": "Tekschay",
+    "lemma": "tekschay",
+    "family_id": "tekschay",
+    "pos": "V",
+    "translation": "Salir (astros)",
+    "segments": [
+      "tekschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tekschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_114"
+    ]
+  },
+  {
+    "id": "p_tesha",
+    "surface": "tësha",
+    "original": "Tësha",
+    "lemma": "tësha",
+    "family_id": "tesha",
+    "pos": "N",
+    "translation": "Luz",
+    "segments": [
+      "tësha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tesha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_teskana",
+    "surface": "teskana",
+    "original": "Teskana",
+    "lemma": "teskana",
+    "family_id": "teskana",
+    "pos": "N",
+    "translation": "Goma",
+    "segments": [
+      "teskana"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "teskana",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_thaxchay",
+    "surface": "thaxchay",
+    "original": "Thaxchay",
+    "lemma": "thaxchay",
+    "family_id": "thaxchay",
+    "pos": "V",
+    "translation": "Dormir",
+    "segments": [
+      "thaxchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "thaxchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_049"
+    ]
+  },
+  {
+    "id": "p_thikuchay",
+    "surface": "thikuchay",
+    "original": "Thikuchay",
+    "lemma": "thikuchay",
+    "family_id": "thikuchay",
+    "pos": "N",
+    "translation": "Caerse",
+    "segments": [
+      "thikuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "thikuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_115"
+    ]
+  },
+  {
+    "id": "p_thosa",
+    "surface": "thosa",
+    "original": "Thosa",
+    "lemma": "thosa",
+    "family_id": "thosa",
+    "pos": "N",
+    "translation": "Balsa",
+    "segments": [
+      "thosa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "thosa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_119"
+    ]
+  },
+  {
+    "id": "p_thu",
+    "surface": "thü",
+    "original": "Thü",
+    "lemma": "thü",
+    "family_id": "thu",
+    "pos": "N",
+    "translation": "Nombre",
+    "segments": [
+      "thü"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "thu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_005",
+      "O_006"
+    ]
+  },
+  {
+    "id": "p_thuni",
+    "surface": "thuñi",
+    "original": "Thuñi",
+    "lemma": "thuñi",
+    "family_id": "thuni",
+    "pos": "N",
+    "translation": "Sol",
+    "segments": [
+      "thuñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "thuni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_003",
+      "O_109",
+      "O_114",
+      "O_115"
+    ]
+  },
+  {
+    "id": "p_ti",
+    "surface": "tï",
+    "original": "Tï",
+    "lemma": "tï",
+    "family_id": "ti",
+    "pos": "PRON",
+    "translation": "Ese o Aquí (Para lugar)",
+    "segments": [
+      "tï"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ti",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_002",
+      "O_016",
+      "O_017",
+      "O_018"
+    ]
+  },
+  {
+    "id": "p_tichu",
+    "surface": "tichu",
+    "original": "Tichu",
+    "lemma": "tichu",
+    "family_id": "tichu",
+    "pos": "DET",
+    "translation": "Este",
+    "segments": [
+      "tichu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tichu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_074"
+    ]
+  },
+  {
+    "id": "p_tijutiju",
+    "surface": "t'ijut'iju",
+    "original": "Tʼijutʼiju",
+    "lemma": "t'ijut'iju",
+    "family_id": "tijutiju",
+    "pos": "N",
+    "translation": "Saltamontes",
+    "segments": [
+      "t'ijut'iju"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tijutiju",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_tiku",
+    "surface": "tiku",
+    "original": "Tiku",
+    "lemma": "tiku",
+    "family_id": "tiku",
+    "pos": "N",
+    "translation": "Cielo",
+    "segments": [
+      "tiku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tiku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_113"
+    ]
+  },
+  {
+    "id": "p_tila",
+    "surface": "tila",
+    "original": "Tila",
+    "lemma": "tila",
+    "family_id": "tila",
+    "pos": "DET",
+    "translation": "Esta",
+    "segments": [
+      "tila"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tila",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_049",
+      "O_056"
+    ]
+  },
+  {
+    "id": "p_titomxe",
+    "surface": "tïtomxe",
+    "original": "Tïtomxe",
+    "lemma": "tïtomxe",
+    "family_id": "titomxe",
+    "pos": "N",
+    "translation": "Hoy día",
+    "segments": [
+      "tïtomxe"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "titomxe",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_112"
+    ]
+  },
+  {
+    "id": "p_tololay",
+    "surface": "tololay",
+    "original": "Tololay",
+    "lemma": "tololay",
+    "family_id": "tololay",
+    "pos": "N",
+    "translation": "Tío",
+    "segments": [
+      "tololay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tololay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_041"
+    ]
+  },
+  {
+    "id": "p_tuchay",
+    "surface": "tuchay",
+    "original": "Tuchay",
+    "lemma": "tuchay",
+    "family_id": "tuchay",
+    "pos": "V",
+    "translation": "Vender",
+    "segments": [
+      "tuchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_070",
+      "O_078",
+      "O_089",
+      "O_100"
+    ]
+  },
+  {
+    "id": "p_tuki",
+    "surface": "tüki",
+    "original": "Tüki",
+    "lemma": "tüki",
+    "family_id": "tuki",
+    "pos": "N",
+    "translation": "Asado",
+    "segments": [
+      "tüki"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tuki",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_tuku",
+    "surface": "t'uku",
+    "original": "Tʼuku",
+    "lemma": "t'uku",
+    "family_id": "tuku",
+    "pos": "N",
+    "translation": "Hambre",
+    "segments": [
+      "t'uku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tuku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_tuncharku",
+    "surface": "tuncharku",
+    "original": "Tuncharku",
+    "lemma": "tuncharku",
+    "family_id": "tuncharku",
+    "pos": "PRON",
+    "translation": "Este",
+    "segments": [
+      "tuncharku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tuncharku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_114"
+    ]
+  },
+  {
+    "id": "p_tupsincha",
+    "surface": "t'upsincha",
+    "original": "Tʼupsincha",
+    "lemma": "t'upsincha",
+    "family_id": "tupsincha",
+    "pos": "N",
+    "translation": "Tapa de faro",
+    "segments": [
+      "t'upsincha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tupsincha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_tuqschay",
+    "surface": "t'uqschay",
+    "original": "Tʼuqschay",
+    "lemma": "t'uqschay",
+    "family_id": "tuqschay",
+    "pos": "V",
+    "translation": "Guardar",
+    "segments": [
+      "t'uqschay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tuqschay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_122"
+    ]
+  },
+  {
+    "id": "p_tusi",
+    "surface": "tüsi",
+    "original": "Tüsi",
+    "lemma": "tüsi",
+    "family_id": "tusi",
+    "pos": "N",
+    "translation": "Corazon",
+    "segments": [
+      "tüsi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tusi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_tutu",
+    "surface": "t'utu",
+    "original": "Tʼutu",
+    "lemma": "t'utu",
+    "family_id": "tutu",
+    "pos": "N",
+    "translation": "Cebada",
+    "segments": [
+      "t'utu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tutu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_125"
+    ]
+  },
+  {
+    "id": "p_tuwqo",
+    "surface": "tüwqo",
+    "original": "Tüwqo",
+    "lemma": "tüwqo",
+    "family_id": "tuwqo",
+    "pos": "NUM",
+    "translation": "Siete",
+    "segments": [
+      "tüwqo"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "tuwqo",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_064",
+      "O_068"
+    ]
+  },
+  {
+    "id": "p_uchpu",
+    "surface": "uchpü",
+    "original": "Uchpü",
+    "lemma": "uchpü",
+    "family_id": "uchpu",
+    "pos": "N",
+    "translation": "Nervio",
+    "segments": [
+      "uchpü"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uchpu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_uchs",
+    "surface": "uchs",
+    "original": "Uchs",
+    "lemma": "uchs",
+    "family_id": "uchs",
+    "pos": "ADJ",
+    "translation": "Pequeño",
+    "segments": [
+      "uchs"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uchs",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_085",
+      "O_086"
+    ]
+  },
+  {
+    "id": "p_uchspinichay",
+    "surface": "uchspinichay",
+    "original": "Uchspinichay",
+    "lemma": "uchs",
+    "family_id": "uchs",
+    "pos": "ADJ",
+    "translation": "Es muy pequeño",
+    "segments": [
+      "uchs",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uchspinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_030",
+      "O_099"
+    ]
+  },
+  {
+    "id": "p_uchumik",
+    "surface": "uchumik",
+    "original": "Uchumik",
+    "lemma": "uchumik",
+    "family_id": "uchumik",
+    "pos": "PRON",
+    "translation": "Nosotros (excluyente)",
+    "segments": [
+      "uchumik"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uchumik",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_020",
+      "O_071"
+    ]
+  },
+  {
+    "id": "p_uchums",
+    "surface": "uchums",
+    "original": "Uchums",
+    "lemma": "uchums",
+    "family_id": "uchums",
+    "pos": "DETPOSS",
+    "translation": "Nuestro (Exclusivo)",
+    "segments": [
+      "uchums"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uchums",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_039"
+    ]
+  },
+  {
+    "id": "p_ulanchay",
+    "surface": "ulanchay",
+    "original": "Ulanchay",
+    "lemma": "ulanchay",
+    "family_id": "ulanchay",
+    "pos": "V",
+    "translation": "Salir",
+    "segments": [
+      "ulanchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "ulanchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_092"
+    ]
+  },
+  {
+    "id": "p_uni",
+    "surface": "uñi",
+    "original": "Uñi",
+    "lemma": "uñi",
+    "family_id": "uni",
+    "pos": "N",
+    "translation": "Conejo",
+    "segments": [
+      "uñi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uni",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_uninaka",
+    "surface": "uñinaka",
+    "original": "Uñinaka",
+    "lemma": "uñi",
+    "family_id": "uni",
+    "pos": "N",
+    "translation": "Conejos",
+    "segments": [
+      "uñi",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uninaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_084"
+    ]
+  },
+  {
+    "id": "p_untu",
+    "surface": "untu",
+    "original": "Untu",
+    "lemma": "untu",
+    "family_id": "untu",
+    "pos": "ADJ",
+    "translation": "Fuerte",
+    "segments": [
+      "untu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "untu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_120"
+    ]
+  },
+  {
+    "id": "p_urkhu",
+    "surface": "urkhu",
+    "original": "Urkhu",
+    "lemma": "urkhu",
+    "family_id": "urkhu",
+    "pos": "N",
+    "translation": "Vestido uru",
+    "segments": [
+      "urkhu"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "urkhu",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_042"
+    ]
+  },
+  {
+    "id": "p_usa",
+    "surface": "usa",
+    "original": "Usa",
+    "lemma": "usa",
+    "family_id": "usa",
+    "pos": "N",
+    "translation": "Cerro",
+    "segments": [
+      "usa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "usa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_usachay",
+    "surface": "usachay",
+    "original": "Usachay",
+    "lemma": "usa",
+    "family_id": "usa",
+    "pos": "N",
+    "translation": "Está en el cerro",
+    "segments": [
+      "usa",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "usachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": []
+  },
+  {
+    "id": "p_uwapinichay",
+    "surface": "uwapinichay",
+    "original": "Uwapinichay",
+    "lemma": "uwapinichay",
+    "family_id": "uwapinichay",
+    "pos": "EXPR",
+    "translation": "Gracias",
+    "segments": [
+      "uwapinichay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uwapinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_009",
+      "O_014"
+    ]
+  },
+  {
+    "id": "p_uyuwichay",
+    "surface": "uyuwichay",
+    "original": "Uyuwichay",
+    "lemma": "uyuwichay",
+    "family_id": "uyuwichay",
+    "pos": "V",
+    "translation": "Criar",
+    "segments": [
+      "uyuwichay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "uyuwichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_084"
+    ]
+  },
+  {
+    "id": "p_wakha",
+    "surface": "wakha",
+    "original": "Wakha",
+    "lemma": "wakha",
+    "family_id": "wakha",
+    "pos": "N",
+    "translation": "Vaca",
+    "segments": [
+      "wakha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wakha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_wakhanaka",
+    "surface": "wakhanaka",
+    "original": "Wakhanaka",
+    "lemma": "wakha",
+    "family_id": "wakha",
+    "pos": "N",
+    "translation": "Vacas",
+    "segments": [
+      "wakha",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wakhanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_090"
+    ]
+  },
+  {
+    "id": "p_wakpacha",
+    "surface": "wakpacha",
+    "original": "Wakpacha",
+    "lemma": "wakpacha",
+    "family_id": "wakpacha",
+    "pos": "N",
+    "translation": "Todos",
+    "segments": [
+      "wakpacha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wakpacha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_002"
+    ]
+  },
+  {
+    "id": "p_walchay",
+    "surface": "walchay",
+    "original": "Walchay",
+    "lemma": "walchay",
+    "family_id": "walchay",
+    "pos": "N",
+    "translation": "Costar o Valer",
+    "segments": [
+      "walchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "walchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_wallpa",
+    "surface": "wallpa",
+    "original": "Wallpa",
+    "lemma": "wallpa",
+    "family_id": "wallpa",
+    "pos": "N",
+    "translation": "Gallina",
+    "segments": [
+      "wallpa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wallpa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_wallpanaka",
+    "surface": "wallpanaka",
+    "original": "Wallpanaka",
+    "lemma": "wallpa",
+    "family_id": "wallpa",
+    "pos": "N",
+    "translation": "Gallinas",
+    "segments": [
+      "wallpa",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wallpanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_083"
+    ]
+  },
+  {
+    "id": "p_warirachay",
+    "surface": "warirachay",
+    "original": "Warirachay",
+    "lemma": "warirachay",
+    "family_id": "warirachay",
+    "pos": "N",
+    "translation": "Usar o Utilizar",
+    "segments": [
+      "warirachay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "warirachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_075"
+    ]
+  },
+  {
+    "id": "p_watha",
+    "surface": "watha",
+    "original": "Watha",
+    "lemma": "watha",
+    "family_id": "watha",
+    "pos": "N",
+    "translation": "Pueblo",
+    "segments": [
+      "watha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "watha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_016",
+      "O_017",
+      "O_018",
+      "O_021",
+      "O_023",
+      "O_034",
+      "O_100",
+      "O_117"
+    ]
+  },
+  {
+    "id": "p_wesla",
+    "surface": "wësla",
+    "original": "Wësla",
+    "lemma": "wësla",
+    "family_id": "wesla",
+    "pos": "N",
+    "translation": "Chhoqha",
+    "segments": [
+      "wësla"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wesla",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_weslanaka",
+    "surface": "wëslanaka",
+    "original": "Wëslanaka",
+    "lemma": "wësla",
+    "family_id": "wesla",
+    "pos": "N",
+    "translation": "Chhoqhas",
+    "segments": [
+      "wësla",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "weslanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_098"
+    ]
+  },
+  {
+    "id": "p_wilk",
+    "surface": "wilk",
+    "original": "Wilk",
+    "lemma": "wilk",
+    "family_id": "wilk",
+    "pos": "PRON",
+    "translation": "Yo",
+    "segments": [
+      "wilk"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wilk",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_004",
+      "O_009",
+      "O_010",
+      "O_012",
+      "O_013",
+      "O_016",
+      "O_017",
+      "O_036",
+      "O_052",
+      "O_053",
+      "O_059",
+      "O_093",
+      "O_094",
+      "O_111",
+      "O_121",
+      "O_123",
+      "O_127",
+      "O_128",
+      "O_129",
+      "O_130",
+      "O_132",
+      "O_133"
+    ]
+  },
+  {
+    "id": "p_wisnaks",
+    "surface": "wisnaks",
+    "original": "Wisnaks",
+    "lemma": "wisnaks",
+    "family_id": "wisnaks",
+    "pos": "DETPOSS",
+    "translation": "Nuestro (Inclusivo)",
+    "segments": [
+      "wisnaks"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wisnaks",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_038",
+      "O_056"
+    ]
+  },
+  {
+    "id": "p_wisnakti",
+    "surface": "wisnakti",
+    "original": "Wisnakti",
+    "lemma": "wisnakti",
+    "family_id": "wisnakti",
+    "pos": "PRON",
+    "translation": "Nosotros (incluyente)",
+    "segments": [
+      "wisnakti"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wisnakti",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_021",
+      "O_035",
+      "O_075",
+      "O_098"
+    ]
+  },
+  {
+    "id": "p_wist",
+    "surface": "wist",
+    "original": "Wist",
+    "lemma": "wist",
+    "family_id": "wist",
+    "pos": "DETPOSS",
+    "translation": "Mi",
+    "segments": [
+      "wist"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wist",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_006",
+      "O_007",
+      "O_024",
+      "O_025",
+      "O_027",
+      "O_028",
+      "O_029",
+      "O_034",
+      "O_046",
+      "O_048",
+      "O_050",
+      "O_070",
+      "O_090",
+      "O_102",
+      "O_103",
+      "O_107",
+      "O_117",
+      "O_134",
+      "O_135"
+    ]
+  },
+  {
+    "id": "p_wistakchay",
+    "surface": "wistakchay",
+    "original": "Wistakchay",
+    "lemma": "wistakchay",
+    "family_id": "wistakchay",
+    "pos": "V",
+    "translation": "Tener",
+    "segments": [
+      "wistakchay"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wistakchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_031",
+      "O_048",
+      "O_058",
+      "O_059",
+      "O_060",
+      "O_065",
+      "O_082",
+      "O_083",
+      "O_085",
+      "O_086",
+      "O_087",
+      "O_090",
+      "O_118",
+      "O_134",
+      "O_135"
+    ]
+  },
+  {
+    "id": "p_wiwi",
+    "surface": "wiwi",
+    "original": "Wiwi",
+    "lemma": "wiwi",
+    "family_id": "wiwi",
+    "pos": "N",
+    "translation": "Río",
+    "segments": [
+      "wiwi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wiwi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_095",
+      "O_098",
+      "O_103",
+      "O_106"
+    ]
+  },
+  {
+    "id": "p_wiyani",
+    "surface": "wiyani",
+    "original": "Wiyani",
+    "lemma": "wiyani",
+    "family_id": "wiyani",
+    "pos": "N",
+    "translation": "En la mañana",
+    "segments": [
+      "wiyani"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wiyani",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_050",
+      "O_053"
+    ]
+  },
+  {
+    "id": "p_wiyanichay",
+    "surface": "wiyanichay",
+    "original": "Wiyanichay",
+    "lemma": "wiyani",
+    "family_id": "wiyani",
+    "pos": "N",
+    "translation": "Noche",
+    "segments": [
+      "wiyani",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wiyanichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_002",
+      "O_092",
+      "O_110"
+    ]
+  },
+  {
+    "id": "p_wiyantam",
+    "surface": "wiyantam",
+    "original": "Wiyantam",
+    "lemma": "wiyantam",
+    "family_id": "wiyantam",
+    "pos": "EXPR",
+    "translation": "Buenos días",
+    "segments": [
+      "wiyantam"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "wiyantam",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_001"
+    ]
+  },
+  {
+    "id": "p_xala",
+    "surface": "xala",
+    "original": "Xala",
+    "lemma": "xala",
+    "family_id": "xala",
+    "pos": "N",
+    "translation": "Llama",
+    "segments": [
+      "xala"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xala",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_xalanaka",
+    "surface": "xalanaka",
+    "original": "Xalanaka",
+    "lemma": "xala",
+    "family_id": "xala",
+    "pos": "N",
+    "translation": "Llamas",
+    "segments": [
+      "xala",
+      "naka"
+    ],
+    "suffixes": [
+      "naka"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xalanaka",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_089"
+    ]
+  },
+  {
+    "id": "p_xalsmasi",
+    "surface": "xalsmäsi",
+    "original": "Xalsmäsi",
+    "lemma": "xalsmäsi",
+    "family_id": "xalsmasi",
+    "pos": "N",
+    "translation": "Batán",
+    "segments": [
+      "xalsmäsi"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xalsmasi",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_075"
+    ]
+  },
+  {
+    "id": "p_xalwari",
+    "surface": "xalwari",
+    "original": "Xalwari",
+    "lemma": "xalwari",
+    "family_id": "xalwari",
+    "pos": "N",
+    "translation": "Vicuña",
+    "segments": [
+      "xalwari"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xalwari",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_094"
+    ]
+  },
+  {
+    "id": "p_xanacharku",
+    "surface": "xanacharku",
+    "original": "Xanacharku",
+    "lemma": "xanacharku",
+    "family_id": "xanacharku",
+    "pos": "N",
+    "translation": "Sur",
+    "segments": [
+      "xanacharku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xanacharku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_xanacharkuchay",
+    "surface": "xanacharkuchay",
+    "original": "Xanacharkuchay",
+    "lemma": "xanacharku",
+    "family_id": "xanacharku",
+    "pos": "N",
+    "translation": "Está al sur",
+    "segments": [
+      "xanacharku",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xanacharkuchay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_117"
+    ]
+  },
+  {
+    "id": "p_xawariski",
+    "surface": "xawariski",
+    "original": "Xawariski",
+    "lemma": "xawariski",
+    "family_id": "xawariski",
+    "pos": "N",
+    "translation": "Pan",
+    "segments": [
+      "xawariski"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xawariski",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_078"
+    ]
+  },
+  {
+    "id": "p_xorcha",
+    "surface": "xorcha",
+    "original": "Xorcha",
+    "lemma": "xorcha",
+    "family_id": "xorcha",
+    "pos": "N",
+    "translation": "Color",
+    "segments": [
+      "xorcha"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xorcha",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_xorchachay",
+    "surface": "xorchachay",
+    "original": "Xorchachay",
+    "lemma": "xorcha",
+    "family_id": "xorcha",
+    "pos": "N",
+    "translation": "Es de color",
+    "segments": [
+      "xorcha",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xorchachay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_047"
+    ]
+  },
+  {
+    "id": "p_xurs",
+    "surface": "xürs",
+    "original": "Xürs",
+    "lemma": "xürs",
+    "family_id": "xurs",
+    "pos": "N",
+    "translation": "Trueno",
+    "segments": [
+      "xürs"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "xurs",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_yachiri",
+    "surface": "yachiri",
+    "original": "Yachiri",
+    "lemma": "yachiri",
+    "family_id": "yachiri",
+    "pos": "N",
+    "translation": "Carpintero",
+    "segments": [
+      "yachiri"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yachiri",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_yachirichay",
+    "surface": "yachirichay",
+    "original": "Yachirichay",
+    "lemma": "yachiri",
+    "family_id": "yachiri",
+    "pos": "N",
+    "translation": "Es carpintero",
+    "segments": [
+      "yachiri",
+      "chay"
+    ],
+    "suffixes": [
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yachirichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_025"
+    ]
+  },
+  {
+    "id": "p_yes",
+    "surface": "yës",
+    "original": "Yës",
+    "lemma": "yës",
+    "family_id": "yes",
+    "pos": "N",
+    "translation": "Mes",
+    "segments": [
+      "yës"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yes",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_yiku",
+    "surface": "yiku",
+    "original": "Yiku",
+    "lemma": "yiku",
+    "family_id": "yiku",
+    "pos": "N",
+    "translation": "Sal",
+    "segments": [
+      "yiku"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yiku",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  },
+  {
+    "id": "p_yikupinichay",
+    "surface": "yikupinichay",
+    "original": "Yikupinichay",
+    "lemma": "yiku",
+    "family_id": "yiku",
+    "pos": "N",
+    "translation": "Está muy salado",
+    "segments": [
+      "yiku",
+      "pini",
+      "chay"
+    ],
+    "suffixes": [
+      "pini",
+      "chay"
+    ],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yikupinichay",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "hypothesis",
+    "context_ids": [
+      "O_076"
+    ]
+  },
+  {
+    "id": "p_yis",
+    "surface": "yïs",
+    "original": "Yïs",
+    "lemma": "yïs",
+    "family_id": "yis",
+    "pos": "N",
+    "translation": "Luna",
+    "segments": [
+      "yïs"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yis",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_110"
+    ]
+  },
+  {
+    "id": "p_yoqa",
+    "surface": "yoqa",
+    "original": "Yoqa",
+    "lemma": "yoqa",
+    "family_id": "yoqa",
+    "pos": "N",
+    "translation": "Suelo",
+    "segments": [
+      "yoqa"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "yoqa",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": [
+      "O_105"
+    ]
+  },
+  {
+    "id": "p_zonchhiji",
+    "surface": "zoñchhiji",
+    "original": "Zoñchhiji",
+    "lemma": "zoñchhiji",
+    "family_id": "zonchhiji",
+    "pos": "N",
+    "translation": "Esqueleto humano",
+    "segments": [
+      "zoñchhiji"
+    ],
+    "suffixes": [],
+    "features": {},
+    "source": "palabras.json",
+    "source_id": "zonchhiji",
+    "review_status": "documented_unreviewed",
+    "segmentation_status": "not_asserted",
+    "context_ids": []
+  }
+]

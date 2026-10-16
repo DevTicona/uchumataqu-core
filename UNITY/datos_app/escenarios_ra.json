@@ -1,0 +1,1738 @@
+{
+  "version": 4,
+  "regla_asr": {
+    "umbral_aprobacion": 85,
+    "max_intentos_evaluados": 3,
+    "continuar_tras_fallo_tecnico": true
+  },
+  "escenarios": [
+    {
+      "id": "ra_encuentro_comunicacion",
+      "titulo": "Encuentro y comunicación",
+      "lecciones_asociadas": [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L05",
+        "L06"
+      ],
+      "prefab_key": "ra/escenario/encuentro_comunicacion",
+      "escala_base": 0.9,
+      "objetos": [
+        {
+          "id": "obj_amigo",
+          "palabra_id": "palitak"
+        },
+        {
+          "id": "obj_profesor",
+          "palabra_id": "sitsni"
+        },
+        {
+          "id": "obj_pueblo",
+          "palabra_id": "watha"
+        }
+      ],
+      "objetos_contexto_ids": [],
+      "exploracion_posterior": true,
+      "mision": {
+        "id": "mision_encuentro_comunicacion",
+        "fases": [
+          {
+            "id": "C01_saludo",
+            "pasos": [
+              {
+                "id": "C01a",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_001",
+                "objetivo_objeto_id": "obj_amigo",
+                "hablante": "amigo",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C01b",
+                "tipo": "repetir_voz",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "wiyantam",
+                "respuesta_id": "wiyantam",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              }
+            ]
+          },
+          {
+            "id": "C02_presentacion",
+            "pasos": [
+              {
+                "id": "C02a",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_004",
+                "objetivo_objeto_id": "obj_amigo",
+                "hablante": "amigo",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C02b",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_005",
+                "objetivo_objeto_id": "obj_amigo",
+                "hablante": "amigo",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              }
+            ]
+          },
+          {
+            "id": "C03_nombre",
+            "pasos": [
+              {
+                "id": "C03",
+                "tipo": "repetir_voz",
+                "plantilla_uch": "Wist thü [nombre]",
+                "plantilla_es": "Me llamo [nombre]",
+                "comparar_texto": "Wist thü",
+                "prefijo_voz_valido": "Wist th",
+                "nombre_perfil": true,
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true,
+                "sufijo_nombre": true
+              }
+            ]
+          },
+          {
+            "id": "C04_relacion",
+            "pasos": [
+              {
+                "id": "C05a",
+                "tipo": "historia",
+                "objetivo_objeto_id": "obj_profesor",
+                "reaccion_id": "profesor_entrar",
+                "trayecto": [
+                  "spawn_profesor",
+                  "punto_aproximacion",
+                  "punto_dialogo"
+                ],
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C04a",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_007",
+                "objetivo_objeto_id": "obj_amigo",
+                "hablante": "amigo",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C04b",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_020",
+                "objetivo_objeto_id": "obj_amigo",
+                "hablante": "amigo",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              }
+            ]
+          },
+          {
+            "id": "C05_profesor",
+            "pasos": [
+              {
+                "id": "C05b",
+                "tipo": "historia",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "wiyantam",
+                "objetivo_objeto_id": "obj_profesor",
+                "hablante": "profesor",
+                "reaccion_id": "profesor_saludar",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              }
+            ]
+          },
+          {
+            "id": "C06_estado",
+            "pasos": [
+              {
+                "id": "C06a",
+                "tipo": "historia",
+                "objetivo_objeto_id": "obj_profesor",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chhuljamachay",
+                "hablante": "profesor",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C06b",
+                "tipo": "repetir_voz",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_009",
+                "respuesta_id": "O_009",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "C06c",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_010",
+                "objetivo_objeto_id": "obj_profesor",
+                "hablante": "profesor",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              }
+            ]
+          },
+          {
+            "id": "C07_bienvenida",
+            "pasos": [
+              {
+                "id": "C07a",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_018",
+                "objetivo_objeto_id": "obj_profesor",
+                "hablante": "profesor",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C07b",
+                "tipo": "repetir_voz",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "uwapinichay",
+                "respuesta_id": "uwapinichay",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              }
+            ]
+          },
+          {
+            "id": "C08_despedida",
+            "pasos": [
+              {
+                "id": "C08b",
+                "tipo": "historia",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "salskama",
+                "objetivo_objeto_id": "obj_amigo",
+                "hablante": "amigo_y_profesor",
+                "reaccion_id": "despedida",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "automatica"
+              },
+              {
+                "id": "C08a",
+                "tipo": "repetir_voz",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_131",
+                "respuesta_id": "O_131",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ra_familia_vestimenta",
+      "titulo": "Familia y vestimenta",
+      "lecciones_asociadas": [
+        "L07",
+        "L08",
+        "L09",
+        "L10",
+        "L11"
+      ],
+      "prefab_key": "ra/escenario/familia_vestimenta",
+      "escala_base": 0.9,
+      "objetos": [
+        {
+          "id": "obj_mama",
+          "palabra_id": "ataluy"
+        },
+        {
+          "id": "obj_papa",
+          "palabra_id": "apay"
+        },
+        {
+          "id": "obj_hermano",
+          "palabra_id": "chichalay"
+        },
+        {
+          "id": "obj_abuelo",
+          "palabra_id": "achichay"
+        },
+        {
+          "id": "obj_sombrero",
+          "palabra_id": "eskhara"
+        },
+        {
+          "id": "obj_faja",
+          "palabra_id": "chhasi"
+        },
+        {
+          "id": "obj_pantalon",
+          "palabra_id": "makchi"
+        },
+        {
+          "id": "obj_abuela",
+          "palabra_id": "apichuy"
+        },
+        {
+          "id": "obj_hermana",
+          "palabra_id": "kayuy"
+        },
+        {
+          "id": "obj_poncho",
+          "palabra_id": "ira"
+        },
+        {
+          "id": "obj_liwi",
+          "palabra_id": "chheqhoni"
+        },
+        {
+          "id": "obj_vestido",
+          "palabra_id": "urkhu"
+        },
+        {
+          "id": "obj_abarca",
+          "palabra_id": "chhata"
+        }
+      ],
+      "objetos_opcionales_exploracion_ids": [],
+      "exploracion_posterior": true,
+      "mision": {
+        "id": "mision_familia_vestimenta",
+        "fases": [
+          {
+            "id": "recorrido",
+            "pasos": [
+              {
+                "id": "R2-01",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_mama",
+                "reaccion_id": "mama_saludar",
+                "opciones_ayuda_objeto_ids": [
+                  "obj_mama",
+                  "obj_papa",
+                  "obj_hermano",
+                  "obj_abuelo",
+                  "obj_abuela",
+                  "obj_hermana"
+                ],
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "ataluy",
+                "respuesta_id": "ataluy",
+                "refuerzo_oracion_id": "O_024",
+                "instruccion": "Escribe mamá"
+              },
+              {
+                "id": "R2-02",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_hermano",
+                "reaccion_id": "hermano_saludar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chichalay",
+                "respuesta_id": "chichalay",
+                "refuerzo_oracion_id": "O_027",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R2-03",
+                "tipo": "escuchar_seleccionar",
+                "objetivo_objeto_id": "obj_papa",
+                "reaccion_id": "papa_saludar",
+                "instruccion": "Escucha y toca al personaje que corresponde.",
+                "opciones_ayuda_objeto_ids": [
+                  "obj_mama",
+                  "obj_papa",
+                  "obj_hermano",
+                  "obj_abuelo",
+                  "obj_abuela",
+                  "obj_hermana"
+                ],
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "apay",
+                "refuerzo_oracion_id": "O_025"
+              },
+              {
+                "id": "R2-04",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_abuelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "achichay",
+                "respuesta_id": "achichay",
+                "refuerzo_oracion_id": "O_039",
+                "instruccion": "Escribe abuelo"
+              },
+              {
+                "id": "R2-10",
+                "tipo": "arrastrar",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Apichuy",
+                "objetivo_objeto_id": "obj_abuela",
+                "destino_id": "dst_cabeza_abuela",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "apichuy",
+                "refuerzo_oracion_id": "O_040",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "R2-11",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_hermana",
+                "opciones_ayuda_objeto_ids": [
+                  "obj_hermana",
+                  "obj_mama",
+                  "obj_abuela"
+                ],
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "kayuy",
+                "refuerzo_oracion_id": "O_026",
+                "respuesta_id": "kayuy",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R2-05",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_sombrero",
+                "destino_id": "dst_cabeza",
+                "reaccion_id": "prenda_colocada",
+                "origen": "modelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "eskhara",
+                "refuerzo_oracion_id": "O_029",
+                "instruccion": "Arrastra el sombrero a donde corresponda",
+                "instruccion_destino": "Arrastra el sombrero a donde corresponda"
+              },
+              {
+                "id": "R2-13",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_liwi",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chheqhoni",
+                "refuerzo_oracion_id": "O_031",
+                "respuesta_id": "chheqhoni",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R2-12",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_poncho",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "ira",
+                "refuerzo_oracion_id": "O_032",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Ira",
+                "destino_id": "dst_texto_obj_poncho",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "R2-07",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_faja",
+                "destino_id": "dst_cintura",
+                "reaccion_id": "prenda_colocada",
+                "origen": "modelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chhasi",
+                "refuerzo_oracion_id": "O_044",
+                "instruccion": "Arrastra la faja a donde corresponda",
+                "instruccion_destino": "Arrastra la faja a donde corresponda"
+              },
+              {
+                "id": "R2-14",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_vestido",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "urkhu",
+                "respuesta_id": "urkhu",
+                "refuerzo_oracion_id": "O_042",
+                "instruccion": "Escribe vestido uru"
+              },
+              {
+                "id": "R2-15",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_abarca",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chhata",
+                "respuesta_id": "chhata",
+                "refuerzo_oracion_id": "O_028",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R2-09",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_pantalon",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "makchi",
+                "refuerzo_oracion_id": "O_045",
+                "respuesta_id": "makchi",
+                "instruccion": "Escribe pantalón"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ra_casa_objetos",
+      "titulo": "Casa y objetos cotidianos",
+      "lecciones_asociadas": [
+        "L12",
+        "L13",
+        "L14",
+        "L15"
+      ],
+      "prefab_key": "ra/escenario/casa_objetos",
+      "escala_base": 0.9,
+      "objetos": [
+        {
+          "id": "obj_ventana",
+          "palabra_id": "pheta",
+          "anclaje_card": {
+            "referencias": [
+              "Ventana_01",
+              "Ventana_02"
+            ],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_cama",
+          "palabra_id": "chusi",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_almohada",
+          "palabra_id": "achasi",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_mesa",
+          "palabra_id": "chimay",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_silla",
+          "palabra_id": "julsni",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_mochila",
+          "palabra_id": "kuskuts",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          },
+          "escala_visual": 1.15
+        },
+        {
+          "id": "obj_lapiz",
+          "palabra_id": "chhikhits",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_puerta",
+          "palabra_id": "sana",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_escoba",
+          "palabra_id": "chhiqha",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        },
+        {
+          "id": "obj_cuaderno",
+          "palabra_id": "kuwarerno",
+          "anclaje_card": {
+            "referencias": [],
+            "margen_superior": 0.04
+          }
+        }
+      ],
+      "objetos_contexto_ids": [
+        "obj_papa"
+      ],
+      "exploracion_posterior": true,
+      "mision": {
+        "id": "mision_casa_objetos",
+        "fases": [
+          {
+            "id": "recorrido",
+            "pasos": [
+              {
+                "id": "R3-00",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_046",
+                "instruccion": "Conoce la casa. Escucha y pulsa Continuar para comenzar.",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "continuar",
+                "mostrar_card_escenario": true
+              },
+              {
+                "id": "R3-01",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_cama",
+                "reaccion_id": "cama_resaltar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chusi",
+                "refuerzo_oracion_id": "O_049",
+                "respuesta_id": "chusi",
+                "instruccion": "Escribe cama"
+              },
+              {
+                "id": "R3-02",
+                "unidades_cantidad": [
+                  "Ventana_01",
+                  "Ventana_02"
+                ],
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_ventana",
+                "reaccion_id": "ventanas_abrir",
+                "cantidad": 2,
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "pheta",
+                "refuerzo_oracion_id": "O_135",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Pheta",
+                "destino_id": "dst_texto_obj_ventana",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "R3-03",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_puerta",
+                "reaccion_id": "puerta_abrir",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "sana",
+                "respuesta_id": "sana",
+                "refuerzo_oracion_id": "O_052",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R3-04",
+                "tipo": "escuchar_seleccionar",
+                "objetivo_objeto_id": "obj_silla",
+                "reaccion_id": "papa_sentarse",
+                "instruccion": "Escucha y toca la silla para que papá se siente.",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "julsni",
+                "refuerzo_oracion_id": "O_056"
+              },
+              {
+                "id": "R3-05",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_mesa",
+                "reaccion_id": "mesa_limpiar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chimay",
+                "respuesta_id": "chimay",
+                "refuerzo_oracion_id": "O_132",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R3-06",
+                "unidades_cantidad": [
+                  "PIV_Almohada_01",
+                  "PIV_Almohada_02",
+                  "PIV_Almohada_03"
+                ],
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_almohada",
+                "reaccion_id": "almohadas_rebotar",
+                "cantidad": 3,
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "achasi",
+                "respuesta_id": "achasi",
+                "refuerzo_oracion_id": "O_134",
+                "instruccion": "Escribe almohada"
+              },
+              {
+                "id": "R3-07",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_mochila",
+                "reaccion_id": "mochila_abrir",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "kuskuts",
+                "respuesta_id": "kuskuts",
+                "refuerzo_oracion_id": "O_062",
+                "instruccion": "Escribe mochila"
+              },
+              {
+                "id": "R3-08",
+                "unidades_cantidad": [
+                  "SM_Lapiz_01",
+                  "SM_Lapiz_02",
+                  "SM_Lapiz_03",
+                  "SM_Lapiz_04",
+                  "SM_Lapiz_05",
+                  "SM_Lapiz_06"
+                ],
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_lapiz",
+                "destino_id": "dst_mochila",
+                "reaccion_id": "utiles_guardar",
+                "cantidad": 6,
+                "origen": "modelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chhikhits",
+                "refuerzo_oracion_id": "O_060",
+                "instruccion": "Arrastra el lápiz a donde corresponda",
+                "instruccion_destino": "Arrastra el lápiz a donde corresponda",
+                "colocacion_vertical": true
+              },
+              {
+                "id": "R3-09",
+                "unidades_cantidad": [
+                  "SM_Cuaderno_01",
+                  "SM_Cuaderno_02",
+                  "SM_Cuaderno_03",
+                  "SM_Cuaderno_04",
+                  "SM_Cuaderno_05"
+                ],
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_cuaderno",
+                "destino_id": "dst_mochila",
+                "reaccion_id": "utiles_guardar",
+                "cantidad": 5,
+                "origen": "modelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "kuwarerno",
+                "refuerzo_oracion_id": "O_059",
+                "instruccion": "Arrastra el cuaderno a donde corresponda",
+                "instruccion_destino": "Arrastra el cuaderno a donde corresponda",
+                "colocacion_vertical": true
+              },
+              {
+                "id": "R3-10",
+                "cantidad": 4,
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_escoba",
+                "reaccion_id": "escoba_resaltar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chhiqha",
+                "respuesta_id": "chhiqha",
+                "refuerzo_oracion_id": "O_057",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R3-11",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_133",
+                "objetivo_objeto_id": "obj_ventana",
+                "reaccion_id": "ventanas_cerrar",
+                "sin_evaluacion_linguistica": true,
+                "instruccion": "Toca las ventanas resaltadas para cerrarlas.",
+                "accion_historia": "tocar_objeto"
+              },
+              {
+                "id": "R3-12",
+                "tipo": "historia",
+                "objetivo_objeto_id": "obj_mochila",
+                "reaccion_id": "mochila_cerrar",
+                "sin_evaluacion_linguistica": true,
+                "instruccion": "Toca la mochila resaltada para cerrarla y terminar.",
+                "accion_historia": "tocar_objeto"
+              }
+            ]
+          }
+        ]
+      },
+      "card_escenario": {
+        "palabra_id": "qhoya",
+        "referencia": "M3D_Rincon_Abierto",
+        "ancla": "AnclaCardCasa",
+        "margen_superior": 0.04,
+        "posicion_relativa": {
+          "x": 0.5,
+          "y": 1,
+          "z": 0
+        }
+      }
+    },
+    {
+      "id": "ra_cocina_alimentos",
+      "titulo": "Cocina y alimentos",
+      "lecciones_asociadas": [
+        "L16",
+        "L17",
+        "L18",
+        "L19"
+      ],
+      "prefab_key": "ra/escenario/cocina_alimentos",
+      "escala_base": 0.9,
+      "objetos": [
+        {
+          "id": "obj_mesa",
+          "palabra_id": "chimay"
+        },
+        {
+          "id": "obj_olla",
+          "palabra_id": "maska"
+        },
+        {
+          "id": "obj_quinua",
+          "palabra_id": "kula"
+        },
+        {
+          "id": "obj_arroz",
+          "palabra_id": "arusha"
+        },
+        {
+          "id": "obj_cantaro",
+          "palabra_id": "lusi"
+        },
+        {
+          "id": "obj_batan",
+          "palabra_id": "xalsmasi"
+        },
+        {
+          "id": "obj_vaso",
+          "palabra_id": "qeru"
+        },
+        {
+          "id": "obj_plato",
+          "palabra_id": "chuwa"
+        },
+        {
+          "id": "obj_cuchara",
+          "palabra_id": "khirchula"
+        },
+        {
+          "id": "obj_pan",
+          "palabra_id": "xawariski"
+        },
+        {
+          "id": "obj_leche",
+          "palabra_id": "chiwliks"
+        }
+      ],
+      "objetos_contexto_ids": [
+        "obj_nino"
+      ],
+      "exploracion_posterior": true,
+      "mision": {
+        "id": "mision_cocina_alimentos",
+        "fases": [
+          {
+            "id": "recorrido",
+            "pasos": [
+              {
+                "id": "R4-01",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_mesa",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chimay",
+                "refuerzo_oracion_id": "O_132",
+                "respuesta_id": "chimay",
+                "instruccion": "Escribe mesa"
+              },
+              {
+                "id": "R4-02",
+                "tipo": "escuchar_seleccionar",
+                "objetivo_objeto_id": "obj_olla",
+                "reaccion_id": "olla_limpiar",
+                "instruccion": "Escucha y toca la olla para limpiarla.",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "maska",
+                "refuerzo_oracion_id": "O_063"
+              },
+              {
+                "id": "R4-03",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_quinua",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "kula",
+                "refuerzo_oracion_id": "O_069",
+                "destino_acierto_id": "dst_despensa",
+                "respuesta_id": "kula",
+                "instruccion": "Escribe quinua"
+              },
+              {
+                "id": "R4-05",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_cantaro",
+                "reaccion_id": "cantaro_mostrar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "lusi",
+                "refuerzo_oracion_id": "O_073",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Lusi",
+                "destino_id": "dst_texto_obj_cantaro",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "R4-04",
+                "objeto_oracion_id": "obj_olla",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_arroz",
+                "destino_id": "dst_olla",
+                "reaccion_id": "arroz_cocinar",
+                "origen": "modelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "arusha",
+                "refuerzo_oracion_id": "O_080",
+                "instruccion": "Arrastra el arroz a donde corresponda",
+                "instruccion_destino": "Arrastra el arroz a donde corresponda"
+              },
+              {
+                "id": "R4-08",
+                "cantidad": 7,
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_plato",
+                "reaccion_id": "plato_colocar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chuwa",
+                "refuerzo_oracion_id": "O_064",
+                "destino_acierto_id": "dst_plato",
+                "respuesta_id": "chuwa",
+                "instruccion": "Escribe plato"
+              },
+              {
+                "id": "R4-06",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_batan",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "xalsmasi",
+                "respuesta_id": "xalsmasi",
+                "refuerzo_oracion_id": "O_075",
+                "instruccion": "Escribe batán"
+              },
+              {
+                "id": "R4-09",
+                "cantidad": 6,
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_cuchara",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "khirchula",
+                "refuerzo_oracion_id": "O_065",
+                "destino_acierto_id": "dst_cuchara",
+                "respuesta_id": "khirchula",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R4-10",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_pan",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "xawariski",
+                "refuerzo_oracion_id": "O_078",
+                "destino_acierto_id": "dst_alimento",
+                "respuesta_id": "xawariski",
+                "instruccion": "Escribe pan"
+              },
+              {
+                "id": "R4-07",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_vaso",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "qeru",
+                "respuesta_id": "qeru",
+                "refuerzo_oracion_id": "O_072",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R4-13",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_olla",
+                "destino_id": "dst_plato",
+                "reaccion_id": "arroz_servir",
+                "sin_evaluacion_linguistica": true,
+                "origen": "modelo",
+                "instruccion": "Arrastra la olla a donde corresponda",
+                "instruccion_destino": "Arrastra la olla a donde corresponda"
+              },
+              {
+                "id": "R4-11",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_leche",
+                "reaccion_id": "leche_servir",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chiwliks",
+                "refuerzo_oracion_id": "O_067",
+                "destino_acierto_id": "dst_vaso",
+                "respuesta_id": "chiwliks",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "R4-12",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_072",
+                "objetivo_objeto_id": "obj_nino",
+                "reaccion_id": "nino_beber",
+                "sin_evaluacion_linguistica": true,
+                "continuar_permitido": true,
+                "instruccion": "Toca al niño o pulsa Continuar para que beba la leche.",
+                "accion_historia": "tocar_o_continuar"
+              },
+              {
+                "id": "R4-14",
+                "tipo": "historia",
+                "objetivo_objeto_id": "obj_mesa",
+                "reaccion_id": "mesa_lista",
+                "instruccion": "La comida está servida. Pulsa Continuar para explorar.",
+                "sin_evaluacion_linguistica": true,
+                "accion_historia": "continuar"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ra_animales_ecosistema",
+      "escala": 0.65,
+      "centro_pantalla_y": 0.63,
+      "titulo": "Animales y ecosistema",
+      "lecciones_asociadas": [
+        "L20",
+        "L21",
+        "L22",
+        "L23",
+        "L24"
+      ],
+      "prefab_key": "ra/escenario/animales_ecosistema",
+      "escala_base": 0.9,
+      "objetos": [
+        {
+          "id": "obj_chancho",
+          "palabra_id": "khuchhi"
+        },
+        {
+          "id": "obj_gato",
+          "palabra_id": "masota"
+        },
+        {
+          "id": "obj_perro",
+          "palabra_id": "paku"
+        },
+        {
+          "id": "obj_gallina",
+          "palabra_id": "wallpa"
+        },
+        {
+          "id": "obj_oveja",
+          "palabra_id": "iwisa"
+        },
+        {
+          "id": "obj_vaca",
+          "palabra_id": "wakha"
+        },
+        {
+          "id": "obj_llama",
+          "palabra_id": "xala"
+        },
+        {
+          "id": "obj_lagarto",
+          "palabra_id": "phesqona"
+        },
+        {
+          "id": "obj_zorro",
+          "palabra_id": "qetsi"
+        },
+        {
+          "id": "obj_vicuna",
+          "palabra_id": "xalwari"
+        },
+        {
+          "id": "obj_flamenco",
+          "palabra_id": "parina"
+        },
+        {
+          "id": "obj_gaviota",
+          "palabra_id": "qala"
+        },
+        {
+          "id": "obj_pato",
+          "palabra_id": "soqna"
+        },
+        {
+          "id": "obj_chhoqha",
+          "palabra_id": "wesla"
+        },
+        {
+          "id": "obj_pez_amarillo",
+          "palabra_id": "chaxana"
+        },
+        {
+          "id": "obj_pejerrey",
+          "palabra_id": "chiwqeri"
+        },
+        {
+          "id": "obj_trucha",
+          "palabra_id": "kurwina"
+        },
+        {
+          "id": "obj_pez",
+          "palabra_id": "qeri"
+        }
+      ],
+      "exploracion_posterior": true,
+      "mision": {
+        "id": "mision_animales_ecosistema",
+        "fases": [
+          {
+            "id": "terrestre",
+            "pasos": [
+              {
+                "id": "T01",
+                "tipo": "escuchar_seleccionar",
+                "objetivo_objeto_id": "obj_chancho",
+                "reaccion_id": "chancho_mover",
+                "instruccion": "Escucha y toca el elemento que corresponde.",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "khuchhi",
+                "refuerzo_oracion_id": "O_085"
+              },
+              {
+                "id": "T02",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_gato",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "masota",
+                "respuesta_id": "masota",
+                "refuerzo_oracion_id": "O_082",
+                "instruccion": "Escribe gato"
+              },
+              {
+                "id": "T03",
+                "posiciones_cantidad": [
+                  {
+                    "x": 1,
+                    "y": 0.02,
+                    "z": 2.65
+                  },
+                  {
+                    "x": 2,
+                    "y": 0.02,
+                    "z": 2.8
+                  }
+                ],
+                "escalas_cantidad": [
+                  1,
+                  1
+                ],
+                "cantidad": 2,
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_perro",
+                "reaccion_id": "perro_reaccionar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "paku",
+                "respuesta_id": "paku",
+                "refuerzo_oracion_id": "O_081",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "T04",
+                "cantidad": 8,
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_gallina",
+                "reaccion_id": "gallina_picotear",
+                "opciones_ayuda_objeto_ids": [
+                  "obj_gato",
+                  "obj_perro",
+                  "obj_gallina"
+                ],
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "wallpa",
+                "refuerzo_oracion_id": "O_083",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Wallpa",
+                "destino_id": "dst_texto_obj_gallina",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "T05",
+                "cantidad": 9,
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_oveja",
+                "reaccion_id": "oveja_reaccionar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "iwisa",
+                "refuerzo_oracion_id": "O_087",
+                "respuesta_id": "iwisa",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "T06",
+                "posiciones_cantidad": [
+                  {
+                    "x": 0.4,
+                    "y": 0.02,
+                    "z": -2
+                  },
+                  {
+                    "x": 2.9,
+                    "y": 0.02,
+                    "z": -2
+                  },
+                  {
+                    "x": 0.4,
+                    "y": 0.02,
+                    "z": -0.1
+                  },
+                  {
+                    "x": 2.9,
+                    "y": 0.02,
+                    "z": -0.1
+                  },
+                  {
+                    "x": 0,
+                    "y": 0.02,
+                    "z": 1.5
+                  },
+                  {
+                    "x": 1.2,
+                    "y": 0.02,
+                    "z": 1.5
+                  },
+                  {
+                    "x": 2.4,
+                    "y": 0.02,
+                    "z": 1.5
+                  },
+                  {
+                    "x": 3.5999999999999996,
+                    "y": 0.02,
+                    "z": 1.5
+                  }
+                ],
+                "escalas_cantidad": [
+                  1,
+                  1,
+                  1,
+                  1,
+                  0.5,
+                  0.5,
+                  0.5,
+                  0.5
+                ],
+                "cantidad": 8,
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_vaca",
+                "reaccion_id": "vaca_mover_cabeza",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "wakha",
+                "respuesta_id": "wakha",
+                "refuerzo_oracion_id": "O_090",
+                "instruccion": "Escribe vaca"
+              },
+              {
+                "id": "T07",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_llama",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "xala",
+                "refuerzo_oracion_id": "O_089",
+                "respuesta_id": "xala",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "T08",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_lagarto",
+                "reaccion_id": "lagarto_correr",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "phesqona",
+                "refuerzo_oracion_id": "O_091",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Phesqoña",
+                "destino_id": "dst_texto_obj_lagarto",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "T09",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_zorro",
+                "reaccion_id": "zorro_salir",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "qetsi",
+                "respuesta_id": "qetsi",
+                "refuerzo_oracion_id": "O_092",
+                "instruccion": "Escribe zorro"
+              },
+              {
+                "id": "T10",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_vicuna",
+                "reaccion_id": "vicuna_observar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "xalwari",
+                "refuerzo_oracion_id": "O_094",
+                "respuesta_id": "xalwari",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              }
+            ]
+          },
+          {
+            "id": "transicion",
+            "pasos": [
+              {
+                "id": "TR01",
+                "tipo": "historia",
+                "reaccion_id": "activar_acuatico",
+                "sin_evaluacion_linguistica": true,
+                "instruccion": "Ahora explora la zona acuática. Pulsa Continuar para comenzar.",
+                "accion_historia": "continuar"
+              }
+            ]
+          },
+          {
+            "id": "acuatico",
+            "pasos": [
+              {
+                "id": "A08",
+                "tipo": "escuchar_seleccionar",
+                "objetivo_objeto_id": "obj_pez",
+                "opciones_ayuda_objeto_ids": [
+                  "obj_pez",
+                  "obj_pez_amarillo",
+                  "obj_pejerrey",
+                  "obj_trucha"
+                ],
+                "instruccion": "Escucha la palabra y toca el elemento que corresponde.",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "qeri",
+                "refuerzo_oracion_id": "O_099"
+              },
+              {
+                "id": "A01",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_flamenco",
+                "reaccion_id": "flamenco_caminar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "parina",
+                "refuerzo_oracion_id": "O_095",
+                "respuesta_id": "parina",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "A02",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_gaviota",
+                "reaccion_id": "gaviota_volar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "qala",
+                "respuesta_id": "qala",
+                "refuerzo_oracion_id": "O_096",
+                "instruccion": "Escribe gaviota"
+              },
+              {
+                "id": "A03",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_pato",
+                "reaccion_id": "pato_nadar",
+                "opciones_ayuda_objeto_ids": [
+                  "obj_flamenco",
+                  "obj_gaviota",
+                  "obj_pato"
+                ],
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "soqna",
+                "refuerzo_oracion_id": "O_097",
+                "respuesta_id": "soqna",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "A04",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_chhoqha",
+                "reaccion_id": "chhoqha_reaccionar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "wesla",
+                "respuesta_id": "wesla",
+                "refuerzo_oracion_id": "O_098",
+                "instruccion": "Escribe chhoqha"
+              },
+              {
+                "id": "A05",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_pez_amarillo",
+                "reaccion_id": "pez_amarillo_nadar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chaxana",
+                "refuerzo_oracion_id": "O_102",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Chʼaxana",
+                "destino_id": "dst_texto_obj_pez_amarillo",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "A06",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_pejerrey",
+                "reaccion_id": "pejerrey_nadar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chiwqeri",
+                "respuesta_id": "chiwqeri",
+                "refuerzo_oracion_id": "O_100",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "A07",
+                "cantidad": 10,
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_trucha",
+                "reaccion_id": "trucha_nadar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "kurwina",
+                "respuesta_id": "kurwina",
+                "refuerzo_oracion_id": "O_101",
+                "instruccion": "Escribe trucha"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ra_naturaleza_orientacion",
+      "escala": 0.65,
+      "centro_pantalla_y": 0.63,
+      "titulo": "Naturaleza y orientación",
+      "lecciones_asociadas": [
+        "L25",
+        "L26",
+        "L27"
+      ],
+      "prefab_key": "ra/escenario/naturaleza_orientacion",
+      "escala_base": 0.9,
+      "objetos": [
+        {
+          "id": "obj_paja",
+          "palabra_id": "phiki"
+        },
+        {
+          "id": "obj_totora",
+          "palabra_id": "juwa"
+        },
+        {
+          "id": "obj_canawa",
+          "palabra_id": "qanawi"
+        },
+        {
+          "id": "obj_sol",
+          "palabra_id": "thuni"
+        },
+        {
+          "id": "obj_luna",
+          "palabra_id": "yis"
+        },
+        {
+          "id": "marcador_este",
+          "palabra_id": "tuncharku"
+        },
+        {
+          "id": "marcador_oeste",
+          "palabra_id": "taxacharku"
+        },
+        {
+          "id": "marcador_norte",
+          "palabra_id": "chiyacharku"
+        },
+        {
+          "id": "marcador_sur",
+          "palabra_id": "xanacharku"
+        },
+        {
+          "id": "obj_bote",
+          "palabra_id": "ochapara"
+        },
+        {
+          "id": "obj_balsa",
+          "palabra_id": "thosa"
+        },
+        {
+          "id": "obj_vela",
+          "palabra_id": "qachina"
+        }
+      ],
+      "exploracion_posterior": true,
+      "mision": {
+        "id": "mision_naturaleza_orientacion",
+        "fases": [
+          {
+            "id": "naturaleza",
+            "pasos": [
+              {
+                "id": "N01",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_paja",
+                "reaccion_id": "planta_balancear",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "phiki",
+                "refuerzo_oracion_id": "O_105",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Phiki",
+                "destino_id": "dst_texto_obj_paja",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "N02",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_totora",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "juwa",
+                "respuesta_id": "juwa",
+                "refuerzo_oracion_id": "O_106",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "N03",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_canawa",
+                "reaccion_id": "planta_balancear",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "qanawi",
+                "respuesta_id": "qanawi",
+                "refuerzo_oracion_id": "O_107",
+                "instruccion": "Escribe cañawa"
+              }
+            ]
+          },
+          {
+            "id": "cielo",
+            "pasos": [
+              {
+                "id": "C01",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_sol",
+                "reaccion_id": "sol_brillar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "thuni",
+                "refuerzo_oracion_id": "O_109",
+                "respuesta_id": "thuni",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "C02",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "obj_luna",
+                "reaccion_id": "luna_noche",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "yis",
+                "respuesta_id": "yis",
+                "refuerzo_oracion_id": "O_110",
+                "instruccion": "Escribe luna"
+              }
+            ]
+          },
+          {
+            "id": "orientacion",
+            "pasos": [
+              {
+                "id": "O01",
+                "tipo": "escuchar_seleccionar",
+                "objetivo_objeto_id": "marcador_este",
+                "reaccion_id": "amanecer_este",
+                "instruccion": "Escucha y toca la dirección que corresponde en el escenario.",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "tuncharku",
+                "refuerzo_oracion_id": "O_114"
+              },
+              {
+                "id": "O02",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "marcador_oeste",
+                "reaccion_id": "atardecer_oeste",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "taxacharku",
+                "respuesta_id": "taxacharku",
+                "refuerzo_oracion_id": "O_115",
+                "instruccion": "Escribe oeste"
+              },
+              {
+                "id": "O03",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "marcador_norte",
+                "reaccion_id": "viento_norte",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "chiyacharku",
+                "refuerzo_oracion_id": "O_116",
+                "respuesta_id": "chiyacharku",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "O04",
+                "tipo": "escribir",
+                "objetivo_objeto_id": "marcador_sur",
+                "reaccion_id": "pueblo_sur",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "xanacharku",
+                "respuesta_id": "xanacharku",
+                "refuerzo_oracion_id": "O_117",
+                "instruccion": "Escribe sur"
+              }
+            ]
+          },
+          {
+            "id": "embarcaciones",
+            "pasos": [
+              {
+                "id": "E01",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_bote",
+                "reaccion_id": "bote_balancear",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "ochapara",
+                "refuerzo_oracion_id": "O_118",
+                "origen": "tarjeta",
+                "texto_tarjeta": "Ochapara",
+                "destino_id": "dst_texto_obj_bote",
+                "instruccion": "Arrastra el texto encima del objeto al que corresponda",
+                "instruccion_destino": "Arrastra el texto encima del objeto al que corresponda"
+              },
+              {
+                "id": "E02",
+                "tipo": "repetir_voz",
+                "objetivo_objeto_id": "obj_balsa",
+                "reaccion_id": "balsa_reaccionar",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "thosa",
+                "respuesta_id": "thosa",
+                "refuerzo_oracion_id": "O_119",
+                "instruccion": "Escucha la palabra. Pulsa Hablar para repetirla y Detener cuando acabes.",
+                "umbral_aprobacion": 85,
+                "max_intentos_evaluados": 3,
+                "continuar_tras_fallo_tecnico": true
+              },
+              {
+                "id": "E03",
+                "tipo": "arrastrar",
+                "objetivo_objeto_id": "obj_vela",
+                "destino_id": "dst_mastil",
+                "reaccion_id": "vela_instalar",
+                "origen": "modelo",
+                "estimulo_tipo": "palabra",
+                "estimulo_id": "qachina",
+                "refuerzo_oracion_id": "O_119",
+                "instruccion": "Arrastra el vela de la balsa a donde corresponda",
+                "instruccion_destino": "Arrastra el vela de la balsa a donde corresponda"
+              },
+              {
+                "id": "E04",
+                "tipo": "historia",
+                "estimulo_tipo": "oracion",
+                "estimulo_id": "O_120",
+                "objetivo_objeto_id": "obj_balsa",
+                "reaccion_id": "balsa_avanzar_simbolico",
+                "sin_evaluacion_linguistica": true,
+                "instruccion": "Toca la balsa resaltada para iniciar el viaje.",
+                "accion_historia": "tocar_objeto"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

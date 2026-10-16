@@ -1,0 +1,239 @@
+{
+  "schema_version": 1,
+  "engine": "seq2seq",
+  "deployment_allowed": false,
+  "dataset_sha256": "5dfce5b7a340dd42649f3e8c19d352bf4db9ef9dfcdd016e4b4eca1b515ee802",
+  "checkpoint_sha256": "873f5be9f1e9a7e8451cd1648fbb059384ec65d2d9da744b63b3f164b14cacb4",
+  "source_sha256": {
+    "palabras.json": "8ae33d355010e9a871235a3856712ed4748b82c858833808a355677e89388595",
+    "oraciones.json": "3a74d24bcac75d5147278beaadd78ee868e8c4855c89fbfbae5d7d2c1ce651ab",
+    "diccionario.json": "b9c3d2f68f253fc24f694417e07eaf991a279ecf1409f88a7755df954ed77233",
+    "reglas_de_escritura_y_gram_tica_uchumataqu.md": "9848faec650559749e19b432317eacab979d5aff14e9bba8689d82f1378348b4"
+  },
+  "requirements_sha256": "a71078769d6e476a11d9031db201d6f1476214a8adee3f1bfcdfa91e4679718a",
+  "source_code_sha256": {
+    "__init__.py": "57c1b434a86505310ca77507e52e80ac1aec9b0e9e1e03ad765d0c0fc2961451",
+    "__main__.py": "b9c254570823157400c5f271d62f8ab83c05db82845a5785e716772d59505721",
+    "data.py": "59e8d3c4dabb545813ed605c0183df1caef960ca0e8bc6cfa1a89a7a799b2df4",
+    "evaluation.py": "ddc01cdef577c99ffa715f35872d780b8760cbe7c68ca7f5b819aae06dd54d85",
+    "exporting.py": "72c05c469f1df35ac09e48f8755829a6775cfa49718bd98cb459e5fb33eb6c34",
+    "model.py": "c1082eec4efdd37781b262b74f723c21823e24a9851bdc547cab60118720fafc",
+    "runtime.py": "508fe86f9fb8c7a36fd9654ee37a130d8c91d611162656eda9be4cb7325a7009",
+    "training.py": "62e48ff7782ee868a18e7cec1edbe904c2587b227b26ae82d76575ced29880f8"
+  },
+  "seed": 43,
+  "epoch": 45,
+  "opset": 17,
+  "contracts": {
+    "encoder": {
+      "inputs": [
+        {
+          "name": "ids",
+          "shape": [
+            1,
+            32
+          ],
+          "type": "tensor(int64)"
+        },
+        {
+          "name": "mask",
+          "shape": [
+            1,
+            32
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "memory",
+          "shape": [
+            1,
+            32,
+            96
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "state",
+          "shape": [
+            1,
+            96
+          ],
+          "type": "tensor(float)"
+        }
+      ]
+    },
+    "decoder_step": {
+      "inputs": [
+        {
+          "name": "previous",
+          "shape": [
+            1
+          ],
+          "type": "tensor(int64)"
+        },
+        {
+          "name": "state",
+          "shape": [
+            1,
+            96
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "memory",
+          "shape": [
+            1,
+            32,
+            96
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "mask",
+          "shape": [
+            1,
+            32
+          ],
+          "type": "tensor(float)"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "shape": [
+            1,
+            48
+          ],
+          "type": "tensor(float)"
+        },
+        {
+          "name": "next_state",
+          "shape": [
+            1,
+            96
+          ],
+          "type": "tensor(float)"
+        }
+      ]
+    }
+  },
+  "annotation_policy": "exploratory_unreviewed_not_gold",
+  "decoder": "greedy; mask PAD/UNK/BOS logits; stop at EOS or max_output; reject missing EOS",
+  "files": {
+    "metrics.json": "451e293592250d105098af899128eef1ce919382f4a9116fe47c648c7beb06be",
+    "normalization.json": "ed8f0f611a07fd2df4eb28360ca012f7dd0fc6a52ff0a15e33202f80d8f30102",
+    "test_vectors.json": "e266cec8f1682833ab22233af07721c5868712ad4237236a7ba8f645556a6fcb",
+    "vocab.json": "72bcf3d8eabc1277d21e9c3e8068aefd5b8563c6bc8c41d69e80709f02e07d5b",
+    "parity.json": "abb40400b1a11d735006545b779b8881fb4e7c7b50bdc4ef57eed8c467108b07",
+    "model_card.md": "3d25129e130b9330d92c56eba2953ee2617ece3a9d16d407ac472086c4298f18",
+    "lexicon.json": "3450a04ebd768058a1178584dfa65072699d8a9dec48ca025a6087aa2759359b",
+    "encoder.onnx": "c0dadd0254a483b1f2e7677051ecaab7acfec5880454c850605b797acb49ba84",
+    "decoder_step.onnx": "bb167670fcf75eb4f9fe56b7737fb3894d108fc56344a5cbdd031f2f825a32d6",
+    "config.json": "ee27e09bd509c635832bdbcc702c13a3a0e6a5ae03ef477b342d8f3c92d88643",
+    "licenses/DATA.md": "2b973f60f2b3b124174f0a645aaa641fdaed4b7d8ffda85a8451a23e3f929a22",
+    "licenses/onnx/licenses/NOTICE": "a4a6f2d7c4df16d4478df326169800219a6b4f51ce6f9a86074cc467e8adab28",
+    "licenses/onnx/licenses/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/numpy/licenses/LICENSE.txt": "4860083caa0de2ac3292ca98bd074bd8f45d8b32624e37b1e70a240bff61e488",
+    "licenses/numpy/licenses/numpy/ma/LICENSE": "05f3b88351988ecfad10abe92c0c50e5875c6452d5009a0084cc291551ffcca6",
+    "licenses/numpy/licenses/numpy/random/LICENSE.md": "103166b62b80443afb9eb3488e052ea06be0cff566b908f199e561fde49af19f",
+    "licenses/numpy/licenses/numpy/random/src/distributions/LICENSE.md": "469778be8f33d54e1bcaab28c281cc472916d2d273f835e55bc487d30503face",
+    "licenses/numpy/licenses/numpy/random/src/sfc64/LICENSE.md": "9d4098846018319cd68e228ee6220361787f73bccbf00237a85e4fc9621b998f",
+    "licenses/numpy/licenses/numpy/random/src/philox/LICENSE.md": "6f5828a57223d4cc7f8ea505a2623e7b978b242752c1515e355f46ba2cec1800",
+    "licenses/numpy/licenses/numpy/random/src/pcg64/LICENSE.md": "e7d4f4fb20358f314210a892ae17351e04993813646f697ec387385ca2a36918",
+    "licenses/numpy/licenses/numpy/random/src/mt19937/LICENSE.md": "0e111337b25494a773106695f0e799f642b8567aaacca4f116a74a8177179156",
+    "licenses/numpy/licenses/numpy/random/src/splitmix64/LICENSE.md": "268b0ca06759d31ea3ca68dd35f20e877916e927b1c2a835e4592a3c4354b1f9",
+    "licenses/numpy/licenses/numpy/fft/pocketfft/LICENSE.md": "a85ca13fdf90160b64a0698215868c13b74d835ad0a4e2ba44713b8c5058a056",
+    "licenses/numpy/licenses/numpy/_core/src/highway/LICENSE": "e340270d4f64384569a91d546acb5b094d69ce47f0c015db77abb74dc6f815af",
+    "licenses/numpy/licenses/numpy/_core/src/umath/svml/LICENSE": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9",
+    "licenses/numpy/licenses/numpy/_core/src/npysort/x86-simd-sort/LICENSE.md": "211e7d737d6179a08f791ebb0a99897ce7cd2457410c542876d125576edfe910",
+    "licenses/numpy/licenses/numpy/_core/include/numpy/libdivide/LICENSE.txt": "fbc539f47d0cf83bc61378080fb873d5c14630126cacbfe754035c3926daa5ec",
+    "licenses/numpy/licenses/numpy/linalg/lapack_lite/LICENSE.txt": "a14cc25e10d40a3aa705b7de2fb764a6535d8ee9b2db4e1724900585457dfd55",
+    "licenses/torch/licenses/LICENSE": "bd018feef8825e88181c84eb7e3aa4eafb8f08a20d9fd6ef948569610c4a3e43",
+    "licenses/torch/licenses/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/llvm-openmp/LICENSE.txt": "68395143f21a9aa29b8232168c71892af5ec4f1ae2529571cd250a71c9e37a03",
+    "licenses/torch/licenses/third_party/mimalloc/LICENSE": "82ade5d7d9b029044b5fbbc326207fc47c2d44ee4dd71e8a559c36d728217de9",
+    "licenses/torch/licenses/third_party/onnx/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/torch/licenses/third_party/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+    "licenses/torch/licenses/third_party/ideep/LICENSE": "a26add03107a53a605a89711b9b7dbd4f5dd668ae193a912e01a879366a23b0e",
+    "licenses/torch/licenses/third_party/psimd/LICENSE": "984ce1e0b8ee89d234e28b960381f240e03a07a8031f35012f9c3256f56964e2",
+    "licenses/torch/licenses/third_party/FXdiv/LICENSE": "7cac00006125b1486a27e4801ed66357236e984c540bd323945ab7b66b078ec3",
+    "licenses/torch/licenses/third_party/miniz-3.0.2/LICENSE": "0115478d567121238cf6cc1c0c361926cf07a49d9e4c9e66da97fac6a01646b3",
+    "licenses/torch/licenses/third_party/protobuf/LICENSE": "6e5e117324afd944dcf67f36cf329843bc1a92229a8cd9bb573d7a83130fea7d",
+    "licenses/torch/licenses/third_party/NNPACK/LICENSE": "ab09e33621f513ebdd1ef685b324f39c1f6bee9221d15600bafd958322df1231",
+    "licenses/torch/licenses/third_party/mslk/LICENSE": "44519cbe722d7bf092cd7e0fa26558b9e3905b88fca4c0c278e2733a9f6b4cf9",
+    "licenses/torch/licenses/third_party/flatbuffers/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/torch/licenses/third_party/XNNPACK/LICENSE": "63f519e15726f4c4f830bd958f694c84fecb4e0a4cacc527d2696bb71ef95ada",
+    "licenses/torch/licenses/third_party/VulkanMemoryAllocator/LICENSE.txt": "8d70e4cf2a9941f6454da71cd60e38484dd3e34810c824760d550e982af6d97a",
+    "licenses/torch/licenses/third_party/pybind11/LICENSE": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb",
+    "licenses/torch/licenses/third_party/sleef/LICENSE.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+    "licenses/torch/licenses/third_party/flash-attention/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+    "licenses/torch/licenses/third_party/benchmark/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/torch/licenses/third_party/NVTX/LICENSE.txt": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0",
+    "licenses/torch/licenses/third_party/tensorpipe/LICENSE.txt": "f4dcef0d1f0520b414d5bfaeed8df02f188e4ec05c0a17bf1c18f25f6cc66245",
+    "licenses/torch/licenses/third_party/kineto/LICENSE": "6f3d59b9103e72e5c977eecf61b261c2e1546a9be2995847e3ee2d31021fd39b",
+    "licenses/torch/licenses/third_party/aiter/LICENSE": "0baca809927cad448401b252ce3bae12687c2987597ad7088cf3423f872d5bcd",
+    "licenses/torch/licenses/third_party/fbgemm/LICENSE": "12c2370ec32e78115dcd71ba22cdcb1297320fdc4ade81f798136d42357c58b8",
+    "licenses/torch/licenses/third_party/cpp-httplib/LICENSE": "4b45cbe16d7b71b89ae6127e26e0d90a029198ca5e958ad8e3d0b8bbed364d8b",
+    "licenses/torch/licenses/third_party/gloo/LICENSE": "2afbc572cf7f60888159bc2ca48ba58f8adec06682ae5de820d61449d1eeea81",
+    "licenses/torch/licenses/third_party/pthreadpool/LICENSE": "57814a606b4d0fb087d9a534919084b6c11b58a4174cb5a4aef200187780dc3a",
+    "licenses/torch/licenses/third_party/cudnn_frontend/LICENSE.txt": "3fc4b473a2c08768a8066bf7e4a58a1185060f3ad674f2ca9e2011bca4adf2ce",
+    "licenses/torch/licenses/third_party/cpuinfo/LICENSE": "8e7e60636c3aa0cb03571a1a841ce5697f9551ff92b3c426c2561613d15ade70",
+    "licenses/torch/licenses/third_party/cutlass/LICENSE.txt": "ad1513ca983da737a6843364ad19e8424a56d860736c2da773b8c5be527e1475",
+    "licenses/torch/licenses/third_party/FP16/LICENSE": "17e4f539024be2749ee729d1e2f01d24cef12ece8c9bf18e91a4349be29c80bf",
+    "licenses/torch/licenses/third_party/fmt/LICENSE": "a65fcc5a1095fc33cc37e4fff69366e49d7e92f613558a2b95ed1b70e33758b4",
+    "licenses/torch/licenses/third_party/perfetto/LICENSE": "9a682a56cffc9524dfa9b0b1c0dca9cb81a19e96d5bd0793aaf02c08a95ee7ca",
+    "licenses/torch/licenses/third_party/onnx/third_party/pybind11/LICENSE": "83965b843b98f670d3a85bd041ed4b372c8ec50d7b4a5995a83ac697ba675dcb",
+    "licenses/torch/licenses/third_party/ideep/mkl-dnn/LICENSE": "e9fc874fc09801b9acf3411ba72394098473704d832d713404b6c4861a086318",
+    "licenses/torch/licenses/third_party/ideep/mkl-dnn/third_party/opencl/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/torch/licenses/third_party/ideep/mkl-dnn/third_party/gtest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/protobuf/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/protobuf/third_party/utf8_range/LICENSE": "5a629d2b868081d8af08bbce5d038116f3a0e2e0d4ce9adf4d53f14e76b6b2e0",
+    "licenses/torch/licenses/third_party/protobuf/third_party/benchmark/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/torch/licenses/third_party/protobuf/third_party/googletest/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/protobuf/third_party/googletest/googlemock/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/protobuf/third_party/googletest/googlemock/scripts/generator/LICENSE": "5e0df8c845c742e76f2f64d2d9ce1b7e74a2422fddbc577ae6a56319083de0bf",
+    "licenses/torch/licenses/third_party/mslk/mslk/attention/flash_attn/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+    "licenses/torch/licenses/third_party/mslk/external/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/mslk/external/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+    "licenses/torch/licenses/third_party/mslk/external/hipify_torch/LICENSE.txt": "ecf819d55b17c2f091b3ba0934d044368aa0680d8a81374860306aa2b91aa1eb",
+    "licenses/torch/licenses/third_party/mslk/external/cutlass/LICENSE.txt": "80a7a18b73d41f64dd9ca881af35938f8de88b18c728703251f4c94d1299884d",
+    "licenses/torch/licenses/third_party/mslk/external/cutlass/python/LICENSE.txt": "42fec630f410aa308f70a51a89fadcd19586fa620f9831a32bee528a9a10000e",
+    "licenses/torch/licenses/third_party/flatbuffers/dart/LICENSE": "edd9b3459bee4c79b549a5ef66d06d12bd144ddb8d08e0b448fb421267f43dd5",
+    "licenses/torch/licenses/third_party/flatbuffers/swift/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/torch/licenses/third_party/flash-attention/flash_attn/cute/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+    "licenses/torch/licenses/third_party/flash-attention/csrc/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+    "licenses/torch/licenses/third_party/flash-attention/csrc/cutlass/LICENSE.txt": "80a7a18b73d41f64dd9ca881af35938f8de88b18c728703251f4c94d1299884d",
+    "licenses/torch/licenses/third_party/flash-attention/csrc/cutlass/python/LICENSE.txt": "42fec630f410aa308f70a51a89fadcd19586fa620f9831a32bee528a9a10000e",
+    "licenses/torch/licenses/third_party/flash-attention/third_party/aiter/LICENSE": "0baca809927cad448401b252ce3bae12687c2987597ad7088cf3423f872d5bcd",
+    "licenses/torch/licenses/third_party/flash-attention/third_party/aiter/3rdparty/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+    "licenses/torch/licenses/third_party/NVTX/rust/LICENSE": "e165ed77854f47fb208850d23d935a9f0ab8bb4527381466beeb16025e2f6e9e",
+    "licenses/torch/licenses/third_party/NVTX/python/LICENSE.txt": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0",
+    "licenses/torch/licenses/third_party/NVTX/docs/LICENSE.txt": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/pybind11/LICENSE": "9a37ea54aa3cf12c7f3292799f20822ffd4b9b7142b36a7a9997b28c39264dc9",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/libuv/LICENSE": "16de0c32b265cb7d46a6d3bd614f259dd4d693a5e26b3407b04aae8d73041f0c",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/libnop/LICENSE": "876e8f7432440974ee5543a2aa1344370ef1f2f7949ad98a1f3899cf722d5631",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/googletest/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/googletest/googlemock/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/tensorpipe/third_party/googletest/googlemock/scripts/generator/LICENSE": "5e0df8c845c742e76f2f64d2d9ce1b7e74a2422fddbc577ae6a56319083de0bf",
+    "licenses/torch/licenses/third_party/kineto/libkineto/third_party/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/kineto/libkineto/third_party/dynolog_headers/LICENSE": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+    "licenses/torch/licenses/third_party/kineto/libkineto/third_party/fmt/LICENSE": "07580f2a3b35709ce703d523f447b242f6dfec7582a8c0df102c7fa2849375f8",
+    "licenses/torch/licenses/third_party/aiter/3rdparty/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+    "licenses/torch/licenses/third_party/fbgemm/fbgemm_gpu/experimental/hstu/LICENSE": "8c9ccb96c065e706135b6cbad279b721da6156e51f3a5f27c6b3329af9416d73",
+    "licenses/torch/licenses/third_party/fbgemm/fbgemm_gpu/src/quantize_ops/mx/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "licenses/torch/licenses/third_party/fbgemm/fbgemm_gpu/test/quantize/mx/LICENSE": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+    "licenses/torch/licenses/third_party/fbgemm/external/googletest/LICENSE": "9702de7e4117a8e2b20dafab11ffda58c198aede066406496bef670d40a22138",
+    "licenses/torch/licenses/third_party/fbgemm/external/composable_kernel/LICENSE": "20f3b83dfda01bd18d285e0edbb9d044be6dde04cdf76a1ec18d9fc7127936bf",
+    "licenses/torch/licenses/third_party/fbgemm/external/hipify_torch/LICENSE.txt": "ecf819d55b17c2f091b3ba0934d044368aa0680d8a81374860306aa2b91aa1eb",
+    "licenses/torch/licenses/third_party/fbgemm/external/cpuinfo/LICENSE": "8e7e60636c3aa0cb03571a1a841ce5697f9551ff92b3c426c2561613d15ade70",
+    "licenses/torch/licenses/third_party/fbgemm/external/cutlass/LICENSE.txt": "80a7a18b73d41f64dd9ca881af35938f8de88b18c728703251f4c94d1299884d",
+    "licenses/torch/licenses/third_party/fbgemm/external/cpuinfo/deps/clog/LICENSE": "68a14c3e79add023eecd83d611e73f05b8bf1d16852efeb7eb4033a96736da9e",
+    "licenses/torch/licenses/third_party/fbgemm/external/cutlass/python/LICENSE.txt": "42fec630f410aa308f70a51a89fadcd19586fa620f9831a32bee528a9a10000e",
+    "licenses/torch/licenses/third_party/cpuinfo/deps/clog/LICENSE": "68a14c3e79add023eecd83d611e73f05b8bf1d16852efeb7eb4033a96736da9e",
+    "licenses/torch/licenses/third_party/cutlass/python/LICENSE.txt": "00bf1806f664ac1afe4221f5f04b384fb6f1ca6eb33efcb6dccf599eb06d08b9",
+    "licenses/torch/licenses/third_party/gemmlowp/gemmlowp/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  }
+}

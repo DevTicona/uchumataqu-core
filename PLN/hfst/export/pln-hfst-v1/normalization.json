@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "unicode": "NFC",
+  "case": "Python Unicode lower",
+  "apostrophes": {
+    "’": "'",
+    "ʼ": "'"
+  },
+  "strip_outer_whitespace": true,
+  "preserve_diacritics": true,
+  "max_characters": 128,
+  "single_word_only": true,
+  "unity_parity_verified": false
+}

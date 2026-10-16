@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "backend": "hfst",
+  "scope": "documented_forms_only",
+  "hfst_version": "/home/primo/proyecto-grado/PLN/hfst/tools/root/usr/bin/hfst-lexc 0.1 (hfst 3.16.0)",
+  "source_sha256": {
+    "palabras.json": "8ae33d355010e9a871235a3856712ed4748b82c858833808a355677e89388595",
+    "oraciones.json": "3a74d24bcac75d5147278beaadd78ee868e8c4855c89fbfbae5d7d2c1ce651ab",
+    "diccionario.json": "b9c3d2f68f253fc24f694417e07eaf991a279ecf1409f88a7755df954ed77233",
+    "reglas_de_escritura_y_gram_tica_uchumataqu.md": "9848faec650559749e19b432317eacab979d5aff14e9bba8689d82f1378348b4"
+  },
+  "grammar_sha256": "c27f24f6ce2108124562bda99d16019b4b2b227efff1797e7a96cc2ed03a4863",
+  "unknown_policy": "abstain",
+  "morphology": "restricted_attested_continuations; suffix segmentation is a hypothesis",
+  "runtime": "Linux x86_64 CLI; Android runtime not included",
+  "files": {
+    "analyses.json": "998e07a022466120e74c67adcf03f7626118ce58dc6203ef6d712a19231e641e",
+    "analyzer.hfst": "3b0238fda871912abc1e80afef09ee8eeb66bdf05cbf69cf0bb88dcaf3f2165f",
+    "analyzer.hfstol": "e0bf9ab2f8ef47d530736f852156ee724a8cbfbc5e02dbce54f3ad6230d24831",
+    "generator.hfst": "2c1edaed1e65ae4d431ca8947e2b589b0472b711b5d8ff088816e4b9cf8bc8d9",
+    "licenses/DATA.md": "71f4ffc098e0c6503dc49d82ac71aaf6b991fa6f6dabb3d948703b5ebabf3802",
+    "licenses/GPL-3.txt": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "licenses/hfst-copyright.txt": "bd202c1df3f542fa297bbb3b89703b67a550fd5662ec8ba985cb21dc4acb4873",
+    "licenses/libfoma0t64-copyright.txt": "e86a52426cce6c558f36a0ef52c8bbbb493556992074c30e3572d029ef66f53f",
+    "licenses/libfst22-copyright.txt": "8cc023496bdc4d29054838f830fc096770e237f75613f972d072a0792254b1ce",
+    "licenses/libhfst55-copyright.txt": "bd202c1df3f542fa297bbb3b89703b67a550fd5662ec8ba985cb21dc4acb4873",
+    "linguistic_scope.md": "6f64af85e5ebf3379aceadecb24282181d69cc11100194b69b3c87a1b4cf1be0",
+    "lookup-index.json": "0305c833e79c36ff7c6d5753ccd51d8f11292eb5e6e29a636764c7f569652436",
+    "metrics.json": "eb5225da9eea229cd38804ed8e16779a1d090a76ad83df814042717f73fbc688",
+    "normalization.json": "801f18d36ce15d416a9d93ef6b4e99d0bb9f710b51824ced85c2c512e4c633b7",
+    "test_vectors.json": "d42229e9ad679911f49b06c2b102888a0dc8d8ddc7490794c8d85c12d5e4a4ec"
+  }
+}

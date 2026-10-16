@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "lecciones": [
+    {
+      "id": "L01",
+      "titulo": "Saludos Básicos",
+      "orden": 1,
+      "oraciones_ids": [
+        "O_001",
+        "O_002",
+        "O_003"
+      ]
+    },
+    {
+      "id": "L02",
+      "titulo": "Presentación Personal",
+      "orden": 2,
+      "oraciones_ids": [
+        "O_004",
+        "O_005",
+        "O_006",
+        "O_007"
+      ]
+    },
+    {
+      "id": "L03",
+      "titulo": "Cortesía y Bienestar",
+      "orden": 3,
+      "oraciones_ids": [
+        "O_008",
+        "O_009",
+        "O_010"
+      ]
+    },
+    {
+      "id": "L04",
+      "titulo": "Respuestas de Bienestar",
+      "orden": 4,
+      "oraciones_ids": [
+        "O_011",
+        "O_012",
+        "O_013",
+        "O_014"
+      ]
+    },
+    {
+      "id": "L05",
+      "titulo": "Procedencia y Despedida",
+      "orden": 5,
+      "oraciones_ids": [
+        "O_015",
+        "O_016",
+        "O_017",
+        "O_018",
+        "O_019"
+      ]
+    },
+    {
+      "id": "L06",
+      "titulo": "Pronombres y Plurales",
+      "orden": 6,
+      "oraciones_ids": [
+        "O_020",
+        "O_021",
+        "O_022",
+        "O_023"
+      ]
+    },
+    {
+      "id": "L07",
+      "titulo": "El Núcleo Familiar",
+      "orden": 7,
+      "oraciones_ids": [
+        "O_024",
+        "O_025",
+        "O_026",
+        "O_027"
+      ]
+    },
+    {
+      "id": "L08",
+      "titulo": "Vestimenta Originaria 1",
+      "orden": 8,
+      "oraciones_ids": [
+        "O_028",
+        "O_029",
+        "O_030",
+        "O_031",
+        "O_032"
+      ]
+    },
+    {
+      "id": "L09",
+      "titulo": "Acciones Cotidianas",
+      "orden": 9,
+      "oraciones_ids": [
+        "O_033",
+        "O_034",
+        "O_035",
+        "O_036",
+        "O_037"
+      ]
+    },
+    {
+      "id": "L10",
+      "titulo": "Familia Extendida",
+      "orden": 10,
+      "oraciones_ids": [
+        "O_038",
+        "O_039",
+        "O_040",
+        "O_041"
+      ]
+    },
+    {
+      "id": "L11",
+      "titulo": "Vestimenta Originaria 2",
+      "orden": 11,
+      "oraciones_ids": [
+        "O_042",
+        "O_043",
+        "O_044",
+        "O_045"
+      ]
+    },
+    {
+      "id": "L12",
+      "titulo": "Objetos del Hogar 1",
+      "orden": 12,
+      "oraciones_ids": [
+        "O_046",
+        "O_047",
+        "O_048",
+        "O_049"
+      ]
+    },
+    {
+      "id": "L13",
+      "titulo": "Actividades del Hogar",
+      "orden": 13,
+      "oraciones_ids": [
+        "O_050",
+        "O_051",
+        "O_052",
+        "O_053",
+        "O_054"
+      ]
+    },
+    {
+      "id": "L14",
+      "titulo": "Objetos del Hogar 2",
+      "orden": 14,
+      "oraciones_ids": [
+        "O_055",
+        "O_056",
+        "O_057",
+        "O_058"
+      ]
+    },
+    {
+      "id": "L15",
+      "titulo": "Objetos Escolares",
+      "orden": 15,
+      "oraciones_ids": [
+        "O_059",
+        "O_060",
+        "O_061",
+        "O_062"
+      ]
+    },
+    {
+      "id": "L16",
+      "titulo": "Utensilios de Cocina 1",
+      "orden": 16,
+      "oraciones_ids": [
+        "O_063",
+        "O_064",
+        "O_065",
+        "O_066"
+      ]
+    },
+    {
+      "id": "L17",
+      "titulo": "Alimentos Tradicionales",
+      "orden": 17,
+      "oraciones_ids": [
+        "O_067",
+        "O_068",
+        "O_069",
+        "O_070",
+        "O_071"
+      ]
+    },
+    {
+      "id": "L18",
+      "titulo": "Utensilios de Cocina 2",
+      "orden": 18,
+      "oraciones_ids": [
+        "O_072",
+        "O_073",
+        "O_074",
+        "O_075"
+      ]
+    },
+    {
+      "id": "L19",
+      "titulo": "Alimentos de la Región",
+      "orden": 19,
+      "oraciones_ids": [
+        "O_076",
+        "O_077",
+        "O_078",
+        "O_079",
+        "O_080"
+      ]
+    },
+    {
+      "id": "L20",
+      "titulo": "Animales Domésticos",
+      "orden": 20,
+      "oraciones_ids": [
+        "O_081",
+        "O_082",
+        "O_083",
+        "O_084",
+        "O_085"
+      ]
+    },
+    {
+      "id": "L21",
+      "titulo": "Ganadería y Crianza",
+      "orden": 21,
+      "oraciones_ids": [
+        "O_086",
+        "O_087",
+        "O_088",
+        "O_089",
+        "O_090"
+      ]
+    },
+    {
+      "id": "L22",
+      "titulo": "Fauna Silvestre",
+      "orden": 22,
+      "oraciones_ids": [
+        "O_091",
+        "O_092",
+        "O_093",
+        "O_094"
+      ]
+    },
+    {
+      "id": "L23",
+      "titulo": "Aves del Ecosistema",
+      "orden": 23,
+      "oraciones_ids": [
+        "O_095",
+        "O_096",
+        "O_097",
+        "O_098"
+      ]
+    },
+    {
+      "id": "L24",
+      "titulo": "Especies Acuáticas",
+      "orden": 24,
+      "oraciones_ids": [
+        "O_099",
+        "O_100",
+        "O_101",
+        "O_102",
+        "O_103"
+      ]
+    },
+    {
+      "id": "L25",
+      "titulo": "Flora del Altiplano",
+      "orden": 25,
+      "oraciones_ids": [
+        "O_104",
+        "O_105",
+        "O_106",
+        "O_107",
+        "O_108"
+      ]
+    },
+    {
+      "id": "L26",
+      "titulo": "Elementos de la Naturaleza",
+      "orden": 26,
+      "oraciones_ids": [
+        "O_109",
+        "O_110",
+        "O_111",
+        "O_112",
+        "O_113"
+      ]
+    },
+    {
+      "id": "L27",
+      "titulo": "Orientación y Navegación",
+      "orden": 27,
+      "oraciones_ids": [
+        "O_114",
+        "O_115",
+        "O_116",
+        "O_117",
+        "O_118",
+        "O_119",
+        "O_120"
+      ]
+    }
+  ]
+}

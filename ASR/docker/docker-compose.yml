@@ -1,0 +1,30 @@
+services:
+  asr-env:
+    build:
+      # Contexto = directorio ASR/ (el Dockerfile y los archivos COPY viven aqui)
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: uchumataqu-asr:latest
+    container_name: uchumataqu_asr_env
+    working_dir: /home/primo/proyecto-grado/ASR/pipeline_icefall
+    user: "${UID:-1000}:${GID:-1000}"
+    volumes:
+      # Montaje limpio 1:1 entre host y contenedor
+      - /home/primo/proyecto-grado:/home/primo/proyecto-grado
+    environment:
+      - HOME=/home/primo
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/home/primo/proyecto-grado/ASR/pipeline_icefall/icefall_repo/egs/librispeech/ASR/zipformer:/home/primo/proyecto-grado/ASR/pipeline_icefall/icefall_repo
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    shm_size: '8gb'
+    stdin_open: true
+    tty: true
+    command: /bin/bash

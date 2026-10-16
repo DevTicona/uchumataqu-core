@@ -1,0 +1,1980 @@
+{
+  "version": 1,
+  "palabras": [
+    {
+      "id": "achasi",
+      "uch": "Achasi",
+      "es": "Almohada",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "achasinaka",
+          "uch": "Achasinaka",
+          "es": "Almohadas"
+        }
+      ]
+    },
+    {
+      "id": "achichay",
+      "uch": "Achichay",
+      "es": "Abuelo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "achuchay",
+      "uch": "Achuchay",
+      "es": "Cultivar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "am",
+      "uch": "Am",
+      "es": "Tú",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "amaruskchay",
+      "uch": "Amaruskchay",
+      "es": "Cerrar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "amchuki",
+      "uch": "Amchuki",
+      "es": "Ustedes",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "amthu",
+      "uch": "Amthü",
+      "es": "Y ¿tú?",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "ana",
+      "uch": "Ana",
+      "es": "No",
+      "categoria_gramatical": "adverbio",
+      "formas": [
+        {
+          "id": "anapini",
+          "uch": "Anapini",
+          "es": "Nunca"
+        }
+      ]
+    },
+    {
+      "id": "anachhulu",
+      "uch": "Anachhulu",
+      "es": "Ninguno",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "anachhuni",
+      "uch": "Anachhuñi",
+      "es": "No estoy bien",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "apay",
+      "uch": "Apay",
+      "es": "Papá",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "apichuy",
+      "uch": "Apichuy",
+      "es": "Abuela",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "arusha",
+      "uch": "Arusha",
+      "es": "Arroz",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "ataluy",
+      "uch": "Ataluy",
+      "es": "Mamá",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "ataluychay",
+          "uch": "Ataluychay",
+          "es": "Es mamá"
+        }
+      ]
+    },
+    {
+      "id": "axtal",
+      "uch": "Axtal",
+      "es": "Lejos",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "aymilla",
+      "uch": "Aymilla",
+      "es": "Camisa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chalachay",
+      "uch": "Chälachay",
+      "es": "Sembrar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "chatschay",
+      "uch": "Chʼatschay",
+      "es": "Ladrar",
+      "categoria_gramatical": "verbo",
+      "formas": [
+        {
+          "id": "chatschaypini",
+          "uch": "Chʼatschaypini",
+          "es": "Ladra mucho"
+        }
+      ]
+    },
+    {
+      "id": "chatuchay",
+      "uch": "Chʼatuchay",
+      "es": "picar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "chaxana",
+      "uch": "Chʼaxana",
+      "es": "Pez amarillo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "cheqallachay",
+      "uch": "Cheqallachay",
+      "es": "Remar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "chers",
+      "uch": "Chers",
+      "es": "Espejo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chhaq",
+      "uch": "Chhaq",
+      "es": "Grande",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "chhaqchay",
+          "uch": "Chhaqchay",
+          "es": "Es/esta grande"
+        },
+        {
+          "id": "chhaqpinichay",
+          "uch": "Chhaqpinichay",
+          "es": "Es/está muy grande"
+        }
+      ]
+    },
+    {
+      "id": "chhaqway",
+      "uch": "Chhaqway",
+      "es": "Alto",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "chhaqwaypini",
+          "uch": "Chhaqwaypini",
+          "es": "Muy alto"
+        }
+      ]
+    },
+    {
+      "id": "chhasi",
+      "uch": "Chhasi",
+      "es": "Faja",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "chhata",
+      "uch": "Chhata",
+      "es": "Abarca",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chhatanaka",
+          "uch": "Chhatanaka",
+          "es": "Abarcas"
+        }
+      ]
+    },
+    {
+      "id": "chhaxrana",
+      "uch": "Chhaxraña",
+      "es": "Peine",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chhaxrananaka",
+          "uch": "Chhaxrañanaka",
+          "es": "Peines"
+        }
+      ]
+    },
+    {
+      "id": "chhep",
+      "uch": "Chhep",
+      "es": "Tres",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "chhepyes",
+      "uch": "Chhepyës",
+      "es": "Trimestre",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chheqets",
+      "uch": "Chheqets",
+      "es": "Ropa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chheqhoni",
+      "uch": "Chheqhoñi",
+      "es": "Liwi",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chherchher",
+      "uch": "Chherchher",
+      "es": "Bonito",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "chherchherpinichay",
+          "uch": "Chherchherpinichay",
+          "es": "Es/está muy bonito"
+        }
+      ]
+    },
+    {
+      "id": "chhi",
+      "uch": "Chhi",
+      "es": "Uno",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "chhikhits",
+      "uch": "Chhikhits",
+      "es": "Lápiz",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chhikhitsnaka",
+          "uch": "Chhikhitsnaka",
+          "es": "Lápices"
+        }
+      ]
+    },
+    {
+      "id": "chhiqha",
+      "uch": "Chhiqha",
+      "es": "Escoba",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chhiqhanaka",
+          "uch": "Chhiqhanaka",
+          "es": "Escobas"
+        }
+      ]
+    },
+    {
+      "id": "chhiri",
+      "uch": "Chhiri",
+      "es": "Nube",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chhuk",
+      "uch": "Chhuk",
+      "es": "Sucio",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "chhukchay",
+          "uch": "Chhukchay",
+          "es": "Está sucio/a"
+        }
+      ]
+    },
+    {
+      "id": "chhuljama",
+      "uch": "Chhuljama",
+      "es": "¿Cómo?",
+      "categoria_gramatical": "adverbio interrogativo",
+      "formas": [
+        {
+          "id": "chhuljamachay",
+          "uch": "Chhuljamachay",
+          "es": "¿Cómo estás?"
+        }
+      ]
+    },
+    {
+      "id": "chhullayku",
+      "uch": "Chhullayku",
+      "es": "¿Por qué?",
+      "categoria_gramatical": "adverbio interrogativo"
+    },
+    {
+      "id": "chhulurasa",
+      "uch": "Chhulurasa",
+      "es": "¿Cuándo?",
+      "categoria_gramatical": "adverbio interrogativo"
+    },
+    {
+      "id": "chhuni",
+      "uch": "Chhuñi",
+      "es": "Bueno/a o Bien",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chhunipinichay",
+          "uch": "Chhuñipinichay",
+          "es": "Es/está muy bueno/a"
+        }
+      ]
+    },
+    {
+      "id": "chhuni_pichuchay",
+      "uch": "Chhuñi pichuchay",
+      "es": "Bienvenido",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "chhuniqasi",
+      "uch": "Chhuñiqasi",
+      "es": "Estoy bien",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chhuniqasichay",
+          "uch": "Chhuñiqasichay",
+          "es": "¿Estás bien?"
+        }
+      ]
+    },
+    {
+      "id": "chhurpikchay",
+      "uch": "Chhurpikchay",
+      "es": "Brillar",
+      "categoria_gramatical": "verbo",
+      "formas": [
+        {
+          "id": "chhurpikchaypini",
+          "uch": "Chhurpikchaypini",
+          "es": "Brilla mucho"
+        }
+      ]
+    },
+    {
+      "id": "chichalay",
+      "uch": "Chichalay",
+      "es": "Hermano",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chimay",
+      "uch": "Chimay",
+      "es": "Mesa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chirsnachay",
+      "uch": "Chirsnachay",
+      "es": "Ver",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "chisawa",
+      "uch": "Chisawa",
+      "es": "Miji",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chisi",
+      "uch": "Chʼisi",
+      "es": "Pez gato",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chisni",
+      "uch": "Chisñi",
+      "es": "Lluvia",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chisnipinichay",
+          "uch": "Chisñipinichay",
+          "es": "Hay mucha lluvia"
+        }
+      ]
+    },
+    {
+      "id": "chiw",
+      "uch": "Chiw",
+      "es": "Blanco",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "chiwa",
+      "uch": "Chʼiwa",
+      "es": "Planta acuatica",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chiwkis",
+      "uch": "Chiwkis",
+      "es": "Queso",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chiwkisnaka",
+          "uch": "Chiwkisnaka",
+          "es": "Quesos"
+        }
+      ]
+    },
+    {
+      "id": "chiwliks",
+      "uch": "Chiwliks",
+      "es": "Leche",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chiwqeri",
+      "uch": "Chiwqeri",
+      "es": "Pejerrey",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chiyacharku",
+      "uch": "Chiyacharku",
+      "es": "Norte",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "choq",
+      "uch": "Choq",
+      "es": "Negro",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "chukichay",
+      "uch": "Chukichay",
+      "es": "Traer",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "chunipaku",
+      "uch": "Chuñipaku",
+      "es": "Zorrino",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "churana",
+      "uch": "Chʼuraña",
+      "es": "Ave pequeña zambullidora",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "churu",
+      "uch": "Chʼuru",
+      "es": "caracol",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chusi",
+      "uch": "Chusi",
+      "es": "Cama",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "chuwa",
+      "uch": "Chuwa",
+      "es": "Plato",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "chuwanaka",
+          "uch": "Chuwanaka",
+          "es": "Platos"
+        }
+      ]
+    },
+    {
+      "id": "chuwicha",
+      "uch": "Chʼüwicha",
+      "es": "Chueco",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "echs",
+      "uch": "Echs",
+      "es": "Verde",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "eskhara",
+      "uch": "Eskhara",
+      "es": "Sombrero",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "ew",
+      "uch": "Ew",
+      "es": "Nuevo",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "ewchay",
+          "uch": "Ewchay",
+          "es": "Es/está nuevo"
+        }
+      ]
+    },
+    {
+      "id": "ira",
+      "uch": "Ira",
+      "es": "Poncho uru",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "iwaltaki",
+      "uch": "Iwaltaki",
+      "es": "Igualmente",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "iwisa",
+      "uch": "Iwisa",
+      "es": "Oveja",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "iwisanaka",
+          "uch": "Iwisanaka",
+          "es": "Ovejas"
+        }
+      ]
+    },
+    {
+      "id": "jakilta",
+      "uch": "Jakilta",
+      "es": "¿Cuál?",
+      "categoria_gramatical": "pronombre interrogativo"
+    },
+    {
+      "id": "jasiktam",
+      "uch": "Jasiktam",
+      "es": "¿De dónde?",
+      "categoria_gramatical": "adverbio interrogativo"
+    },
+    {
+      "id": "jaxchay",
+      "uch": "Jaxchay",
+      "es": "Lavar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "jilaynacha",
+      "uch": "Jilaynacha",
+      "es": "Demasiado",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "jilli",
+      "uch": "Jilli",
+      "es": "Carne",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "jipu",
+      "uch": "Jipu",
+      "es": "Viento",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "julsnay",
+      "uch": "Julsnay",
+      "es": "Sentarse",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "julsni",
+      "uch": "Julsni",
+      "es": "Silla",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "juwa",
+      "uch": "Juwa",
+      "es": "Totora",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kana",
+      "uch": "Kʼana",
+      "es": "Soga de paja",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "karpinisa",
+      "uch": "Karpinisa",
+      "es": "Medias",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "karpinisanaka",
+          "uch": "Karpinisanaka",
+          "es": "Medias (plural)"
+        }
+      ]
+    },
+    {
+      "id": "kasa",
+      "uch": "Kʼasa",
+      "es": "Ala",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kayuy",
+      "uch": "Kʼayuy",
+      "es": "Hermana",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "khera",
+      "uch": "Khera",
+      "es": "Cucharón",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "khirchula",
+      "uch": "Khirchula",
+      "es": "Cuchara",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "khirchulanaka",
+          "uch": "Khirchulanaka",
+          "es": "Cucharas"
+        }
+      ]
+    },
+    {
+      "id": "khitschay",
+      "uch": "Khitschay",
+      "es": "Abrir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "khuchhi",
+      "uch": "Khuchhi",
+      "es": "Chancho",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kula",
+      "uch": "Kula",
+      "es": "Quinua",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kuli",
+      "uch": "Kʼuli",
+      "es": "Pez pequeño con bigotes",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kullku",
+      "uch": "Kʼullku",
+      "es": "Angosto",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "kurwina",
+      "uch": "Kurwina",
+      "es": "Trucha",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "kurwinanaka",
+          "uch": "Kurwinanaka",
+          "es": "Truchas"
+        }
+      ]
+    },
+    {
+      "id": "kusikasi",
+      "uch": "Kʼusikasi",
+      "es": "Contento",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "kusikasichay",
+          "uch": "Kʼusikasichay",
+          "es": "Está contento/a"
+        }
+      ]
+    },
+    {
+      "id": "kuskuts",
+      "uch": "Kuskuts",
+      "es": "Mochila",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kuti",
+      "uch": "Kʼuti",
+      "es": "Pulga",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "kuwarerno",
+      "uch": "Kuwarerno",
+      "es": "Cuaderno",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "kuwarernonaka",
+          "uch": "Kuwarernonaka",
+          "es": "Cuadernos"
+        }
+      ]
+    },
+    {
+      "id": "lasnuchay",
+      "uch": "Lasnuchay",
+      "es": "Saltar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "layschay",
+      "uch": "Layschay",
+      "es": "Volar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "likschay",
+      "uch": "Likschay",
+      "es": "Beber",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "lloqa",
+      "uch": "Lloqa",
+      "es": "Orilla",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "lowalowa",
+      "uch": "Lowalowa",
+      "es": "Rápido",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "lowalowapini",
+          "uch": "Lowalowapini",
+          "es": "Muy rápido"
+        }
+      ]
+    },
+    {
+      "id": "lulschay",
+      "uch": "Lulschay",
+      "es": "Comer",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "lusi",
+      "uch": "Lusi",
+      "es": "Cántaro",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "makchi",
+      "uch": "Makchi",
+      "es": "Pantalón",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "malaqoy",
+      "uch": "Malaqoy",
+      "es": "Tía",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "maska",
+      "uch": "Mäska",
+      "es": "Olla",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "masota",
+      "uch": "Masota",
+      "es": "Gato",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "maxsi",
+      "uch": "Maxsi",
+      "es": "Zapato",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "maxsinaka",
+          "uch": "Maxsinaka",
+          "es": "Zapatos"
+        }
+      ]
+    },
+    {
+      "id": "murchula",
+      "uch": "Murchula",
+      "es": "Burro",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "ni",
+      "uch": "Nï",
+      "es": "Él o Ella",
+      "categoria_gramatical": "pronombre",
+      "formas": [
+        {
+          "id": "ninaka",
+          "uch": "Nïnaka",
+          "es": "Ellos o Ellas"
+        }
+      ]
+    },
+    {
+      "id": "nis",
+      "uch": "Nis",
+      "es": "Su (de él/ella)",
+      "categoria_gramatical": "determinante_posesivo"
+    },
+    {
+      "id": "nonschay",
+      "uch": "Nonschay",
+      "es": "Escuchar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "ochapara",
+      "uch": "Ochapara",
+      "es": "Bote",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "oqlaychay",
+      "uch": "Oqlaychay",
+      "es": "Caminar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "oqschay",
+      "uch": "Oqschay",
+      "es": "Ir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "pakschay",
+      "uch": "Pakschay",
+      "es": "Crecer",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "paku",
+      "uch": "Päku",
+      "es": "Perro",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "pakunaka",
+          "uch": "Päkunaka",
+          "es": "Perros"
+        }
+      ]
+    },
+    {
+      "id": "palitak",
+      "uch": "Palitak",
+      "es": "Amigo",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "palitakchay",
+          "uch": "Palitakchay",
+          "es": "Es amigo"
+        },
+        {
+          "id": "palitaknaka",
+          "uch": "Palitaknaka",
+          "es": "Amigos"
+        }
+      ]
+    },
+    {
+      "id": "papi",
+      "uch": "Pʼapi",
+      "es": "Pescado tostado",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "papila",
+      "uch": "Papila",
+      "es": "Papel",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "parentina",
+      "uch": "Parentiña",
+      "es": "Familia",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "parina",
+      "uch": "Parina",
+      "es": "Flamenco",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "paxpiku",
+      "uch": "Paxpiku",
+      "es": "Cuatro",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "pesaqa",
+      "uch": "Pʼesaqa",
+      "es": "Perdiz",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "peske",
+      "uch": "Peske",
+      "es": "Dos",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "phawschay",
+      "uch": "Phawschay",
+      "es": "Fabricar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "phesqona",
+      "uch": "Phesqoña",
+      "es": "Lagarto",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "pheta",
+      "uch": "Pheta",
+      "es": "Ventana",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "phetanaka",
+          "uch": "Phetanaka",
+          "es": "Ventanas"
+        }
+      ]
+    },
+    {
+      "id": "phiki",
+      "uch": "Phiki",
+      "es": "Paja brava",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "pichuchay",
+      "uch": "Pichuchay",
+      "es": "Venir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "pitkchay",
+      "uch": "Pʼitkchay",
+      "es": "Tejer",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "piwachay",
+      "uch": "Piwachay",
+      "es": "Limpiar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "poa",
+      "uch": "Pʼoa",
+      "es": "Tambor",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "potschay",
+      "uch": "Potschay",
+      "es": "Cortar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "potsi",
+      "uch": "Potsi",
+      "es": "Cuchillo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "purchay",
+      "uch": "Purchay",
+      "es": "Poder",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "puschay",
+      "uch": "Pʼuschay",
+      "es": "Está enfermo/a",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "pusu",
+      "uch": "Pʼusu",
+      "es": "Hinchado",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "qachina",
+      "uch": "Qachina",
+      "es": "Vela de la balsa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qala",
+      "uch": "Qala",
+      "es": "Gaviota",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qalluchay",
+      "uch": "Qʼalluchay",
+      "es": "Pagar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "qalpu",
+      "uch": "Qälpu",
+      "es": "Tikitiki",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qamirizoni",
+      "uch": "Qʼämirizoñi",
+      "es": "Persona adinerada",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qanawi",
+      "uch": "Qañawi",
+      "es": "Cañawa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qawi",
+      "uch": "Qawi",
+      "es": "Cóndor",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qecha",
+      "uch": "Qʼecha",
+      "es": "Oro",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qeja",
+      "uch": "Qʼeja",
+      "es": "Relampago",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qelaqela",
+      "uch": "Qʼelaqʼela",
+      "es": "Hierba para el parto",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qeri",
+      "uch": "Qeri",
+      "es": "Pez",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qerjina",
+      "uch": "Qerjiña",
+      "es": "Wallake",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qeru",
+      "uch": "Qeru",
+      "es": "Vaso",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qerwakha",
+      "uch": "Qerwakha",
+      "es": "Toro",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qeschhala",
+      "uch": "Qeschhäla",
+      "es": "Sembradío",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qetsi",
+      "uch": "Qetsi",
+      "es": "Zorro",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qhalu",
+      "uch": "Qhalu",
+      "es": "Diez",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "qhasi",
+      "uch": "Qhasi",
+      "es": "Agua",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qhasumpek",
+      "uch": "Qhasumpek",
+      "es": "¿Cuánto?",
+      "categoria_gramatical": "pronombre interrogativo"
+    },
+    {
+      "id": "qhathu",
+      "uch": "Qhathu",
+      "es": "Mercado",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qhawschay",
+      "uch": "Qhawschay",
+      "es": "Comprar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "qhorskchay",
+      "uch": "Qhorskchay",
+      "es": "Buscar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "qhoya",
+      "uch": "Qhoya",
+      "es": "Casa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "qhoychay",
+      "uch": "Qhoychay",
+      "es": "Construir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "qola",
+      "uch": "Qola",
+      "es": "Estrella",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "qolanakapini",
+          "uch": "Qolanakapini",
+          "es": "Muchas estrellas"
+        }
+      ]
+    },
+    {
+      "id": "qonqo",
+      "uch": "Qonqo",
+      "es": "Ocho",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "qoq",
+      "uch": "Qoq",
+      "es": "Árbol",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "qoqnaka",
+          "uch": "Qoqnaka",
+          "es": "Árboles"
+        }
+      ]
+    },
+    {
+      "id": "qotni",
+      "uch": "Qotñi",
+      "es": "Caliente",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "salskama",
+      "uch": "Salskama",
+      "es": "Hasta luego",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "sana",
+      "uch": "Säna",
+      "es": "Puerta",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "sanqo",
+      "uch": "Sanqo",
+      "es": "Nueve",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "satschay",
+      "uch": "Satschay",
+      "es": "Correr",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "saxoni",
+      "uch": "Saxoni",
+      "es": "Azul",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "saxonichay",
+          "uch": "Saxonichay",
+          "es": "Es/está azul"
+        }
+      ]
+    },
+    {
+      "id": "selschay",
+      "uch": "Selschay",
+      "es": "Existir o Hay",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "serx",
+      "uch": "Serx",
+      "es": "Viejo",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "serxchay",
+          "uch": "Serxchay",
+          "es": "Es/está viejo"
+        }
+      ]
+    },
+    {
+      "id": "seschay",
+      "uch": "Seschay",
+      "es": "Tarde",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "shachkuchay",
+      "uch": "Shachkuchay",
+      "es": "Terreno",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "shatachay",
+      "uch": "Shatachay",
+      "es": "Escapar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "shaxara",
+      "uch": "Shaxara",
+      "es": "Víbora",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "shikacha",
+      "uch": "Shikacha",
+      "es": "Sapo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "shila",
+      "uch": "Shila",
+      "es": "Sí",
+      "categoria_gramatical": "adverbio"
+    },
+    {
+      "id": "shuwani",
+      "uch": "Shuwani",
+      "es": "Niñez",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "siluchay",
+      "uch": "Siluchay",
+      "es": "Residir o Vivir",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "sini",
+      "uch": "Siñi",
+      "es": "Huevo",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "sininaka",
+          "uch": "Siñinaka",
+          "es": "Huevos"
+        }
+      ]
+    },
+    {
+      "id": "siqetschay",
+      "uch": "Siqetschay",
+      "es": "Escribir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "sischay",
+      "uch": "Sischay",
+      "es": "Saber",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "sisni",
+      "uch": "Sisñi",
+      "es": "Curandero",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "sisnichay",
+          "uch": "Sisñichay",
+          "es": "Es/está curandero"
+        }
+      ]
+    },
+    {
+      "id": "sisuchay",
+      "uch": "Sisuchay",
+      "es": "Aprender",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "sitsni",
+      "uch": "Sitsñi",
+      "es": "Profesor",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "sitsninaka",
+          "uch": "Sitsñinaka",
+          "es": "Profesores"
+        },
+        {
+          "id": "sitsninakachay",
+          "uch": "Sitsñinakachay",
+          "es": "Somos profesores"
+        }
+      ]
+    },
+    {
+      "id": "sitsnizoni",
+      "uch": "Sitsñizoñi",
+      "es": "Sabio",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "sitsnizonipinichay",
+          "uch": "Sitsñizoñipinichay",
+          "es": "Es muy sabio"
+        }
+      ]
+    },
+    {
+      "id": "soqna",
+      "uch": "Soqna",
+      "es": "Pato",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "suwa",
+      "uch": "Suwa",
+      "es": "Niño",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "taki",
+      "uch": "Taki",
+      "es": "Ese o Esa",
+      "categoria_gramatical": "determinante"
+    },
+    {
+      "id": "talla",
+      "uch": "Tʼalla",
+      "es": "Bañador",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tanachay",
+      "uch": "Tanachay",
+      "es": "Atrapar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "tanschay",
+      "uch": "Tanschay",
+      "es": "Pescar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "tapa",
+      "uch": "Tapa",
+      "es": "Ají",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tapha",
+      "uch": "Tʼapha",
+      "es": "Desabrido",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "taxacharku",
+      "uch": "Taxacharku",
+      "es": "Oeste",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "taxchuku",
+      "uch": "Taxchuku",
+      "es": "Seis",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "taxchukyes",
+      "uch": "Taxchukyës",
+      "es": "Semestre",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "taxsnakichay",
+      "uch": "Taxsnakichay",
+      "es": "Cocinar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "taxsnuku",
+      "uch": "Taxsnuku",
+      "es": "Cinco",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "tekschay",
+      "uch": "Tekschay",
+      "es": "Salir (astros)",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "tesha",
+      "uch": "Tësha",
+      "es": "Luz",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "teskana",
+      "uch": "Teskana",
+      "es": "Goma",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "thaxchay",
+      "uch": "Thaxchay",
+      "es": "Dormir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "thikuchay",
+      "uch": "Thikuchay",
+      "es": "Caerse",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "thosa",
+      "uch": "Thosa",
+      "es": "Balsa",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "thu",
+      "uch": "Thü",
+      "es": "Nombre",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "thuni",
+      "uch": "Thuñi",
+      "es": "Sol",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "thuni_seschay",
+      "uch": "Thuñi seschay",
+      "es": "Buenas tardes",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "ti",
+      "uch": "Tï",
+      "es": "Ese o Aquí (Para lugar)",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "ti_wiyanichay",
+      "uch": "Tï wiyanichay",
+      "es": "Buenas noches",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "tichu",
+      "uch": "Tichu",
+      "es": "Este",
+      "categoria_gramatical": "determinante"
+    },
+    {
+      "id": "tijutiju",
+      "uch": "Tʼijutʼiju",
+      "es": "Saltamontes",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tiku",
+      "uch": "Tiku",
+      "es": "Cielo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tila",
+      "uch": "Tila",
+      "es": "Esta",
+      "categoria_gramatical": "determinante"
+    },
+    {
+      "id": "titomxe",
+      "uch": "Tïtomxe",
+      "es": "Hoy día",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tololay",
+      "uch": "Tololay",
+      "es": "Tío",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tuchay",
+      "uch": "Tuchay",
+      "es": "Vender",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "tuki",
+      "uch": "Tüki",
+      "es": "Asado",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tuku",
+      "uch": "Tʼuku",
+      "es": "Hambre",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tuncharku",
+      "uch": "Tuncharku",
+      "es": "Este",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "tupsincha",
+      "uch": "Tʼupsincha",
+      "es": "Tapa de faro",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tuqschay",
+      "uch": "Tʼuqschay",
+      "es": "Guardar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "tusi",
+      "uch": "Tüsi",
+      "es": "Corazon",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tutu",
+      "uch": "Tʼutu",
+      "es": "Cebada",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "tuwqo",
+      "uch": "Tüwqo",
+      "es": "Siete",
+      "categoria_gramatical": "numeral"
+    },
+    {
+      "id": "uchpu",
+      "uch": "Uchpü",
+      "es": "Nervio",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "uchs",
+      "uch": "Uchs",
+      "es": "Pequeño",
+      "categoria_gramatical": "adjetivo",
+      "formas": [
+        {
+          "id": "uchspinichay",
+          "uch": "Uchspinichay",
+          "es": "Es muy pequeño"
+        }
+      ]
+    },
+    {
+      "id": "uchumik",
+      "uch": "Uchumik",
+      "es": "Nosotros (excluyente)",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "uchums",
+      "uch": "Uchums",
+      "es": "Nuestro (Exclusivo)",
+      "categoria_gramatical": "determinante_posesivo"
+    },
+    {
+      "id": "ulanchay",
+      "uch": "Ulanchay",
+      "es": "Salir",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "uni",
+      "uch": "Uñi",
+      "es": "Conejo",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "uninaka",
+          "uch": "Uñinaka",
+          "es": "Conejos"
+        }
+      ]
+    },
+    {
+      "id": "untu",
+      "uch": "Untu",
+      "es": "Fuerte",
+      "categoria_gramatical": "adjetivo"
+    },
+    {
+      "id": "urkhu",
+      "uch": "Urkhu",
+      "es": "Vestido uru",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "usa",
+      "uch": "Usa",
+      "es": "Cerro",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "usachay",
+          "uch": "Usachay",
+          "es": "Está en el cerro"
+        }
+      ]
+    },
+    {
+      "id": "uwapinichay",
+      "uch": "Uwapinichay",
+      "es": "Gracias",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "uyuwichay",
+      "uch": "Uyuwichay",
+      "es": "Criar",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "wakha",
+      "uch": "Wakha",
+      "es": "Vaca",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "wakhanaka",
+          "uch": "Wakhanaka",
+          "es": "Vacas"
+        }
+      ]
+    },
+    {
+      "id": "wakpacha",
+      "uch": "Wakpacha",
+      "es": "Todos",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "walchay",
+      "uch": "Walchay",
+      "es": "Costar o Valer",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "wallpa",
+      "uch": "Wallpa",
+      "es": "Gallina",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "wallpanaka",
+          "uch": "Wallpanaka",
+          "es": "Gallinas"
+        }
+      ]
+    },
+    {
+      "id": "warirachay",
+      "uch": "Warirachay",
+      "es": "Usar o Utilizar",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "watha",
+      "uch": "Watha",
+      "es": "Pueblo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "wesla",
+      "uch": "Wësla",
+      "es": "Chhoqha",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "weslanaka",
+          "uch": "Wëslanaka",
+          "es": "Chhoqhas"
+        }
+      ]
+    },
+    {
+      "id": "wilk",
+      "uch": "Wilk",
+      "es": "Yo",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "wilk_tho",
+      "uch": "Wilk thö",
+      "es": "Yo soy",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "wisnaks",
+      "uch": "Wisnaks",
+      "es": "Nuestro (Inclusivo)",
+      "categoria_gramatical": "determinante_posesivo"
+    },
+    {
+      "id": "wisnakti",
+      "uch": "Wisnakti",
+      "es": "Nosotros (incluyente)",
+      "categoria_gramatical": "pronombre"
+    },
+    {
+      "id": "wist",
+      "uch": "Wist",
+      "es": "Mi",
+      "categoria_gramatical": "determinante_posesivo"
+    },
+    {
+      "id": "wistakchay",
+      "uch": "Wistakchay",
+      "es": "Tener",
+      "categoria_gramatical": "verbo"
+    },
+    {
+      "id": "wiwi",
+      "uch": "Wiwi",
+      "es": "Río",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "wiyani",
+      "uch": "Wiyani",
+      "es": "En la mañana",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "wiyanichay",
+          "uch": "Wiyanichay",
+          "es": "Noche"
+        }
+      ]
+    },
+    {
+      "id": "wiyantam",
+      "uch": "Wiyantam",
+      "es": "Buenos días",
+      "categoria_gramatical": "expresión"
+    },
+    {
+      "id": "xala",
+      "uch": "Xala",
+      "es": "Llama",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "xalanaka",
+          "uch": "Xalanaka",
+          "es": "Llamas"
+        }
+      ]
+    },
+    {
+      "id": "xalsmasi",
+      "uch": "Xalsmäsi",
+      "es": "Batán",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "xalwari",
+      "uch": "Xalwari",
+      "es": "Vicuña",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "xanacharku",
+      "uch": "Xanacharku",
+      "es": "Sur",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "xanacharkuchay",
+          "uch": "Xanacharkuchay",
+          "es": "Está al sur"
+        }
+      ]
+    },
+    {
+      "id": "xawariski",
+      "uch": "Xawariski",
+      "es": "Pan",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "xorcha",
+      "uch": "Xorcha",
+      "es": "Color",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "xorchachay",
+          "uch": "Xorchachay",
+          "es": "Es de color"
+        }
+      ]
+    },
+    {
+      "id": "xurs",
+      "uch": "Xürs",
+      "es": "Trueno",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "yachiri",
+      "uch": "Yachiri",
+      "es": "Carpintero",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "yachirichay",
+          "uch": "Yachirichay",
+          "es": "Es carpintero"
+        }
+      ]
+    },
+    {
+      "id": "yes",
+      "uch": "Yës",
+      "es": "Mes",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "yiku",
+      "uch": "Yiku",
+      "es": "Sal",
+      "categoria_gramatical": "sustantivo",
+      "formas": [
+        {
+          "id": "yikupinichay",
+          "uch": "Yikupinichay",
+          "es": "Está muy salado"
+        }
+      ]
+    },
+    {
+      "id": "yis",
+      "uch": "Yïs",
+      "es": "Luna",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "yoqa",
+      "uch": "Yoqa",
+      "es": "Suelo",
+      "categoria_gramatical": "sustantivo"
+    },
+    {
+      "id": "zonchhiji",
+      "uch": "Zoñchhiji",
+      "es": "Esqueleto humano",
+      "categoria_gramatical": "sustantivo"
+    }
+  ]
+}

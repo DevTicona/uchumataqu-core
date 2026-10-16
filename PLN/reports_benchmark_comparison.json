@@ -1,0 +1,299 @@
+{
+  "t_hfst_load_ms": 4.09384299928206,
+  "t_seq_load_ms": 41.756270999030676,
+  "t_hfst_avg_ms": 4.774991029989906,
+  "t_seq_avg_ms": 0.7069348900040495,
+  "cases": [
+    {
+      "category": "Raíz básica",
+      "word": "Achasi",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "achasi",
+        "segments": [
+          "achasi"
+        ],
+        "time_ms": 36.639329002355225
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "achasi",
+        "segments": [
+          "achasi"
+        ],
+        "raw": "<LEMMA>achasi<POS><N><SEG>achasi<FEAT><NONE><EOS>",
+        "time_ms": 4.59301099908771
+      }
+    },
+    {
+      "category": "Plural documentado (-naka)",
+      "word": "Achasinaka",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "achasi",
+        "segments": [
+          "achasi",
+          "naka"
+        ],
+        "time_ms": 5.733392001275206
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "achasi",
+        "segments": [
+          "achasi",
+          "naka"
+        ],
+        "raw": "<LEMMA>achasi<POS><N><SEG>achasi|naka<FEAT><NONE><EOS>",
+        "time_ms": 1.1869230002048425
+      }
+    },
+    {
+      "category": "Sufijo -pini",
+      "word": "Anapini",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "ana",
+        "segments": [
+          "ana",
+          "pini"
+        ],
+        "time_ms": 4.708360000222456
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "ana",
+        "segments": [
+          "ana",
+          "pini"
+        ],
+        "raw": "<LEMMA>ana<POS><ADV><SEG>ana|pini<FEAT><NONE><EOS>",
+        "time_ms": 1.1781200009863824
+      }
+    },
+    {
+      "category": "Sufijos combinados (-pini, -chay)",
+      "word": "Chhaqpinichay",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "chhaq",
+        "segments": [
+          "chhaq",
+          "pini",
+          "chay"
+        ],
+        "time_ms": 4.715406001196243
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "chhaq",
+        "segments": [
+          "chhaq",
+          "pini",
+          "chay"
+        ],
+        "raw": "<LEMMA>chhaq<POS><ADJ><SEG>chhaq|pini|chay<FEAT><NONE><EOS>",
+        "time_ms": 1.472035000915639
+      }
+    },
+    {
+      "category": "Sufijos triples (-naka, -chay)",
+      "word": "Sitsñinakachay",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "sitsñi",
+        "segments": [
+          "sitsñi",
+          "naka",
+          "chay"
+        ],
+        "time_ms": 8.199282998248236
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "sitsñi",
+        "segments": [
+          "sitsñi",
+          "naka",
+          "chay"
+        ],
+        "raw": "<LEMMA>sitsñi<POS><N><SEG>sitsñi|naka|chay<FEAT><NONE><EOS>",
+        "time_ms": 1.0921519969997462
+      }
+    },
+    {
+      "category": "Falsa raíz con -chay (Achichay = abuelo)",
+      "word": "Achichay",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "achichay",
+        "segments": [
+          "achichay"
+        ],
+        "time_ms": 5.668990001140628
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "achichay",
+        "segments": [
+          "achichay"
+        ],
+        "raw": "<LEMMA>achichay<POS><N><SEG>achichay<FEAT><NONE><EOS>",
+        "time_ms": 1.085102998331422
+      }
+    },
+    {
+      "category": "Vocal con diacrítico / diéresis",
+      "word": "Päku",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "päku",
+        "segments": [
+          "päku"
+        ],
+        "time_ms": 4.94798599902424
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "päku",
+        "segments": [
+          "päku"
+        ],
+        "raw": "<LEMMA>päku<POS><N><SEG>päku<FEAT><NONE><EOS>",
+        "time_ms": 0.9278489997086581
+      }
+    },
+    {
+      "category": "Apóstrofo tipográfico",
+      "word": "Chʼatschay",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "ch'atschay",
+        "segments": [
+          "ch'atschay"
+        ],
+        "time_ms": 4.5061269993311726
+      },
+      "seq2seq": {
+        "status": "experimental_match",
+        "lemma": "ch'atschay",
+        "segments": [
+          "ch'atschay"
+        ],
+        "raw": "<LEMMA>ch'atschay<POS><V><SEG>ch'atschay<FEAT><NONE><EOS>",
+        "time_ms": 1.4534499969158787
+      }
+    },
+    {
+      "category": "Nombre propio de oración",
+      "word": "lorenzo",
+      "hfst": {
+        "status": "analyzed",
+        "lemma": "lorenzo",
+        "segments": [
+          "lorenzo"
+        ],
+        "time_ms": 5.148526000994025
+      },
+      "seq2seq": {
+        "status": "abstained",
+        "lemma": null,
+        "segments": null,
+        "raw": "<LEMMA>lornoz<POS><N><SEG>lornizo<FEAT><NONE><EOS>",
+        "time_ms": 1.3797939973301254
+      }
+    },
+    {
+      "category": "Error ortográfico leve (distancia 1)",
+      "word": "achazi",
+      "hfst": {
+        "status": "unknown",
+        "lemma": null,
+        "segments": null,
+        "time_ms": 5.17395000133547
+      },
+      "seq2seq": {
+        "status": "abstained",
+        "lemma": null,
+        "segments": null,
+        "raw": "<LEMMA>achawi<POS><N><SEG>achawi<FEAT><NONE><EOS>",
+        "time_ms": 1.364437001029728
+      }
+    },
+    {
+      "category": "Error ortográfico grave",
+      "word": "zzzzz",
+      "hfst": {
+        "status": "unknown",
+        "lemma": null,
+        "segments": null,
+        "time_ms": 4.753181001433404
+      },
+      "seq2seq": {
+        "status": "abstained",
+        "lemma": null,
+        "segments": null,
+        "raw": "<LEMMA>wiwi<POS><N><SEG>wiwi<FEAT><NONE><EOS>",
+        "time_ms": 1.0676269994291943
+      }
+    },
+    {
+      "category": "Sufijación no permitida / recursiva",
+      "word": "achasinakanaka",
+      "hfst": {
+        "status": "unknown",
+        "lemma": null,
+        "segments": null,
+        "time_ms": 5.2634610001405235
+      },
+      "seq2seq": {
+        "status": "abstained",
+        "lemma": null,
+        "segments": null,
+        "raw": "<LEMMA>achasi<POS><N><SEG>achasi|naka<FEAT><NONE><EOS>",
+        "time_ms": 1.316172998485854
+      }
+    },
+    {
+      "category": "Entrada no soportada (números)",
+      "word": "achasi123",
+      "hfst": {
+        "status": "unsupported_input",
+        "lemma": null,
+        "segments": null,
+        "time_ms": 0.011123000149382278
+      },
+      "seq2seq": {
+        "status": "unsupported_input",
+        "lemma": null,
+        "segments": null,
+        "raw": "",
+        "time_ms": 0.008561000868212432
+      }
+    },
+    {
+      "category": "Entrada no soportada (multipalabra)",
+      "word": "achasi otra",
+      "hfst": {
+        "status": "unsupported_input",
+        "lemma": null,
+        "segments": null,
+        "time_ms": 0.004174999048700556
+      },
+      "seq2seq": {
+        "status": "unsupported_input",
+        "lemma": null,
+        "segments": null,
+        "raw": "",
+        "time_ms": 0.003730998287210241
+      }
+    }
+  ],
+  "test_split": {
+    "total": 28,
+    "hfst_exact": 28,
+    "seq2seq_exact": 7,
+    "seq2seq_valid": 12,
+    "seq2seq_abstained": 21
+  }
+}

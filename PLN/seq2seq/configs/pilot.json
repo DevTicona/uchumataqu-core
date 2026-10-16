@@ -1,0 +1,17 @@
+{
+  "embedding": 48,
+  "hidden": 96,
+  "max_input": 32,
+  "max_output": 80,
+  "batch_size": 32,
+  "epochs": 100,
+  "eval_every": 5,
+  "patience": 6,
+  "learning_rate": 0.003,
+  "seeds": [17, 29, 43],
+  "split_seed": 20261015,
+  "threads": 1,
+  "opset": 17,
+  "annotation_policy": "exploratory_unreviewed_not_gold",
+  "deployment_allowed": false
+}

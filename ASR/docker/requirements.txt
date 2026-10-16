@@ -1,0 +1,35 @@
+# Dependencias completas para entrenamiento dual:
+# 1. Opción A: Next-gen Kaldi (Icefall / Lhotse / k2)
+# 2. Opción B: Fine-Tuning Multilingüe (Meta MMS / HuggingFace)
+# 3. Exportación y Runtime Offline (Sherpa-onnx / ONNX Runtime GPU)
+
+# Base PyTorch & Audio
+torch>=2.2.0
+torchaudio>=2.2.0
+soundfile>=0.12.1
+librosa>=0.10.1
+pydub>=0.25.1
+scipy>=1.11.0
+
+# Ecosistema Next-gen Kaldi (Opción A)
+lhotse>=1.20.0
+kaldi-native-fbank>=1.18.0
+sentencepiece>=0.2.0
+
+# Ecosistema HuggingFace / Meta MMS (Opción B)
+transformers>=4.38.0
+datasets>=2.17.0
+accelerate>=0.27.0
+evaluate>=0.4.1
+jiwer>=3.0.3
+
+# Runtime & Exportación ONNX
+sherpa-onnx>=1.10.0
+onnx>=1.15.0
+onnxruntime-gpu>=1.17.0
+
+# Utilidades y Datos
+pandas>=2.1.0
+openpyxl>=3.1.2
+tqdm>=4.66.0
+tabulate>=0.9.0

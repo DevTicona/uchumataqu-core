@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.pytest_cache/
+**/tools/uv-cache/
+**/tools/root/
+**/tools/packages/*.deb
+seq2seq/runs/**/*.pt
+seq2seq/runs/selected.pt

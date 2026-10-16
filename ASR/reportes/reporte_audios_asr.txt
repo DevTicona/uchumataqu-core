@@ -1,0 +1,246 @@
+=====================================================================================
+REPORTE DETALLADO DE AUDIOS PARA MÓDULO ASR (PARA_ASR)
+=====================================================================================
+Excel Palabras PLN : /home/primo/proyecto-grado/excel/palabras_pln.xlsx (325 entradas léxicas)
+Excel Oraciones PLN: /home/primo/proyecto-grado/excel/oraciones.xlsx (130 oraciones)
+Carpeta ASR        : /home/primo/proyecto-grado/ASR
+Locutores Palabras : eva, lorenzo, pedro, roberto, sofia
+Locutores Oraciones: pedro, sofia
+
+=====================================================================================
+1. AUDIOS DE PALABRAS POR LOCUTOR (ASR)
+=====================================================================================
+-------------------------------------------------------------------------------------
+LOCUTOR: EVA (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 1297
+  • Cobertura total     : 325 / 325 palabras
+  • Completas (4 tomas) : 324
+  • Parciales (1-3 tomas): 1
+  • Sin audio           : 0
+  • Audios sobrantes    : 0
+
+-------------------------------------------------------------------------------------
+LOCUTOR: LORENZO (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 562
+  • Cobertura total     : 281 / 325 palabras
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 281
+  • Sin audio           : 44
+  • Audios sobrantes    : 0
+
+  Palabras que faltan para lorenzo (44):
+    ID                             UCHUMATAQU                ESPAÑOL
+    ---------------------------------------------------------------------------
+    pusu                           Pʼusu                     Hinchado
+    sisuchay                       Sisuchay                  Aprender
+    sischay                        Sischay                   Saber
+    chisi                          Chʼisi                    Pez gato
+    churana                        Chʼuraña                  Ave pequeña zambullidora
+    churu                          Chʼuru                    caracol
+    chuwicha                       Chʼüwicha                 Chueco
+    chiwa                          Chʼiwa                    planta acuatica
+    chatuchay                      Chʼatuchay                picar
+    qamirizoni                     Qʼämirizoñi               Persona adinerada
+    qeja                           Qʼeja                     Relampago
+    qelaqela                       Qʼelaqʼela                Hierba para el parto
+    qalluchay                      Qʼalluchay                Pagar
+    qecha                          Qʼecha                    oro
+    tapha                          Tʼapha                    Desabrido
+    talla                          Tʼalla                    Bañador
+    tijutiju                       Tʼijutʼiju                Saltamontes
+    tuku                           Tʼuku                     Hambre
+    tuqschay                       Tʼuqschay                 Guardar
+    tupsincha                      Tʼupsincha                Tapa de faro
+    tutu                           Tʼutu                     Cebada
+    papi                           Pʼapi                     Pescado tostado
+    pesaqa                         Pʼesaqa                   Perdiz
+    pitkchay                       Pʼitkchay                 Tejer
+    poa                            Pʼoa                      Tambor
+    shatachay                      Shatachay                 Escapar
+    shaxara                        Shaxara                   Víbora
+    shuwani                        Shuwani                   Niñez
+    shachkuchay                    Shachkuchay               Terreno
+    shikacha                       Shikacha                  Sapo
+    tesha                          Tësha                     Luz
+    yes                            Yës                       Mes
+    chhepyes                       Chhepyës                  Trimestre
+    taxchukyes                     Taxchukyës                Semestre
+    kullku                         Kʼullku                   Angosto
+    kuti                           Kʼuti                     Pulga
+    kuli                           Kʼuli                     Pez pequeño con bigotes
+    kasa                           Kʼasa                     Ala
+    kana                           Kʼana                     Soga de paja
+    zonchhiji                      Zoñchhiji                 Esqueleto humano
+    xurs                           Xürs                      Trueno
+    tuki                           Tüki                      Asado
+    tusi                           Tüsi                      Corazon
+    uchpu                          Uchpü                     Nervio
+
+-------------------------------------------------------------------------------------
+LOCUTOR: PEDRO (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 975
+  • Cobertura total     : 325 / 325 palabras
+  • Completas (3 tomas) : 325
+  • Parciales (1-2 tomas): 0
+  • Sin audio           : 0
+  • Audios sobrantes    : 0
+
+-------------------------------------------------------------------------------------
+LOCUTOR: ROBERTO (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 542
+  • Cobertura total     : 271 / 325 palabras
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 271
+  • Sin audio           : 54
+  • Audios sobrantes    : 0
+
+  Palabras que faltan para roberto (54):
+    ID                             UCHUMATAQU                ESPAÑOL
+    ---------------------------------------------------------------------------
+    achasinaka                     Achasinaka                Almohadas
+    phetanaka                      Phetanaka                 Ventanas
+    phawschay                      Phawschay                 Fabricar
+    sitsninakachay                 Sitsñinakachay            Somos profesores
+    ulanchay                       Ulanchay                  Salir
+    pedro                          Pedro                     Pedro
+    lorenzo                        Lorenzo                   Lorenzo
+    maria                          María                     María
+    juana                          Juana                     Juana
+    chhunipinichay                 Chhuñipinichay            Muy bueno/a
+    pusu                           Pʼusu                     Hinchado
+    sisuchay                       Sisuchay                  Aprender
+    sischay                        Sischay                   Saber
+    chisi                          Chʼisi                    Pez gato
+    churana                        Chʼuraña                  Ave pequeña zambullidora
+    churu                          Chʼuru                    caracol
+    chuwicha                       Chʼüwicha                 Chueco
+    chiwa                          Chʼiwa                    planta acuatica
+    chatuchay                      Chʼatuchay                picar
+    qamirizoni                     Qʼämirizoñi               Persona adinerada
+    qeja                           Qʼeja                     Relampago
+    qelaqela                       Qʼelaqʼela                Hierba para el parto
+    qalluchay                      Qʼalluchay                Pagar
+    qecha                          Qʼecha                    oro
+    tapha                          Tʼapha                    Desabrido
+    talla                          Tʼalla                    Bañador
+    tijutiju                       Tʼijutʼiju                Saltamontes
+    tuku                           Tʼuku                     Hambre
+    tuqschay                       Tʼuqschay                 Guardar
+    tupsincha                      Tʼupsincha                Tapa de faro
+    tutu                           Tʼutu                     Cebada
+    papi                           Pʼapi                     Pescado tostado
+    pesaqa                         Pʼesaqa                   Perdiz
+    pitkchay                       Pʼitkchay                 Tejer
+    poa                            Pʼoa                      Tambor
+    shatachay                      Shatachay                 Escapar
+    shaxara                        Shaxara                   Víbora
+    shuwani                        Shuwani                   Niñez
+    shachkuchay                    Shachkuchay               Terreno
+    shikacha                       Shikacha                  Sapo
+    tesha                          Tësha                     Luz
+    yes                            Yës                       Mes
+    chhepyes                       Chhepyës                  Trimestre
+    taxchukyes                     Taxchukyës                Semestre
+    kullku                         Kʼullku                   Angosto
+    kuti                           Kʼuti                     Pulga
+    kuli                           Kʼuli                     Pez pequeño con bigotes
+    kasa                           Kʼasa                     Ala
+    kana                           Kʼana                     Soga de paja
+    zonchhiji                      Zoñchhiji                 Esqueleto humano
+    xurs                           Xürs                      Trueno
+    tuki                           Tüki                      Asado
+    tusi                           Tüsi                      Corazon
+    uchpu                          Uchpü                     Nervio
+
+-------------------------------------------------------------------------------------
+LOCUTOR: SOFIA (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 574
+  • Cobertura total     : 304 / 325 palabras
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 304
+  • Sin audio           : 21
+  • Audios sobrantes    : 0
+
+  Palabras que faltan para sofia (21):
+    ID                             UCHUMATAQU                ESPAÑOL
+    ---------------------------------------------------------------------------
+    chisni                         Chisñi                    Lluvia
+    jilli                          Jilli                     Carne
+    jipu                           Jipu                      Viento
+    julsni                         Julsni                    Silla
+    likschay                       Likschay                  Beber
+    lowalowapini                   Lowalowapini              Muy rápido
+    lulschay                       Lulschay                  Comer
+    nis                            Nis                       Su (de él/ella)
+    phiki                          Phiki                     Paja brava
+    selschay                       Selschay                  Existir o Hay
+    sisni                          Sisñi                     Curandero
+    sitsni                         Sitsñi                    Profesor
+    tekschay                       Tekschay                  Salir para astros
+    uchs                           Uchs                      Pequeño
+    untu                           Untu                      Fuerte
+    urkhu                          Urkhu                     Vestido uru
+    wilk                           Wilk                      Yo
+    tuqschay                       Tʼuqschay                 Guardar
+    kullku                         Kʼullku                   Angosto
+    kuli                           Kʼuli                     Pez pequeño con bigotes
+    tuki                           Tüki                      Asado
+
+=====================================================================================
+2. AUDIOS DE ORACIONES POR LOCUTOR (ASR)
+=====================================================================================
+-------------------------------------------------------------------------------------
+LOCUTOR: PEDRO (Oraciones)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 354
+  • Cobertura total     : 118 / 130 oraciones
+  • Completas (3 tomas) : 118
+  • Parciales (1-2 tomas): 0
+  • Sin audio           : 12
+  • Audios sobrantes    : 0
+
+  Oraciones que faltan para pedro (12):
+    SLUG ID                             UCHUMATAQU
+    ---------------------------------------------------------------------------
+    wilk_chhuniqasi_uwapinichay_amthu   Wilk chhuñiqasi, uwapinichay, amthü
+    chhuniqasichay                      Chhuñiqasichay
+    wilk_qhoya_qhoychay                 Wilk qhoya qhoychay
+    am_chheqets_tuqschay                Am chheqets tʼuqschay
+    wilk_karpinisa_jaxchay              Wilk karpinisa jaxchay
+    ni_papi_lulschay                    Nï pʼapi lulschay
+    ni_tutu_chalachay                   Nï tʼutu chälachay
+    ni_qelaqela_qhorskchay              Nï qʼelaqʼela qhorskchay
+    wilk_poa_nonschay                   Wilk pʼoa nonschay
+    wilk_kana_pitkchay                  Wilk kʼana pʼitkchay
+    wilk_qawi_chirsnachay               Wilk qawi chirsnachay
+    wilk_shaxara_chirsnachay            Wilk shaxara chirsnachay
+
+-------------------------------------------------------------------------------------
+LOCUTOR: SOFIA (Oraciones)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 120
+  • Cobertura total     : 120 / 130 oraciones
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 120
+  • Sin audio           : 10
+  • Audios sobrantes    : 0
+
+  Oraciones que faltan para sofia (10):
+    SLUG ID                             UCHUMATAQU
+    ---------------------------------------------------------------------------
+    wilk_qhoya_qhoychay                 Wilk qhoya qhoychay
+    am_chheqets_tuqschay                Am chheqets tʼuqschay
+    wilk_karpinisa_jaxchay              Wilk karpinisa jaxchay
+    ni_papi_lulschay                    Nï pʼapi lulschay
+    ni_tutu_chalachay                   Nï tʼutu chälachay
+    ni_qelaqela_qhorskchay              Nï qʼelaqʼela qhorskchay
+    wilk_poa_nonschay                   Wilk pʼoa nonschay
+    wilk_kana_pitkchay                  Wilk kʼana pʼitkchay
+    wilk_qawi_chirsnachay               Wilk qawi chirsnachay
+    wilk_shaxara_chirsnachay            Wilk shaxara chirsnachay
+

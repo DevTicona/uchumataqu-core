@@ -1,0 +1,95 @@
+{
+  "experiment": "exploratory_unreviewed_targets",
+  "seeds": [
+    {
+      "seed": 17,
+      "best_epoch": 40,
+      "dev": {
+        "count": 31,
+        "annotation_status": "unreviewed_provisional_targets",
+        "valid": 0.6129032258064516,
+        "exact": 0.3870967741935484,
+        "lemma_exact": 0.4838709677419355,
+        "segments_exact": 0.5806451612903226,
+        "pos_exact": 0.45161290322580644,
+        "unsupported_count": 0,
+        "features_f1": null,
+        "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+      },
+      "seconds": 25.653959135997866
+    },
+    {
+      "seed": 29,
+      "best_epoch": 50,
+      "dev": {
+        "count": 31,
+        "annotation_status": "unreviewed_provisional_targets",
+        "valid": 0.6451612903225806,
+        "exact": 0.3870967741935484,
+        "lemma_exact": 0.5806451612903226,
+        "segments_exact": 0.5806451612903226,
+        "pos_exact": 0.3870967741935484,
+        "unsupported_count": 0,
+        "features_f1": null,
+        "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+      },
+      "seconds": 29.241670824998437
+    },
+    {
+      "seed": 43,
+      "best_epoch": 45,
+      "dev": {
+        "count": 31,
+        "annotation_status": "unreviewed_provisional_targets",
+        "valid": 0.7741935483870968,
+        "exact": 0.4838709677419355,
+        "lemma_exact": 0.6451612903225806,
+        "segments_exact": 0.7419354838709677,
+        "pos_exact": 0.5806451612903226,
+        "unsupported_count": 0,
+        "features_f1": null,
+        "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+      },
+      "seconds": 28.457731604998116
+    }
+  ],
+  "selected_seed": 43,
+  "train": {
+    "count": 258,
+    "annotation_status": "unreviewed_provisional_targets",
+    "valid": 1.0,
+    "exact": 0.9728682170542635,
+    "lemma_exact": 1.0,
+    "segments_exact": 1.0,
+    "pos_exact": 0.9728682170542635,
+    "unsupported_count": 0,
+    "features_f1": null,
+    "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+  },
+  "test": {
+    "count": 28,
+    "annotation_status": "unreviewed_provisional_targets",
+    "valid": 0.42857142857142855,
+    "exact": 0.25,
+    "lemma_exact": 0.39285714285714285,
+    "segments_exact": 0.42857142857142855,
+    "pos_exact": 0.25,
+    "unsupported_count": 0,
+    "features_f1": null,
+    "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+  },
+  "baseline": {
+    "count": 28,
+    "train_only_dictionary_exact_coverage": 0.0,
+    "identity_lemma_exact": 0.9642857142857143,
+    "identity_segments_exact": 0.9642857142857143,
+    "majority_pos": "N",
+    "majority_pos_exact": 0.4642857142857143,
+    "full_documented_dictionary_coverage": 1.0,
+    "access_note": "El diccionario completo conoce las formas de prueba; no es generalización a familias nuevas.",
+    "educational_diagnosis_evaluated": false
+  },
+  "parameters": 134016,
+  "deployment_allowed": false,
+  "reason": "Falta revisión lingüística, evaluación educativa y validación Sentis/Android."
+}

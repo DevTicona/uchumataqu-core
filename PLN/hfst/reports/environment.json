@@ -1,0 +1,15 @@
+{
+  "python": "3.12.3",
+  "platform": "Linux-6.6.114.1-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "dependencies": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.4",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "pytest": "8.4.2"
+  },
+  "cpu_tensor_smoke_passed": true,
+  "onnx_identity_cpu_smoke_passed": true,
+  "seq2seq_export_tested": false,
+  "package_vectors_passed": 8
+}

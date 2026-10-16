@@ -1,0 +1,90 @@
+{
+  "records": 317,
+  "families": 262,
+  "split_sizes": {
+    "train": 258,
+    "dev": 31,
+    "test": 28
+  },
+  "excluded": [
+    {
+      "id": "chhuni_pichuchay",
+      "family_id": "chhuni_pichuchay",
+      "surface": "chhuñi pichuchay",
+      "lemma": "chhuñi pichuchay",
+      "pos": "EXPR",
+      "segments": [
+        "chhuñi pichuchay"
+      ],
+      "features": {},
+      "translation": "Bienvenido",
+      "source": "palabras.json",
+      "context_ids": [],
+      "review_status": "documented_unreviewed",
+      "segmentation_status": "not_asserted"
+    },
+    {
+      "id": "thuni_seschay",
+      "family_id": "thuni_seschay",
+      "surface": "thuñi seschay",
+      "lemma": "thuñi seschay",
+      "pos": "EXPR",
+      "segments": [
+        "thuñi seschay"
+      ],
+      "features": {},
+      "translation": "Buenas tardes",
+      "source": "palabras.json",
+      "context_ids": [],
+      "review_status": "documented_unreviewed",
+      "segmentation_status": "not_asserted"
+    },
+    {
+      "id": "ti_wiyanichay",
+      "family_id": "ti_wiyanichay",
+      "surface": "tï wiyanichay",
+      "lemma": "tï wiyanichay",
+      "pos": "EXPR",
+      "segments": [
+        "tï wiyanichay"
+      ],
+      "features": {},
+      "translation": "Buenas noches",
+      "source": "palabras.json",
+      "context_ids": [],
+      "review_status": "documented_unreviewed",
+      "segmentation_status": "not_asserted"
+    },
+    {
+      "id": "wilk_tho",
+      "family_id": "wilk_tho",
+      "surface": "wilk thö",
+      "lemma": "wilk thö",
+      "pos": "N",
+      "segments": [
+        "wilk thö"
+      ],
+      "features": {},
+      "translation": "Yo soy",
+      "source": "palabras.json",
+      "context_ids": [],
+      "review_status": "documented_unreviewed",
+      "segmentation_status": "not_asserted"
+    }
+  ],
+  "sentences": 135,
+  "sentence_only_tokens": [
+    "irohito",
+    "juana",
+    "lorenzo",
+    "maría",
+    "pedro",
+    "thö",
+    "urus",
+    "waki"
+  ],
+  "dictionary_available": 1384,
+  "dictionary_training_records": 0,
+  "reviewed_records": 0,
+  "reason_no_augmentation": "No inventar análisis morfológicos a partir de traducciones; piloto primario primero."
+}

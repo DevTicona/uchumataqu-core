@@ -1,0 +1,258 @@
+[
+  {
+    "epoch": 5,
+    "train_loss": 1.0301497379938762,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.03225806451612903,
+      "exact": 0.03225806451612903,
+      "lemma_exact": 0.03225806451612903,
+      "segments_exact": 0.03225806451612903,
+      "pos_exact": 0.03225806451612903,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 10,
+    "train_loss": 0.35772759053442216,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.0,
+      "exact": 0.0,
+      "lemma_exact": 0.0,
+      "segments_exact": 0.0,
+      "pos_exact": 0.0,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 15,
+    "train_loss": 0.16946128921376336,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.22580645161290322,
+      "exact": 0.22580645161290322,
+      "lemma_exact": 0.22580645161290322,
+      "segments_exact": 0.22580645161290322,
+      "pos_exact": 0.22580645161290322,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 20,
+    "train_loss": 0.10751020742787255,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.5161290322580645,
+      "exact": 0.3548387096774194,
+      "lemma_exact": 0.3870967741935484,
+      "segments_exact": 0.45161290322580644,
+      "pos_exact": 0.3548387096774194,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 25,
+    "train_loss": 0.05165506899356842,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.4838709677419355,
+      "exact": 0.3548387096774194,
+      "lemma_exact": 0.3870967741935484,
+      "segments_exact": 0.41935483870967744,
+      "pos_exact": 0.3548387096774194,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 30,
+    "train_loss": 0.03606091005106767,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.5483870967741935,
+      "exact": 0.3548387096774194,
+      "lemma_exact": 0.45161290322580644,
+      "segments_exact": 0.45161290322580644,
+      "pos_exact": 0.3870967741935484,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 35,
+    "train_loss": 0.03177273232075903,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.5161290322580645,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.41935483870967744,
+      "segments_exact": 0.5161290322580645,
+      "pos_exact": 0.41935483870967744,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 40,
+    "train_loss": 0.020747491986387305,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6129032258064516,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5483870967741935,
+      "segments_exact": 0.5161290322580645,
+      "pos_exact": 0.41935483870967744,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 45,
+    "train_loss": 0.03577343219270309,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.4838709677419355,
+      "exact": 0.22580645161290322,
+      "lemma_exact": 0.3870967741935484,
+      "segments_exact": 0.41935483870967744,
+      "pos_exact": 0.25806451612903225,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 50,
+    "train_loss": 0.04303176768331064,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6451612903225806,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5806451612903226,
+      "segments_exact": 0.5806451612903226,
+      "pos_exact": 0.3870967741935484,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 55,
+    "train_loss": 0.02472853370838695,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.5806451612903226,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.4838709677419355,
+      "segments_exact": 0.5161290322580645,
+      "pos_exact": 0.41935483870967744,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 60,
+    "train_loss": 0.008712545916852023,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6129032258064516,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5483870967741935,
+      "segments_exact": 0.5806451612903226,
+      "pos_exact": 0.3870967741935484,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 65,
+    "train_loss": 0.00530355669454568,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6129032258064516,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5806451612903226,
+      "segments_exact": 0.5806451612903226,
+      "pos_exact": 0.3870967741935484,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 70,
+    "train_loss": 0.003525629225704405,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6129032258064516,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5806451612903226,
+      "segments_exact": 0.5806451612903226,
+      "pos_exact": 0.3870967741935484,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 75,
+    "train_loss": 0.0027781029800987905,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6451612903225806,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5806451612903226,
+      "segments_exact": 0.6129032258064516,
+      "pos_exact": 0.41935483870967744,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  },
+  {
+    "epoch": 80,
+    "train_loss": 0.0023049830666018855,
+    "dev": {
+      "count": 31,
+      "annotation_status": "unreviewed_provisional_targets",
+      "valid": 0.6451612903225806,
+      "exact": 0.3870967741935484,
+      "lemma_exact": 0.5806451612903226,
+      "segments_exact": 0.6129032258064516,
+      "pos_exact": 0.41935483870967744,
+      "unsupported_count": 0,
+      "features_f1": null,
+      "features_note": "No hay rasgos gramaticales anotados; no se calcula una métrica vacía."
+    }
+  }
+]

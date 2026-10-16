@@ -1,0 +1,38 @@
+[
+  {
+    "input": "Achasinaka",
+    "status": "analyzed",
+    "lemma": "achasi"
+  },
+  {
+    "input": "Achichay",
+    "status": "analyzed",
+    "lemma": "achichay"
+  },
+  {
+    "input": "Chhaqpinichay",
+    "status": "analyzed",
+    "lemma": "chhaq"
+  },
+  {
+    "input": "achasinakanaka",
+    "status": "unknown"
+  },
+  {
+    "input": "achazi",
+    "status": "unknown"
+  },
+  {
+    "input": "<achasi>",
+    "status": "unsupported_input"
+  },
+  {
+    "input": "achasi otra",
+    "status": "unsupported_input"
+  },
+  {
+    "input": "lorenzo",
+    "status": "analyzed",
+    "lemma": "lorenzo"
+  }
+]

@@ -1,0 +1,14 @@
+id,fecha,tipo,objetivo_uch,objetivo_fonemas,salida_cruda,tokens_predichos,PER,precision,resultado_85,duracion_s,version_modelo,hash_modelo
+13,16:15:08,personalizado,"wilk thö primo","W I L K TH OO P R I M O","WILKTHOOPETO","W I L K TH OO P E T O",27.27,72.73,RECHAZADO,3.42,model.int8.onnx,58dd82c7643b2a87
+12,16:14:51,personalizado,"wilk thö primo","W I L K TH OO P R I M O","WILKTHOOPEO","W I L K TH OO P E O",27.27,72.73,RECHAZADO,3.48,model.int8.onnx,58dd82c7643b2a87
+11,16:14:35,personalizado,"wilk thö primo","W I L K TH OO P R I M O","AWILKTHOOPEN","A W I L K TH OO P E N",45.45,54.55,RECHAZADO,2.28,model.int8.onnx,58dd82c7643b2a87
+10,16:14:10,personalizado,"wilk thö primo","W I L K TH OO P R I M O","AWILKTHOOPEN","A W I L K TH OO P E N",45.45,54.55,RECHAZADO,2.28,model.int8.onnx,58dd82c7643b2a87
+9,16:13:26,personalizado,"wilk thö dilver","W I L K TH OO T I L v E R","WILKQHOYAWA","W I L K QH O Y A W A",66.67,33.33,RECHAZADO,1.958,model.int8.onnx,58dd82c7643b2a87
+8,16:12:43,personalizado,"wisnakti wiwi wëslanaka tanachay","W I S N A K T I W I W I W EE S L A N A K A T A N A CH A Y","WISNAKTIWYWIWEEEESLANAKATANACHAY","W I S N A K T I W Y W I W EE EE S L A N A K A T A N A CH A Y",7.14,92.86,APROBADO,4.538,model.int8.onnx,58dd82c7643b2a87
+7,16:11:44,personalizado,"wisnakti wëslanaka tanachay","W I S N A K T I W EE S L A N A K A T A N A CH A Y","WISNAKTIWYWIWEEEESLANAKATANACHAY","W I S N A K T I W Y W I W EE EE S L A N A K A T A N A CH A Y",20.83,79.17,APROBADO,4.538,model.int8.onnx,58dd82c7643b2a87
+6,16:10:28,personalizado,"thuñi tuncharku tekschay","TH U NY I T U N CH A R K U T E K S CH A Y","CHHUITUNCHARKUEKSCHAY","CHH U I T U N CH A R K U E K S CH A Y",15.79,84.21,RECHAZADO,4.518,model.int8.onnx,58dd82c7643b2a87
+5,16:09:50,personalizado,"LLoqa","LL O Q A","OA","O A",50,50,RECHAZADO,2.218,model.int8.onnx,58dd82c7643b2a87
+4,16:05:16,personalizado,"Wiyantam palitak","W I Y A N T A M P A L I T A K","WIYANTAMPALITAK","W I Y A N T A M P A L I T A K",0,100,APROBADO,3.12,model.int8.onnx,58dd82c7643b2a87
+3,16:04:38,personalizado,"Wiyantam palitak","W I Y A N T A M P A L I T A K","WIYANAMALITAK","W I Y A N A M A L I T A K",13.33,86.67,APROBADO,2.232,model.int8.onnx,58dd82c7643b2a87
+2,16:03:12,personalizado,"Tï wiyanichay","T II W I Y A N I CH A Y","ATIIWIYANICHA","A T II W I Y A N I CH A",18.18,81.82,APROBADO,3.12,model.int8.onnx,58dd82c7643b2a87
+1,16:02:31,personalizado,"wistakchay","W I S T A K CH A Y","WISACHAOY","W I S A CH A O Y",33.33,66.67,RECHAZADO,3.9,model.int8.onnx,58dd82c7643b2a87

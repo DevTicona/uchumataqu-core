@@ -1,0 +1,680 @@
+{
+  "version": 1,
+  "oraciones": [
+    {
+      "id": "O_001",
+      "uch": "Wiyantam palitak",
+      "es": "Buenos días amigo"
+    },
+    {
+      "id": "O_002",
+      "uch": "Tï wiyanichay wakpacha",
+      "es": "Buenas noches a todos"
+    },
+    {
+      "id": "O_003",
+      "uch": "Thuñi seschay sitsñi",
+      "es": "Buenas tardes profesor"
+    },
+    {
+      "id": "O_004",
+      "uch": "Wilk thö lorenzo",
+      "es": "Yo soy Lorenzo"
+    },
+    {
+      "id": "O_005",
+      "uch": "Jakilta am thü",
+      "es": "¿Cuál es tu nombre?"
+    },
+    {
+      "id": "O_006",
+      "uch": "Wist thü lorenzo",
+      "es": "Mi nombre es Lorenzo"
+    },
+    {
+      "id": "O_007",
+      "uch": "Nï wist palitakchay",
+      "es": "Él es mi amigo"
+    },
+    {
+      "id": "O_008",
+      "uch": "Chhuljamachay pedro",
+      "es": "¿Cómo estás Pedro?"
+    },
+    {
+      "id": "O_009",
+      "uch": "Wilk chhuñiqasi, uwapinichay, amthü",
+      "es": "Yo estoy bien gracias, y ¿tú?"
+    },
+    {
+      "id": "O_010",
+      "uch": "Iwaltaki wilk chhuñiqasi",
+      "es": "Igualmente, yo estoy bien"
+    },
+    {
+      "id": "O_011",
+      "uch": "Chhuñiqasichay",
+      "es": "¿Estás bien?"
+    },
+    {
+      "id": "O_012",
+      "uch": "Shila wilk chhuñiqasi",
+      "es": "Sí, yo estoy bien"
+    },
+    {
+      "id": "O_013",
+      "uch": "Ana wilk anachhuñi",
+      "es": "No, yo no estoy bien"
+    },
+    {
+      "id": "O_014",
+      "uch": "Uwapinichay palitak",
+      "es": "Gracias amigo"
+    },
+    {
+      "id": "O_015",
+      "uch": "Jasiktam pichuchay pedro",
+      "es": "¿De dónde vienes Pedro?"
+    },
+    {
+      "id": "O_016",
+      "uch": "Wilk tï watha irohito urus",
+      "es": "Soy de la comunidad Irohito Urus"
+    },
+    {
+      "id": "O_017",
+      "uch": "Wilk tï watha waki pichuchay",
+      "es": "Yo vengo del pueblo de Guaqui"
+    },
+    {
+      "id": "O_018",
+      "uch": "Chhuñi pichuchay tï watha irohito urus",
+      "es": "Bienvenido a la comunidad Irohito Urus"
+    },
+    {
+      "id": "O_019",
+      "uch": "Salskama pedro",
+      "es": "Hasta luego Pedro"
+    },
+    {
+      "id": "O_020",
+      "uch": "Uchumik sitsñinakachay",
+      "es": "Nosotros somos profesores"
+    },
+    {
+      "id": "O_021",
+      "uch": "Wisnakti watha oqschay",
+      "es": "Nosotros vamos al pueblo"
+    },
+    {
+      "id": "O_022",
+      "uch": "Amchuki palitaknaka, chhuñi pichuchay",
+      "es": "Ustedes amigos son bienvenidos"
+    },
+    {
+      "id": "O_023",
+      "uch": "Nïnaka watha ana oqschay",
+      "es": "Ellos no van al pueblo"
+    },
+    {
+      "id": "O_024",
+      "uch": "Nï wist ataluychay",
+      "es": "Ella es mi mamá"
+    },
+    {
+      "id": "O_025",
+      "uch": "Wist apay yachirichay",
+      "es": "Mi papá es carpintero"
+    },
+    {
+      "id": "O_026",
+      "uch": "Nis kʼayuy kʼusikasichay",
+      "es": "Su hermana está contenta"
+    },
+    {
+      "id": "O_027",
+      "uch": "Am chichalay wist palitakchay",
+      "es": "Tu hermano es mi amigo"
+    },
+    {
+      "id": "O_028",
+      "uch": "Wist ataluy chhatanaka qhawschay",
+      "es": "Mi mamá compra abarcas"
+    },
+    {
+      "id": "O_029",
+      "uch": "Wist eskhara chhaqchay",
+      "es": "Mi sombrero es grande"
+    },
+    {
+      "id": "O_030",
+      "uch": "Nis aymilla pedro uchspinichay",
+      "es": "Su camisa de Pedro es muy pequeña"
+    },
+    {
+      "id": "O_031",
+      "uch": "Pedro chhi chheqhoñi wistakchay",
+      "es": "Pedro tiene un liwi"
+    },
+    {
+      "id": "O_032",
+      "uch": "Am ira chhaqpinichay",
+      "es": "Tu poncho es muy grande"
+    },
+    {
+      "id": "O_033",
+      "uch": "Lorenzo lowalowapini satschay",
+      "es": "Lorenzo corre muy rápido"
+    },
+    {
+      "id": "O_034",
+      "uch": "Wist chichalay watha oqlaychay",
+      "es": "Mi hermano camina hacia el pueblo"
+    },
+    {
+      "id": "O_035",
+      "uch": "Shila wisnakti sitsñi nonschay",
+      "es": "Sí, nosotros escuchamos al profesor"
+    },
+    {
+      "id": "O_036",
+      "uch": "Wilk ana purchay chirsnachay",
+      "es": "Yo no puedo ver"
+    },
+    {
+      "id": "O_037",
+      "uch": "Nï axtal lasnuchay",
+      "es": "Él salta lejos"
+    },
+    {
+      "id": "O_038",
+      "uch": "Wisnaks malaqoy chhuñipinichay",
+      "es": "Nuestra tía es muy buena"
+    },
+    {
+      "id": "O_039",
+      "uch": "Uchums achichay sitsñizoñipinichay",
+      "es": "Nuestro abuelo es muy sabio"
+    },
+    {
+      "id": "O_040",
+      "uch": "Nis apichuy pʼuschay",
+      "es": "Su abuela está enferma"
+    },
+    {
+      "id": "O_041",
+      "uch": "Nis tololay sisñichay",
+      "es": "Su tío es curandero"
+    },
+    {
+      "id": "O_042",
+      "uch": "Taki urkhu ewchay",
+      "es": "Ese vestido es nuevo"
+    },
+    {
+      "id": "O_043",
+      "uch": "María peske maxsinaka qhawschay",
+      "es": "María compra dos zapatos"
+    },
+    {
+      "id": "O_044",
+      "uch": "Nis chhasi ewchay",
+      "es": "Su faja está nueva"
+    },
+    {
+      "id": "O_045",
+      "uch": "Am makchi chhukchay",
+      "es": "Tu pantalón está sucio"
+    },
+    {
+      "id": "O_046",
+      "uch": "Wist qhoya chhaqpinichay",
+      "es": "Mi casa es muy grande"
+    },
+    {
+      "id": "O_047",
+      "uch": "Säna echs xorchachay",
+      "es": "La puerta es de color verde"
+    },
+    {
+      "id": "O_048",
+      "uch": "Wist qhoya chhep phetanaka wistakchay",
+      "es": "Mi casa tiene tres ventanas"
+    },
+    {
+      "id": "O_049",
+      "uch": "Nï tila chusi thaxchay",
+      "es": "Él duerme en esta cama"
+    },
+    {
+      "id": "O_050",
+      "uch": "Wist ataluy wiyani taxsnakichay",
+      "es": "Mi mamá cocina temprano"
+    },
+    {
+      "id": "O_051",
+      "uch": "Pheta ana purchay amaruskchay",
+      "es": "No puedo cerrar la ventana"
+    },
+    {
+      "id": "O_052",
+      "uch": "Wilk säna khitschay",
+      "es": "Yo abro la puerta"
+    },
+    {
+      "id": "O_053",
+      "uch": "Wilk wiyani piwachay",
+      "es": "Yo limpio temprano"
+    },
+    {
+      "id": "O_054",
+      "uch": "Chhulurasa am chheqets jaxchay",
+      "es": "¿Cuando vas a lavar tu ropa?"
+    },
+    {
+      "id": "O_055",
+      "uch": "Lorenzo chhaq chimay piwachay",
+      "es": "Lorenzo limpia la mesa grande"
+    },
+    {
+      "id": "O_056",
+      "uch": "Wisnaks apay tila julsni julsnay",
+      "es": "Nuestro papá se sienta en esta silla"
+    },
+    {
+      "id": "O_057",
+      "uch": "Paxpiku chhiqhanaka selschay",
+      "es": "Hay cuatro escobas"
+    },
+    {
+      "id": "O_058",
+      "uch": "Pedro chhep achasinaka wistakchay",
+      "es": "Pedro tiene tres almohadas"
+    },
+    {
+      "id": "O_059",
+      "uch": "Wilk taxsnuku kuwarernonaka wistakchay",
+      "es": "Yo tengo cinco cuadernos"
+    },
+    {
+      "id": "O_060",
+      "uch": "Am taxchuku chhikhitsnaka wistakchay",
+      "es": "Tú tienes seis lápices"
+    },
+    {
+      "id": "O_061",
+      "uch": "Sitsñi papila siqetschay",
+      "es": "El profesor escribe en el papel"
+    },
+    {
+      "id": "O_062",
+      "uch": "Taki kuskuts saxonichay",
+      "es": "Esa mochila es azul"
+    },
+    {
+      "id": "O_063",
+      "uch": "Taki mäska chhukchay",
+      "es": "Esa olla está sucia"
+    },
+    {
+      "id": "O_064",
+      "uch": "María tüwqo chuwanaka qhawschay",
+      "es": "María compra siete platos"
+    },
+    {
+      "id": "O_065",
+      "uch": "Nï taxchuku khirchulanaka wistakchay",
+      "es": "Él tiene seis cucharas"
+    },
+    {
+      "id": "O_066",
+      "uch": "Pedro potsi potschay",
+      "es": "Pedro corta con el cuchillo"
+    },
+    {
+      "id": "O_067",
+      "uch": "Nï suwa chiwliks likschay",
+      "es": "El niño bebe leche"
+    },
+    {
+      "id": "O_068",
+      "uch": "Tüwqo siñinaka selschay",
+      "es": "Hay siete huevos"
+    },
+    {
+      "id": "O_069",
+      "uch": "Lorenzo kula chälachay",
+      "es": "Lorenzo siembra quinua"
+    },
+    {
+      "id": "O_070",
+      "uch": "Wist malaqoy chiwkisnaka tuchay",
+      "es": "Mi tía vende quesos"
+    },
+    {
+      "id": "O_071",
+      "uch": "Uchumik jilli jaxchay",
+      "es": "Nosotros lavamos la carne"
+    },
+    {
+      "id": "O_072",
+      "uch": "Nï suwa qeru chiwliks likschay",
+      "es": "El niño bebe leche del vaso"
+    },
+    {
+      "id": "O_073",
+      "uch": "Taki lusi chherchherpinichay",
+      "es": "Ese cántaro es muy bonito"
+    },
+    {
+      "id": "O_074",
+      "uch": "Tichu khera serxchay",
+      "es": "Este cucharón está viejo"
+    },
+    {
+      "id": "O_075",
+      "uch": "Wisnakti xalsmäsi ana warirachay",
+      "es": "Nosotros no usamos el batán"
+    },
+    {
+      "id": "O_076",
+      "uch": "Jilli yikupinichay",
+      "es": "La carne está salada"
+    },
+    {
+      "id": "O_077",
+      "uch": "María tapa ana lulschay",
+      "es": "María no come ají"
+    },
+    {
+      "id": "O_078",
+      "uch": "Juana qotñi xawariski tuchay",
+      "es": "Juana vende pan caliente"
+    },
+    {
+      "id": "O_079",
+      "uch": "Am lusi qhasi chukichay",
+      "es": "Tú traes agua en el cántaro"
+    },
+    {
+      "id": "O_080",
+      "uch": "Amchuki parentiña arusha taxsnakichay",
+      "es": "Ustedes cocinan arroz para la familia"
+    },
+    {
+      "id": "O_081",
+      "uch": "Taki päkunaka chʼatschaypini",
+      "es": "Esos perros ladran mucho"
+    },
+    {
+      "id": "O_082",
+      "uch": "María chherchher masota wistakchay",
+      "es": "María tiene un gato bonito"
+    },
+    {
+      "id": "O_083",
+      "uch": "Nï qonqo wallpanaka wistakchay",
+      "es": "Él tiene ocho gallinas"
+    },
+    {
+      "id": "O_084",
+      "uch": "Juana sanqo uñinaka uyuwichay",
+      "es": "Juana cria nueve conejos"
+    },
+    {
+      "id": "O_085",
+      "uch": "Lorenzo uchs khuchhi wistakchay",
+      "es": "Lorenzo tiene un chancho pequeño"
+    },
+    {
+      "id": "O_086",
+      "uch": "Achichay uchs murchula wistakchay",
+      "es": "El abuelo tiene un burro pequeño"
+    },
+    {
+      "id": "O_087",
+      "uch": "Nï sanqo chiw iwisanaka wistakchay",
+      "es": "Ella tiene nueve ovejas blancas"
+    },
+    {
+      "id": "O_088",
+      "uch": "Taki qerwakha jilaynacha lulschay",
+      "es": "Ese toro come demasiado"
+    },
+    {
+      "id": "O_089",
+      "uch": "María xalanaka tuchay",
+      "es": "María vende llamas"
+    },
+    {
+      "id": "O_090",
+      "uch": "Wist apichuy qonqo choq wakhanaka wistakchay",
+      "es": "Mi abuela tiene ocho vacas negras"
+    },
+    {
+      "id": "O_091",
+      "uch": "Taki phesqoña lowalowapini satschay",
+      "es": "Ese lagarto corre muy rápido"
+    },
+    {
+      "id": "O_092",
+      "uch": "Taki qetsi wiyanichay ulanchay",
+      "es": "Ese zorro sale de noche"
+    },
+    {
+      "id": "O_093",
+      "uch": "Wilk anapini chuñipaku chirsnachay",
+      "es": "Yo nunca vi un zorrino"
+    },
+    {
+      "id": "O_094",
+      "uch": "Wilk axtal xalwari chirsnachay",
+      "es": "Yo veo una vicuña a lo lejos"
+    },
+    {
+      "id": "O_095",
+      "uch": "Parina wiwi lloqa oqlaychay",
+      "es": "El flamenco camina en las orillas del río"
+    },
+    {
+      "id": "O_096",
+      "uch": "Taki qala chhaqwaypini layschay",
+      "es": "Esa gaviota vuela muy alto"
+    },
+    {
+      "id": "O_097",
+      "uch": "Pedro soqna siñinaka qhorskchay",
+      "es": "Pedro busca huevos de pato"
+    },
+    {
+      "id": "O_098",
+      "uch": "Wisnakti wiwi wëslanaka tanachay",
+      "es": "Nosotros atrapamos chhoqhas en el río"
+    },
+    {
+      "id": "O_099",
+      "uch": "Taki qeri uchspinichay",
+      "es": "Ese pez es muy pequeño"
+    },
+    {
+      "id": "O_100",
+      "uch": "Juana watha qhathu chiwqeri tuchay",
+      "es": "Juana vende pejerrey en el mercado"
+    },
+    {
+      "id": "O_101",
+      "uch": "Lorenzo qhalu kurwinanaka tanschay",
+      "es": "Lorenzo pesca diez truchas"
+    },
+    {
+      "id": "O_102",
+      "uch": "Wist ataluy chʼaxana qerjiña taxsnakichay",
+      "es": "Mi mamá cocina wallake con el pez amarillo"
+    },
+    {
+      "id": "O_103",
+      "uch": "Wist apay wiwi chisawa tanschay",
+      "es": "Mi papá pesca un miji en el río"
+    },
+    {
+      "id": "O_104",
+      "uch": "Nïnaka qeschhäla oqschay",
+      "es": "Ellas van al sembradío de papa"
+    },
+    {
+      "id": "O_105",
+      "uch": "Phiki yoqa pakschay",
+      "es": "La paja brava crece en el suelo"
+    },
+    {
+      "id": "O_106",
+      "uch": "Juwa wiwi pakschay",
+      "es": "La totora crece en el río"
+    },
+    {
+      "id": "O_107",
+      "uch": "Wist malaqoy qañawi achuchay",
+      "es": "Mi tía cultiva cañawa"
+    },
+    {
+      "id": "O_108",
+      "uch": "Chhullayku qoqnaka ana selschay",
+      "es": "¿Por qué no hay árboles?"
+    },
+    {
+      "id": "O_109",
+      "uch": "Thuñi chhurpikchaypini",
+      "es": "El sol brilla mucho"
+    },
+    {
+      "id": "O_110",
+      "uch": "Yïs wiyanichay chirsnachay",
+      "es": "La luna se ve de noche"
+    },
+    {
+      "id": "O_111",
+      "uch": "Wilk qolanakapini chirsnachay",
+      "es": "Yo veo muchas estrellas"
+    },
+    {
+      "id": "O_112",
+      "uch": "Tïtomxe chisñipinichay",
+      "es": "Hoy día hay mucha lluvia"
+    },
+    {
+      "id": "O_113",
+      "uch": "Tiku anachhulu chhiri ana selschay",
+      "es": "No hay ninguna nube en el cielo"
+    },
+    {
+      "id": "O_114",
+      "uch": "Thuñi tuncharku tekschay",
+      "es": "El sol sale del este"
+    },
+    {
+      "id": "O_115",
+      "uch": "Thuñi taxacharku thikuchay",
+      "es": "El sol se oculta en el oeste"
+    },
+    {
+      "id": "O_116",
+      "uch": "Jipu chiyacharku pichuchay",
+      "es": "El viento viene del norte"
+    },
+    {
+      "id": "O_117",
+      "uch": "Wist watha xanacharkuchay",
+      "es": "Mi pueblo está al sur"
+    },
+    {
+      "id": "O_118",
+      "uch": "Achichay chhaq ochapara wistakchay",
+      "es": "El abuelo tiene un bote grande"
+    },
+    {
+      "id": "O_119",
+      "uch": "Lorenzo thosa qachina phawschay",
+      "es": "Lorenzo fabrica la vela de la balsa"
+    },
+    {
+      "id": "O_120",
+      "uch": "Am untu cheqallachay",
+      "es": "Tú tienes que remar fuerte"
+    },
+    {
+      "id": "O_121",
+      "uch": "Wilk qhoya qhoychay",
+      "es": "Yo construyo una casa"
+    },
+    {
+      "id": "O_122",
+      "uch": "Am chheqets tʼuqschay",
+      "es": "Tú guardas la ropa"
+    },
+    {
+      "id": "O_123",
+      "uch": "Wilk karpinisa jaxchay",
+      "es": "Yo lavo las medias"
+    },
+    {
+      "id": "O_124",
+      "uch": "Nï pʼapi lulschay",
+      "es": "Ella come pescado tostado"
+    },
+    {
+      "id": "O_125",
+      "uch": "Nï tʼutu chälachay",
+      "es": "Él siembra cebada"
+    },
+    {
+      "id": "O_126",
+      "uch": "Nï qʼelaqʼela qhorskchay",
+      "es": "Ella busca hierba para el parto"
+    },
+    {
+      "id": "O_127",
+      "uch": "Wilk pʼoa nonschay",
+      "es": "Yo escucho el tambor"
+    },
+    {
+      "id": "O_128",
+      "uch": "Wilk kʼana pʼitkchay",
+      "es": "Yo tejo una soga de paja"
+    },
+    {
+      "id": "O_129",
+      "uch": "Wilk qawi chirsnachay",
+      "es": "Yo veo un cóndor"
+    },
+    {
+      "id": "O_130",
+      "uch": "Wilk shaxara chirsnachay",
+      "es": "Yo veo una víbora"
+    },
+    {
+      "id": "O_131",
+      "uch": "Salskama sitsñinaka",
+      "es": "Hasta luego, profesores"
+    },
+    {
+      "id": "O_132",
+      "uch": "Wilk chhaq chimay piwachay",
+      "es": "Yo limpio la mesa grande"
+    },
+    {
+      "id": "O_133",
+      "uch": "Wilk pheta amaruskchay",
+      "es": "Yo cierro la ventana"
+    },
+    {
+      "id": "O_134",
+      "uch": "Wist chusi chhep achasinaka wistakchay",
+      "es": "Mi cama tiene tres almohadas"
+    },
+    {
+      "id": "O_135",
+      "uch": "Wist qhoya peske phetanaka wistakchay",
+      "es": "Mi casa tiene dos ventanas"
+    }
+  ]
+}

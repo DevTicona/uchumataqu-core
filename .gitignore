@@ -1,0 +1,67 @@
+# =============================================================================
+# .gitignore para Proyecto de Grado Uchumataqu (ASR, PLN, UNITY)
+# =============================================================================
+
+# --- Entornos virtuales y Caches de Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# --- Paquetes, Caches y Artefactos de PLN (HFST / Seq2Seq) ---
+PLN/**/.venv/
+PLN/**/.pytest_cache/
+PLN/**/__pycache__/
+PLN/**/tools/uv-cache/
+PLN/**/tools/root/
+PLN/**/tools/packages/*.deb
+PLN/seq2seq/tools/
+PLN/seq2seq/runs/**/*.pt
+PLN/seq2seq/runs/selected.pt
+PLN/hfst/build/
+
+# --- Datasets de audio masivos externos (>10 GB) ---
+musan/
+
+# --- Repositorio externo embebido Icefall ---
+ASR/pipeline_icefall/icefall_repo/
+
+# --- Checkpoints y Modelos ASR de gran tamaño (>100 MB) ---
+ASR/pipeline_icefall/exp_*/
+ASR/pipeline_icefall/pretrained/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+
+# --- Caches de herramientas y runtime ---
+.lhotse/
+.nv/
+.bash_history
+.gitconfig
+
+# --- Scripts temporales y de prueba (Scratch) ---
+scratch*.py
+*.tmp
+*.bak
+
+# --- Archivos de sistema operativo y editores ---
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
+
+# --- Documentación Markdown (ignorar todos los .md excepto README.md) ---
+*.md
+**/*.md
+!/README.md

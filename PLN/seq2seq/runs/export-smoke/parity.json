@@ -1,0 +1,9 @@
+{
+  "examples": 5,
+  "max_absolute_tensor_error": 2.086162567138672e-07,
+  "rtol": 0.0001,
+  "atol": 1e-05,
+  "sequence_parity": true,
+  "sentis_tested": false,
+  "android_tested": false
+}
