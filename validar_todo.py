@@ -476,7 +476,9 @@ def validar_determinismo(project_root, unity_dir, unity_scripts_dir):
     import sys
 
     dir_app = os.path.join(unity_dir, "datos_app")
-    ruta_script = os.path.join(unity_scripts_dir, "preparar_corpus_app.py")
+    ruta_script = os.path.join(unity_scripts_dir, "corpus", "preparar_corpus_app.py")
+    if not os.path.exists(ruta_script):
+        ruta_script = os.path.join(unity_scripts_dir, "preparar_corpus_app.py")
 
     # Ejecución 1
     subprocess.run([sys.executable, ruta_script], check=True, stdout=subprocess.DEVNULL)

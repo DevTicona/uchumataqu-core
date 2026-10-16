@@ -24,7 +24,8 @@ import glob
 from collections import defaultdict
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-UNITY_DIR = os.path.dirname(SCRIPT_DIR)
+SCRIPTS_DIR = os.path.dirname(SCRIPT_DIR)
+UNITY_DIR = os.path.dirname(SCRIPTS_DIR)
 PROJECT_ROOT = os.path.dirname(UNITY_DIR)
 
 REPORT_APP_FILE = os.path.join(UNITY_DIR, "reportes", "reporte_audios_app.txt")

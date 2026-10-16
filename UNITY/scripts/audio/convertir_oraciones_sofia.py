@@ -17,7 +17,8 @@ import argparse
 import subprocess
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-UNITY_DIR = os.path.dirname(SCRIPT_DIR)
+SCRIPTS_DIR = os.path.dirname(SCRIPT_DIR)
+UNITY_DIR = os.path.dirname(SCRIPTS_DIR)
 PROJECT_ROOT = os.path.dirname(UNITY_DIR)
 
 DEFAULT_INPUT_DIR = os.path.join(UNITY_DIR, "oraciones_sofia")

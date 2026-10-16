@@ -31,11 +31,23 @@ import subprocess
 import unicodedata
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-unity_dir = os.path.dirname(script_dir)
+scripts_dir = os.path.dirname(script_dir)
+unity_dir = os.path.dirname(scripts_dir)
 project_root = os.path.dirname(unity_dir)
 
-sys.path.append(script_dir)
-from lector_xlsx import leer_xlsx
+if scripts_dir not in sys.path:
+    sys.path.insert(0, scripts_dir)
+try:
+    from UNITY.scripts.corpus.lector_xlsx import leer_xlsx
+except ImportError:
+    try:
+        from corpus.lector_xlsx import leer_xlsx
+    except ImportError:
+        import importlib.util
+        _spec = importlib.util.spec_from_file_location("lector_xlsx", os.path.join(scripts_dir, "corpus", "lector_xlsx.py"))
+        _mod = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_mod)
+        leer_xlsx = _mod.leer_xlsx
 
 EXCEL_DIR = os.path.join(project_root, "excel")
 OUTPUT_FILE = os.path.join(unity_dir, "reportes", "reporte_audios_app.txt")

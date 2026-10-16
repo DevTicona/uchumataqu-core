@@ -310,7 +310,7 @@ def validar_restricciones_nombres_propios(palabras_json_data: list, lecciones_co
 # Función Principal de Ejecución
 # ---------------------------------------------------------------------------
 def main():
-    if os.path.basename(script_dir) == "generador_corpus":
+    if os.path.basename(script_dir) in ["corpus", "generador_corpus"]:
         unity_dir = os.path.dirname(os.path.dirname(script_dir))
     else:
         unity_dir = os.path.dirname(script_dir)

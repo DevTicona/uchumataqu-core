@@ -2,15 +2,15 @@
 REPORTE DETALLADO DE AUDIOS PARA LA APLICACIÓN MÓVIL (UNITY)
 =====================================================================================
 Excel Palabras    : /home/primo/proyecto-grado/excel/palabras_app.xlsx (327 unidades léxicas)
-Excel Oraciones   : /home/primo/proyecto-grado/excel/oraciones.xlsx (130 oraciones: 120 curriculares + 10 reserva)
+Excel Oraciones   : /home/primo/proyecto-grado/excel/oraciones.xlsx (135 oraciones: 120 curriculares + 10 reserva)
 Carpeta Palabras  : /home/primo/proyecto-grado/UNITY/audios_palabras (326 archivos .wav)
-Carpeta Oraciones : /home/primo/proyecto-grado/UNITY/audios_oraciones (120 archivos .wav)
+Carpeta Oraciones : /home/primo/proyecto-grado/UNITY/audios_oraciones (135 archivos .wav)
 
 --- RESUMEN EJECUTIVO DE COBERTURA ---
   • Palabras App (Cruce por ID)    : 326 / 327 presentes (1 faltantes)
   • Oraciones Curriculares (Slug) : 120 / 120 presentes (0 faltantes)
-  • Oraciones de Reserva (Slug)   : 0 / 10 presentes (Audio opcional por ser distractores)
-  • Total archivos .wav en App    : 326 palabras, 120 oraciones
+  • Oraciones de Reserva (Slug)   : 15 / 10 presentes (Audio opcional por ser distractores)
+  • Total archivos .wav en App    : 326 palabras, 135 oraciones
   • Audios Sobrantes Palabras     : 0 archivos
   • Audios Sobrantes Oraciones    : 0 archivos
 
@@ -27,18 +27,23 @@ irohito_urus                   Irohito urus              Irohito Urus           
   ✅ ¡100% de oraciones curriculares tienen su archivo de audio!
 
 =====================================================================================
-3. ORACIONES DE RESERVA (O_121..O_130) [AUDIO OPCIONAL] (0 con audio, 10 sin audio)
+3. ORACIONES DE RESERVA (O_121..O_130) [AUDIO OPCIONAL] (15 con audio, 0 sin audio)
 =====================================================================================
-  O_121: Wilk qhoya qhoychay                 (slug: wilk_qhoya_qhoychay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_122: Am chheqets tʼuqschay               (slug: am_chheqets_tuqschay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_123: Wilk karpinisa jaxchay              (slug: wilk_karpinisa_jaxchay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_124: Nï pʼapi lulschay                   (slug: ni_papi_lulschay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_125: Nï tʼutu chälachay                  (slug: ni_tutu_chalachay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_126: Nï qʼelaqʼela qhorskchay            (slug: ni_qelaqela_qhorskchay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_127: Wilk pʼoa nonschay                  (slug: wilk_poa_nonschay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_128: Wilk kʼana pʼitkchay                (slug: wilk_kana_pitkchay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_129: Wilk qawi chirsnachay               (slug: wilk_qawi_chirsnachay) -> SIN AUDIO (Opcional - Distractor textual)
-  O_130: Wilk shaxara chirsnachay            (slug: wilk_shaxara_chirsnachay) -> SIN AUDIO (Opcional - Distractor textual)
+  O_121: Wilk qhoya qhoychay                 (slug: wilk_qhoya_qhoychay) -> CON AUDIO
+  O_122: Am chheqets tʼuqschay               (slug: am_chheqets_tuqschay) -> CON AUDIO
+  O_123: Wilk karpinisa jaxchay              (slug: wilk_karpinisa_jaxchay) -> CON AUDIO
+  O_124: Nï pʼapi lulschay                   (slug: ni_papi_lulschay) -> CON AUDIO
+  O_125: Nï tʼutu chälachay                  (slug: ni_tutu_chalachay) -> CON AUDIO
+  O_126: Nï qʼelaqʼela qhorskchay            (slug: ni_qelaqela_qhorskchay) -> CON AUDIO
+  O_127: Wilk pʼoa nonschay                  (slug: wilk_poa_nonschay) -> CON AUDIO
+  O_128: Wilk kʼana pʼitkchay                (slug: wilk_kana_pitkchay) -> CON AUDIO
+  O_129: Wilk qawi chirsnachay               (slug: wilk_qawi_chirsnachay) -> CON AUDIO
+  O_130: Wilk shaxara chirsnachay            (slug: wilk_shaxara_chirsnachay) -> CON AUDIO
+  O_131: Salskama sitsñinaka                 (slug: salskama_sitsninaka) -> CON AUDIO
+  O_132: Wilk chhaq chimay piwachay          (slug: wilk_chhaq_chimay_piwachay) -> CON AUDIO
+  O_133: Wilk pheta amaruskchay              (slug: wilk_pheta_amaruskchay) -> CON AUDIO
+  O_134: Wist chusi chhep achasinaka wistakchay (slug: wist_chusi_chhep_achasinaka_wistakchay) -> CON AUDIO
+  O_135: Wist qhoya peske phetanaka wistakchay (slug: wist_qhoya_peske_phetanaka_wistakchay) -> CON AUDIO
 
 =====================================================================================
 4. AUDIOS SOBRANTES EN UNITY/audios_palabras/ (Sin ID en Excel) (0)
