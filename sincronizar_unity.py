@@ -3,12 +3,19 @@
 sincronizar_unity.py
 Sincronizador automático y seguro de contenido desde WSL hacia proyecto Unity en Windows.
 
-Sincroniza de forma controlada ÚNICAMENTE:
-  - UNITY/datos_app/ -> Assets/Content/Data/ (archivos .json)
-  (Los audios y documentos Markdown quedan excluidos de esta sincronización).
+Sincroniza de forma controlada y eficiente:
+  - Datos JSON: UNITY/datos_app/ -> Assets/Content/Data/
+    (EXCLUSIVAMENTE: lecciones_compiladas.json, palabras.json, oraciones.json)
+  - Audios Palabras: UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/ (*.wav)
+  - Audios Oraciones: UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/ (*.wav)
+
+Condición estricta de sincronización:
+  - Solo copia archivos si son NUEVOS o si están ACTUALIZADOS (modificados por hash SHA-256).
+  - Los archivos idénticos sin cambios NO se transfieren ni sobrescriben.
+  - Los archivos .meta de Unity son preservados intactos.
 
 Uso:
-  python sincronizar_unity.py [--dry-run] [--delete] [--unity-path /ruta/unity]
+  python sincronizar_unity.py [--dry-run] [--delete] [--verbose] [--unity-path /ruta/unity]
 """
 
 import argparse
@@ -34,14 +41,15 @@ class Estadisticas:
     eliminados: int = 0
 
 
-# Archivos y extensiones excluidos explícitamente del runtime Unity
-ARCHIVOS_EXCLUIDOS_DATOS = {
-    "lecciones.json",
-    "lexicon.txt",
-    "tokens.txt",
+# Archivos JSON permitidos explícitamente para Unity
+ARCHIVOS_DATOS_PERMITIDOS = {
+    "lecciones_compiladas.json",
+    "palabras.json",
+    "oraciones.json",
 }
 
 EXTENSIONES_DATOS_PERMITIDAS = {".json"}
+EXTENSIONES_AUDIO_PERMITIDAS = {".wav"}
 
 
 def obtener_raiz_proyecto() -> Path:
@@ -104,7 +112,7 @@ def obtener_configuracion(cli_unity_path: str | None, wsl_root: Path) -> Path:
 
 
 def validar_rutas(wsl_root: Path, unity_root: Path) -> Path:
-    """Valida la existencia de las rutas requeridas en WSL y Unity para los datos JSON."""
+    """Valida la existencia de las rutas requeridas en WSL y Unity para los datos y audios."""
     # Validación Unity
     if not unity_root.exists():
         print(f"[ERROR] La ruta del proyecto Unity no existe: {unity_root}")
@@ -124,6 +132,8 @@ def validar_rutas(wsl_root: Path, unity_root: Path) -> Path:
     rutas_wsl_requeridas = [
         unity_source,
         unity_source / "datos_app",
+        unity_source / "audios_palabras",
+        unity_source / "audios_oraciones",
     ]
 
     for ruta in rutas_wsl_requeridas:
@@ -135,9 +145,11 @@ def validar_rutas(wsl_root: Path, unity_root: Path) -> Path:
 
 
 def obtener_destinos_autorizados(unity_root: Path) -> list[Path]:
-    """Retorna la lista de rutas base autorizadas para escritura en Unity (exclusivamente Data JSON)."""
+    """Retorna la lista de rutas base autorizadas para escritura en Unity."""
     return [
         (unity_root / "Assets" / "Content" / "Data").resolve(),
+        (unity_root / "Assets" / "Content" / "Audio" / "Palabras").resolve(),
+        (unity_root / "Assets" / "Content" / "Audio" / "Oraciones").resolve(),
     ]
 
 
@@ -167,6 +179,7 @@ def calcular_sha256(file_path: Path) -> str:
 def listar_archivos_fuente(
     source_dir: Path,
     allowed_extensions: set[str],
+    allowed_names: set[str] | None = None,
     excluded_names: set[str] | None = None,
     recursive: bool = False,
 ) -> list[Path]:
@@ -182,7 +195,10 @@ def listar_archivos_fuente(
         if item.name.endswith(".meta") or item.suffix.lower() == ".meta":
             continue
 
-        if item.name in excluded:
+        if excluded and item.name in excluded:
+            continue
+
+        if allowed_names and item.name not in allowed_names:
             continue
 
         if item.suffix.lower() not in allowed_extensions:
@@ -201,8 +217,10 @@ def sincronizar_categoria(
     authorized_roots: list[Path],
     dry_run: bool,
     delete_orphans: bool,
+    allowed_names: set[str] | None = None,
     excluded_names: set[str] | None = None,
     recursive: bool = False,
+    verbose: bool = False,
 ) -> Estadisticas:
     """Sincroniza una categoría de origen a destino con comparación SHA-256 y detección de huérfanos."""
     stats = Estadisticas()
@@ -214,6 +232,7 @@ def sincronizar_categoria(
     archivos_fuente = listar_archivos_fuente(
         source_dir=source_dir,
         allowed_extensions=allowed_extensions,
+        allowed_names=allowed_names,
         excluded_names=excluded_names,
         recursive=recursive,
     )
@@ -232,26 +251,39 @@ def sincronizar_categoria(
 
         if not dst_file.exists():
             if dry_run:
-                print(f"[DRY-RUN][NUEVO] {rel_str}")
+                print(f"  [DRY-RUN][NUEVO] {rel_str}")
             else:
                 dst_file.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(src_file, dst_file)
-                print(f"[NUEVO] {rel_str}")
+                print(f"  [NUEVO] {rel_str}")
             stats.nuevos += 1
         else:
-            sha_src = calcular_sha256(src_file)
-            sha_dst = calcular_sha256(dst_file)
+            # Comprobación rápida por tamaño y luego SHA-256 exacta
+            tam_src = src_file.stat().st_size
+            tam_dst = dst_file.stat().st_size
 
-            if sha_src != sha_dst:
+            cambiado = False
+            if tam_src != tam_dst:
+                cambiado = True
+            else:
+                sha_src = calcular_sha256(src_file)
+                sha_dst = calcular_sha256(dst_file)
+                cambiado = (sha_src != sha_dst)
+
+            if cambiado:
                 if dry_run:
-                    print(f"[DRY-RUN][ACTUALIZAR] {rel_str}")
+                    print(f"  [DRY-RUN][ACTUALIZAR] {rel_str}")
                 else:
                     shutil.copy2(src_file, dst_file)
-                    print(f"[ACTUALIZADO] {rel_str}")
+                    print(f"  [ACTUALIZADO] {rel_str}")
                 stats.actualizados += 1
             else:
-                print(f"[SIN CAMBIOS] {rel_str}")
+                if verbose:
+                    print(f"  [SIN CAMBIOS] {rel_str}")
                 stats.sin_cambios += 1
+
+    if not verbose and stats.sin_cambios > 0:
+        print(f"  ({stats.sin_cambios} archivos sin cambios no requirieron sincronización)")
 
     # Detección y gestión de huérfanos en destino
     if dest_dir.exists():
@@ -261,6 +293,13 @@ def sincronizar_categoria(
                 continue
 
             if dst_item.name.endswith(".meta") or dst_item.suffix.lower() == ".meta":
+                continue
+
+            # Si hay un conjunto estricto de nombres permitidos, solo evaluar huérfanos entre ellos
+            if allowed_names and dst_item.name not in allowed_names:
+                continue
+
+            if dst_item.suffix.lower() not in allowed_extensions:
                 continue
 
             rel_path = dst_item.relative_to(dest_dir)
@@ -275,52 +314,76 @@ def sincronizar_categoria(
 
                 if delete_orphans:
                     if dry_run:
-                        print(f"[DRY-RUN][ELIMINARIA] {rel_str}")
+                        print(f"  [DRY-RUN][ELIMINARIA] {rel_str}")
                     else:
-                        is_asset = "Assets" in dst_item.parts
                         dst_item.unlink()
                         stats.eliminados += 1
-                        if is_asset:
-                            print(f"[INFO] Asset eliminado; Unity gestionará su metadata: {rel_str}")
-                        else:
-                            print(f"[ELIMINADO] {rel_str}")
+                        print(f"  [INFO] Asset eliminado; Unity gestionará su metadata: {rel_str}")
                 else:
                     if dry_run:
-                        print(f"[DRY-RUN][HUERFANO] {rel_str}")
+                        print(f"  [DRY-RUN][HUERFANO] {rel_str}")
                     else:
-                        print(f"[HUERFANO EN UNITY] {rel_str}")
+                        print(f"  [HUERFANO EN UNITY] {rel_str}")
 
     return stats
 
 
 def mostrar_resumen(
     stats_datos: Estadisticas,
+    stats_audios_palabras: Estadisticas,
+    stats_audios_oraciones: Estadisticas,
     unity_root: Path,
     dry_run: bool,
 ) -> None:
-    """Muestra el resumen final formateado para la sincronización exclusiva de JSON."""
+    """Muestra el resumen final formateado de la sincronización."""
     print("\n================================================")
-    print("SINCRONIZACIÓN WSL → UNITY COMPLETADA (SOLO JSON)")
+    print("RESUMEN DE SINCRONIZACIÓN WSL → UNITY")
     print("================================================")
 
-    print("\nDatos JSON (Assets/Content/Data):")
-    print(f"  Nuevos:        {stats_datos.nuevos}")
-    print(f"  Actualizados:  {stats_datos.actualizados}")
-    print(f"  Sin cambios:   {stats_datos.sin_cambios}")
-    print(f"  Huérfanos:     {stats_datos.huerfanos}")
+    def imprimir_bloque(titulo: str, stats: Estadisticas, ruta_dest: Path):
+        print(f"\n{titulo} ({ruta_dest.name}):")
+        print(f"  Nuevos:        {stats.nuevos}")
+        print(f"  Actualizados:  {stats.actualizados}")
+        print(f"  Sin cambios:   {stats.sin_cambios}")
+        if stats.huerfanos > 0:
+            print(f"  Huérfanos:     {stats.huerfanos}")
+        if stats.eliminados > 0:
+            print(f"  Eliminados:    {stats.eliminados}")
 
-    print(f"\nDestino Unity:\n  {unity_root / 'Assets' / 'Content' / 'Data'}")
+    imprimir_bloque(
+        "Datos JSON",
+        stats_datos,
+        unity_root / "Assets" / "Content" / "Data",
+    )
+    imprimir_bloque(
+        "Audios Palabras",
+        stats_audios_palabras,
+        unity_root / "Assets" / "Content" / "Audio" / "Palabras",
+    )
+    imprimir_bloque(
+        "Audios Oraciones",
+        stats_audios_oraciones,
+        unity_root / "Assets" / "Content" / "Audio" / "Oraciones",
+    )
+
+    total_nuevos = stats_datos.nuevos + stats_audios_palabras.nuevos + stats_audios_oraciones.nuevos
+    total_actualizados = stats_datos.actualizados + stats_audios_palabras.actualizados + stats_audios_oraciones.actualizados
+    total_sin_cambios = stats_datos.sin_cambios + stats_audios_palabras.sin_cambios + stats_audios_oraciones.sin_cambios
+
+    print("\n------------------------------------------------")
+    print(f"TOTAL: {total_nuevos} nuevos, {total_actualizados} actualizados, {total_sin_cambios} sin cambios")
+    print("------------------------------------------------")
 
     print("\nEstado:")
     if dry_run:
-        print("  SIMULACIÓN — no se modificó ningún archivo")
+        print("  SIMULACIÓN — no se modificó ningún archivo en Unity")
     else:
-        print("  OK — Archivos JSON sincronizados exitosamente")
+        print("  OK — Sincronización completada exitosamente")
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Sincronizador automático y seguro de archivos JSON desde WSL hacia el proyecto Unity (sin audios)."
+        description="Sincronizador automático y seguro de JSON (lecciones_compiladas, palabras, oraciones) y Audios desde WSL hacia Unity."
     )
     parser.add_argument(
         "--dry-run",
@@ -330,13 +393,19 @@ def main() -> None:
     parser.add_argument(
         "--delete",
         action="store_true",
-        help="Elimina los archivos JSON huérfanos en Assets/Content/Data (sin tocar .meta).",
+        help="Elimina los archivos huérfanos en destinos autorizados de Unity (sin tocar .meta).",
     )
     parser.add_argument(
         "--unity-path",
         type=str,
         default=None,
         help="Ruta al proyecto Unity (sobrescribe UNITY_PROJECT_PATH).",
+    )
+    parser.add_argument(
+        "--verbose",
+        "-v",
+        action="store_true",
+        help="Muestra todos los archivos sin cambios en detalle.",
     )
 
     args = parser.parse_args()
@@ -346,7 +415,10 @@ def main() -> None:
 
     print(f"[INFO] Proyecto WSL: {wsl_root}")
     print(f"[INFO] Proyecto Unity: {unity_root}")
-    print("[INFO] Alcance: Sincronización EXCLUSIVA de archivos JSON (sin audios)")
+    print("[INFO] Alcance:")
+    print("  - Datos JSON: lecciones_compiladas.json, palabras.json, oraciones.json")
+    print("  - Audios Palabras: UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/")
+    print("  - Audios Oraciones: UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/")
     if args.dry_run:
         print("[INFO] Modo: SIMULACIÓN (--dry-run)")
     if args.delete:
@@ -355,27 +427,56 @@ def main() -> None:
     unity_source = validar_rutas(wsl_root, unity_root)
     authorized_roots = obtener_destinos_autorizados(unity_root)
 
-    # Sincronizar únicamente datos JSON (UNITY/datos_app/ -> Assets/Content/Data/)
+    # 1. Sincronizar datos JSON (EXCLUSIVAMENTE lecciones_compiladas.json, palabras.json, oraciones.json)
     stats_datos = sincronizar_categoria(
-        nombre_categoria="datos JSON",
+        nombre_categoria="datos JSON (lecciones_compiladas, palabras, oraciones)",
         source_dir=unity_source / "datos_app",
         dest_dir=unity_root / "Assets" / "Content" / "Data",
         allowed_extensions=EXTENSIONES_DATOS_PERMITIDAS,
         authorized_roots=authorized_roots,
         dry_run=args.dry_run,
         delete_orphans=args.delete,
-        excluded_names=ARCHIVOS_EXCLUIDOS_DATOS,
+        allowed_names=ARCHIVOS_DATOS_PERMITIDOS,
         recursive=False,
+        verbose=args.verbose,
+    )
+
+    # 2. Sincronizar Audios Palabras (UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/)
+    stats_audios_palabras = sincronizar_categoria(
+        nombre_categoria="audios de palabras",
+        source_dir=unity_source / "audios_palabras",
+        dest_dir=unity_root / "Assets" / "Content" / "Audio" / "Palabras",
+        allowed_extensions=EXTENSIONES_AUDIO_PERMITIDAS,
+        authorized_roots=authorized_roots,
+        dry_run=args.dry_run,
+        delete_orphans=args.delete,
+        recursive=False,
+        verbose=args.verbose,
+    )
+
+    # 3. Sincronizar Audios Oraciones (UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/)
+    stats_audios_oraciones = sincronizar_categoria(
+        nombre_categoria="audios de oraciones",
+        source_dir=unity_source / "audios_oraciones",
+        dest_dir=unity_root / "Assets" / "Content" / "Audio" / "Oraciones",
+        allowed_extensions=EXTENSIONES_AUDIO_PERMITIDAS,
+        authorized_roots=authorized_roots,
+        dry_run=args.dry_run,
+        delete_orphans=args.delete,
+        recursive=False,
+        verbose=args.verbose,
     )
 
     mostrar_resumen(
         stats_datos=stats_datos,
+        stats_audios_palabras=stats_audios_palabras,
+        stats_audios_oraciones=stats_audios_oraciones,
         unity_root=unity_root,
         dry_run=args.dry_run,
     )
 
     if not args.dry_run:
-        print("\n[OK] Sincronización de JSON terminada exitosamente.")
+        print("\n[OK] Sincronización completada exitosamente.")
 
 
 if __name__ == "__main__":
