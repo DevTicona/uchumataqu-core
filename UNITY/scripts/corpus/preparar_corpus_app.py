@@ -40,7 +40,7 @@ from distractores_corpus import (
     normalizar_lid,
     NOMBRES_PROPIOS_CONTEXTUALES
 )
-from compilador_lecciones import compilar_lecciones_curriculares, CATALOGO_22
+from compilador_lecciones import compilar_lecciones_curriculares, CATALOGO_11
 
 # ---------------------------------------------------------------------------
 # Agrupación léxica: Raíces y Formas (05-guia-corpus-datos.md, Sec 2.7)
@@ -284,7 +284,7 @@ def validar_restricciones_nombres_propios(palabras_json_data: list, lecciones_co
                 raise ValueError(f"Violación en {lid}: Nombre propio '{ro.get('familia_id')}' en familias_repaso_organico")
         for paso in lec.get("pasos", []):
             t = paso.get("tipo")
-            if t not in CATALOGO_22:
+            if t not in CATALOGO_11:
                 raise ValueError(f"Violación en {lid}: Tipo no generable '{t}' presente en paso compilado")
             if paso.get("objetivo_id") and paso.get("objetivo_id").lower() in nombres_prohibidos:
                 raise ValueError(f"Violación en {lid}: Nombre propio '{paso.get('objetivo_id')}' como objetivo_id en paso {t}")
@@ -310,7 +310,7 @@ def validar_restricciones_nombres_propios(palabras_json_data: list, lecciones_co
 # Función Principal de Ejecución
 # ---------------------------------------------------------------------------
 def main():
-    if os.path.basename(script_dir) in ["corpus", "generador_corpus"]:
+    if os.path.basename(script_dir) in ["corpus", "corpus_v2", "generador_corpus"]:
         unity_dir = os.path.dirname(os.path.dirname(script_dir))
     else:
         unity_dir = os.path.dirname(script_dir)
@@ -421,7 +421,7 @@ def main():
     # 6. Validación estricta de nombres propios y tipos
     validar_restricciones_nombres_propios(palabras_json_data, lecciones_compiladas_data)
     print("\n[OK] Verificación estricta: ningún nombre propio presente en palabras.json ni en actividades.")
-    print(f"[OK] Verificación de tipos: exactamente {len(tipos_global)} tipos generados, todos en catálogo 22. memoria_uch_es = {tipos_global.get('memoria_uch_es', 0)}.")
+    print(f"[OK] Verificación de tipos: exactamente {len(tipos_global)} tipos generados, todos en catálogo 11.")
 
     # 7. Guardar archivos JSON en datos_app/
     def guardar_json(nombre_rel, data):
@@ -430,18 +430,17 @@ def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"[OK] Generado: {ruta_app}")
 
-    guardar_json("palabras.json", {"version": 1, "palabras": palabras_json_data})
-    guardar_json("oraciones.json", {"version": 1, "oraciones": oraciones_json_data})
-    guardar_json("lecciones.json", {"version": 1, "lecciones": lecciones_json_data})
-    guardar_json("lecciones_compiladas.json", {
+    datos = {
         "version": 4,
         "metricas_distractores": metricas_distractores,
         "informe_compilacion": informe_compilacion,
         "lecciones": lecciones_compiladas_data
-    })
-    guardar_json("escenarios_ra.json", escenarios_ra_data)
+    }
 
-    print("\n=== PROCESAMIENTO DE CORPUS APP v4 COMPLETADO CON ÉXITO ===\n")
+    # Guardar lecciones_compiladas.json
+    guardar_json("lecciones_compiladas.json", datos)
+
+    print("\n=== PROCESAMIENTO DE CORPUS APP (11 TIPOS) COMPLETADO CON ÉXITO ===\n")
 
 
 if __name__ == '__main__':

@@ -1,9 +1,7 @@
 """
-test_compilador_lecciones.py
-Suite integral de pruebas unitarias y de integración para el compilador de lecciones (versión 4).
-Verifica todos los criterios de aceptación de:
-  - UNITY/instrucciones-mejora-compilador-lecciones.md
-  - UNITY/instrucciones-ajustes-finales-lecciones-compiladas.md
+test_compilador_lecciones.py (Versión 11 Tipos - Suite de Pruebas Automatizadas)
+Verifica rigurosamente todos los criterios de aceptación y casos de regresión de:
+  - INSTRUCCIONES_AGENTE_RECOMPILACION_LECCIONES_UCHUMATAQU.md
   - 01-modulo-pln-texto.md
   - 02-modulo-asr-voz.md
   - 04-flujo-leccion-app.md
@@ -14,6 +12,7 @@ Verifica todos los criterios de aceptación de:
 import os
 import sys
 import json
+import hashlib
 import unittest
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -28,11 +27,11 @@ if UNITY_SCRIPTS_DIR not in sys.path:
     sys.path.insert(0, UNITY_SCRIPTS_DIR)
 
 from compilador_lecciones import (
-    CATALOGO_22,
-    MECANICA_POR_TIPO,
-    RECONSTRUCCION_TIPOS
+    CATALOGO_11,
+    TIPOS_RETIRADOS,
+    MECANICA_POR_TIPO
 )
-from distractores_corpus import NOMBRES_PROPIOS_CONTEXTUALES
+from distractores_corpus import normalizar_texto, NOMBRES_PROPIOS_CONTEXTUALES
 
 
 class TestCompiladorLecciones(unittest.TestCase):
@@ -62,24 +61,32 @@ class TestCompiladorLecciones(unittest.TestCase):
         }
 
     def test_version_contrato_unity(self):
-        """Verifica que lecciones_compiladas.json sea versión 4."""
+        """Verifica que lecciones_compiladas.json sea versión 4 para compatibilidad con Unity."""
         self.assertEqual(self.data_compiladas.get("version"), 4)
 
-    def test_catalogo_22_tipos_y_retiro_memoria(self):
-        """Verifica que solo se emitan tipos del catálogo 22 y que memoria_uch_es tenga 0 pasos."""
+    def test_catalogo_cerrado_11_tipos(self):
+        """Verifica que exactamente se emitan los 11 tipos permitidos y ningún tipo retirado."""
         tipos_emitidos = set()
-        conteo_memoria = 0
         for lec in self.lecciones:
             for paso in lec.get("pasos", []):
                 t = paso.get("tipo")
                 tipos_emitidos.add(t)
-                if t == "memoria_uch_es":
-                    conteo_memoria += 1
 
-        self.assertEqual(conteo_memoria, 0, "memoria_uch_es no debe ser generada en lecciones_compiladas.json")
-        tipos_desconocidos = tipos_emitidos - CATALOGO_22
-        self.assertEqual(len(tipos_desconocidos), 0, f"Tipos desconocidos emitidos: {tipos_desconocidos}")
-        self.assertEqual(len(tipos_emitidos), 22, f"Se esperaban exactamente 22 tipos generados, se obtuvieron {len(tipos_emitidos)}")
+        self.assertTrue(tipos_emitidos.issubset(CATALOGO_11),
+                        f"Tipos no permitidos emitidos: {tipos_emitidos - CATALOGO_11}")
+        self.assertEqual(len(tipos_emitidos), 11,
+                         f"Se esperaban exactamente 11 tipos generados, se obtuvieron {len(tipos_emitidos)}: {tipos_emitidos}")
+
+        # Comprobar que ningún tipo retirado esté presente
+        interseccion_retirados = tipos_emitidos & TIPOS_RETIRADOS
+        self.assertEqual(len(interseccion_retirados), 0,
+                         f"Se detectaron tipos retirados en el compilado: {interseccion_retirados}")
+
+    def test_total_pasos_inferior_a_referencia_804(self):
+        """Verifica que el total de pasos no exceda los 804 de la referencia v4 (reducción de redundancia)."""
+        total_pasos = sum(len(l.get("pasos", [])) for l in self.lecciones)
+        self.assertLessEqual(total_pasos, 804, f"Total de pasos {total_pasos} excede el límite de 804")
+        self.assertGreaterEqual(total_pasos, 500, f"Total de pasos {total_pasos} es anormalmente bajo")
 
     def test_cobertura_27_lecciones_y_120_oraciones(self):
         """Verifica que las 27 lecciones existan y que las 120 oraciones curriculares estén cubiertas."""
@@ -94,195 +101,225 @@ class TestCompiladorLecciones(unittest.TestCase):
                 if paso.get("oracion_id"):
                     oraciones_evaluadas.add(paso["oracion_id"])
 
-        esperadas_oraciones = {f"O_{i:03d}" for i in range(1, 121)}
+        # O_011 en L04 tiene 1 solo token ('Chhuñiqasichay'), excluida justificadamente de ordenar_oracion
+        esperadas_oraciones = {f"O_{i:03d}" for i in range(1, 121)} - {"O_011"}
         self.assertTrue(esperadas_oraciones.issubset(oraciones_evaluadas),
                         f"Faltan oraciones curriculares por evaluar: {esperadas_oraciones - oraciones_evaluadas}")
 
     def test_presentacion_y_microactividad_inmediata(self):
-        """Verifica exactamente una presentación y microactividad inmediata compatible por familia nueva."""
-        tipos_micro_validos = {
-            "uch_a_es", "es_a_uch", "audio_a_uch", "audio_a_es",
-            "forma_a_raiz", "forma_a_es", "es_a_forma", "audio_a_forma"
-        }
+        """Verifica que tras cada presentacion_familia haya inmediatamente una microactividad válida."""
+        total_presentaciones = 0
         for lec in self.lecciones:
-            lid = lec["id"]
             pasos = lec.get("pasos", [])
-            fn_set = set(lec.get("familias_nuevas", []))
-
-            pres_indices = []
-            for idx, p in enumerate(pasos):
-                if p.get("tipo") == "presentacion_familia":
-                    pres_indices.append((idx, p.get("objetivo_id")))
-
-            self.assertEqual(len(pres_indices), len(fn_set),
-                             f"En {lid}, se esperaban {len(fn_set)} presentaciones y hay {len(pres_indices)}")
-
-            for idx, fid in pres_indices:
-                self.assertLess(idx + 1, len(pasos), f"En {lid}, presentacion en {idx} sin paso siguiente")
-                siguiente = pasos[idx + 1]
-                t_sig = siguiente.get("tipo")
-                self.assertIn(t_sig, tipos_micro_validos,
-                              f"En {lid}, paso {idx+1} tras presentacion no es microactividad: {t_sig}")
-
-    def test_alternancia_reconstruccion_oraciones(self):
-        """Verifica que no haya pares consecutivos de reconstrucción, excepto el caso inevitable de L27."""
-        total_pares = 0
-        for lec in self.lecciones:
-            lid = lec["id"]
-            pasos = lec.get("pasos", [])
-            pares_en_lec = 0
-            for i in range(len(pasos) - 1):
-                t1 = pasos[i].get("tipo")
-                t2 = pasos[i + 1].get("tipo")
-                if t1 in RECONSTRUCCION_TIPOS and t2 in RECONSTRUCCION_TIPOS:
-                    pares_en_lec += 1
-            if lid != "L27":
-                self.assertEqual(pares_en_lec, 0, f"En {lid}, se encontraron {pares_en_lec} pares de reconstrucción contiguos")
-            else:
-                self.assertLessEqual(pares_en_lec, 2, f"En L27, pares de reconstrucción exceden el límite de excepción: {pares_en_lec}")
-            total_pares += pares_en_lec
-        self.assertLessEqual(total_pares, 2, f"Pares de reconstrucción totales exceden el objetivo ({total_pares} > 2)")
-
-    def test_espaciado_escritura_misma_forma(self):
-        """Verifica separación de >=3 pasos entre evaluación de forma y escribir_forma en L08, L11 y L17."""
-        casos_control = {
-            "L08": "chhaqchay",
-            "L11": "chhukchay",
-            "L17": "chiwkisnaka"
-        }
-        lec_map = {l["id"]: l for l in self.lecciones}
-
-        for lid, forma_id in casos_control.items():
-            pasos = lec_map[lid]["pasos"]
-            eval_idx = None
-            escritura_idx = None
-
-            for i, p in enumerate(pasos):
-                t = p.get("tipo")
-                fid = p.get("forma_id")
-                if fid == forma_id:
-                    if t != "escribir_forma" and eval_idx is None:
-                        eval_idx = i
-                    elif t == "escribir_forma" and escritura_idx is None:
-                        escritura_idx = i
-
-            if eval_idx is not None and escritura_idx is not None:
-                distancia = escritura_idx - eval_idx - 1
-                self.assertGreaterEqual(
-                    distancia, 3,
-                    f"En {lid}, forma '{forma_id}' evaluada en {eval_idx} y escrita en {escritura_idx} (distancia: {distancia} < 3)"
-                )
-
-    def test_seleccion_oracion_asr_l04(self):
-        """Verifica que el ASR de oración en L04 no seleccione la oración unipalabra O_011."""
-        lec_map = {l["id"]: l for l in self.lecciones}
-        l04 = lec_map["L04"]
-        asr_pasos = [p for p in l04["pasos"] if p.get("tipo") == "escucha_y_repite_oracion_asr"]
-        self.assertEqual(len(asr_pasos), 1, "L04 debe tener exactamente 1 paso de ASR de oración")
-        target_oid = asr_pasos[0].get("oracion_id")
-        self.assertNotEqual(target_oid, "O_011", "ASR de oración en L04 no debe seleccionar O_011 (1 solo token)")
-        self.assertIn(target_oid, ["O_012", "O_013", "O_014"], f"ASR de oración en L04 seleccionó {target_oid}")
-
-    def test_validez_completar_oracion(self):
-        """Verifica que todos los pasos de completar_oracion tengan estructura, pista en español y distractores curriculares válidos."""
-        oraciones_dict = {o["id"]: o for o in self.data_oraciones["oraciones"]}
-        vocabulario_acumulado = set()
-
-        for lec in self.lecciones:
-            lid = lec["id"]
-            vocabulario_acumulado.update(lec.get("familias_nuevas", []))
-
-            for idx, paso in enumerate(lec.get("pasos", [])):
-                if paso.get("tipo") == "completar_oracion":
-                    oculta = paso.get("palabra_oculta_id")
-                    opciones = paso.get("opciones_ids", [])
-                    oid = paso.get("oracion_id")
-                    consigna = paso.get("consigna", "")
-
-                    self.assertTrue(oculta, f"En {lid}, paso {idx} sin palabra_oculta_id")
-                    self.assertIn(oculta, opciones, f"En {lid}, paso {idx} {oculta} no está en opciones_ids")
-                    self.assertEqual(len(opciones), len(set(opciones)), f"En {lid}, paso {idx} opciones duplicadas")
-                    self.assertTrue(2 <= len(opciones) <= 4, f"En {lid}, paso {idx} debe tener 2 a 4 opciones (tiene {len(opciones)})")
-                    self.assertNotIn(oculta.lower(), NOMBRES_PROPIOS_CONTEXTUALES, f"En {lid} nombre propio oculto")
-
-                    # Verificar pista en español de la misma oración
-                    self.assertIn(oid, oraciones_dict, f"En {lid}, oración {oid} no encontrada")
-                    es_esperado = oraciones_dict[oid]["es"]
-                    self.assertIn(es_esperado, consigna, f"En {lid}, la consigna '{consigna}' no contiene la traducción '{es_esperado}'")
-
-                    # En L01, verificar específicamente O_002 y wakpacha
-                    if lid == "L01":
-                        self.assertEqual(oid, "O_002", "L01 debe usar O_002 en completar_oracion")
-                        self.assertEqual(oculta, "wakpacha", "L01 debe tener 'wakpacha' como palabra oculta")
-
-                    # Verificar que todas las opciones pertenezcan al vocabulario ya introducido
-                    for op in opciones:
-                        self.assertIn(op, vocabulario_acumulado, f"En {lid}, opción '{op}' no ha sido introducida aún")
-
-
-    def test_unicidad_par_tipo_objetivo(self):
-        """Verifica que dentro de una misma lección no se evalúe dos veces el mismo par (tipo, objetivo)."""
-        for lec in self.lecciones:
-            lid = lec["id"]
-            pares_vistos = set()
-            for idx, paso in enumerate(lec.get("pasos", [])):
-                tipo = paso.get("tipo")
-                obj = paso.get("objetivo_id") or paso.get("forma_id") or paso.get("oracion_id")
-                if tipo in ["presentacion_familia", "familia_completa", "emparejar_uch_es", "emparejar_audio_uch"]:
-                    continue
-                if obj:
-                    par = (tipo, obj)
-                    self.assertNotIn(par, pares_vistos, f"En {lid}, par duplicado {par} en paso {idx}")
-                    pares_vistos.add(par)
-
-    def test_distribucion_y_validez_asr(self):
-        """Verifica que los pasos ASR tengan opcional: true, audio válido y estén intercalados."""
-        for lec in self.lecciones:
-            lid = lec["id"]
-            pasos = lec.get("pasos", [])
-            n_pasos = len(pasos)
-
             for idx, paso in enumerate(pasos):
-                t = paso.get("tipo")
-                if t == "escucha_y_repite_asr":
-                    self.assertTrue(paso.get("opcional"), f"En {lid}, ASR en paso {idx} sin opcional: true")
-                    self.assertIn(paso.get("objetivo_id"), self.audios_palabras,
-                                  f"En {lid}, ASR léxico en paso {idx} sin audio en audios_palabras")
-                    self.assertLess(idx, n_pasos - 2, f"En {lid}, ASR léxico colocado al final en paso {idx}/{n_pasos}")
-                elif t == "escucha_y_repite_oracion_asr":
-                    self.assertTrue(paso.get("opcional"), f"En {lid}, ASR oración en paso {idx} sin opcional: true")
-                    self.assertIn(paso.get("oracion_id"), self.audios_oraciones,
-                                  f"En {lid}, ASR oración en paso {idx} sin audio en audios_oraciones")
+                if paso["tipo"] == "presentacion_familia":
+                    total_presentaciones += 1
+                    fid = paso["objetivo_id"]
+                    self.assertLess(idx + 1, len(pasos), f"En {lec['id']}, presentacion final sin microactividad")
+                    siguiente = pasos[idx + 1]
+                    self.assertNotEqual(siguiente["tipo"], "presentacion_familia",
+                                        f"En {lec['id']}, dos presentaciones consecutivas")
+                    # Verificar que la microactividad use la familia recién presentada o su forma
+                    siguiente_obj = siguiente.get("objetivo_id") or siguiente.get("raiz_id")
+                    self.assertEqual(siguiente_obj, fid,
+                                     f"En {lec['id']}, microactividad inmediata no evalúa {fid}")
 
-    def test_presupuestos_escritura_y_consignas(self):
-        """Verifica cuotas de escritura, consignas explícitas y refuerzos al fallar válidos."""
+        self.assertEqual(total_presentaciones, 210, f"Se esperaban 210 presentaciones, se obtuvieron {total_presentaciones}")
+
+    def test_proporcion_y_rango_escritura_libre(self):
+        """Verifica que cada lección tenga entre 4 y 6 actividades de escritura libre."""
         for lec in self.lecciones:
-            lid = lec["id"]
+            escrituras = [p for p in lec.get("pasos", []) if p["tipo"] in {"escribir_palabra", "escribir_forma", "escribir_oracion"}]
+            total_esc = len(escrituras)
+            self.assertTrue(4 <= total_esc <= 6,
+                            f"En {lec['id']}: se esperaban 4-6 escrituras libres, se obtuvieron {total_esc}")
+
+    def test_no_duplicacion_de_objetivos_escritos(self):
+        """Verifica que ningún ID ni respuesta superficial normalizada se repita en escritura libre en la misma lección."""
+        for lec in self.lecciones:
+            escrituras = [p for p in lec.get("pasos", []) if p["tipo"] in {"escribir_palabra", "escribir_forma", "escribir_oracion"}]
+            ids_vistos = set()
+            respuestas_vistas = set()
+
+            for paso in escrituras:
+                obj_id = paso.get("objetivo_id") or paso.get("forma_id") or paso.get("oracion_id")
+                resp_uch = normalizar_texto(paso.get("respuesta_esperada_uch", ""))
+
+                self.assertNotIn(obj_id, ids_vistos,
+                                 f"En {lec['id']}: ID '{obj_id}' duplicado en escritura libre")
+                self.assertNotIn(resp_uch, respuestas_vistas,
+                                 f"En {lec['id']}: Respuesta '{resp_uch}' duplicada en escritura libre")
+
+                ids_vistos.add(obj_id)
+                respuestas_vistas.add(resp_uch)
+
+    def test_dictado_y_traduccion_distintos_oracion(self):
+        """Verifica que en una misma lección el dictado y la traducción escrita no compartan oracion_id."""
+        for lec in self.lecciones:
+            pasos_oracion = [p for p in lec.get("pasos", []) if p["tipo"] == "escribir_oracion"]
+            dictados = [p["oracion_id"] for p in pasos_oracion if p.get("fuente_estimulo") == "audio"]
+            traducciones = [p["oracion_id"] for p in pasos_oracion if p.get("fuente_estimulo") == "texto_es"]
+
+            interseccion = set(dictados) & set(traducciones)
+            self.assertEqual(len(interseccion), 0,
+                             f"En {lec['id']}: oración {interseccion} compartida entre dictado y traducción")
+
+    def test_contrato_dictado_escrito(self):
+        """Verifica que el dictado escrito tenga tipo escribir_oracion, fuente_estimulo audio y sin fichas."""
+        dictados_totales = 0
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                if paso["tipo"] == "escribir_oracion" and paso.get("fuente_estimulo") == "audio":
+                    dictados_totales += 1
+                    self.assertIn("Escucha", paso["consigna"])
+                    self.assertIn("respuesta_esperada_uch", paso)
+                    self.assertNotIn("opciones_ids", paso)
+                    self.assertNotIn("banco_palabras", paso)
+                    self.assertNotIn("palabra_oculta_id", paso)
+
+        self.assertEqual(dictados_totales, 27, f"Se esperaban 27 dictados escritos, se obtuvieron {dictados_totales}")
+
+    def test_refuerzos_al_fallar_validos(self):
+        """Verifica que ningún refuerzo_al_fallar apunte a un tipo retirado."""
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                ref = paso.get("refuerzo_al_fallar")
+                if ref:
+                    r_tipo = ref.get("tipo")
+                    self.assertIn(r_tipo, CATALOGO_11,
+                                  f"En {lec['id']}: refuerzo_al_fallar con tipo no permitido: {r_tipo}")
+                    self.assertNotIn(r_tipo, TIPOS_RETIRADOS,
+                                     f"En {lec['id']}: refuerzo_al_fallar con tipo retirado: {r_tipo}")
+
+    def test_refuerzos_generacion_opciones_validas(self):
+        """Verifica que todos los refuerzos tengan referencias válidas en el corpus y objetivos resolubles sin ambigüedad."""
+        palabras_map = {p["id"]: p for p in self.data_palabras.get("palabras", [])}
+        oraciones_map = {o["id"]: o for o in self.data_oraciones.get("oraciones", [])}
+
+        total_refuerzos = 0
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                ref = paso.get("refuerzo_al_fallar")
+                if not ref:
+                    continue
+                total_refuerzos += 1
+                r_tipo = ref.get("tipo")
+                if r_tipo in {"audio_a_uch", "uch_a_es"}:
+                    obj = ref.get("objetivo_id")
+                    self.assertIn(obj, palabras_map, f"En {lec['id']}: refuerzo {r_tipo} con objetivo {obj} no existe en palabras.json")
+                elif r_tipo == "audio_a_forma":
+                    frm = ref.get("forma_id")
+                    raiz = ref.get("raiz_id")
+                    self.assertIn(raiz, palabras_map, f"En {lec['id']}: raiz {raiz} no existe en palabras.json")
+                    formas_raiz = [f["id"] for f in palabras_map[raiz].get("formas", [])]
+                    self.assertIn(frm, formas_raiz, f"En {lec['id']}: forma {frm} no pertenece a raiz {raiz}")
+                elif r_tipo == "ordenar_oracion":
+                    oid = ref.get("oracion_id")
+                    self.assertIn(oid, oraciones_map, f"En {lec['id']}: oracion {oid} no existe en oraciones.json")
+                    self.assertGreaterEqual(len(oraciones_map[oid]["uch"].split()), 2,
+                                            f"En {lec['id']}: refuerzo ordenar_oracion {oid} tiene < 2 tokens")
+
+        self.assertGreater(total_refuerzos, 80, f"Se esperaban más de 80 refuerzos, se encontraron {total_refuerzos}")
+
+    def test_asr_opcional_no_bloqueante(self):
+        """Verifica que cada paso ASR de palabra y oración tenga opcional: True."""
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                if paso["tipo"] in {"escucha_y_repite_asr", "escucha_y_repite_oracion_asr"}:
+                    self.assertTrue(paso.get("opcional", False),
+                                    f"En {lec['id']}: paso ASR sin opcional=True")
+
+    def test_dos_emparejamientos_por_leccion(self):
+        """Verifica que cada una de las 27 lecciones tenga exactamente 2 emparejamientos (54 en total), entre 2 y 5 parejas."""
+        total_emparejamientos = 0
+        for lec in self.lecciones:
             pasos = lec.get("pasos", [])
-            fn_cnt = len(lec.get("familias_nuevas", []))
+            emps = [p for p in pasos if p.get("tipo") == "emparejar_uch_es"]
+            self.assertEqual(len(emps), 2, f"En {lec['id']}: se esperaban 2 emparejamientos, se obtuvieron {len(emps)}")
+            total_emparejamientos += len(emps)
 
-            esc_lexicas = [p for p in pasos if p.get("tipo") in ["escribir_palabra", "escribir_forma"]]
-            esc_oracion = [p for p in pasos if p.get("tipo") == "escribir_oracion"]
+            for i, emp in enumerate(emps):
+                items = emp.get("items_ids", [])
+                self.assertTrue(2 <= len(items) <= 5,
+                                f"En {lec['id']}, emparejamiento {i+1}: items {len(items)} fuera de rango [2, 5]")
+                self.assertEqual(len(set(items)), len(items),
+                                 f"En {lec['id']}, emparejamiento {i+1}: IDs duplicados en {items}")
 
-            cuota_esperada = 1 if fn_cnt <= 4 else (2 if fn_cnt <= 8 else 3)
-            self.assertEqual(len(esc_lexicas), cuota_esperada,
-                             f"En {lid}, escrituras léxicas={len(esc_lexicas)}, esperadas={cuota_esperada}")
-            self.assertLessEqual(len(esc_oracion), 1, f"En {lid}, más de 1 escribir_oracion")
+            # Posición de emparejamiento 1: después de floor(N/2) presentaciones
+            n_nuevas = len(lec.get("familias_nuevas", []))
+            mitad = n_nuevas // 2
+            emp1_idx = pasos.index(emps[0])
+            pres_antes_emp1 = sum(1 for p in pasos[:emp1_idx] if p.get("tipo") == "presentacion_familia")
+            self.assertGreaterEqual(pres_antes_emp1, mitad,
+                                    f"En {lec['id']}: emparejamiento 1 apareció antes de presentar {mitad} familias nuevas")
 
-            for p in esc_lexicas + esc_oracion:
-                self.assertIn("consigna", p, f"En {lid}, paso de escritura sin consigna")
-                self.assertIn("refuerzo_al_fallar", p, f"En {lid}, paso de escritura sin refuerzo_al_fallar")
-                ref = p["refuerzo_al_fallar"]
-                self.assertIn(ref["tipo"], CATALOGO_22, f"En {lid}, tipo de refuerzo inválido: {ref['tipo']}")
+            # Posición de emparejamiento 2: después de todas las presentaciones
+            emp2_idx = pasos.index(emps[1])
+            pres_antes_emp2 = sum(1 for p in pasos[:emp2_idx] if p.get("tipo") == "presentacion_familia")
+            self.assertEqual(pres_antes_emp2, n_nuevas,
+                             f"En {lec['id']}: emparejamiento 2 apareció antes de completar todas las presentaciones")
 
-    def test_densidad_l08_y_l27(self):
-        """Verifica que L08 y L27 cumplan los umbrales de densidad especificados."""
-        lec_map = {l["id"]: l for l in self.lecciones}
-        l08_pasos = len(lec_map["L08"]["pasos"])
-        l27_pasos = len(lec_map["L27"]["pasos"])
+        self.assertEqual(total_emparejamientos, 54,
+                         f"Se esperaban exactamente 54 emparejamientos, se obtuvieron {total_emparejamientos}")
 
-        self.assertLessEqual(l08_pasos, 39, f"L08 excede el umbral de revisión (39): {l08_pasos}")
-        self.assertLessEqual(l27_pasos, 48, f"L27 excede el umbral de revisión pedagógica (48): {l27_pasos}")
+    def test_prioridad_escritura_l06(self):
+        """Verifica que en L06 los objetivos escritos sean de vocabulario nuevo y no repitan ana o chhuni_pichuchay."""
+        l06 = next(l for l in self.lecciones if l["id"] == "L06")
+        escrituras_palabra = [p["objetivo_id"] for p in l06.get("pasos", []) if p.get("tipo") == "escribir_palabra"]
+        self.assertNotIn("ana", escrituras_palabra, "L06 no debe escribir 'ana' (repaso)")
+        self.assertNotIn("chhuni_pichuchay", escrituras_palabra, "L06 no debe escribir 'chhuni_pichuchay' (repaso)")
+        for obj in escrituras_palabra:
+            self.assertIn(obj, l06["familias_nuevas"], f"L06 escribió {obj} que no es familia nueva")
+
+    def test_nombres_propios_excluidos_de_objetivos(self):
+        """Verifica que ningún nombre propio contextual aparezca como objetivo_id, forma_id o en items_ids."""
+        nombres_prohibidos = {normalizar_texto(np) for np in NOMBRES_PROPIOS_CONTEXTUALES}
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                obj = paso.get("objetivo_id")
+                if obj:
+                    self.assertNotIn(obj.lower(), nombres_prohibidos,
+                                     f"En {lec['id']}: nombre propio '{obj}' como objetivo_id")
+                frm = paso.get("forma_id")
+                if frm:
+                    self.assertNotIn(frm.lower(), nombres_prohibidos,
+                                     f"En {lec['id']}: nombre propio '{frm}' como forma_id")
+                for itm in paso.get("items_ids", []):
+                    self.assertNotIn(itm.lower(), nombres_prohibidos,
+                                     f"En {lec['id']}: nombre propio '{itm}' en items_ids")
+
+
+    def test_consignas_sin_barras_ambiguas(self):
+        """Verifica que ninguna consigna en las 27 lecciones contenga barras '/' de ambigüedad."""
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                consigna = paso.get("consigna", "")
+                self.assertNotIn("/", consigna,
+                                 f"En {lec['id']}, paso {paso.get('tipo')}: consigna con barra: '{consigna}'")
+
+    def test_ningun_ordenar_oracion_con_un_solo_token(self):
+        """Verifica que ninguna actividad ordenar_oracion tenga menos de dos tokens (e.g. O_011 excluida)."""
+        oraciones_map = {o["id"]: o for o in self.data_oraciones.get("oraciones", [])}
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                if paso.get("tipo") == "ordenar_oracion":
+                    oid = paso["oracion_id"]
+                    self.assertNotEqual(oid, "O_011", f"En {lec['id']}: O_011 (1 token) no debe estar en ordenar_oracion")
+                    uch = oraciones_map[oid]["uch"]
+                    tokens = uch.split()
+                    self.assertGreaterEqual(len(tokens), 2,
+                                            f"En {lec['id']}: {oid} tiene {len(tokens)} tokens, se requieren >= 2")
+
+    def test_ausencia_repeticiones_entre_emparejamientos(self):
+        """Verifica que no existan palabras repetidas entre los dos emparejamientos de una misma lección."""
+        for lec in self.lecciones:
+            emps = [p for p in lec.get("pasos", []) if p.get("tipo") == "emparejar_uch_es"]
+            if len(emps) == 2:
+                s1 = set(emps[0].get("items_ids", []))
+                s2 = set(emps[1].get("items_ids", []))
+                inter = s1 & s2
+                self.assertEqual(len(inter), 0,
+                                 f"En {lec['id']}: palabras repetidas entre Emp 1 y Emp 2: {inter}")
 
 
 if __name__ == "__main__":

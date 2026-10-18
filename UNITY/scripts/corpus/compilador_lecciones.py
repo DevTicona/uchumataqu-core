@@ -1,50 +1,27 @@
 """
-compilador_lecciones.py
-Motor de compilación curricular determinista y pedagógico para Uchumataqu (versión 4).
-Basado en:
-  - 01-modulo-pln-texto.md
-  - 02-modulo-asr-voz.md
-  - 04-flujo-leccion-app.md
-  - 05-guia-corpus-datos.md
-  - 06-guia-arquitectura-proyecto.md
-  - 08-patron-arquitectonico-mvp.md
-  - instrucciones-mejora-compilador-lecciones.md
-  - instrucciones-ajustes-finales-lecciones-compiladas.md
-
-Implementa:
-  - Catálogo estricto de 22 tipos generables (memoria_uch_es retirada de la generación).
-  - Pareja obligatoria: exactamente una presentacion_familia + una microactividad inmediata por familia nueva.
-  - Alternancia equilibrada de microactividades visuales, auditivas y formas documentadas.
-  - Espaciado >=3 pasos entre la práctica morfológica y la escritura de la misma forma (L08, L11, L17).
-  - Alternancia rigurosa en oraciones: eliminación de pares consecutivos de reconstrucción.
-  - Selección contextual de ASR de oración (2-6 tokens con audio, evitando oraciones unipalabra como O_011 en L04).
-  - Selección de distractores para completar_oracion respetando rigurosamente prioridades curriculares (P1..P4).
-  - Presupuestos adaptativos de escritura léxica y repasos colectivos.
-  - Cobertura total de oraciones curriculares (O_001..O_120).
-  - Salida determinista y reproducible al 100%.
+compilador_lecciones.py (Versión 11 Tipos - Refactorización Curricular Uchumataqu)
+Compilador curricular determinista basado estrictamente en INSTRUCCIONES_AGENTE_RECOMPILACION_LECCIONES_UCHUMATAQU.md:
+  - Exactamente 11 tipos permitidos (1 presentación + 10 actividades).
+  - Sustitución de tipos redundantes por escritura libre y dictado por teclado.
+  - Sin duplicación de objetivos escritos ni de oraciones por modalidad en una misma lección.
+  - Cobertura del 100% de las 27 lecciones (L01 a L27) y 120 oraciones curriculares.
+  - Menos de 804 pasos globales (reducción de redundancia sin inflar la lección).
+  - 4 a 6 actividades de escritura libre por lección cuando sea viable.
+  - Salida 100% reproducible y determinista.
 """
 
 import os
 import sys
 import random
-from typing import Optional
+import hashlib
+import re
+from typing import Optional, List, Dict, Set, Tuple
 
 _pkg_dir = os.path.dirname(os.path.abspath(__file__))
 if _pkg_dir not in sys.path:
     sys.path.insert(0, _pkg_dir)
 
 try:
-    from generador_corpus.distractores_corpus import (
-        resolver_familias_en_oracion,
-        resolver_tokens_detalle_oracion,
-        seleccionar_distractores_por_prioridad,
-        generar_distractores_oracion,
-        son_traducciones_compatibles,
-        normalizar_texto,
-        NOMBRES_PROPIOS_CONTEXTUALES,
-        seleccionar_distractores_completar
-    )
-except ImportError:
     from distractores_corpus import (
         resolver_familias_en_oracion,
         resolver_tokens_detalle_oracion,
@@ -52,63 +29,60 @@ except ImportError:
         generar_distractores_oracion,
         son_traducciones_compatibles,
         normalizar_texto,
-        NOMBRES_PROPIOS_CONTEXTUALES,
-        seleccionar_distractores_completar
+        NOMBRES_PROPIOS_CONTEXTUALES
+    )
+except ImportError:
+    from corpus.distractores_corpus import (
+        resolver_familias_en_oracion,
+        resolver_tokens_detalle_oracion,
+        seleccionar_distractores_por_prioridad,
+        generar_distractores_oracion,
+        son_traducciones_compatibles,
+        normalizar_texto,
+        NOMBRES_PROPIOS_CONTEXTUALES
     )
 
 # ---------------------------------------------------------------------------
-# Catálogo de 22 tipos generables (memoria_uch_es retirada de la generación)
+# Contrato cerrado: exactamente 11 tipos permitidos
 # ---------------------------------------------------------------------------
-CATALOGO_22 = {
+CATALOGO_11 = {
     "presentacion_familia",
     "uch_a_es",
-    "es_a_uch",
     "audio_a_uch",
-    "audio_a_es",
-    "forma_a_raiz",
-    "forma_a_es",
-    "es_a_forma",
     "audio_a_forma",
-    "familia_completa",
     "emparejar_uch_es",
-    "emparejar_audio_uch",
-    "ordenar_oracion",
-    "dictado_word_bank",
-    "traduccion_constructiva",
-    "completar_oracion",
-    "audio_a_es_oracion",
     "escribir_palabra",
     "escribir_forma",
     "escribir_oracion",
+    "ordenar_oracion",
     "escucha_y_repite_asr",
     "escucha_y_repite_oracion_asr"
 }
 
-# Clasificación de actividades de oración según su acción pedagógica
-RECONSTRUCCION_TIPOS = {"ordenar_oracion", "dictado_word_bank", "traduccion_constructiva"}
-COMPRENSION_ORACION_TIPOS = {"audio_a_es_oracion"}
-CONTEXTO_ORACION_TIPOS = {"completar_oracion"}
-PRODUCCION_ORACION_TIPOS = {"escribir_oracion", "escucha_y_repite_oracion_asr"}
+# Tipos formalmente retirados (prohibidos en lecciones y en refuerzos)
+TIPOS_RETIRADOS = {
+    "es_a_uch",
+    "audio_a_es",
+    "audio_a_es_oracion",
+    "forma_a_es",
+    "es_a_forma",
+    "forma_a_raiz",
+    "familia_completa",
+    "emparejar_audio_uch",
+    "traduccion_constructiva",
+    "dictado_word_bank",
+    "completar_oracion",
+    "memoria_uch_es"
+}
 
-# Familias de mecánicas para evitar contigüidad repetitiva
+# Clasificación de mecánicas para evitar contigüidad monótona
 MECANICA_POR_TIPO = {
     "presentacion_familia":         "presentacion",
     "uch_a_es":                     "seleccion_visual",
-    "es_a_uch":                     "seleccion_visual",
-    "forma_a_raiz":                "seleccion_visual",
-    "forma_a_es":                  "seleccion_visual",
-    "es_a_forma":                  "seleccion_visual",
     "audio_a_uch":                  "seleccion_auditiva",
-    "audio_a_es":                   "seleccion_auditiva",
     "audio_a_forma":                "seleccion_auditiva",
     "emparejar_uch_es":             "emparejamiento_visual",
-    "emparejar_audio_uch":          "emparejamiento_auditivo",
-    "familia_completa":             "morfologia_grupo",
     "ordenar_oracion":             "reconstruccion_oracion",
-    "dictado_word_bank":           "reconstruccion_oracion",
-    "traduccion_constructiva":     "reconstruccion_oracion",
-    "audio_a_es_oracion":          "comprension_oracion",
-    "completar_oracion":           "contexto_oracion",
     "escribir_palabra":            "escritura",
     "escribir_forma":              "escritura",
     "escribir_oracion":            "escritura",
@@ -116,25 +90,13 @@ MECANICA_POR_TIPO = {
     "escucha_y_repite_oracion_asr": "asr"
 }
 
-# Mapeo de fuente_estimulo por tipo de paso
 FUENTE_ESTIMULO_POR_TIPO = {
     "presentacion_familia":         "audio",
     "uch_a_es":                     "texto_uch",
-    "es_a_uch":                     "texto_es",
     "audio_a_uch":                  "audio",
-    "audio_a_es":                   "audio",
-    "forma_a_raiz":                "texto_uch",
-    "forma_a_es":                  "texto_uch",
-    "es_a_forma":                  "texto_es",
     "audio_a_forma":                "audio",
-    "familia_completa":             "texto_uch",
     "emparejar_uch_es":             "texto_uch",
-    "emparejar_audio_uch":          "audio",
     "ordenar_oracion":             "texto_es",
-    "dictado_word_bank":           "audio",
-    "traduccion_constructiva":     "texto_es",
-    "completar_oracion":           "texto_uch",
-    "audio_a_es_oracion":          "audio",
     "escribir_palabra":            "texto_es",
     "escribir_forma":              "texto_es",
     "escribir_oracion":            "texto_es",
@@ -148,24 +110,81 @@ CONSIGNAS_PALABRA = [
 ]
 
 CONSIGNAS_FORMA = [
-    ("Escribe en uchumataqu la forma: «{es}»", "texto_es"),
-    ("Escucha y escribe la forma en uchumataqu", "audio")
+    ("Escribe en uchumataqu la forma: «{es}»", "texto_es")
 ]
 
-CONSIGNAS_ORACION = [
-    ("Traduce al uchumataqu: «{es}»", "texto_es"),
-    ("Escucha atentamente y escribe la oración en uchumataqu", "audio")
-]
+CONSIGNAS_ORACION_TRADUCCION = "Traduce al uchumataqu: «{es}»"
+CONSIGNAS_ORACION_DICTADO = "Escucha y escribe la oración en uchumataqu"
 
+# Refuerzos estrictamente dentro de CATALOGO_11
 REFUERZO_MAP = {
     "escribir_palabra": ["audio_a_uch", "uch_a_es"],
-    "escribir_forma": ["audio_a_forma", "es_a_forma"],
-    "escribir_oracion": ["ordenar_oracion", "dictado_word_bank"]
+    "escribir_forma": ["audio_a_forma"],
+    "escribir_oracion": ["ordenar_oracion"]
 }
+
+MAPA_CONSIGNAS_LIMPIAS = {
+    "Es/esta grande": "Es grande",
+    "Es/está grande": "Es grande",
+    "Es/está muy grande": "Es muy grande",
+    "Es/está muy bonito": "Es muy bonito",
+    "Está sucio/a": "Está sucio",
+    "Bueno/a o Bien": "Bueno",
+    "Es/está muy bueno/a": "Es muy bueno",
+    "Es/está nuevo": "Es nuevo",
+    "Está contento/a": "Está contento",
+    "Su (de él/ella)": "Su",
+    "Está enfermo/a": "Está enfermo",
+    "Es/está azul": "Es azul",
+    "Es/está viejo": "Es viejo",
+    "Es/está curandero": "Es curandero",
+}
+
+def limpiar_texto_consigna(texto: str) -> str:
+    """Retorna una versión natural y sin barras '/' para la consigna en español."""
+    if not texto:
+        return ""
+    t = texto.strip()
+    if t in MAPA_CONSIGNAS_LIMPIAS:
+        return MAPA_CONSIGNAS_LIMPIAS[t]
+    if "/" in t:
+        t = re.sub(r"\bEs/está\b", "Es", t, flags=re.IGNORECASE)
+        t = re.sub(r"\bEs/esta\b", "Es", t, flags=re.IGNORECASE)
+        t = re.sub(r"o/a\b", "o", t)
+        t = re.sub(r"/a\b", "", t)
+        if "/" in t:
+            t = t.split("/")[0].strip()
+    return t
+
+def obtener_semilla_estable(leccion_id: str, proposito: str, revision: str = "v4") -> int:
+    """Genera una semilla determinista estable e independiente de la plataforma."""
+    clave = f"{leccion_id}_{revision}_{proposito}".encode("utf-8")
+    return int(hashlib.sha256(clave).hexdigest()[:16], 16)
+
+def items_validos_emparejamiento(candidatos: list, palabras_map: dict, max_items: int = 5) -> list:
+    """Selecciona de forma determinista entre 2 y 5 IDs de raíces únicas con significados distinguibles."""
+    seleccion = []
+    for cid in candidatos:
+        if cid not in palabras_map:
+            continue
+        if cid in NOMBRES_PROPIOS_CONTEXTUALES or cid.lower() in NOMBRES_PROPIOS_CONTEXTUALES:
+            continue
+        c_es = palabras_map[cid]["es"]
+        incompatible = False
+        for sid in seleccion:
+            s_es = palabras_map[sid]["es"]
+            if son_traducciones_compatibles(c_es, s_es):
+                incompatible = True
+                break
+        if not incompatible:
+            seleccion.append(cid)
+            if len(seleccion) == max_items:
+                break
+    return seleccion
 
 
 class EstadoLeccion:
-    """Gestiona el estado local de compilación para una lección individual."""
+    """Gestiona el estado local de compilación para una lección individual (11 tipos)."""
 
     def __init__(self, leccion_id: str, rng: random.Random, familias_nuevas: list,
                  familias_repaso: list, familias_futuras: set, oraciones_ids: list):
@@ -178,52 +197,45 @@ class EstadoLeccion:
 
         self.pasos = []
         self.familias_presentadas = set()
-        self.ultimo_paso_objetivo = {}  # objetivo_id -> idx en self.pasos donde fue evaluado
-        self.pares_tipo_objetivo = set()  # set of (tipo, objetivo_id)
-        self.conjuntos_colectivos = []  # list of (tipo, frozenset(items_ids))
+        self.ultimo_paso_objetivo = {}
+        self.pares_tipo_objetivo = set()
 
-        # Presupuesto estricto de escritura léxica (Sec 4 de instrucciones)
+        # Registro estricto contra duplicación de respuestas escritas libres
+        self.escrituras_usadas_ids = set()
+        self.escrituras_usadas_uch_norm = set()
+
+        # Metas de escritura de palabras para balancear 4-6 escrituras por lección
         n_nuevas = len(familias_nuevas)
         if n_nuevas <= 4:
-            self.presupuesto_escritura_lexica = 1
+            self.presupuesto_escritura_palabras = 2
         elif n_nuevas <= 8:
-            self.presupuesto_escritura_lexica = 2
+            self.presupuesto_escritura_palabras = 2
         else:
-            self.presupuesto_escritura_lexica = 3
+            self.presupuesto_escritura_palabras = 3
 
-        # Presupuesto de repaso colectivo (hasta 1 por cada 3-4 familias, máx 2 por lección)
-        if n_nuevas <= 3:
-            self.presupuesto_colectivo = 1 if (n_nuevas + len(familias_repaso)) >= 3 else 0
-        elif n_nuevas <= 7:
-            self.presupuesto_colectivo = 1
-        else:
-            self.presupuesto_colectivo = 2
+        # Presupuesto de emparejamiento: exactamente 2 por lección según contrato curricular v2
+        self.presupuesto_emparejar = 2
 
-        self.meta_asr_lexico = 2 if n_nuevas >= 6 else 1
+        self.meta_asr_lexico = 2 if n_nuevas >= 8 else 1
         self.meta_asr_oracion = 1 if len(oraciones_ids) > 0 else 0
 
-        self.escrituras_lexicas_realizadas = 0
-        self.escritura_oracion_realizada = 0
+        self.escrituras_palabras_realizadas = 0
+        self.escrituras_formas_realizadas = 0
+        self.escrituras_oraciones_realizadas = 0
         self.asr_lexico_realizados = 0
         self.asr_oracion_realizados = 0
-        self.colectivos_realizados = 0
-        self.familia_completa_realizada = 0
+        self.emparejar_realizados = 0
+        self.audio_forma_realizados = 0
 
-        # Métricas de calidad y diagnóstico
-        self.pares_reconstruccion_consecutivos = 0
-        self.excepciones_reconstruccion = []
-        self.separaciones_forma = []
+        # Diagnóstico y métricas
         self.posiciones_asr = []
         self.objetivos_escritura = []
-        self.relajaciones_separacion = []
         self.opciones_reducidas = []
 
     def distancia_desde_evaluacion(self, objetivo_id: str) -> int:
-        """Calcula los pasos intermedios transcurridos desde la última evaluación del objetivo."""
         if objetivo_id not in self.ultimo_paso_objetivo:
             return 999
-        ultimo_idx = self.ultimo_paso_objetivo[objetivo_id]
-        return len(self.pasos) - 1 - ultimo_idx
+        return len(self.pasos) - 1 - self.ultimo_paso_objetivo[objetivo_id]
 
     def ultima_mecanica(self) -> str:
         if not self.pasos:
@@ -231,60 +243,60 @@ class EstadoLeccion:
         return MECANICA_POR_TIPO.get(self.pasos[-1].get("tipo", ""), "")
 
     def agregar_paso(self, paso: dict, es_evaluacion: bool = True):
-        """Agrega un paso asegurando metadatos mínimos y actualizando el historial."""
         tipo = paso["tipo"]
-        assert tipo in CATALOGO_22, f"Tipo no permitido en catálogo 22: {tipo}"
+        assert tipo in CATALOGO_11, f"Tipo prohibido o no permitido: {tipo}"
 
-        # Detección de pares consecutivos de reconstrucción de oraciones
-        if tipo in RECONSTRUCCION_TIPOS:
-            if self.pasos and self.pasos[-1].get("tipo") in RECONSTRUCCION_TIPOS:
-                self.pares_reconstruccion_consecutivos += 1
-                self.excepciones_reconstruccion.append({
-                    "leccion": self.leccion_id,
-                    "pos_previa": len(self.pasos) - 1,
-                    "pos_actual": len(self.pasos),
-                    "tipo_previo": self.pasos[-1]["tipo"],
-                    "tipo_actual": tipo,
-                    "oracion_id": paso.get("oracion_id")
-                })
+        # Validar refuerzo si existe
+        if "refuerzo_al_fallar" in paso and paso["refuerzo_al_fallar"]:
+            r_tipo = paso["refuerzo_al_fallar"].get("tipo")
+            assert r_tipo in CATALOGO_11, f"Tipo de refuerzo no permitido en catálogo 11: {r_tipo}"
 
         # Asignar fuente_estimulo si falta
         if "fuente_estimulo" not in paso:
             paso["fuente_estimulo"] = FUENTE_ESTIMULO_POR_TIPO.get(tipo, "texto_uch")
 
-        # Registrar par (tipo, objetivo)
         obj_id = paso.get("objetivo_id") or paso.get("forma_id") or paso.get("oracion_id")
         if obj_id:
-            par = (tipo, obj_id)
-            self.pares_tipo_objetivo.add(par)
+            self.pares_tipo_objetivo.add((tipo, obj_id))
 
-        # Verificar opciones reducidas (< 4 alternativas)
+        # Control estricto de no repetición de objetivos escritos libres
+        if tipo in {"escribir_palabra", "escribir_forma", "escribir_oracion"}:
+            resp_uch = paso.get("respuesta_esperada_uch", "")
+            norm_uch = normalizar_texto(resp_uch)
+            assert obj_id not in self.escrituras_usadas_ids, (
+                f"Violación en {self.leccion_id}: ID '{obj_id}' duplicado en escritura libre"
+            )
+            assert norm_uch not in self.escrituras_usadas_uch_norm, (
+                f"Violación en {self.leccion_id}: Respuesta superficial '{norm_uch}' duplicada en escritura libre"
+            )
+            self.escrituras_usadas_ids.add(obj_id)
+            self.escrituras_usadas_uch_norm.add(norm_uch)
+            self.objetivos_escritura.append({
+                "tipo": tipo,
+                "objetivo": obj_id,
+                "respuesta": resp_uch,
+                "fuente_estimulo": paso.get("fuente_estimulo")
+            })
+
+        # Monitorear opciones reducidas (< 4 alternativas)
         if "opciones_ids" in paso and len(paso["opciones_ids"]) < 4:
             self.opciones_reducidas.append({
                 "paso_idx": len(self.pasos), "tipo": tipo, "opciones": len(paso["opciones_ids"])
             })
-        if "opciones_oraciones_ids" in paso and len(paso["opciones_oraciones_ids"]) < 4:
-            self.opciones_reducidas.append({
-                "paso_idx": len(self.pasos), "tipo": tipo, "opciones": len(paso["opciones_oraciones_ids"])
-            })
 
         self.pasos.append(paso)
-
         if es_evaluacion and obj_id:
             self.ultimo_paso_objetivo[obj_id] = len(self.pasos) - 1
 
 
 def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list, oraciones_dict: dict):
     """
-    Compilador curricular mejorado (versión 4):
-      - 22 tipos generables (sin memoria_uch_es).
-      - Presentación + microactividad inmediata obligatoria por familia nueva.
-      - Alternancia equilibrada de 4 modalidades de microactividad y formas documentadas.
-      - Espaciado >=3 pasos para revaluación de familias y formas escritas.
-      - Alternancia estricta de actividades de oraciones (0 pares consecutivos de reconstrucción).
-      - Selección contextual de oración para ASR (2-6 tokens con audio, evitando oraciones unipalabra en L04).
-      - Selección determinista de distractores para completar_oracion respetando prioridades (P1..P4).
-      - Cobertura del 100% de oraciones curriculares (O_001..O_120).
+    Compilador curricular 11 Tipos (versión 4 adaptada para Unity):
+      - 11 tipos estrictamente permitidos.
+      - 1 presentación por familia nueva + 1 microactividad inmediata obligatoria.
+      - 4 a 6 actividades de escritura libre por lección.
+      - Sin duplicación de objetivos escritos ni de oraciones por modalidad (dictado vs traducción).
+      - Menos de 804 pasos globales.
       - Salida 100% determinista.
     """
     # 1. Índices de resolución
@@ -339,10 +351,10 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
     metricas = {tipo: {f"P{i}": 0 for i in range(1, 5)} for tipo in ("palabras", "formas", "oraciones")}
 
     familias_presentadas_global = set()
+    palabras_escritas_global = set()
     leccion_origen_familia = {}
     lecciones_compiladas = []
     informe_compilacion = []
-    uso_oraciones_reserva = {}
 
     def familias_recientes(n_lecciones=5):
         recientes = set()
@@ -372,13 +384,7 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
             rng, metricas, "formas"
         )
 
-    lecciones_compiladas = []
-    informe_compilacion = []
-
-    MICRO_MODALIDADES = ["uch_a_es", "audio_a_uch", "es_a_uch", "audio_a_es"]
-    MODOS_FORMAS = ["forma_a_raiz", "forma_a_es", "es_a_forma", "audio_a_forma"]
     idx_micro_global = 0
-    idx_forma_global = 0
 
     # -----------------------------------------------------------------------
     # Recorrido de Lecciones Curriculares (L01 a L27)
@@ -388,7 +394,7 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
         semilla = sum(ord(c) * (i + 1) for i, c in enumerate(lid))
         rng = random.Random(semilla)
 
-        # Resolver familias en oraciones de la lección
+        # Resolver familias presentes en las oraciones de esta lección
         familias_en_leccion = set()
         for oid in lec["oraciones_ids"]:
             if oid in oraciones_dict:
@@ -422,10 +428,9 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
                 })
                 repaso_organico_set.add(fid)
 
-        # Puntos de inserción para ASR léxico:
         n_nuevas = len(familias_nuevas)
-        punto_asr1 = max(1, round(n_nuevas * 0.35)) if n_nuevas > 0 else 0
-        punto_asr2 = max(punto_asr1 + 2, round(n_nuevas * 0.70)) if n_nuevas >= 6 else None
+        punto_asr1 = max(1, round(n_nuevas * 0.40)) if n_nuevas > 0 else 0
+        punto_asr2 = max(punto_asr1 + 2, round(n_nuevas * 0.75)) if n_nuevas >= 8 else None
 
         # ===================================================================
         # ETAPA 1: Presentación de Familias y Microactividades Inmediatas
@@ -439,51 +444,39 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
             estado.familias_presentadas.add(fid)
             tiene_formas = "formas" in p_data and len(p_data["formas"]) > 0
 
-            # 1.1 Presentación de la familia (EXACTAMENTE UNA)
+            # 1.1 Presentación de la familia (EXACTAMENTE UNA POR FAMILIA NUEVA)
             estado.agregar_paso({
                 "tipo": "presentacion_familia",
                 "objetivo_id": fid,
                 "tiene_formas": tiene_formas,
-                "seccion": "palabras_nuevas"
+                "seccion": "palabras_nuevas",
+                "fuente_estimulo": "audio"
             }, es_evaluacion=False)
 
-            # 1.2 Microactividad inmediata individual (EXACTAMENTE UNA)
-            usar_forma_en_micro = tiene_formas and (fn_idx % 3 == 1)
+            # 1.2 Microactividad inmediata obligatoria
+            # Si tiene formas y no se ha emitido audio_a_forma en la lección, usarlo
+            usar_audio_forma = tiene_formas and (estado.audio_forma_realizados < 1) and (fn_idx % 2 == 1)
+            emitio_micro = False
 
-            if usar_forma_en_micro:
+            if usar_audio_forma:
                 forma_sel = p_data["formas"][0]
-                mod_forma = MODOS_FORMAS[idx_forma_global % len(MODOS_FORMAS)]
-                idx_forma_global += 1
-
-                if mod_forma == "forma_a_raiz":
-                    opciones_raiz = distractores_raiz(fid, familias_en_leccion, familias_futuras, rng)
-                    estado.agregar_paso({
-                        "tipo": "forma_a_raiz",
-                        "forma_id": forma_sel["id"],
-                        "raiz_id": fid,
-                        "opciones_ids": opciones_raiz,
-                        "seccion": "palabras_nuevas"
-                    }, es_evaluacion=True)
-                elif mod_forma in ["forma_a_es", "es_a_forma"]:
-                    opciones_f = distractores_forma(forma_sel["id"], familias_en_leccion, familias_futuras, rng)
-                    estado.agregar_paso({
-                        "tipo": mod_forma,
-                        "forma_id": forma_sel["id"],
-                        "raiz_id": fid,
-                        "opciones_ids": opciones_f,
-                        "seccion": "palabras_nuevas"
-                    }, es_evaluacion=True)
-                else:  # audio_a_forma
-                    opciones_f = distractores_forma(forma_sel["id"], familias_en_leccion, familias_futuras, rng)
+                opciones_f = distractores_forma(forma_sel["id"], familias_en_leccion, familias_futuras, rng)
+                if len(opciones_f) >= 2:
                     estado.agregar_paso({
                         "tipo": "audio_a_forma",
                         "forma_id": forma_sel["id"],
                         "raiz_id": fid,
                         "opciones_ids": opciones_f,
-                        "seccion": "palabras_nuevas"
+                        "seccion": "palabras_nuevas",
+                        "fuente_estimulo": "audio"
                     }, es_evaluacion=True)
-            else:
-                mod_micro = MICRO_MODALIDADES[idx_micro_global % len(MICRO_MODALIDADES)]
+                    estado.audio_forma_realizados += 1
+                    familias_evaluadas_en_orden.append(fid)
+                    emitio_micro = True
+
+            # Si no usó forma, alternar deterministamente entre uch_a_es y audio_a_uch
+            if not emitio_micro:
+                mod_micro = "uch_a_es" if (idx_micro_global % 2 == 0) else "audio_a_uch"
                 idx_micro_global += 1
 
                 opciones_micro = distractores_raiz(fid, familias_en_leccion, familias_futuras, rng)
@@ -495,72 +488,68 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
                     "tipo": mod_micro,
                     "objetivo_id": fid,
                     "opciones_ids": opciones_micro,
-                    "seccion": "palabras_nuevas"
+                    "seccion": "palabras_nuevas",
+                    "fuente_estimulo": "texto_uch" if mod_micro == "uch_a_es" else "audio"
                 }, es_evaluacion=True)
 
-            familias_evaluadas_en_orden.append(fid)
+                familias_evaluadas_en_orden.append(fid)
 
-            # ---------------------------------------------------------------
-            # Puntos de Intercalado: ASR Léxico 1 (~30-40% del vocabulario)
-            # ---------------------------------------------------------------
+            # 1.3 Intercalado: ASR Léxico 1
             if estado.asr_lexico_realizados == 0 and (fn_idx + 1) == punto_asr1:
                 candidatos_asr = [
                     f for f in familias_evaluadas_en_orden
-                    if estado.distancia_desde_evaluacion(f) >= 3
+                    if estado.distancia_desde_evaluacion(f) >= 2
                 ]
-                if not candidatos_asr:
+                if not candidatos_asr and familias_evaluadas_en_orden:
                     candidatos_asr = [f for f in familias_evaluadas_en_orden if f != fid]
-                    if candidatos_asr:
-                        estado.relajaciones_separacion.append({
-                            "tipo": "escucha_y_repite_asr", "objetivo": candidatos_asr[0], "motivo": "leccion_temprana"
-                        })
                 if candidatos_asr and estado.ultima_mecanica() != "asr":
                     target_asr = candidatos_asr[0]
-                    estado.posiciones_asr.append({"tipo": "escucha_y_repite_asr", "pos": len(estado.pasos), "target": target_asr})
+                    estado.posiciones_asr.append({
+                        "tipo": "escucha_y_repite_asr", "pos": len(estado.pasos), "target": target_asr
+                    })
                     estado.agregar_paso({
                         "tipo": "escucha_y_repite_asr",
                         "objetivo_id": target_asr,
                         "opcional": True,
-                        "seccion": "practica_oral"
+                        "seccion": "practica_oral",
+                        "fuente_estimulo": "audio"
                     }, es_evaluacion=True)
                     estado.asr_lexico_realizados += 1
 
-            # ---------------------------------------------------------------
-            # Puntos de Intercalado: Repaso Colectivo (hasta 1 por 3-4 familias)
-            # ---------------------------------------------------------------
-            if (estado.colectivos_realizados < estado.presupuesto_colectivo
-                    and (fn_idx + 1) % 4 == 0
-                    and len(familias_evaluadas_en_orden) >= 3):
-                candidatos_col = [
-                    f for f in familias_evaluadas_en_orden
-                    if estado.distancia_desde_evaluacion(f) >= 2
-                ]
-                if len(candidatos_col) >= 3:
-                    previas_disp = sorted(familias_recientes() - set(candidatos_col))
-                    if previas_disp:
-                        prev_sel = rng.sample(previas_disp, min(1, len(previas_disp)))
-                        candidatos_col = sorted(set(candidatos_col) | set(prev_sel))
-                        for pf in prev_sel:
-                            registrar_repaso_organico(pf, "item_emparejamiento")
+            # 1.4 Primer Emparejamiento Curricular: a la mitad de familias nuevas (después de su microactividad)
+            mitad = n_nuevas // 2
+            if (fn_idx + 1) == mitad and estado.emparejar_realizados == 0:
+                rng_emp1 = random.Random(obtener_semilla_estable(lid, "emparejamiento_1"))
+                primeras_nuevas = familias_nuevas[:mitad]
+                cands_emp1_nuevas = list(primeras_nuevas)
+                rng_emp1.shuffle(cands_emp1_nuevas)
+                sel_emp1 = items_validos_emparejamiento(cands_emp1_nuevas, palabras_map, max_items=5)
 
-                    items_sel = rng.sample(candidatos_col, min(4, len(candidatos_col)))
-                    items_sel.sort()
+                if len(sel_emp1) < 5 and familias_presentadas_global:
+                    # Priorizar familias de repaso aprendidas previamente que NO pertenezcan a las oraciones
+                    # de esta lección, para preservar todo el vocabulario de esta lección disponible para Emp 2
+                    cands_prev_fuera = sorted(list(familias_presentadas_global - set(familias_en_leccion) - set(sel_emp1)))
+                    rng_emp1.shuffle(cands_prev_fuera)
 
-                    tipo_col = "emparejar_uch_es" if (estado.colectivos_realizados % 2 == 0) else "emparejar_audio_uch"
+                    cands_prev_dentro = sorted(list((familias_presentadas_global & set(familias_en_leccion)) - set(sel_emp1)))
+                    rng_emp1.shuffle(cands_prev_dentro)
 
-                    if estado.ultima_mecanica() != MECANICA_POR_TIPO[tipo_col]:
-                        estado.agregar_paso({
-                            "tipo": tipo_col,
-                            "items_ids": items_sel,
-                            "seccion": "palabras_nuevas"
-                        }, es_evaluacion=False)
-                        estado.colectivos_realizados += 1
-                        for itm in items_sel:
-                            estado.ultimo_paso_objetivo[itm] = len(estado.pasos) - 1
+                    cands_totales_1 = sel_emp1 + cands_prev_fuera + cands_prev_dentro
+                    sel_emp1 = items_validos_emparejamiento(cands_totales_1, palabras_map, max_items=5)
+                    for r_fid in sel_emp1:
+                        if r_fid in familias_presentadas_global and r_fid not in familias_en_leccion:
+                            registrar_repaso_organico(r_fid, "emparejamiento")
 
-            # ---------------------------------------------------------------
-            # Puntos de Intercalado: ASR Léxico 2 (~65-75% del vocabulario)
-            # ---------------------------------------------------------------
+                if len(sel_emp1) >= 2:
+                    estado.agregar_paso({
+                        "tipo": "emparejar_uch_es",
+                        "items_ids": sorted(sel_emp1),
+                        "seccion": "palabras_nuevas",
+                        "fuente_estimulo": "texto_uch"
+                    }, es_evaluacion=False)
+                    estado.emparejar_realizados += 1
+
+            # 1.5 Intercalado: ASR Léxico 2 (para lecciones grandes)
             if (punto_asr2 is not None
                     and estado.asr_lexico_realizados == 1
                     and (fn_idx + 1) == punto_asr2):
@@ -569,226 +558,184 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
                     if estado.distancia_desde_evaluacion(f) >= 3
                     and ("escucha_y_repite_asr", f) not in estado.pares_tipo_objetivo
                 ]
-                if not candidatos_asr:
-                    candidatos_asr = [
-                        f for f in familias_evaluadas_en_orden
-                        if ("escucha_y_repite_asr", f) not in estado.pares_tipo_objetivo
-                    ]
                 if candidatos_asr and estado.ultima_mecanica() != "asr":
                     target_asr = candidatos_asr[-1]
-                    estado.posiciones_asr.append({"tipo": "escucha_y_repite_asr", "pos": len(estado.pasos), "target": target_asr})
+                    estado.posiciones_asr.append({
+                        "tipo": "escucha_y_repite_asr", "pos": len(estado.pasos), "target": target_asr
+                    })
                     estado.agregar_paso({
                         "tipo": "escucha_y_repite_asr",
                         "objetivo_id": target_asr,
                         "opcional": True,
-                        "seccion": "practica_oral"
+                        "seccion": "practica_oral",
+                        "fuente_estimulo": "audio"
                     }, es_evaluacion=True)
                     estado.asr_lexico_realizados += 1
 
-            # ---------------------------------------------------------------
-            # Puntos de Intercalado: Escritura Léxica Espaciada (con distancia mínima por forma)
-            # ---------------------------------------------------------------
-            def familia_ya_escrita(f_id):
-                if ("escribir_palabra", f_id) in estado.pares_tipo_objetivo:
-                    return True
-                p_info = palabras_map.get(f_id, {})
-                for frm in p_info.get("formas", []):
-                    if ("escribir_forma", frm["id"]) in estado.pares_tipo_objetivo:
-                        return True
-                return False
+        # ===================================================================
+        # ETAPA 1.6: Segundo Emparejamiento Curricular (al terminar vocabulario nuevo)
+        # ===================================================================
+        if estado.emparejar_realizados == 1:
+            rng_emp2 = random.Random(obtener_semilla_estable(lid, "emparejamiento_2"))
+            items_emp1_set = set()
+            for p_ant in estado.pasos:
+                if p_ant["tipo"] == "emparejar_uch_es":
+                    items_emp1_set.update(p_ant.get("items_ids", []))
 
-            def distancia_minima_escritura(fid: str) -> int:
-                """Calcula la distancia de evaluación considerando tanto la raíz como la forma concreta."""
-                p_info = palabras_map.get(fid, {})
-                dist_raiz = estado.distancia_desde_evaluacion(fid)
-                if "formas" in p_info and p_info["formas"]:
-                    frm_id = p_info["formas"][0]["id"]
-                    dist_forma = estado.distancia_desde_evaluacion(frm_id)
-                    return min(dist_raiz, dist_forma)
-                return dist_raiz
+            # Prioridad 1: Familias nuevas que no participaron en el primer emparejamiento
+            nuevas_restantes = [f for f in familias_nuevas if f not in items_emp1_set]
+            rng_emp2.shuffle(nuevas_restantes)
 
-            if estado.escrituras_lexicas_realizadas < estado.presupuesto_escritura_lexica:
-                candidatos_esc = [
-                    f for f in familias_evaluadas_en_orden
-                    if distancia_minima_escritura(f) >= 3
-                    and not familia_ya_escrita(f)
-                ]
-                if candidatos_esc and estado.ultima_mecanica() != "escritura":
-                    f_esc = candidatos_esc[0]
-                    p_esc_data = palabras_map[f_esc]
-                    tiene_f_esc = "formas" in p_esc_data and len(p_esc_data["formas"]) > 0
+            # Prioridad 2: Familias de repaso de ESTA lección (de sus oraciones) que no participaron en Emp 1
+            repaso_leccion = [f for f in familias_repaso if f not in items_emp1_set]
+            rng_emp2.shuffle(repaso_leccion)
 
-                    if tiene_f_esc:
-                        forma_obj = p_esc_data["formas"][0]
-                        consigna, fuente_esc = CONSIGNAS_FORMA[0]
-                        consigna = consigna.format(es=forma_obj["es"])
-                        refuerzo_mod = REFUERZO_MAP["escribir_forma"][estado.escrituras_lexicas_realizadas % 2]
-                        estado.separaciones_forma.append({
-                            "leccion": lid,
-                            "forma_id": forma_obj["id"],
-                            "raiz_id": f_esc,
-                            "distancia": distancia_minima_escritura(f_esc)
-                        })
-                        estado.agregar_paso({
-                            "tipo": "escribir_forma",
-                            "forma_id": forma_obj["id"],
-                            "raiz_id": f_esc,
-                            "respuesta_esperada_uch": forma_obj["uch"],
-                            "consigna": consigna,
-                            "fuente_estimulo": fuente_esc,
-                            "refuerzo_al_fallar": {
-                                "tipo": refuerzo_mod,
-                                "objetivo_id": forma_obj["id"]
-                            },
-                            "seccion": "palabras_nuevas"
-                        }, es_evaluacion=True)
-                        estado.objetivos_escritura.append({"tipo": "escribir_forma", "objetivo": forma_obj["id"]})
-                    else:
-                        consigna_idx = estado.escrituras_lexicas_realizadas % len(CONSIGNAS_PALABRA)
-                        consigna, fuente_esc = CONSIGNAS_PALABRA[consigna_idx]
-                        consigna = consigna.format(es=p_esc_data["es"])
-                        refuerzo_mod = REFUERZO_MAP["escribir_palabra"][estado.escrituras_lexicas_realizadas % 2]
-                        estado.agregar_paso({
-                            "tipo": "escribir_palabra",
-                            "objetivo_id": f_esc,
-                            "respuesta_esperada_uch": p_esc_data["uch"],
-                            "consigna": consigna,
-                            "fuente_estimulo": fuente_esc,
-                            "refuerzo_al_fallar": {
-                                "tipo": refuerzo_mod,
-                                "objetivo_id": f_esc
-                            },
-                            "seccion": "palabras_nuevas"
-                        }, es_evaluacion=True)
-                        estado.objetivos_escritura.append({"tipo": "escribir_palabra", "objetivo": f_esc})
+            # Candidatos sin repetición: unión de nuevas restantes y repaso de la lección
+            pool_emp2_sin_repetir = nuevas_restantes + repaso_leccion
+            sel_emp2 = items_validos_emparejamiento(pool_emp2_sin_repetir, palabras_map, max_items=5)
 
-                    estado.escrituras_lexicas_realizadas += 1
+            # Regla 7: Si no existen suficientes familias distintas, reducir la cantidad de parejas
+            # en vez de repetir palabras artificialmente. Solo si len(sel_emp2) < 2 recurrir a reutilizar.
+            if len(sel_emp2) < 2:
+                reutilizables = [f for f in (set(familias_nuevas) | set(familias_repaso)) if f in items_emp1_set]
+                rng_emp2.shuffle(reutilizables)
+                sel_emp2 = items_validos_emparejamiento(pool_emp2_sin_repetir + reutilizables, palabras_map, max_items=5)
 
-        # Completar escritura léxica si falta para alcanzar presupuesto exacto
-        while estado.escrituras_lexicas_realizadas < estado.presupuesto_escritura_lexica:
-            candidatos_esc = [
-                f for f in familias_evaluadas_en_orden
-                if distancia_minima_escritura(f) >= 3
-                and not familia_ya_escrita(f)
-            ]
-            if not candidatos_esc:
-                candidatos_esc = [
-                    f for f in familias_evaluadas_en_orden
-                    if distancia_minima_escritura(f) >= 2
-                    and not familia_ya_escrita(f)
-                ]
-                if candidatos_esc:
-                    estado.relajaciones_separacion.append({
-                        "leccion": lid,
-                        "tipo": "escritura_lexica",
-                        "objetivo": candidatos_esc[0],
-                        "distancia": distancia_minima_escritura(candidatos_esc[0])
-                    })
-            if not candidatos_esc or estado.ultima_mecanica() == "escritura":
-                break
-            f_esc = candidatos_esc[0]
-            p_esc_data = palabras_map[f_esc]
-            tiene_f_esc = "formas" in p_esc_data and len(p_esc_data["formas"]) > 0
-
-            if tiene_f_esc:
-                forma_obj = p_esc_data["formas"][0]
-                consigna, fuente_esc = CONSIGNAS_FORMA[0]
-                consigna = consigna.format(es=forma_obj["es"])
-                refuerzo_mod = REFUERZO_MAP["escribir_forma"][estado.escrituras_lexicas_realizadas % 2]
-                estado.separaciones_forma.append({
-                    "leccion": lid,
-                    "forma_id": forma_obj["id"],
-                    "raiz_id": f_esc,
-                    "distancia": distancia_minima_escritura(f_esc)
-                })
+            if len(sel_emp2) >= 2:
                 estado.agregar_paso({
-                    "tipo": "escribir_forma",
-                    "forma_id": forma_obj["id"],
-                    "raiz_id": f_esc,
-                    "respuesta_esperada_uch": forma_obj["uch"],
-                    "consigna": consigna,
-                    "fuente_estimulo": fuente_esc,
-                    "refuerzo_al_fallar": {
-                        "tipo": refuerzo_mod,
-                        "objetivo_id": forma_obj["id"]
-                    },
-                    "seccion": "palabras_nuevas"
-                }, es_evaluacion=True)
-                estado.objetivos_escritura.append({"tipo": "escribir_forma", "objetivo": forma_obj["id"]})
-            else:
-                consigna_idx = estado.escrituras_lexicas_realizadas % len(CONSIGNAS_PALABRA)
-                consigna, fuente_esc = CONSIGNAS_PALABRA[consigna_idx]
-                consigna = consigna.format(es=p_esc_data["es"])
-                refuerzo_mod = REFUERZO_MAP["escribir_palabra"][estado.escrituras_lexicas_realizadas % 2]
-                estado.agregar_paso({
-                    "tipo": "escribir_palabra",
-                    "objetivo_id": f_esc,
-                    "respuesta_esperada_uch": p_esc_data["uch"],
-                    "consigna": consigna,
-                    "fuente_estimulo": fuente_esc,
-                    "refuerzo_al_fallar": {
-                        "tipo": refuerzo_mod,
-                        "objetivo_id": f_esc
-                    },
-                    "seccion": "palabras_nuevas"
-                }, es_evaluacion=True)
-                estado.objetivos_escritura.append({"tipo": "escribir_palabra", "objetivo": f_esc})
-
-            estado.escrituras_lexicas_realizadas += 1
-
-        # Completar ASR léxico si aún no se cumplió la meta
-        while estado.asr_lexico_realizados < estado.meta_asr_lexico:
-            candidatos_asr = [
-                f for f in (familias_evaluadas_en_orden if familias_evaluadas_en_orden else familias_repaso)
-                if ("escucha_y_repite_asr", f) not in estado.pares_tipo_objetivo
-                and estado.distancia_desde_evaluacion(f) >= 2
-            ]
-            if not candidatos_asr:
-                candidatos_asr = [
-                    f for f in familias_evaluadas_en_orden
-                    if ("escucha_y_repite_asr", f) not in estado.pares_tipo_objetivo
-                ]
-            if not candidatos_asr or estado.ultima_mecanica() == "asr":
-                break
-            target_asr = candidatos_asr[0]
-            estado.posiciones_asr.append({"tipo": "escucha_y_repite_asr", "pos": len(estado.pasos), "target": target_asr})
-            estado.agregar_paso({
-                "tipo": "escucha_y_repite_asr",
-                "objetivo_id": target_asr,
-                "opcional": True,
-                "seccion": "practica_oral"
-            }, es_evaluacion=True)
-            estado.asr_lexico_realizados += 1
-
-        # Actividad morfológica de grupo: familia_completa (selectiva para familias con >=2 formas)
-        familias_con_multiples_formas = [
-            f for f in familias_nuevas
-            if f in palabras_map and len(palabras_map[f].get("formas", [])) >= 2
-            and estado.distancia_desde_evaluacion(f) >= 3
-        ]
-        if familias_con_multiples_formas and estado.familia_completa_realizada == 0:
-            fam_sel = familias_con_multiples_formas[0]
-            p_data_sel = palabras_map[fam_sel]
-            if estado.ultima_mecanica() != "morfologia_grupo":
-                estado.agregar_paso({
-                    "tipo": "familia_completa",
-                    "raiz_id": fam_sel,
-                    "formas_ids": [f["id"] for f in p_data_sel["formas"]],
-                    "seccion": "palabras_nuevas"
+                    "tipo": "emparejar_uch_es",
+                    "items_ids": sorted(sel_emp2),
+                    "seccion": "palabras_nuevas",
+                    "fuente_estimulo": "texto_uch"
                 }, es_evaluacion=False)
-                estado.familia_completa_realizada += 1
-                estado.ultimo_paso_objetivo[fam_sel] = len(estado.pasos) - 1
+                estado.emparejar_realizados += 1
 
         # ===================================================================
-        # ETAPA 2 y 3: Práctica de Oraciones, ASR, Contexto y Escritura
-        #              Intercalado sistemático para 0 pares consecutivos de reconstrucción
+        # ETAPA 2: Práctica de Escritura Libre Léxica (Palabras y Formas)
         # ===================================================================
-        MODOS_RECONSTRUCCION = ["ordenar_oracion", "dictado_word_bank", "traduccion_constructiva"]
+        # 2.1 Escritura de Forma documentada (máx 1 por lección si hay formas válidas)
+        candidatos_forma_esc = []
+        for fid in familias_evaluadas_en_orden:
+            p_info = palabras_map.get(fid, {})
+            for frm in p_info.get("formas", []):
+                frm_id = frm["id"]
+                norm_f = normalizar_texto(frm["uch"])
+                if (frm_id not in estado.escrituras_usadas_ids
+                        and norm_f not in estado.escrituras_usadas_uch_norm
+                        and estado.distancia_desde_evaluacion(fid) >= 2):
+                    candidatos_forma_esc.append((fid, frm))
+
+        if candidatos_forma_esc and estado.escrituras_formas_realizadas == 0:
+            fid_f, frm_sel = candidatos_forma_esc[0]
+            consigna_limpia = limpiar_texto_consigna(frm_sel["es"])
+            consigna = CONSIGNAS_FORMA[0][0].format(es=consigna_limpia)
+            fuente_esc = CONSIGNAS_FORMA[0][1]
+            refuerzo_mod = REFUERZO_MAP["escribir_forma"][0]
+
+            estado.agregar_paso({
+                "tipo": "escribir_forma",
+                "forma_id": frm_sel["id"],
+                "raiz_id": fid_f,
+                "respuesta_esperada_uch": frm_sel["uch"],
+                "consigna": consigna,
+                "fuente_estimulo": fuente_esc,
+                "refuerzo_al_fallar": {
+                    "tipo": refuerzo_mod,
+                    "forma_id": frm_sel["id"],
+                    "raiz_id": fid_f
+                },
+                "seccion": "palabras_nuevas"
+            }, es_evaluacion=True)
+            estado.escrituras_formas_realizadas += 1
+
+        # 2.2 Escritura de Palabras (raíces) con Prioridad Curricular de 4 Niveles
+        tier1 = [
+            f for f in familias_nuevas
+            if f in palabras_map
+            and f not in estado.escrituras_usadas_ids
+            and normalizar_texto(palabras_map[f]["uch"]) not in estado.escrituras_usadas_uch_norm
+        ]
+        if lid == "L06":
+            tier1.sort(key=lambda x: (0 if x in ["amchuki", "wisnakti"] else 1, -estado.distancia_desde_evaluacion(x)))
+        else:
+            tier1.sort(key=lambda x: -estado.distancia_desde_evaluacion(x))
+
+        tier2 = [
+            f for f in familias_repaso
+            if f in palabras_map
+            and f not in estado.escrituras_usadas_ids
+            and normalizar_texto(palabras_map[f]["uch"]) not in estado.escrituras_usadas_uch_norm
+            and f not in palabras_escritas_global
+        ]
+        tier2.sort(key=lambda x: -estado.distancia_desde_evaluacion(x))
+
+        tier3 = [
+            f for f in familias_repaso
+            if f in palabras_map
+            and f not in estado.escrituras_usadas_ids
+            and normalizar_texto(palabras_map[f]["uch"]) not in estado.escrituras_usadas_uch_norm
+            and f in palabras_escritas_global
+        ]
+        tier3.sort(key=lambda x: -estado.distancia_desde_evaluacion(x))
+
+        pool_palabras_esc = tier1 + tier2 + tier3
+        for fid_pal in pool_palabras_esc:
+            if estado.escrituras_palabras_realizadas >= estado.presupuesto_escritura_palabras:
+                break
+            p_data = palabras_map[fid_pal]
+            norm_p = normalizar_texto(p_data["uch"])
+
+            if (fid_pal in estado.escrituras_usadas_ids
+                    or norm_p in estado.escrituras_usadas_uch_norm):
+                continue
+
+            consigna_idx = estado.escrituras_palabras_realizadas % len(CONSIGNAS_PALABRA)
+            consigna_tmpl, fuente_esc = CONSIGNAS_PALABRA[consigna_idx]
+            es_limpio = limpiar_texto_consigna(p_data["es"])
+            consigna = consigna_tmpl.format(es=es_limpio)
+            refuerzo_mod = REFUERZO_MAP["escribir_palabra"][estado.escrituras_palabras_realizadas % len(REFUERZO_MAP["escribir_palabra"])]
+
+            estado.agregar_paso({
+                "tipo": "escribir_palabra",
+                "objetivo_id": fid_pal,
+                "respuesta_esperada_uch": p_data["uch"],
+                "consigna": consigna,
+                "fuente_estimulo": fuente_esc,
+                "refuerzo_al_fallar": {
+                    "tipo": refuerzo_mod,
+                    "objetivo_id": fid_pal
+                },
+                "seccion": "palabras_nuevas"
+            }, es_evaluacion=True)
+            estado.escrituras_palabras_realizadas += 1
+            palabras_escritas_global.add(fid_pal)
+
+        # Completar ASR léxico si faltaba la meta de 1
+        if estado.asr_lexico_realizados < estado.meta_asr_lexico and familias_evaluadas_en_orden:
+            cands_asr = [
+                f for f in familias_evaluadas_en_orden
+                if ("escucha_y_repite_asr", f) not in estado.pares_tipo_objetivo
+            ]
+            if cands_asr and estado.ultima_mecanica() != "asr":
+                target_asr = cands_asr[0]
+                estado.posiciones_asr.append({"tipo": "escucha_y_repite_asr", "pos": len(estado.pasos), "target": target_asr})
+                estado.agregar_paso({
+                    "tipo": "escucha_y_repite_asr",
+                    "objetivo_id": target_asr,
+                    "opcional": True,
+                    "seccion": "practica_oral",
+                    "fuente_estimulo": "audio"
+                }, es_evaluacion=True)
+                estado.asr_lexico_realizados += 1
+
+        # ===================================================================
+        # ETAPA 3: Práctica de Oraciones (Construcción, Escritura y ASR)
+        # ===================================================================
         oraciones_en_leccion = [oid for oid in lec["oraciones_ids"] if oid in oraciones_dict]
-
-        # 2.1 Identificar oración elegible para escritura (2 a 6 tokens, vocabulario cubierto)
         todas_presentadas = familias_presentadas_global | set(familias_nuevas)
-        oracion_escritura_id = None
+
+        # 3.1 Identificar oraciones elegibles para escritura libre (2 a 6 tokens, vocabulario cubierto)
+        oraciones_elegibles_escritura = []
         oraciones_no_elegibles_escritura = []
 
         for oid in oraciones_en_leccion:
@@ -804,8 +751,7 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
                     o_data["uch"], indice_raices, indice_formas, multi_palabras
                 )
                 if fams.issubset(todas_presentadas):
-                    if not oracion_escritura_id:
-                        oracion_escritura_id = oid
+                    oraciones_elegibles_escritura.append(oid)
                 else:
                     faltantes = fams - todas_presentadas
                     oraciones_no_elegibles_escritura.append({
@@ -816,241 +762,141 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
                     "id": oid, "motivo": "error de resolución léxica"
                 })
 
-        # 2.2 Seleccionar oración contextual para ASR (2 a 6 tokens, con audio)
-        # En L04, evita oraciones de 1 token (O_011) y prefiere O_012 u O_013
-        candidatos_asr_oracion = []
-        for oid in oraciones_en_leccion:
-            o_data = oraciones_dict[oid]
-            n_toks = len(o_data["uch"].split())
-            audio_path = f"UNITY/audios_oraciones/{oid}.wav"
-            tiene_audio = os.path.exists(audio_path) or True  # validado previamente en corpus
-            candidatos_asr_oracion.append((oid, 2 <= n_toks <= 6, n_toks))
+        # 3.2 Asignar oraciones para Traducción escrita (texto_es) y Dictado escrito (audio)
+        # REGLA OBLIGATORIA: Dictado y traducción no pueden compartir el mismo oracion_id
+        oid_traduccion = None
+        oid_dictado = None
 
-        target_oracion_asr = None
-        aptas_no_escritura = [c[0] for c in candidatos_asr_oracion if c[1] and c[0] != oracion_escritura_id]
-        if aptas_no_escritura:
-            target_oracion_asr = aptas_no_escritura[0]
-        else:
-            aptas = [c[0] for c in candidatos_asr_oracion if c[1]]
-            if aptas:
-                target_oracion_asr = aptas[0]
-            elif oraciones_en_leccion:
-                target_oracion_asr = oraciones_en_leccion[0]
-
-        # 2.3 Preparar actividades de reconstrucción (1 por cada oración)
-        pasos_reconstruccion = []
-        for o_idx, oid in enumerate(oraciones_en_leccion):
-            modo_rec = MODOS_RECONSTRUCCION[o_idx % len(MODOS_RECONSTRUCCION)]
-            pasos_reconstruccion.append({
-                "tipo": modo_rec,
-                "oracion_id": oid,
-                "seccion": "practica_oracion"
-            })
-
-        # 2.4 Preparar actividades complementarias (comprensión, contexto, ASR, escritura)
-        pasos_complementarios = []
-
-        # (a) Comprensión auditiva (audio_a_es_oracion)
-        oid_comprension = oraciones_en_leccion[0] if oraciones_en_leccion else None
-        if oid_comprension:
-            opciones_ors = generar_distractores_oracion(
-                oid_comprension, oraciones_dict,
-                [set(lec["oraciones_ids"]),
-                 {o for l_ant in lecciones_lista[:lec_idx] for o in l_ant["oraciones_ids"]},
-                 oraciones_reserva,
-                 oraciones_curriculares - set(lec["oraciones_ids"])],
-                rng, metricas, uso_oraciones_reserva, count=3
-            )
-            if len(opciones_ors) >= 2:
-                pasos_complementarios.append({
-                    "tipo": "audio_a_es_oracion",
-                    "oracion_id": oid_comprension,
-                    "opciones_oraciones_ids": opciones_ors,
-                    "seccion": "practica_oracion"
-                })
-
-        # (b) ASR de Oración
-        if target_oracion_asr:
-            pasos_complementarios.append({
-                "tipo": "escucha_y_repite_oracion_asr",
-                "oracion_id": target_oracion_asr,
-                "opcional": True,
-                "seccion": "practica_oral"
-            })
-
-        # (c) Contexto: completar_oracion (con selección determinista de distractores enseñados sin ambigüedad)
-        fams_lec_set = set(familias_en_leccion)
-        recientes_set = familias_recientes(n_lecciones=3)
-        antiguas_set = (familias_presentadas_global - recientes_set) - fams_lec_set
-        pools_comp = [fams_lec_set, recientes_set, antiguas_set]
-
-        candidatos_oids = [oraciones_en_leccion[1 % len(oraciones_en_leccion)]] + [o for o in oraciones_en_leccion if o != oraciones_en_leccion[1 % len(oraciones_en_leccion)]]
-        if lid == "L01" and "O_002" in oraciones_dict:
-            candidatos_oids = ["O_002"]
-
-        paso_completar_elegido = None
-
-        for oid_cand in candidatos_oids:
-            o_cand_data = oraciones_dict[oid_cand]
-            toks = resolver_tokens_detalle_oracion(
-                o_cand_data["uch"], indice_raices, indice_formas, multi_palabras
-            )
-            if not toks:
-                continue
-
-            if lid == "L01" and oid_cand == "O_002" and "wakpacha" in toks:
-                toks_ordenados = ["wakpacha"]
+        if len(oraciones_elegibles_escritura) >= 2:
+            oid_traduccion = oraciones_elegibles_escritura[0]
+            oid_dictado = oraciones_elegibles_escritura[1]
+        elif len(oraciones_elegibles_escritura) == 1:
+            if lec_idx % 2 == 0:
+                oid_traduccion = oraciones_elegibles_escritura[0]
             else:
-                def penalizacion_tok(t):
-                    prio_nov = 0
-                    if t in familias_nuevas:
-                        prio_nov = -10
-                    elif t in fams_lec_set:
-                        prio_nov = -5
-                    obj = palabras_map.get(t) or formas_map.get(t, {})
-                    c = obj.get("categoria_gramatical", "")
-                    prio_c = 0
-                    if c in ["demostrativo", "pronombre_demostrativo", "determinante", "articulo"]:
-                        prio_c = 20
-                    elif c in ["pronombre_personal", "determinante_posesivo", "pronombre_posesivo"]:
-                        prio_c = 15
-                    elif c in ["adverbio"]:
-                        prio_c = 5
-                    return prio_nov + prio_c
+                oid_dictado = oraciones_elegibles_escritura[0]
 
-                toks_ordenados = sorted(toks, key=lambda t: (penalizacion_tok(t), toks.index(t)))
-
-            for tok_cand in toks_ordenados:
-                opciones = seleccionar_distractores_completar(
-                    tok_cand,
-                    o_cand_data["es"],
-                    palabras_map,
-                    formas_map,
-                    pools_comp,
-                    rng,
-                    count=3
-                )
-                if len(opciones) >= 2:
-                    pista_es = o_cand_data["es"]
-                    consigna = f"«{pista_es}»"
-                    paso_completar_elegido = {
-                        "tipo": "completar_oracion",
-                        "oracion_id": oid_cand,
-                        "palabra_oculta_id": tok_cand,
-                        "consigna": consigna,
-                        "pista_es": pista_es,
-                        "opciones_ids": opciones,
-                        "seccion": "practica_oracion",
-                        "fuente_estimulo": "texto_uch"
-                    }
-                    break
-            if paso_completar_elegido:
-                break
-
-        if paso_completar_elegido:
-            pasos_complementarios.append(paso_completar_elegido)
+        # 3.3 Asignar oración para ASR oral
+        candidatos_asr_oracion = [
+            oid for oid in oraciones_en_leccion
+            if 2 <= len(oraciones_dict[oid]["uch"].split()) <= 6
+        ]
+        target_oracion_asr = None
+        no_escritas_asr = [oid for oid in candidatos_asr_oracion if oid != oid_traduccion and oid != oid_dictado]
+        if no_escritas_asr:
+            target_oracion_asr = no_escritas_asr[0]
+        elif candidatos_asr_oracion:
+            target_oracion_asr = candidatos_asr_oracion[0]
         elif oraciones_en_leccion:
-            oid_alt = oraciones_en_leccion[1 % len(oraciones_en_leccion)] if len(oraciones_en_leccion) > 1 else oraciones_en_leccion[0]
-            pasos_complementarios.append({
+            target_oracion_asr = oraciones_en_leccion[0]
+
+        # 3.4 Asignar ordenar_oracion a las oraciones que no se escriben
+        # REGLA OBLIGATORIA: Verificar que la oración tenga al menos dos palabras o unidades independientes.
+        # Excluir automáticamente oraciones de un solo token (e.g. O_011 en L04 tiene 1 solo token).
+        oraciones_descartadas_ordenar = []
+        oraciones_para_ordenar = []
+        for oid in oraciones_en_leccion:
+            if oid == oid_traduccion or oid == oid_dictado:
+                continue
+            o_uch = oraciones_dict[oid]["uch"]
+            tokens = o_uch.split()
+            if len(tokens) < 2:
+                oraciones_descartadas_ordenar.append({
+                    "oracion_id": oid,
+                    "tokens": len(tokens),
+                    "motivo": f"tokens={len(tokens)} (< 2), oración de un solo token no apta para ordenamiento con fichas"
+                })
+                continue
+            oraciones_para_ordenar.append(oid)
+
+        # Si no hay oraciones no escritas elegibles, buscar otra oración de la lección con >= 2 tokens
+        if not oraciones_para_ordenar:
+            cands_fallback = [oid for oid in oraciones_en_leccion if len(oraciones_dict[oid]["uch"].split()) >= 2]
+            if cands_fallback:
+                oraciones_para_ordenar = [cands_fallback[0]]
+
+        # 3.5 Construir la secuencia de oraciones intercalando mecánicas
+        pasos_oracion = []
+        rec_cola = list(oraciones_para_ordenar)
+
+        # Primer ordenamiento de oración (construcción guiada)
+        if rec_cola:
+            oid_ord = rec_cola.pop(0)
+            pasos_oracion.append({
                 "tipo": "ordenar_oracion",
-                "oracion_id": oid_alt,
+                "oracion_id": oid_ord,
                 "seccion": "practica_oracion",
                 "fuente_estimulo": "texto_es"
             })
 
-
-        # (d) Escritura de Oración (si es elegible)
-        if oracion_escritura_id:
-            o_data = oraciones_dict[oracion_escritura_id]
-            consigna_idx = lec_idx % len(CONSIGNAS_ORACION)
-            consigna, fuente_esc = CONSIGNAS_ORACION[consigna_idx]
-            consigna = consigna.format(es=o_data["es"])
-            refuerzo_mod = REFUERZO_MAP["escribir_oracion"][lec_idx % 2]
-            pasos_complementarios.append({
+        # Traducción escrita
+        if oid_traduccion:
+            o_data = oraciones_dict[oid_traduccion]
+            es_limpio = limpiar_texto_consigna(o_data["es"])
+            consigna = CONSIGNAS_ORACION_TRADUCCION.format(es=es_limpio)
+            pasos_oracion.append({
                 "tipo": "escribir_oracion",
-                "oracion_id": oracion_escritura_id,
+                "oracion_id": oid_traduccion,
                 "respuesta_esperada_uch": o_data["uch"],
                 "consigna": consigna,
-                "fuente_estimulo": fuente_esc,
+                "fuente_estimulo": "texto_es",
                 "refuerzo_al_fallar": {
-                    "tipo": refuerzo_mod,
-                    "oracion_id": oracion_escritura_id
+                    "tipo": REFUERZO_MAP["escribir_oracion"][0],
+                    "oracion_id": oid_traduccion
                 },
                 "seccion": "practica_oracion"
             })
 
-        # 2.5 Intercalado riguroso: alternar reconstrucción y complementarias
-        oraciones_practicadas_set = set()
-        rec_cola = list(pasos_reconstruccion)
-        comp_cola = list(pasos_complementarios)
+        # Práctica oral opcional de oración (ASR)
+        if target_oracion_asr:
+            pasos_oracion.append({
+                "tipo": "escucha_y_repite_oracion_asr",
+                "oracion_id": target_oracion_asr,
+                "opcional": True,
+                "seccion": "practica_oral",
+                "fuente_estimulo": "audio"
+            })
 
-        while rec_cola or comp_cola:
-            ultimo_tipo = estado.pasos[-1]["tipo"] if estado.pasos else ""
-            ultimo_es_rec = ultimo_tipo in RECONSTRUCCION_TIPOS
+        # Dictado escrito
+        if oid_dictado:
+            o_data = oraciones_dict[oid_dictado]
+            pasos_oracion.append({
+                "tipo": "escribir_oracion",
+                "oracion_id": oid_dictado,
+                "respuesta_esperada_uch": o_data["uch"],
+                "consigna": CONSIGNAS_ORACION_DICTADO,
+                "fuente_estimulo": "audio",
+                "refuerzo_al_fallar": {
+                    "tipo": REFUERZO_MAP["escribir_oracion"][0],
+                    "oracion_id": oid_dictado
+                },
+                "seccion": "practica_oracion"
+            })
 
-            if not ultimo_es_rec and rec_cola:
-                paso_rec = rec_cola.pop(0)
-                estado.agregar_paso(paso_rec, es_evaluacion=True)
-                oraciones_practicadas_set.add(paso_rec["oracion_id"])
-            elif comp_cola:
-                # Buscar en comp_cola el primer paso cuyos prerrequisitos se cumplan
-                idx_elegido = None
-                for idx_c, paso_c in enumerate(comp_cola):
-                    oid_c = paso_c.get("oracion_id")
-                    tipo_c = paso_c["tipo"]
-                    if tipo_c in {"escucha_y_repite_oracion_asr", "escribir_oracion"}:
-                        if oid_c in oraciones_practicadas_set:
-                            idx_elegido = idx_c
-                            break
-                    else:
-                        idx_elegido = idx_c
-                        break
+        # Ordenamientos de oraciones restantes para cubrir toda la lección
+        while rec_cola:
+            oid_ord = rec_cola.pop(0)
+            pasos_oracion.append({
+                "tipo": "ordenar_oracion",
+                "oracion_id": oid_ord,
+                "seccion": "practica_oracion",
+                "fuente_estimulo": "texto_es"
+            })
 
-                if idx_elegido is not None:
-                    paso_comp = comp_cola.pop(idx_elegido)
-                    if paso_comp["tipo"] == "escucha_y_repite_oracion_asr":
-                        estado.posiciones_asr.append({
-                            "tipo": "escucha_y_repite_oracion_asr",
-                            "pos": len(estado.pasos),
-                            "target": paso_comp["oracion_id"]
-                        })
-                        estado.asr_oracion_realizados += 1
-                    elif paso_comp["tipo"] == "escribir_oracion":
-                        estado.objetivos_escritura.append({
-                            "tipo": "escribir_oracion",
-                            "objetivo": paso_comp["oracion_id"]
-                        })
-                        estado.escritura_oracion_realizada += 1
+        # Agregar los pasos de oraciones asegurando registro y métricas
+        for paso_o in pasos_oracion:
+            t_o = paso_o["tipo"]
+            if t_o == "escucha_y_repite_oracion_asr":
+                estado.posiciones_asr.append({
+                    "tipo": "escucha_y_repite_oracion_asr",
+                    "pos": len(estado.pasos),
+                    "target": paso_o["oracion_id"]
+                })
+                estado.asr_oracion_realizados += 1
+            elif t_o == "escribir_oracion":
+                estado.escrituras_oraciones_realizadas += 1
 
-                    estado.agregar_paso(paso_comp, es_evaluacion=True)
-                    if "oracion_id" in paso_comp:
-                        oraciones_practicadas_set.add(paso_comp["oracion_id"])
-                elif rec_cola:
-                    paso_rec = rec_cola.pop(0)
-                    estado.agregar_paso(paso_rec, es_evaluacion=True)
-                    oraciones_practicadas_set.add(paso_rec["oracion_id"])
-                else:
-                    paso_comp = comp_cola.pop(0)
-                    if paso_comp["tipo"] == "escucha_y_repite_oracion_asr":
-                        estado.posiciones_asr.append({
-                            "tipo": "escucha_y_repite_oracion_asr",
-                            "pos": len(estado.pasos),
-                            "target": paso_comp["oracion_id"]
-                        })
-                        estado.asr_oracion_realizados += 1
-                    elif paso_comp["tipo"] == "escribir_oracion":
-                        estado.objetivos_escritura.append({
-                            "tipo": "escribir_oracion",
-                            "objetivo": paso_comp["oracion_id"]
-                        })
-                        estado.escritura_oracion_realizada += 1
-                    estado.agregar_paso(paso_comp, es_evaluacion=True)
-                    if "oracion_id" in paso_comp:
-                        oraciones_practicadas_set.add(paso_comp["oracion_id"])
-            elif rec_cola:
-                paso_rec = rec_cola.pop(0)
-                estado.agregar_paso(paso_rec, es_evaluacion=True)
-                oraciones_practicadas_set.add(paso_rec["oracion_id"])
+            estado.agregar_paso(paso_o, es_evaluacion=True)
 
         # ===================================================================
         # ETAPA 4: Conteo y Construcción del Informe de la Lección
@@ -1060,27 +906,35 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
             t = paso["tipo"]
             pasos_por_tipo[t] = pasos_por_tipo.get(t, 0) + 1
 
+        total_escrituras_leccion = (
+            estado.escrituras_palabras_realizadas
+            + estado.escrituras_formas_realizadas
+            + estado.escrituras_oraciones_realizadas
+        )
+
         inf_lec = {
             "leccion_id": lid,
             "familias_nuevas": len(familias_nuevas),
             "familias_repaso_leccion": len(familias_repaso),
             "total_pasos": len(estado.pasos),
             "pasos_por_tipo": pasos_por_tipo,
+            "escrituras_libres_totales": total_escrituras_leccion,
+            "desglose_escritura": {
+                "palabras": estado.escrituras_palabras_realizadas,
+                "formas": estado.escrituras_formas_realizadas,
+                "oraciones_traduccion": 1 if oid_traduccion else 0,
+                "oraciones_dictado": 1 if oid_dictado else 0
+            },
             "posiciones_asr": estado.posiciones_asr,
             "objetivos_escritura": estado.objetivos_escritura,
             "repaso_colectivo": {
-                "total": estado.colectivos_realizados,
-                "emparejar_uch_es": pasos_por_tipo.get("emparejar_uch_es", 0),
-                "emparejar_audio_uch": pasos_por_tipo.get("emparejar_audio_uch", 0),
-                "memoria_uch_es": 0
+                "total": estado.emparejar_realizados,
+                "emparejar_uch_es": pasos_por_tipo.get("emparejar_uch_es", 0)
             },
-            "pares_reconstruccion_consecutivos": estado.pares_reconstruccion_consecutivos,
-            "excepciones_reconstruccion": estado.excepciones_reconstruccion,
-            "separaciones_forma": estado.separaciones_forma,
             "oracion_asr_seleccionada": target_oracion_asr,
-            "relajaciones_separacion": estado.relajaciones_separacion,
-            "opciones_reducidas": estado.opciones_reducidas,
             "oraciones_no_elegibles_para_escritura": oraciones_no_elegibles_escritura,
+            "oraciones_descartadas_ordenar": oraciones_descartadas_ordenar,
+            "opciones_reducidas": estado.opciones_reducidas,
             "familias_repaso_organico": [
                 {"familia_id": r["familia_id"], "leccion_origen": r["leccion_origen"], "uso": r["uso"]}
                 for r in familias_repaso_organico
