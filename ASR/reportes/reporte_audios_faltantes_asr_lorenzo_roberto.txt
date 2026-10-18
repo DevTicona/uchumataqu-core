@@ -1,0 +1,477 @@
+=====================================================================================
+REPORTE DE AUDIOS FALTANTES PARA ENTRENAMIENTO Y MODELADO ASR
+=====================================================================================
+Excel Palabras PLN : /home/primo/proyecto-grado/excel/palabras_pln.xlsx (325 entradas léxicas)
+Excel Oraciones PLN: /home/primo/proyecto-grado/excel/oraciones.xlsx (135 oraciones: 120 curriculares + 15 reserva)
+Carpeta ASR        : /home/primo/proyecto-grado/ASR
+Locutores auditados: lorenzo, roberto
+Estándar ASR       : 3 tomas por ítem (_01, _02 para Train; _03 para Val/Test)
+
+=====================================================================================
+1. AUDIOS DE PALABRAS POR LOCUTOR (ASR / audios_palabras)
+=====================================================================================
+-------------------------------------------------------------------------------------
+LOCUTOR: LORENZO (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 562
+  • Cobertura total     : 281 / 325 palabras
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 281 (faltan tomas para Train/Val/Test)
+  • Sin audio (0 tomas) : 44
+  • Audios sobrantes    : 0
+
+  Palabras que faltan para lorenzo en ASR (44 sin ninguna toma):
+    #    ID                             UCHUMATAQU                ESPAÑOL
+    ---------------------------------------------------------------------------
+    1    pusu                           Pʼusu                     Hinchado
+    2    sisuchay                       Sisuchay                  Aprender
+    3    sischay                        Sischay                   Saber
+    4    chisi                          Chʼisi                    Pez gato
+    5    churana                        Chʼuraña                  Ave pequeña zambullidora
+    6    churu                          Chʼuru                    caracol
+    7    chuwicha                       Chʼüwicha                 Chueco
+    8    chiwa                          Chʼiwa                    planta acuatica
+    9    chatuchay                      Chʼatuchay                picar
+    10   qamirizoni                     Qʼämirizoñi               Persona adinerada
+    11   qeja                           Qʼeja                     Relampago
+    12   qelaqela                       Qʼelaqʼela                Hierba para el parto
+    13   qalluchay                      Qʼalluchay                Pagar
+    14   qecha                          Qʼecha                    oro
+    15   tapha                          Tʼapha                    Desabrido
+    16   talla                          Tʼalla                    Bañador
+    17   tijutiju                       Tʼijutʼiju                Saltamontes
+    18   tuku                           Tʼuku                     Hambre
+    19   tuqschay                       Tʼuqschay                 Guardar
+    20   tupsincha                      Tʼupsincha                Tapa de faro
+    21   tutu                           Tʼutu                     Cebada
+    22   papi                           Pʼapi                     Pescado tostado
+    23   pesaqa                         Pʼesaqa                   Perdiz
+    24   pitkchay                       Pʼitkchay                 Tejer
+    25   poa                            Pʼoa                      Tambor
+    26   shatachay                      Shatachay                 Escapar
+    27   shaxara                        Shaxara                   Víbora
+    28   shuwani                        Shuwani                   Niñez
+    29   shachkuchay                    Shachkuchay               Terreno
+    30   shikacha                       Shikacha                  Sapo
+    31   tesha                          Tësha                     Luz
+    32   yes                            Yës                       Mes
+    33   chhepyes                       Chhepyës                  Trimestre
+    34   taxchukyes                     Taxchukyës                Semestre
+    35   kullku                         Kʼullku                   Angosto
+    36   kuti                           Kʼuti                     Pulga
+    37   kuli                           Kʼuli                     Pez pequeño con bigotes
+    38   kasa                           Kʼasa                     Ala
+    39   kana                           Kʼana                     Soga de paja
+    40   zonchhiji                      Zoñchhiji                 Esqueleto humano
+    41   xurs                           Xürs                      Trueno
+    42   tuki                           Tüki                      Asado
+    43   tusi                           Tüsi                      Corazon
+    44   uchpu                          Uchpü                     Nervio
+
+-------------------------------------------------------------------------------------
+LOCUTOR: ROBERTO (Palabras)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 542
+  • Cobertura total     : 271 / 325 palabras
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 271 (faltan tomas para Train/Val/Test)
+  • Sin audio (0 tomas) : 54
+  • Audios sobrantes    : 0
+
+  Palabras que faltan para roberto en ASR (54 sin ninguna toma):
+    #    ID                             UCHUMATAQU                ESPAÑOL
+    ---------------------------------------------------------------------------
+    1    achasinaka                     Achasinaka                Almohadas
+    2    phetanaka                      Phetanaka                 Ventanas
+    3    phawschay                      Phawschay                 Fabricar
+    4    sitsninakachay                 Sitsñinakachay            Somos profesores
+    5    ulanchay                       Ulanchay                  Salir
+    6    pedro                          Pedro                     Pedro
+    7    lorenzo                        Lorenzo                   Lorenzo
+    8    maria                          María                     María
+    9    juana                          Juana                     Juana
+    10   chhunipinichay                 Chhuñipinichay            Muy bueno/a
+    11   pusu                           Pʼusu                     Hinchado
+    12   sisuchay                       Sisuchay                  Aprender
+    13   sischay                        Sischay                   Saber
+    14   chisi                          Chʼisi                    Pez gato
+    15   churana                        Chʼuraña                  Ave pequeña zambullidora
+    16   churu                          Chʼuru                    caracol
+    17   chuwicha                       Chʼüwicha                 Chueco
+    18   chiwa                          Chʼiwa                    planta acuatica
+    19   chatuchay                      Chʼatuchay                picar
+    20   qamirizoni                     Qʼämirizoñi               Persona adinerada
+    21   qeja                           Qʼeja                     Relampago
+    22   qelaqela                       Qʼelaqʼela                Hierba para el parto
+    23   qalluchay                      Qʼalluchay                Pagar
+    24   qecha                          Qʼecha                    oro
+    25   tapha                          Tʼapha                    Desabrido
+    26   talla                          Tʼalla                    Bañador
+    27   tijutiju                       Tʼijutʼiju                Saltamontes
+    28   tuku                           Tʼuku                     Hambre
+    29   tuqschay                       Tʼuqschay                 Guardar
+    30   tupsincha                      Tʼupsincha                Tapa de faro
+    31   tutu                           Tʼutu                     Cebada
+    32   papi                           Pʼapi                     Pescado tostado
+    33   pesaqa                         Pʼesaqa                   Perdiz
+    34   pitkchay                       Pʼitkchay                 Tejer
+    35   poa                            Pʼoa                      Tambor
+    36   shatachay                      Shatachay                 Escapar
+    37   shaxara                        Shaxara                   Víbora
+    38   shuwani                        Shuwani                   Niñez
+    39   shachkuchay                    Shachkuchay               Terreno
+    40   shikacha                       Shikacha                  Sapo
+    41   tesha                          Tësha                     Luz
+    42   yes                            Yës                       Mes
+    43   chhepyes                       Chhepyës                  Trimestre
+    44   taxchukyes                     Taxchukyës                Semestre
+    45   kullku                         Kʼullku                   Angosto
+    46   kuti                           Kʼuti                     Pulga
+    47   kuli                           Kʼuli                     Pez pequeño con bigotes
+    48   kasa                           Kʼasa                     Ala
+    49   kana                           Kʼana                     Soga de paja
+    50   zonchhiji                      Zoñchhiji                 Esqueleto humano
+    51   xurs                           Xürs                      Trueno
+    52   tuki                           Tüki                      Asado
+    53   tusi                           Tüsi                      Corazon
+    54   uchpu                          Uchpü                     Nervio
+
+=====================================================================================
+2. AUDIOS DE ORACIONES POR LOCUTOR (ASR / audios_oraciones - Dataset Segmentado)
+=====================================================================================
+-------------------------------------------------------------------------------------
+LOCUTOR: LORENZO (Oraciones Segmentadas para ASR)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 0
+  • Cobertura total     : 0 / 135 oraciones
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 0
+  • Sin audio           : 135
+  • Audios sobrantes    : 0
+
+  Oraciones que faltan en audios_oraciones/lorenzo para ASR (135):
+    #    ID       UCHUMATAQU                                    ESPAÑOL
+    ---------------------------------------------------------------------------
+    1    O_001    Wiyantam palitak                              Buenos días amigo
+    2    O_002    Tï wiyanichay wakpacha                        Buenas noches a todos
+    3    O_003    Thuñi seschay sitsñi                          Buenas tardes profesor
+    4    O_004    Wilk thö lorenzo                              Yo soy Lorenzo
+    5    O_005    Jakilta am thü                                ¿Cuál es tu nombre?
+    6    O_006    Wist thü lorenzo                              Mi nombre es Lorenzo
+    7    O_007    Nï wist palitakchay                           Él es mi amigo
+    8    O_008    Chhuljamachay pedro                           ¿Cómo estás Pedro?
+    9    O_009    Wilk chhuñiqasi, uwapinichay, amthü           Yo estoy bien gracias, y ¿tú?
+    10   O_010    Iwaltaki wilk chhuñiqasi                      Igualmente, yo estoy bien
+    11   O_011    Chhuñiqasichay                                ¿Estás bien?
+    12   O_012    Shila wilk chhuñiqasi                         Sí, yo estoy bien
+    13   O_013    Ana wilk anachhuñi                            No, yo no estoy bien
+    14   O_014    Uwapinichay palitak                           Gracias amigo
+    15   O_015    Jasiktam pichuchay pedro                      ¿De dónde vienes Pedro?
+    16   O_016    Wilk tï watha irohito urus                    Soy de la comunidad Irohito Urus
+    17   O_017    Wilk tï watha waki pichuchay                  Yo vengo del pueblo de Guaqui
+    18   O_018    Chhuñi pichuchay tï watha irohito urus        Bienvenido a la comunidad Irohito Urus
+    19   O_019    Salskama pedro                                Hasta luego Pedro
+    20   O_020    Uchumik sitsñinakachay                        Nosotros somos profesores
+    21   O_021    Wisnakti watha oqschay                        Nosotros vamos al pueblo
+    22   O_022    Amchuki palitaknaka, chhuñi pichuchay         Ustedes amigos son bienvenidos
+    23   O_023    Nïnaka watha ana oqschay                      Ellos no van al pueblo
+    24   O_024    Nï wist ataluychay                            Ella es mi mamá
+    25   O_025    Wist apay yachirichay                         Mi papá es carpintero
+    26   O_026    Nis kʼayuy kʼusikasichay                      Su hermana está contenta
+    27   O_027    Am chichalay wist palitakchay                 Tu hermano es mi amigo
+    28   O_028    Wist ataluy chhatanaka qhawschay              Mi mamá compra abarcas
+    29   O_029    Wist eskhara chhaqchay                        Mi sombrero es grande
+    30   O_030    Nis aymilla pedro uchspinichay                Su camisa de Pedro es muy pequeña
+    31   O_031    Pedro chhi chheqhoñi wistakchay               Pedro tiene un liwi
+    32   O_032    Am ira chhaqpinichay                          Tu poncho es muy grande
+    33   O_033    Lorenzo lowalowapini satschay                 Lorenzo corre muy rápido
+    34   O_034    Wist chichalay watha oqlaychay                Mi hermano camina hacia el pueblo
+    35   O_035    Shila wisnakti sitsñi nonschay                Sí, nosotros escuchamos al profesor
+    36   O_036    Wilk ana purchay chirsnachay                  Yo no puedo ver
+    37   O_037    Nï axtal lasnuchay                            Él salta lejos
+    38   O_038    Wisnaks malaqoy chhuñipinichay                Nuestra tía es muy buena
+    39   O_039    Uchums achichay sitsñizoñipinichay            Nuestro abuelo es muy sabio
+    40   O_040    Nis apichuy pʼuschay                          Su abuela está enferma
+    41   O_041    Nis tololay sisñichay                         Su tío es curandero
+    42   O_042    Taki urkhu ewchay                             Ese vestido es nuevo
+    43   O_043    María peske maxsinaka qhawschay               María compra dos zapatos
+    44   O_044    Nis chhasi ewchay                             Su faja está nueva
+    45   O_045    Am makchi chhukchay                           Tu pantalón está sucio
+    46   O_046    Wist qhoya chhaqpinichay                      Mi casa es muy grande
+    47   O_047    Säna echs xorchachay                          La puerta es de color verde
+    48   O_048    Wist qhoya chhep phetanaka wistakchay         Mi casa tiene tres ventanas
+    49   O_049    Nï tila chusi thaxchay                        Él duerme en esta cama
+    50   O_050    Wist ataluy wiyani taxsnakichay               Mi mamá cocina temprano
+    51   O_051    Pheta ana purchay amaruskchay                 No puedo cerrar la ventana
+    52   O_052    Wilk säna khitschay                           Yo abro la puerta
+    53   O_053    Wilk wiyani piwachay                          Yo limpio temprano
+    54   O_054    Chhulurasa am chheqets jaxchay                ¿Cuando vas a lavar tu ropa?
+    55   O_055    Lorenzo chhaq chimay piwachay                 Lorenzo limpia la mesa grande
+    56   O_056    Wisnaks apay tila julsni julsnay              Nuestro papá se sienta en esta silla
+    57   O_057    Paxpiku chhiqhanaka selschay                  Hay cuatro escobas
+    58   O_058    Pedro chhep achasinaka wistakchay             Pedro tiene tres almohadas
+    59   O_059    Wilk taxsnuku kuwarernonaka wistakchay        Yo tengo cinco cuadernos
+    60   O_060    Am taxchuku chhikhitsnaka wistakchay          Tú tienes seis lápices
+    61   O_061    Sitsñi papila siqetschay                      El profesor escribe en el papel
+    62   O_062    Taki kuskuts saxonichay                       Esa mochila es azul
+    63   O_063    Taki mäska chhukchay                          Esa olla está sucia
+    64   O_064    María tüwqo chuwanaka qhawschay               María compra siete platos
+    65   O_065    Nï taxchuku khirchulanaka wistakchay          Él tiene seis cucharas
+    66   O_066    Pedro potsi potschay                          Pedro corta con el cuchillo
+    67   O_067    Nï suwa chiwliks likschay                     El niño bebe leche
+    68   O_068    Tüwqo siñinaka selschay                       Hay siete huevos
+    69   O_069    Lorenzo kula chälachay                        Lorenzo siembra quinua
+    70   O_070    Wist malaqoy chiwkisnaka tuchay               Mi tía vende quesos
+    71   O_071    Uchumik jilli jaxchay                         Nosotros lavamos la carne
+    72   O_072    Nï suwa qeru chiwliks likschay                El niño bebe leche del vaso
+    73   O_073    Taki lusi chherchherpinichay                  Ese cántaro es muy bonito
+    74   O_074    Tichu khera serxchay                          Este cucharón está viejo
+    75   O_075    Wisnakti xalsmäsi ana warirachay              Nosotros no usamos el batán
+    76   O_076    Jilli yikupinichay                            La carne está salada
+    77   O_077    María tapa ana lulschay                       María no come ají
+    78   O_078    Juana qotñi xawariski tuchay                  Juana vende pan caliente
+    79   O_079    Am lusi qhasi chukichay                       Tú traes agua en el cántaro
+    80   O_080    Amchuki parentiña arusha taxsnakichay         Ustedes cocinan arroz para la familia
+    81   O_081    Taki päkunaka chʼatschaypini                  Esos perros ladran mucho
+    82   O_082    María chherchher masota wistakchay            María tiene un gato bonito
+    83   O_083    Nï qonqo wallpanaka wistakchay                Él tiene ocho gallinas
+    84   O_084    Juana sanqo uñinaka uyuwichay                 Juana cria nueve conejos
+    85   O_085    Lorenzo uchs khuchhi wistakchay               Lorenzo tiene un chancho pequeño
+    86   O_086    Achichay uchs murchula wistakchay             El abuelo tiene un burro pequeño
+    87   O_087    Nï sanqo chiw iwisanaka wistakchay            Ella tiene nueve ovejas blancas
+    88   O_088    Taki qerwakha jilaynacha lulschay             Ese toro come demasiado
+    89   O_089    María xalanaka tuchay                         María vende llamas
+    90   O_090    Wist apichuy qonqo choq wakhanaka wistakchay  Mi abuela tiene ocho vacas negras
+    91   O_091    Taki phesqoña lowalowapini satschay           Ese lagarto corre muy rápido
+    92   O_092    Taki qetsi wiyanichay ulanchay                Ese zorro sale de noche
+    93   O_093    Wilk anapini chuñipaku chirsnachay            Yo nunca vi un zorrino
+    94   O_094    Wilk axtal xalwari chirsnachay                Yo veo una vicuña a lo lejos
+    95   O_095    Parina wiwi lloqa oqlaychay                   El flamenco camina en las orillas del río
+    96   O_096    Taki qala chhaqwaypini layschay               Esa gaviota vuela muy alto
+    97   O_097    Pedro soqna siñinaka qhorskchay               Pedro busca huevos de pato
+    98   O_098    Wisnakti wiwi wëslanaka tanachay              Nosotros atrapamos chhoqhas en el río
+    99   O_099    Taki qeri uchspinichay                        Ese pez es muy pequeño
+    100  O_100    Juana watha qhathu chiwqeri tuchay            Juana vende pejerrey en el mercado
+    101  O_101    Lorenzo qhalu kurwinanaka tanschay            Lorenzo pesca diez truchas
+    102  O_102    Wist ataluy chʼaxana qerjiña taxsnakichay     Mi mamá cocina wallake con el pez amarillo
+    103  O_103    Wist apay wiwi chisawa tanschay               Mi papá pesca un miji en el río
+    104  O_104    Nïnaka qeschhäla oqschay                      Ellas van al sembradío de papa
+    105  O_105    Phiki yoqa pakschay                           La paja brava crece en el suelo
+    106  O_106    Juwa wiwi pakschay                            La totora crece en el río
+    107  O_107    Wist malaqoy qañawi achuchay                  Mi tía cultiva cañawa
+    108  O_108    Chhullayku qoqnaka ana selschay               ¿Por qué no hay árboles?
+    109  O_109    Thuñi chhurpikchaypini                        El sol brilla mucho
+    110  O_110    Yïs wiyanichay chirsnachay                    La luna se ve de noche
+    111  O_111    Wilk qolanakapini chirsnachay                 Yo veo muchas estrellas
+    112  O_112    Tïtomxe chisñipinichay                        Hoy día hay mucha lluvia
+    113  O_113    Tiku anachhulu chhiri ana selschay            No hay ninguna nube en el cielo
+    114  O_114    Thuñi tuncharku tekschay                      El sol sale del este
+    115  O_115    Thuñi taxacharku thikuchay                    El sol se oculta en el oeste
+    116  O_116    Jipu chiyacharku pichuchay                    El viento viene del norte
+    117  O_117    Wist watha xanacharkuchay                     Mi pueblo está al sur
+    118  O_118    Achichay chhaq ochapara wistakchay            El abuelo tiene un bote grande
+    119  O_119    Lorenzo thosa qachina phawschay               Lorenzo fabrica la vela de la balsa
+    120  O_120    Am untu cheqallachay                          Tú tienes que remar fuerte
+    121  O_121    Wilk qhoya qhoychay                           Yo construyo una casa
+    122  O_122    Am chheqets tʼuqschay                         Tú guardas la ropa
+    123  O_123    Wilk karpinisa jaxchay                        Yo lavo las medias
+    124  O_124    Nï pʼapi lulschay                             Ella come pescado tostado
+    125  O_125    Nï tʼutu chälachay                            Él siembra cebada
+    126  O_126    Nï qʼelaqʼela qhorskchay                      Ella busca hierba para el parto
+    127  O_127    Wilk pʼoa nonschay                            Yo escucho el tambor
+    128  O_128    Wilk kʼana pʼitkchay                          Yo tejo una soga de paja
+    129  O_129    Wilk qawi chirsnachay                         Yo veo un cóndor
+    130  O_130    Wilk shaxara chirsnachay                      Yo veo una víbora
+    131  O_131    Salskama sitsñinaka                           Hasta luego, profesores
+    132  O_132    Wilk chhaq chimay piwachay                    Yo limpio la mesa grande
+    133  O_133    Wilk pheta amaruskchay                        Yo cierro la ventana
+    134  O_134    Wist chusi chhep achasinaka wistakchay        Mi cama tiene tres almohadas
+    135  O_135    Wist qhoya peske phetanaka wistakchay         Mi casa tiene dos ventanas
+
+-------------------------------------------------------------------------------------
+LOCUTOR: ROBERTO (Oraciones Segmentadas para ASR)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav : 0
+  • Cobertura total     : 0 / 135 oraciones
+  • Completas (3 tomas) : 0
+  • Parciales (1-2 tomas): 0
+  • Sin audio           : 135
+  • Audios sobrantes    : 0
+
+  Oraciones que faltan en audios_oraciones/roberto para ASR (135):
+    #    ID       UCHUMATAQU                                    ESPAÑOL
+    ---------------------------------------------------------------------------
+    1    O_001    Wiyantam palitak                              Buenos días amigo
+    2    O_002    Tï wiyanichay wakpacha                        Buenas noches a todos
+    3    O_003    Thuñi seschay sitsñi                          Buenas tardes profesor
+    4    O_004    Wilk thö lorenzo                              Yo soy Lorenzo
+    5    O_005    Jakilta am thü                                ¿Cuál es tu nombre?
+    6    O_006    Wist thü lorenzo                              Mi nombre es Lorenzo
+    7    O_007    Nï wist palitakchay                           Él es mi amigo
+    8    O_008    Chhuljamachay pedro                           ¿Cómo estás Pedro?
+    9    O_009    Wilk chhuñiqasi, uwapinichay, amthü           Yo estoy bien gracias, y ¿tú?
+    10   O_010    Iwaltaki wilk chhuñiqasi                      Igualmente, yo estoy bien
+    11   O_011    Chhuñiqasichay                                ¿Estás bien?
+    12   O_012    Shila wilk chhuñiqasi                         Sí, yo estoy bien
+    13   O_013    Ana wilk anachhuñi                            No, yo no estoy bien
+    14   O_014    Uwapinichay palitak                           Gracias amigo
+    15   O_015    Jasiktam pichuchay pedro                      ¿De dónde vienes Pedro?
+    16   O_016    Wilk tï watha irohito urus                    Soy de la comunidad Irohito Urus
+    17   O_017    Wilk tï watha waki pichuchay                  Yo vengo del pueblo de Guaqui
+    18   O_018    Chhuñi pichuchay tï watha irohito urus        Bienvenido a la comunidad Irohito Urus
+    19   O_019    Salskama pedro                                Hasta luego Pedro
+    20   O_020    Uchumik sitsñinakachay                        Nosotros somos profesores
+    21   O_021    Wisnakti watha oqschay                        Nosotros vamos al pueblo
+    22   O_022    Amchuki palitaknaka, chhuñi pichuchay         Ustedes amigos son bienvenidos
+    23   O_023    Nïnaka watha ana oqschay                      Ellos no van al pueblo
+    24   O_024    Nï wist ataluychay                            Ella es mi mamá
+    25   O_025    Wist apay yachirichay                         Mi papá es carpintero
+    26   O_026    Nis kʼayuy kʼusikasichay                      Su hermana está contenta
+    27   O_027    Am chichalay wist palitakchay                 Tu hermano es mi amigo
+    28   O_028    Wist ataluy chhatanaka qhawschay              Mi mamá compra abarcas
+    29   O_029    Wist eskhara chhaqchay                        Mi sombrero es grande
+    30   O_030    Nis aymilla pedro uchspinichay                Su camisa de Pedro es muy pequeña
+    31   O_031    Pedro chhi chheqhoñi wistakchay               Pedro tiene un liwi
+    32   O_032    Am ira chhaqpinichay                          Tu poncho es muy grande
+    33   O_033    Lorenzo lowalowapini satschay                 Lorenzo corre muy rápido
+    34   O_034    Wist chichalay watha oqlaychay                Mi hermano camina hacia el pueblo
+    35   O_035    Shila wisnakti sitsñi nonschay                Sí, nosotros escuchamos al profesor
+    36   O_036    Wilk ana purchay chirsnachay                  Yo no puedo ver
+    37   O_037    Nï axtal lasnuchay                            Él salta lejos
+    38   O_038    Wisnaks malaqoy chhuñipinichay                Nuestra tía es muy buena
+    39   O_039    Uchums achichay sitsñizoñipinichay            Nuestro abuelo es muy sabio
+    40   O_040    Nis apichuy pʼuschay                          Su abuela está enferma
+    41   O_041    Nis tololay sisñichay                         Su tío es curandero
+    42   O_042    Taki urkhu ewchay                             Ese vestido es nuevo
+    43   O_043    María peske maxsinaka qhawschay               María compra dos zapatos
+    44   O_044    Nis chhasi ewchay                             Su faja está nueva
+    45   O_045    Am makchi chhukchay                           Tu pantalón está sucio
+    46   O_046    Wist qhoya chhaqpinichay                      Mi casa es muy grande
+    47   O_047    Säna echs xorchachay                          La puerta es de color verde
+    48   O_048    Wist qhoya chhep phetanaka wistakchay         Mi casa tiene tres ventanas
+    49   O_049    Nï tila chusi thaxchay                        Él duerme en esta cama
+    50   O_050    Wist ataluy wiyani taxsnakichay               Mi mamá cocina temprano
+    51   O_051    Pheta ana purchay amaruskchay                 No puedo cerrar la ventana
+    52   O_052    Wilk säna khitschay                           Yo abro la puerta
+    53   O_053    Wilk wiyani piwachay                          Yo limpio temprano
+    54   O_054    Chhulurasa am chheqets jaxchay                ¿Cuando vas a lavar tu ropa?
+    55   O_055    Lorenzo chhaq chimay piwachay                 Lorenzo limpia la mesa grande
+    56   O_056    Wisnaks apay tila julsni julsnay              Nuestro papá se sienta en esta silla
+    57   O_057    Paxpiku chhiqhanaka selschay                  Hay cuatro escobas
+    58   O_058    Pedro chhep achasinaka wistakchay             Pedro tiene tres almohadas
+    59   O_059    Wilk taxsnuku kuwarernonaka wistakchay        Yo tengo cinco cuadernos
+    60   O_060    Am taxchuku chhikhitsnaka wistakchay          Tú tienes seis lápices
+    61   O_061    Sitsñi papila siqetschay                      El profesor escribe en el papel
+    62   O_062    Taki kuskuts saxonichay                       Esa mochila es azul
+    63   O_063    Taki mäska chhukchay                          Esa olla está sucia
+    64   O_064    María tüwqo chuwanaka qhawschay               María compra siete platos
+    65   O_065    Nï taxchuku khirchulanaka wistakchay          Él tiene seis cucharas
+    66   O_066    Pedro potsi potschay                          Pedro corta con el cuchillo
+    67   O_067    Nï suwa chiwliks likschay                     El niño bebe leche
+    68   O_068    Tüwqo siñinaka selschay                       Hay siete huevos
+    69   O_069    Lorenzo kula chälachay                        Lorenzo siembra quinua
+    70   O_070    Wist malaqoy chiwkisnaka tuchay               Mi tía vende quesos
+    71   O_071    Uchumik jilli jaxchay                         Nosotros lavamos la carne
+    72   O_072    Nï suwa qeru chiwliks likschay                El niño bebe leche del vaso
+    73   O_073    Taki lusi chherchherpinichay                  Ese cántaro es muy bonito
+    74   O_074    Tichu khera serxchay                          Este cucharón está viejo
+    75   O_075    Wisnakti xalsmäsi ana warirachay              Nosotros no usamos el batán
+    76   O_076    Jilli yikupinichay                            La carne está salada
+    77   O_077    María tapa ana lulschay                       María no come ají
+    78   O_078    Juana qotñi xawariski tuchay                  Juana vende pan caliente
+    79   O_079    Am lusi qhasi chukichay                       Tú traes agua en el cántaro
+    80   O_080    Amchuki parentiña arusha taxsnakichay         Ustedes cocinan arroz para la familia
+    81   O_081    Taki päkunaka chʼatschaypini                  Esos perros ladran mucho
+    82   O_082    María chherchher masota wistakchay            María tiene un gato bonito
+    83   O_083    Nï qonqo wallpanaka wistakchay                Él tiene ocho gallinas
+    84   O_084    Juana sanqo uñinaka uyuwichay                 Juana cria nueve conejos
+    85   O_085    Lorenzo uchs khuchhi wistakchay               Lorenzo tiene un chancho pequeño
+    86   O_086    Achichay uchs murchula wistakchay             El abuelo tiene un burro pequeño
+    87   O_087    Nï sanqo chiw iwisanaka wistakchay            Ella tiene nueve ovejas blancas
+    88   O_088    Taki qerwakha jilaynacha lulschay             Ese toro come demasiado
+    89   O_089    María xalanaka tuchay                         María vende llamas
+    90   O_090    Wist apichuy qonqo choq wakhanaka wistakchay  Mi abuela tiene ocho vacas negras
+    91   O_091    Taki phesqoña lowalowapini satschay           Ese lagarto corre muy rápido
+    92   O_092    Taki qetsi wiyanichay ulanchay                Ese zorro sale de noche
+    93   O_093    Wilk anapini chuñipaku chirsnachay            Yo nunca vi un zorrino
+    94   O_094    Wilk axtal xalwari chirsnachay                Yo veo una vicuña a lo lejos
+    95   O_095    Parina wiwi lloqa oqlaychay                   El flamenco camina en las orillas del río
+    96   O_096    Taki qala chhaqwaypini layschay               Esa gaviota vuela muy alto
+    97   O_097    Pedro soqna siñinaka qhorskchay               Pedro busca huevos de pato
+    98   O_098    Wisnakti wiwi wëslanaka tanachay              Nosotros atrapamos chhoqhas en el río
+    99   O_099    Taki qeri uchspinichay                        Ese pez es muy pequeño
+    100  O_100    Juana watha qhathu chiwqeri tuchay            Juana vende pejerrey en el mercado
+    101  O_101    Lorenzo qhalu kurwinanaka tanschay            Lorenzo pesca diez truchas
+    102  O_102    Wist ataluy chʼaxana qerjiña taxsnakichay     Mi mamá cocina wallake con el pez amarillo
+    103  O_103    Wist apay wiwi chisawa tanschay               Mi papá pesca un miji en el río
+    104  O_104    Nïnaka qeschhäla oqschay                      Ellas van al sembradío de papa
+    105  O_105    Phiki yoqa pakschay                           La paja brava crece en el suelo
+    106  O_106    Juwa wiwi pakschay                            La totora crece en el río
+    107  O_107    Wist malaqoy qañawi achuchay                  Mi tía cultiva cañawa
+    108  O_108    Chhullayku qoqnaka ana selschay               ¿Por qué no hay árboles?
+    109  O_109    Thuñi chhurpikchaypini                        El sol brilla mucho
+    110  O_110    Yïs wiyanichay chirsnachay                    La luna se ve de noche
+    111  O_111    Wilk qolanakapini chirsnachay                 Yo veo muchas estrellas
+    112  O_112    Tïtomxe chisñipinichay                        Hoy día hay mucha lluvia
+    113  O_113    Tiku anachhulu chhiri ana selschay            No hay ninguna nube en el cielo
+    114  O_114    Thuñi tuncharku tekschay                      El sol sale del este
+    115  O_115    Thuñi taxacharku thikuchay                    El sol se oculta en el oeste
+    116  O_116    Jipu chiyacharku pichuchay                    El viento viene del norte
+    117  O_117    Wist watha xanacharkuchay                     Mi pueblo está al sur
+    118  O_118    Achichay chhaq ochapara wistakchay            El abuelo tiene un bote grande
+    119  O_119    Lorenzo thosa qachina phawschay               Lorenzo fabrica la vela de la balsa
+    120  O_120    Am untu cheqallachay                          Tú tienes que remar fuerte
+    121  O_121    Wilk qhoya qhoychay                           Yo construyo una casa
+    122  O_122    Am chheqets tʼuqschay                         Tú guardas la ropa
+    123  O_123    Wilk karpinisa jaxchay                        Yo lavo las medias
+    124  O_124    Nï pʼapi lulschay                             Ella come pescado tostado
+    125  O_125    Nï tʼutu chälachay                            Él siembra cebada
+    126  O_126    Nï qʼelaqʼela qhorskchay                      Ella busca hierba para el parto
+    127  O_127    Wilk pʼoa nonschay                            Yo escucho el tambor
+    128  O_128    Wilk kʼana pʼitkchay                          Yo tejo una soga de paja
+    129  O_129    Wilk qawi chirsnachay                         Yo veo un cóndor
+    130  O_130    Wilk shaxara chirsnachay                      Yo veo una víbora
+    131  O_131    Salskama sitsñinaka                           Hasta luego, profesores
+    132  O_132    Wilk chhaq chimay piwachay                    Yo limpio la mesa grande
+    133  O_133    Wilk pheta amaruskchay                        Yo cierro la ventana
+    134  O_134    Wist chusi chhep achasinaka wistakchay        Mi cama tiene tres almohadas
+    135  O_135    Wist qhoya peske phetanaka wistakchay         Mi casa tiene dos ventanas
+
+=====================================================================================
+3. DISPONIBILIDAD EN GRABACIONES ORIGINALES EN BRUTO (audios_originales/oraciones)
+=====================================================================================
+-------------------------------------------------------------------------------------
+LOCUTOR: LORENZO (Grabaciones Originales)
+-------------------------------------------------------------------------------------
+  • Estado: NO existen grabaciones originales de oraciones para LORENZO.
+  • Oraciones pendientes de grabación: 135 / 135 (100% faltante).
+
+-------------------------------------------------------------------------------------
+LOCUTOR: ROBERTO (Grabaciones Originales)
+-------------------------------------------------------------------------------------
+  • Total archivos .wav brutos en disco: 130
+  • Oraciones identificadas coincidentes: 118 / 135
+  • Oraciones faltantes en grabaciones : 17
+  • Grabaciones descartadas/obsoletas   : 12
+
+  Oraciones que NO fueron grabadas por roberto (17):
+    #    ID       UCHUMATAQU                                    ESPAÑOL
+    ---------------------------------------------------------------------------
+    1    O_009    Wilk chhuñiqasi, uwapinichay, amthü           Yo estoy bien gracias, y ¿tú?
+    2    O_010    Iwaltaki wilk chhuñiqasi                      Igualmente, yo estoy bien
+    3    O_038    Wisnaks malaqoy chhuñipinichay                Nuestra tía es muy buena
+    4    O_121    Wilk qhoya qhoychay                           Yo construyo una casa
+    5    O_122    Am chheqets tʼuqschay                         Tú guardas la ropa
+    6    O_124    Nï pʼapi lulschay                             Ella come pescado tostado
+    7    O_125    Nï tʼutu chälachay                            Él siembra cebada
+    8    O_126    Nï qʼelaqʼela qhorskchay                      Ella busca hierba para el parto
+    9    O_127    Wilk pʼoa nonschay                            Yo escucho el tambor
+    10   O_128    Wilk kʼana pʼitkchay                          Yo tejo una soga de paja
+    11   O_129    Wilk qawi chirsnachay                         Yo veo un cóndor
+    12   O_130    Wilk shaxara chirsnachay                      Yo veo una víbora
+    13   O_131    Salskama sitsñinaka                           Hasta luego, profesores
+    14   O_132    Wilk chhaq chimay piwachay                    Yo limpio la mesa grande
+    15   O_133    Wilk pheta amaruskchay                        Yo cierro la ventana
+    16   O_134    Wist chusi chhep achasinaka wistakchay        Mi cama tiene tres almohadas
+    17   O_135    Wist qhoya peske phetanaka wistakchay         Mi casa tiene dos ventanas
+

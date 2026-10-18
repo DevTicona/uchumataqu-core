@@ -10,12 +10,15 @@ Uso:
 import os
 import sys
 import unicodedata
-import openpyxl
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 scripts_dir = os.path.dirname(script_dir)
 asr_dir = os.path.dirname(scripts_dir)
 project_root = os.path.dirname(asr_dir)
+entrenamiento_dir = os.path.join(scripts_dir, "entrenamiento")
+
+sys.path.insert(0, entrenamiento_dir)
+from lector_xlsx import leer_xlsx
 
 excel_path = os.path.join(project_root, "excel", "oraciones.xlsx")
 audio_dir = os.path.join(asr_dir, "audios_originales", "oraciones", "roberto")
@@ -104,16 +107,14 @@ def main():
         return
 
     # Leer Excel
-    wb = openpyxl.load_workbook(excel_path)
-    ws = wb.active
-
+    rows = leer_xlsx(excel_path)
     excel_entries = []
-    for row in ws.iter_rows(min_row=2, values_only=True):
-        id_val = row[0]
-        uch_val = row[1]
-        if id_val and uch_val:
-            normalized = normalize_name(str(uch_val))
-            excel_entries.append((str(id_val).strip(), str(uch_val).strip(), normalized))
+    for row in rows[1:]:
+        if len(row) >= 2 and row[0] and row[1]:
+            id_val = str(row[0]).strip()
+            uch_val = str(row[1]).strip()
+            normalized = normalize_name(uch_val)
+            excel_entries.append((id_val, uch_val, normalized))
 
     # Mapeo normalizado -> ID
     norm_to_id = {e[2]: e[0] for e in excel_entries}
