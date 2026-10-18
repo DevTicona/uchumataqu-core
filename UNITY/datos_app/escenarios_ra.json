@@ -14,8 +14,7 @@
         "L02",
         "L03",
         "L04",
-        "L05",
-        "L06"
+        "L05"
       ],
       "prefab_key": "ra/escenario/encuentro_comunicacion",
       "escala_base": 0.9,
@@ -253,11 +252,11 @@
       "id": "ra_familia_vestimenta",
       "titulo": "Familia y vestimenta",
       "lecciones_asociadas": [
+        "L06",
         "L07",
         "L08",
         "L09",
-        "L10",
-        "L11"
+        "L10"
       ],
       "prefab_key": "ra/escenario/familia_vestimenta",
       "escala_base": 0.9,
@@ -509,10 +508,10 @@
       "id": "ra_casa_objetos",
       "titulo": "Casa y objetos cotidianos",
       "lecciones_asociadas": [
+        "L11",
         "L12",
         "L13",
-        "L14",
-        "L15"
+        "L14"
       ],
       "prefab_key": "ra/escenario/casa_objetos",
       "escala_base": 0.9,
@@ -818,10 +817,10 @@
       "id": "ra_cocina_alimentos",
       "titulo": "Cocina y alimentos",
       "lecciones_asociadas": [
+        "L15",
         "L16",
         "L17",
-        "L18",
-        "L19"
+        "L18"
       ],
       "prefab_key": "ra/escenario/cocina_alimentos",
       "escala_base": 0.9,
@@ -1060,11 +1059,11 @@
       "centro_pantalla_y": 0.63,
       "titulo": "Animales y ecosistema",
       "lecciones_asociadas": [
+        "L19",
         "L20",
         "L21",
         "L22",
-        "L23",
-        "L24"
+        "L23"
       ],
       "prefab_key": "ra/escenario/animales_ecosistema",
       "escala_base": 0.9,
@@ -1490,9 +1489,9 @@
       "centro_pantalla_y": 0.63,
       "titulo": "Naturaleza y orientación",
       "lecciones_asociadas": [
+        "L24",
         "L25",
-        "L26",
-        "L27"
+        "L26"
       ],
       "prefab_key": "ra/escenario/naturaleza_orientacion",
       "escala_base": 0.9,

@@ -2,14 +2,14 @@
   "version": 4,
   "metricas_distractores": {
     "palabras": {
-      "P1": 448,
-      "P2": 79,
+      "P1": 447,
+      "P2": 77,
       "P3": 27,
-      "P4": 25
+      "P4": 28
     },
     "formas": {
-      "P1": 44,
-      "P2": 5,
+      "P1": 46,
+      "P2": 3,
       "P3": 2,
       "P4": 0
     },
@@ -158,7 +158,7 @@
         {
           "tipo": "escribir_oracion",
           "objetivo": "O_004",
-          "respuesta": "Wilk thö lorenzo",
+          "respuesta": "Wilk thö Lorenzo",
           "fuente_estimulo": "texto_es"
         },
         {
@@ -196,25 +196,25 @@
     },
     {
       "leccion_id": "L03",
-      "familias_nuevas": 6,
-      "familias_repaso_leccion": 0,
-      "total_pasos": 22,
+      "familias_nuevas": 9,
+      "familias_repaso_leccion": 1,
+      "total_pasos": 33,
       "pasos_por_tipo": {
-        "presentacion_familia": 6,
-        "audio_a_uch": 3,
+        "presentacion_familia": 9,
+        "audio_a_uch": 4,
         "audio_a_forma": 1,
-        "escucha_y_repite_asr": 1,
-        "uch_a_es": 2,
+        "uch_a_es": 4,
+        "escucha_y_repite_asr": 2,
         "emparejar_uch_es": 2,
         "escribir_forma": 1,
-        "escribir_palabra": 2,
-        "ordenar_oracion": 1,
+        "escribir_palabra": 3,
+        "ordenar_oracion": 4,
         "escribir_oracion": 2,
         "escucha_y_repite_oracion_asr": 1
       },
-      "escrituras_libres_totales": 5,
+      "escrituras_libres_totales": 6,
       "desglose_escritura": {
-        "palabras": 2,
+        "palabras": 3,
         "formas": 1,
         "oraciones_traduccion": 1,
         "oraciones_dictado": 1
@@ -222,137 +222,18 @@
       "posiciones_asr": [
         {
           "tipo": "escucha_y_repite_asr",
-          "pos": 4,
+          "pos": 8,
           "target": "amthu"
         },
         {
-          "tipo": "escucha_y_repite_oracion_asr",
-          "pos": 20,
-          "target": "O_010"
-        }
-      ],
-      "objetivos_escritura": [
-        {
-          "tipo": "escribir_forma",
-          "objetivo": "chhuljamachay",
-          "respuesta": "Chhuljamachay",
-          "fuente_estimulo": "texto_es"
-        },
-        {
-          "tipo": "escribir_palabra",
-          "objetivo": "chhuljama",
-          "respuesta": "Chhuljama",
-          "fuente_estimulo": "texto_es"
-        },
-        {
-          "tipo": "escribir_palabra",
-          "objetivo": "amthu",
-          "respuesta": "Amthü",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "escribir_oracion",
-          "objetivo": "O_008",
-          "respuesta": "Chhuljamachay pedro",
-          "fuente_estimulo": "texto_es"
-        },
-        {
-          "tipo": "escribir_oracion",
-          "objetivo": "O_009",
-          "respuesta": "Wilk chhuñiqasi, uwapinichay, amthü",
-          "fuente_estimulo": "audio"
-        }
-      ],
-      "repaso_colectivo": {
-        "total": 2,
-        "emparejar_uch_es": 2
-      },
-      "oracion_asr_seleccionada": "O_010",
-      "oraciones_no_elegibles_para_escritura": [],
-      "oraciones_descartadas_ordenar": [],
-      "opciones_reducidas": [],
-      "familias_repaso_organico": [
-        {
-          "familia_id": "wiyantam",
-          "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "palitak",
-          "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "sitsni",
-          "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "wilk_tho",
-          "leccion_origen": "L02",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "jakilta",
-          "leccion_origen": "L02",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "wakpacha",
-          "leccion_origen": "L01",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "thuni_seschay",
-          "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "am",
-          "leccion_origen": "L02",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "ni",
-          "leccion_origen": "L02",
-          "uso": "distractor"
-        }
-      ]
-    },
-    {
-      "leccion_id": "L04",
-      "familias_nuevas": 3,
-      "familias_repaso_leccion": 4,
-      "total_pasos": 16,
-      "pasos_por_tipo": {
-        "presentacion_familia": 3,
-        "uch_a_es": 2,
-        "emparejar_uch_es": 2,
-        "audio_a_uch": 1,
-        "escribir_forma": 1,
-        "escribir_palabra": 2,
-        "escucha_y_repite_asr": 1,
-        "ordenar_oracion": 1,
-        "escribir_oracion": 2,
-        "escucha_y_repite_oracion_asr": 1
-      },
-      "escrituras_libres_totales": 5,
-      "desglose_escritura": {
-        "palabras": 2,
-        "formas": 1,
-        "oraciones_traduccion": 1,
-        "oraciones_dictado": 1
-      },
-      "posiciones_asr": [
-        {
           "tipo": "escucha_y_repite_asr",
-          "pos": 11,
-          "target": "ana"
+          "pos": 16,
+          "target": "chhuniqasi"
         },
         {
           "tipo": "escucha_y_repite_oracion_asr",
-          "pos": 14,
-          "target": "O_014"
+          "pos": 28,
+          "target": "O_010"
         }
       ],
       "objetivos_escritura": [
@@ -375,15 +256,21 @@
           "fuente_estimulo": "audio"
         },
         {
-          "tipo": "escribir_oracion",
-          "objetivo": "O_012",
-          "respuesta": "Shila wilk chhuñiqasi",
+          "tipo": "escribir_palabra",
+          "objetivo": "chhuljama",
+          "respuesta": "Chhuljama",
           "fuente_estimulo": "texto_es"
         },
         {
           "tipo": "escribir_oracion",
-          "objetivo": "O_013",
-          "respuesta": "Ana wilk anachhuñi",
+          "objetivo": "O_008",
+          "respuesta": "Chhuljamachay Pedro",
+          "fuente_estimulo": "texto_es"
+        },
+        {
+          "tipo": "escribir_oracion",
+          "objetivo": "O_009",
+          "respuesta": "Wilk chhuñiqasi, amthü",
           "fuente_estimulo": "audio"
         }
       ],
@@ -391,7 +278,7 @@
         "total": 2,
         "emparejar_uch_es": 2
       },
-      "oracion_asr_seleccionada": "O_014",
+      "oracion_asr_seleccionada": "O_010",
       "oraciones_no_elegibles_para_escritura": [
         {
           "id": "O_011",
@@ -408,29 +295,39 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "ni",
-          "leccion_origen": "L02",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "wakpacha",
+          "familia_id": "wiyantam",
           "leccion_origen": "L01",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "wilk_tho",
-          "leccion_origen": "L02",
-          "uso": "emparejamiento"
+          "uso": "distractor"
         },
         {
           "familia_id": "thu",
           "leccion_origen": "L02",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "jakilta",
+          "leccion_origen": "L02",
           "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "ti_wiyanichay",
+          "leccion_origen": "L01",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "am",
+          "leccion_origen": "L02",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "ni",
+          "leccion_origen": "L02",
+          "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L05",
+      "leccion_id": "L04",
       "familias_nuevas": 6,
       "familias_repaso_leccion": 1,
       "total_pasos": 23,
@@ -480,7 +377,7 @@
         {
           "tipo": "escribir_oracion",
           "objetivo": "O_015",
-          "respuesta": "Jasiktam pichuchay pedro",
+          "respuesta": "Jasiktam pichuchay Pedro",
           "fuente_estimulo": "texto_es"
         },
         {
@@ -500,8 +397,8 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "iwaltaki",
-          "leccion_origen": "L03",
+          "familia_id": "ti_wiyanichay",
+          "leccion_origen": "L01",
           "uso": "distractor"
         },
         {
@@ -515,18 +412,28 @@
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuniqasi",
-          "leccion_origen": "L03",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "am",
+          "familia_id": "wilk_tho",
           "leccion_origen": "L02",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "ti_wiyanichay",
+          "familia_id": "thu",
+          "leccion_origen": "L02",
+          "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "thuni_seschay",
           "leccion_origen": "L01",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "uwapinichay",
+          "leccion_origen": "L03",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "am",
+          "leccion_origen": "L02",
           "uso": "distractor"
         },
         {
@@ -535,24 +442,19 @@
           "uso": "distractor"
         },
         {
-          "familia_id": "palitak",
+          "familia_id": "chhuniqasi",
+          "leccion_origen": "L03",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "wakpacha",
           "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "thu",
-          "leccion_origen": "L02",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "wilk_tho",
-          "leccion_origen": "L02",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L06",
+      "leccion_id": "L05",
       "familias_nuevas": 4,
       "familias_repaso_leccion": 6,
       "total_pasos": 18,
@@ -623,28 +525,28 @@
       "familias_repaso_organico": [
         {
           "familia_id": "pichuchay",
-          "leccion_origen": "L05",
+          "leccion_origen": "L04",
           "uso": "distractor"
         },
         {
-          "familia_id": "shila",
-          "leccion_origen": "L04",
+          "familia_id": "iwaltaki",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "wiyantam",
-          "leccion_origen": "L01",
+          "familia_id": "am",
+          "leccion_origen": "L02",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "anachhuni",
+          "familia_id": "ti",
           "leccion_origen": "L04",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L07",
+      "leccion_id": "L06",
       "familias_nuevas": 7,
       "familias_repaso_leccion": 4,
       "total_pasos": 25,
@@ -722,19 +624,19 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "thu",
-          "leccion_origen": "L02",
+          "familia_id": "shila",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "shila",
-          "leccion_origen": "L04",
+          "familia_id": "ana",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L08",
+      "leccion_id": "L07",
       "familias_nuevas": 10,
       "familias_repaso_leccion": 4,
       "total_pasos": 34,
@@ -824,23 +726,23 @@
       "familias_repaso_organico": [
         {
           "familia_id": "oqschay",
-          "leccion_origen": "L06",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "pichuchay",
           "leccion_origen": "L05",
           "uso": "distractor"
         },
         {
+          "familia_id": "pichuchay",
+          "leccion_origen": "L04",
+          "uso": "distractor"
+        },
+        {
           "familia_id": "kusikasi",
-          "leccion_origen": "L07",
+          "leccion_origen": "L06",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L09",
+      "leccion_id": "L08",
       "familias_nuevas": 8,
       "familias_repaso_leccion": 9,
       "total_pasos": 29,
@@ -924,23 +826,23 @@
       "familias_repaso_organico": [
         {
           "familia_id": "chhaq",
-          "leccion_origen": "L08",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "kusikasi",
           "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
-          "familia_id": "apay",
+          "familia_id": "uchs",
           "leccion_origen": "L07",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "anachhuni",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L10",
+      "leccion_id": "L09",
       "familias_nuevas": 10,
       "familias_repaso_leccion": 1,
       "total_pasos": 33,
@@ -1030,17 +932,17 @@
       "familias_repaso_organico": [
         {
           "familia_id": "nonschay",
-          "leccion_origen": "L09",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "oqlaychay",
-          "leccion_origen": "L09",
+          "familia_id": "satschay",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "purchay",
-          "leccion_origen": "L09",
+          "familia_id": "wistakchay",
+          "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
@@ -1051,7 +953,7 @@
       ]
     },
     {
-      "leccion_id": "L11",
+      "leccion_id": "L10",
       "familias_nuevas": 8,
       "familias_repaso_leccion": 3,
       "total_pasos": 28,
@@ -1134,44 +1036,34 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "chhaq",
+          "familia_id": "lowalowa",
           "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "lowalowa",
+          "familia_id": "sisni",
           "leccion_origen": "L09",
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuni",
-          "leccion_origen": "L10",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "jakilta",
-          "leccion_origen": "L02",
+          "familia_id": "anachhuni",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "sisni",
-          "leccion_origen": "L10",
+          "familia_id": "apichuy",
+          "leccion_origen": "L09",
           "uso": "distractor"
         },
         {
           "familia_id": "chhi",
-          "leccion_origen": "L08",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "kayuy",
           "leccion_origen": "L07",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L12",
+      "leccion_id": "L11",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 4,
       "total_pasos": 31,
@@ -1261,48 +1153,48 @@
       "familias_repaso_organico": [
         {
           "familia_id": "chhi",
-          "leccion_origen": "L08",
+          "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
           "familia_id": "peske",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuk",
-          "leccion_origen": "L11",
+          "familia_id": "chhasi",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "kusikasi",
-          "leccion_origen": "L07",
+          "familia_id": "lowalowa",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "apay",
+          "familia_id": "eskhara",
           "leccion_origen": "L07",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "lasnuchay",
-          "leccion_origen": "L09",
+          "familia_id": "chirsnachay",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
           "familia_id": "oqlaychay",
-          "leccion_origen": "L09",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
           "familia_id": "taki",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L13",
+      "leccion_id": "L12",
       "familias_nuevas": 8,
       "familias_repaso_leccion": 8,
       "total_pasos": 29,
@@ -1391,18 +1283,18 @@
         },
         {
           "familia_id": "jasiktam",
-          "leccion_origen": "L05",
+          "leccion_origen": "L04",
           "uso": "distractor"
         },
         {
-          "familia_id": "malaqoy",
-          "leccion_origen": "L10",
+          "familia_id": "axtal",
+          "leccion_origen": "L08",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L14",
+      "leccion_id": "L13",
       "familias_nuevas": 7,
       "familias_repaso_leccion": 7,
       "total_pasos": 25,
@@ -1480,34 +1372,34 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "sana",
-          "leccion_origen": "L12",
+          "familia_id": "chusi",
+          "leccion_origen": "L11",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "apichuy",
-          "leccion_origen": "L10",
+          "familia_id": "kayuy",
+          "leccion_origen": "L06",
           "uso": "emparejamiento"
         },
         {
           "familia_id": "chhi",
-          "leccion_origen": "L08",
+          "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
           "familia_id": "peske",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "purchay",
-          "leccion_origen": "L09",
+          "familia_id": "khitschay",
+          "leccion_origen": "L12",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L15",
+      "leccion_id": "L14",
       "familias_nuevas": 8,
       "familias_repaso_leccion": 5,
       "total_pasos": 28,
@@ -1589,54 +1481,49 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "ataluy",
-          "leccion_origen": "L07",
+          "familia_id": "peske",
+          "leccion_origen": "L10",
           "uso": "emparejamiento"
         },
         {
           "familia_id": "chhasi",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuk",
+          "familia_id": "echs",
           "leccion_origen": "L11",
           "uso": "distractor"
         },
         {
           "familia_id": "ew",
-          "leccion_origen": "L11",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "puschay",
           "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "taxsnakichay",
-          "leccion_origen": "L13",
+          "familia_id": "amaruskchay",
+          "leccion_origen": "L12",
           "uso": "distractor"
         },
         {
-          "familia_id": "paxpiku",
-          "leccion_origen": "L14",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "peske",
-          "leccion_origen": "L11",
+          "familia_id": "piwachay",
+          "leccion_origen": "L12",
           "uso": "distractor"
         },
         {
           "familia_id": "chhep",
-          "leccion_origen": "L12",
+          "leccion_origen": "L11",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "paxpiku",
+          "leccion_origen": "L13",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L16",
+      "leccion_id": "L15",
       "familias_nuevas": 6,
       "familias_repaso_leccion": 6,
       "total_pasos": 23,
@@ -1714,29 +1601,34 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "peske",
-          "leccion_origen": "L11",
+          "familia_id": "apichuy",
+          "leccion_origen": "L09",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "salskama",
-          "leccion_origen": "L05",
+          "familia_id": "urkhu",
+          "leccion_origen": "L10",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "jaxchay",
-          "leccion_origen": "L13",
+          "familia_id": "siqetschay",
+          "leccion_origen": "L14",
           "uso": "distractor"
         },
         {
           "familia_id": "chhep",
-          "leccion_origen": "L12",
+          "leccion_origen": "L11",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "peske",
+          "leccion_origen": "L10",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L17",
+      "leccion_id": "L16",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 7,
       "total_pasos": 32,
@@ -1825,14 +1717,14 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "apay",
-          "leccion_origen": "L07",
+          "familia_id": "iwaltaki",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L18",
+      "leccion_id": "L17",
       "familias_nuevas": 8,
       "familias_repaso_leccion": 7,
       "total_pasos": 28,
@@ -1914,29 +1806,29 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "lowalowa",
-          "leccion_origen": "L09",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "saxoni",
-          "leccion_origen": "L15",
+          "leccion_origen": "L14",
           "uso": "distractor"
         },
         {
-          "familia_id": "uwapinichay",
-          "leccion_origen": "L03",
+          "familia_id": "chhata",
+          "leccion_origen": "L07",
           "uso": "emparejamiento"
         },
         {
+          "familia_id": "axtal",
+          "leccion_origen": "L08",
+          "uso": "distractor"
+        },
+        {
           "familia_id": "tila",
-          "leccion_origen": "L12",
+          "leccion_origen": "L11",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L19",
+      "leccion_id": "L18",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 7,
       "total_pasos": 31,
@@ -2017,29 +1909,29 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "nonschay",
+          "familia_id": "apichuy",
           "leccion_origen": "L09",
           "uso": "emparejamiento"
         },
         {
           "familia_id": "chherchher",
-          "leccion_origen": "L18",
+          "leccion_origen": "L17",
           "uso": "distractor"
         },
         {
           "familia_id": "saxoni",
-          "leccion_origen": "L15",
+          "leccion_origen": "L14",
           "uso": "distractor"
         },
         {
           "familia_id": "serx",
-          "leccion_origen": "L18",
+          "leccion_origen": "L17",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L20",
+      "leccion_id": "L19",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 5,
       "total_pasos": 32,
@@ -2128,34 +2020,39 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "lulschay",
-          "leccion_origen": "L19",
+          "familia_id": "chukichay",
+          "leccion_origen": "L18",
           "uso": "distractor"
         },
         {
-          "familia_id": "lasnuchay",
+          "familia_id": "wisnaks",
           "leccion_origen": "L09",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "taxchuku",
-          "leccion_origen": "L15",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "taxsnuku",
+          "leccion_origen": "L14",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "tuwqo",
           "leccion_origen": "L15",
           "uso": "distractor"
         },
         {
-          "familia_id": "likschay",
-          "leccion_origen": "L17",
+          "familia_id": "taxchuku",
+          "leccion_origen": "L14",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "tuchay",
+          "leccion_origen": "L16",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L21",
+      "leccion_id": "L20",
       "familias_nuevas": 8,
       "familias_repaso_leccion": 11,
       "total_pasos": 29,
@@ -2238,14 +2135,14 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "ew",
-          "leccion_origen": "L11",
+          "familia_id": "jilli",
+          "leccion_origen": "L16",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L22",
+      "leccion_id": "L21",
       "familias_nuevas": 5,
       "familias_repaso_leccion": 8,
       "total_pasos": 20,
@@ -2315,29 +2212,29 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "chichalay",
+          "familia_id": "wiyantam",
+          "leccion_origen": "L01",
+          "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "chhiqha",
+          "leccion_origen": "L13",
+          "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "chheqhoni",
           "leccion_origen": "L07",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "siqetschay",
-          "leccion_origen": "L15",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "maska",
-          "leccion_origen": "L16",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "lulschay",
+          "familia_id": "chatschay",
           "leccion_origen": "L19",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L23",
+      "leccion_id": "L22",
       "familias_nuevas": 10,
       "familias_repaso_leccion": 4,
       "total_pasos": 33,
@@ -2425,24 +2322,24 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
+          "familia_id": "chherchher",
+          "leccion_origen": "L17",
+          "uso": "distractor"
+        },
+        {
           "familia_id": "choq",
-          "leccion_origen": "L21",
+          "leccion_origen": "L20",
           "uso": "distractor"
         },
         {
           "familia_id": "jilaynacha",
-          "leccion_origen": "L21",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "qotni",
-          "leccion_origen": "L19",
+          "leccion_origen": "L20",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L24",
+      "leccion_id": "L23",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 9,
       "total_pasos": 32,
@@ -2531,34 +2428,34 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "sisni",
-          "leccion_origen": "L10",
+          "familia_id": "ana",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "paxpiku",
-          "leccion_origen": "L14",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "qonqo",
-          "leccion_origen": "L20",
+          "leccion_origen": "L19",
           "uso": "distractor"
         },
         {
           "familia_id": "sanqo",
-          "leccion_origen": "L20",
+          "leccion_origen": "L19",
           "uso": "distractor"
         },
         {
-          "familia_id": "tanachay",
-          "leccion_origen": "L23",
+          "familia_id": "tuwqo",
+          "leccion_origen": "L15",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "lulschay",
+          "leccion_origen": "L18",
           "uso": "distractor"
         }
       ]
     },
     {
-      "leccion_id": "L25",
+      "leccion_id": "L24",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 7,
       "total_pasos": 32,
@@ -2653,23 +2550,18 @@
         },
         {
           "familia_id": "chhulurasa",
-          "leccion_origen": "L13",
+          "leccion_origen": "L12",
           "uso": "distractor"
         },
         {
           "familia_id": "jasiktam",
-          "leccion_origen": "L05",
+          "leccion_origen": "L04",
           "uso": "distractor"
-        },
-        {
-          "familia_id": "wistakchay",
-          "leccion_origen": "L08",
-          "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L26",
+      "leccion_id": "L25",
       "familias_nuevas": 9,
       "familias_repaso_leccion": 5,
       "total_pasos": 32,
@@ -2758,19 +2650,19 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "tanschay",
-          "leccion_origen": "L24",
+          "familia_id": "qhorskchay",
+          "leccion_origen": "L22",
           "uso": "distractor"
         },
         {
-          "familia_id": "aymilla",
-          "leccion_origen": "L08",
+          "familia_id": "chhuni",
+          "leccion_origen": "L09",
           "uso": "emparejamiento"
         }
       ]
     },
     {
-      "leccion_id": "L27",
+      "leccion_id": "L26",
       "familias_nuevas": 13,
       "familias_repaso_leccion": 8,
       "total_pasos": 41,
@@ -2851,23 +2743,18 @@
       "opciones_reducidas": [],
       "familias_repaso_organico": [
         {
-          "familia_id": "ti",
+          "familia_id": "ni",
+          "leccion_origen": "L02",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "uchumik",
           "leccion_origen": "L05",
           "uso": "distractor"
         },
         {
-          "familia_id": "wisnakti",
-          "leccion_origen": "L06",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "chhaqway",
-          "leccion_origen": "L23",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "chhasi",
-          "leccion_origen": "L11",
+          "leccion_origen": "L22",
           "uso": "distractor"
         }
       ]
@@ -3343,7 +3230,7 @@
         {
           "tipo": "escribir_oracion",
           "oracion_id": "O_004",
-          "respuesta_esperada_uch": "Wilk thö lorenzo",
+          "respuesta_esperada_uch": "Wilk thö Lorenzo",
           "consigna": "Traduce al uchumataqu: «Yo soy Lorenzo»",
           "fuente_estimulo": "texto_es",
           "refuerzo_al_fallar": {
@@ -3385,13 +3272,18 @@
       "orden": 3,
       "familias_nuevas": [
         "amthu",
+        "ana",
+        "anachhuni",
         "chhuljama",
         "chhuniqasi",
         "iwaltaki",
+        "shila",
         "uwapinichay",
         "wilk"
       ],
-      "familias_repaso": [],
+      "familias_repaso": [
+        "palitak"
+      ],
       "familias_repaso_organico": [
         {
           "familia_id": "wiyantam",
@@ -3399,17 +3291,7 @@
           "uso": "distractor"
         },
         {
-          "familia_id": "palitak",
-          "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "sitsni",
-          "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "wilk_tho",
+          "familia_id": "thu",
           "leccion_origen": "L02",
           "uso": "distractor"
         },
@@ -3419,12 +3301,7 @@
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "wakpacha",
-          "leccion_origen": "L01",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "thuni_seschay",
+          "familia_id": "ti_wiyanichay",
           "leccion_origen": "L01",
           "uso": "distractor"
         },
@@ -3442,7 +3319,11 @@
       "oraciones_ids": [
         "O_008",
         "O_009",
-        "O_010"
+        "O_010",
+        "O_011",
+        "O_012",
+        "O_013",
+        "O_014"
       ],
       "pasos": [
         {
@@ -3466,20 +3347,58 @@
         },
         {
           "tipo": "presentacion_familia",
-          "objetivo_id": "chhuljama",
+          "objetivo_id": "ana",
           "tiene_formas": true,
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
         },
         {
           "tipo": "audio_a_forma",
-          "forma_id": "chhuljamachay",
-          "raiz_id": "chhuljama",
+          "forma_id": "anapini",
+          "raiz_id": "ana",
           "opciones_ids": [
-            "chhuljamachay",
+            "anapini",
             "ninaka",
             "palitakchay",
             "sitsninaka"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "presentacion_familia",
+          "objetivo_id": "anachhuni",
+          "tiene_formas": false,
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "uch_a_es",
+          "objetivo_id": "anachhuni",
+          "opciones_ids": [
+            "anachhuni",
+            "chhuniqasi",
+            "palitak",
+            "thu"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "texto_uch"
+        },
+        {
+          "tipo": "presentacion_familia",
+          "objetivo_id": "chhuljama",
+          "tiene_formas": true,
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "audio_a_uch",
+          "objetivo_id": "chhuljama",
+          "opciones_ids": [
+            "chhuljama",
+            "chhullayku",
+            "chhulurasa",
+            "jasiktam"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -3492,6 +3411,18 @@
           "fuente_estimulo": "audio"
         },
         {
+          "tipo": "emparejar_uch_es",
+          "items_ids": [
+            "amthu",
+            "ana",
+            "anachhuni",
+            "chhuljama",
+            "jakilta"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "texto_uch"
+        },
+        {
           "tipo": "presentacion_familia",
           "objetivo_id": "chhuniqasi",
           "tiene_formas": true,
@@ -3502,22 +3433,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chhuniqasi",
           "opciones_ids": [
+            "anachhuni",
             "chhuniqasi",
             "palitak",
-            "sitsni",
-            "wilk_tho"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "emparejar_uch_es",
-          "items_ids": [
-            "amthu",
-            "chhuljama",
-            "chhuniqasi",
-            "jakilta",
-            "wakpacha"
+            "thu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -3535,10 +3454,36 @@
           "opciones_ids": [
             "amthu",
             "iwaltaki",
-            "thuni_seschay",
+            "ti_wiyanichay",
             "uwapinichay"
           ],
           "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "presentacion_familia",
+          "objetivo_id": "shila",
+          "tiene_formas": false,
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "uch_a_es",
+          "objetivo_id": "shila",
+          "opciones_ids": [
+            "amthu",
+            "ana",
+            "anachhuni",
+            "shila"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "texto_uch"
+        },
+        {
+          "tipo": "escucha_y_repite_asr",
+          "objetivo_id": "chhuniqasi",
+          "opcional": true,
+          "seccion": "practica_oral",
           "fuente_estimulo": "audio"
         },
         {
@@ -3549,7 +3494,7 @@
           "fuente_estimulo": "audio"
         },
         {
-          "tipo": "uch_a_es",
+          "tipo": "audio_a_uch",
           "objetivo_id": "uwapinichay",
           "opciones_ids": [
             "amthu",
@@ -3558,7 +3503,7 @@
             "wiyantam"
           ],
           "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
+          "fuente_estimulo": "audio"
         },
         {
           "tipo": "presentacion_familia",
@@ -3568,7 +3513,7 @@
           "fuente_estimulo": "audio"
         },
         {
-          "tipo": "audio_a_uch",
+          "tipo": "uch_a_es",
           "objetivo_id": "wilk",
           "opciones_ids": [
             "am",
@@ -3577,213 +3522,13 @@
             "wilk"
           ],
           "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
+          "fuente_estimulo": "texto_uch"
         },
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "chhuniqasi",
             "iwaltaki",
-            "uwapinichay",
-            "wilk"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "escribir_forma",
-          "forma_id": "chhuljamachay",
-          "raiz_id": "chhuljama",
-          "respuesta_esperada_uch": "Chhuljamachay",
-          "consigna": "Escribe en uchumataqu la forma: «¿Cómo estás?»",
-          "fuente_estimulo": "texto_es",
-          "refuerzo_al_fallar": {
-            "tipo": "audio_a_forma",
-            "forma_id": "chhuljamachay",
-            "raiz_id": "chhuljama"
-          },
-          "seccion": "palabras_nuevas"
-        },
-        {
-          "tipo": "escribir_palabra",
-          "objetivo_id": "chhuljama",
-          "respuesta_esperada_uch": "Chhuljama",
-          "consigna": "Escribe en uchumataqu: «¿Cómo?»",
-          "fuente_estimulo": "texto_es",
-          "refuerzo_al_fallar": {
-            "tipo": "audio_a_uch",
-            "objetivo_id": "chhuljama"
-          },
-          "seccion": "palabras_nuevas"
-        },
-        {
-          "tipo": "escribir_palabra",
-          "objetivo_id": "amthu",
-          "respuesta_esperada_uch": "Amthü",
-          "consigna": "Escucha y escribe la palabra en uchumataqu",
-          "fuente_estimulo": "audio",
-          "refuerzo_al_fallar": {
-            "tipo": "uch_a_es",
-            "objetivo_id": "amthu"
-          },
-          "seccion": "palabras_nuevas"
-        },
-        {
-          "tipo": "ordenar_oracion",
-          "oracion_id": "O_010",
-          "seccion": "practica_oracion",
-          "fuente_estimulo": "texto_es"
-        },
-        {
-          "tipo": "escribir_oracion",
-          "oracion_id": "O_008",
-          "respuesta_esperada_uch": "Chhuljamachay pedro",
-          "consigna": "Traduce al uchumataqu: «¿Cómo estás Pedro?»",
-          "fuente_estimulo": "texto_es",
-          "refuerzo_al_fallar": {
-            "tipo": "ordenar_oracion",
-            "oracion_id": "O_008"
-          },
-          "seccion": "practica_oracion"
-        },
-        {
-          "tipo": "escucha_y_repite_oracion_asr",
-          "oracion_id": "O_010",
-          "opcional": true,
-          "seccion": "practica_oral",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "escribir_oracion",
-          "oracion_id": "O_009",
-          "respuesta_esperada_uch": "Wilk chhuñiqasi, uwapinichay, amthü",
-          "consigna": "Escucha y escribe la oración en uchumataqu",
-          "fuente_estimulo": "audio",
-          "refuerzo_al_fallar": {
-            "tipo": "ordenar_oracion",
-            "oracion_id": "O_009"
-          },
-          "seccion": "practica_oracion"
-        }
-      ]
-    },
-    {
-      "id": "L04",
-      "titulo": "Respuestas de Bienestar",
-      "orden": 4,
-      "familias_nuevas": [
-        "ana",
-        "anachhuni",
-        "shila"
-      ],
-      "familias_repaso": [
-        "chhuniqasi",
-        "palitak",
-        "uwapinichay",
-        "wilk"
-      ],
-      "familias_repaso_organico": [
-        {
-          "familia_id": "ni",
-          "leccion_origen": "L02",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "wakpacha",
-          "leccion_origen": "L01",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "wilk_tho",
-          "leccion_origen": "L02",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "thu",
-          "leccion_origen": "L02",
-          "uso": "emparejamiento"
-        }
-      ],
-      "oraciones_ids": [
-        "O_011",
-        "O_012",
-        "O_013",
-        "O_014"
-      ],
-      "pasos": [
-        {
-          "tipo": "presentacion_familia",
-          "objetivo_id": "ana",
-          "tiene_formas": true,
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "uch_a_es",
-          "objetivo_id": "ana",
-          "opciones_ids": [
-            "ana",
-            "shila",
-            "uwapinichay",
-            "wilk"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "emparejar_uch_es",
-          "items_ids": [
-            "ana",
-            "ni",
-            "thu",
-            "wakpacha",
-            "wilk_tho"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "presentacion_familia",
-          "objetivo_id": "anachhuni",
-          "tiene_formas": false,
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "audio_a_uch",
-          "objetivo_id": "anachhuni",
-          "opciones_ids": [
-            "anachhuni",
-            "chhuniqasi",
-            "palitak",
-            "wilk_tho"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "presentacion_familia",
-          "objetivo_id": "shila",
-          "tiene_formas": false,
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "uch_a_es",
-          "objetivo_id": "shila",
-          "opciones_ids": [
-            "ana",
-            "chhuniqasi",
-            "palitak",
-            "shila"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "emparejar_uch_es",
-          "items_ids": [
-            "anachhuni",
-            "chhuniqasi",
             "shila",
             "uwapinichay",
             "wilk"
@@ -3830,55 +3575,78 @@
           "seccion": "palabras_nuevas"
         },
         {
-          "tipo": "escucha_y_repite_asr",
-          "objetivo_id": "ana",
+          "tipo": "escribir_palabra",
+          "objetivo_id": "chhuljama",
+          "respuesta_esperada_uch": "Chhuljama",
+          "consigna": "Escribe en uchumataqu: «¿Cómo?»",
+          "fuente_estimulo": "texto_es",
+          "refuerzo_al_fallar": {
+            "tipo": "audio_a_uch",
+            "objetivo_id": "chhuljama"
+          },
+          "seccion": "palabras_nuevas"
+        },
+        {
+          "tipo": "ordenar_oracion",
+          "oracion_id": "O_010",
+          "seccion": "practica_oracion",
+          "fuente_estimulo": "texto_es"
+        },
+        {
+          "tipo": "escribir_oracion",
+          "oracion_id": "O_008",
+          "respuesta_esperada_uch": "Chhuljamachay Pedro",
+          "consigna": "Traduce al uchumataqu: «¿Cómo estás Pedro?»",
+          "fuente_estimulo": "texto_es",
+          "refuerzo_al_fallar": {
+            "tipo": "ordenar_oracion",
+            "oracion_id": "O_008"
+          },
+          "seccion": "practica_oracion"
+        },
+        {
+          "tipo": "escucha_y_repite_oracion_asr",
+          "oracion_id": "O_010",
           "opcional": true,
           "seccion": "practica_oral",
           "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "escribir_oracion",
+          "oracion_id": "O_009",
+          "respuesta_esperada_uch": "Wilk chhuñiqasi, amthü",
+          "consigna": "Escucha y escribe la oración en uchumataqu",
+          "fuente_estimulo": "audio",
+          "refuerzo_al_fallar": {
+            "tipo": "ordenar_oracion",
+            "oracion_id": "O_009"
+          },
+          "seccion": "practica_oracion"
+        },
+        {
+          "tipo": "ordenar_oracion",
+          "oracion_id": "O_012",
+          "seccion": "practica_oracion",
+          "fuente_estimulo": "texto_es"
+        },
+        {
+          "tipo": "ordenar_oracion",
+          "oracion_id": "O_013",
+          "seccion": "practica_oracion",
+          "fuente_estimulo": "texto_es"
         },
         {
           "tipo": "ordenar_oracion",
           "oracion_id": "O_014",
           "seccion": "practica_oracion",
           "fuente_estimulo": "texto_es"
-        },
-        {
-          "tipo": "escribir_oracion",
-          "oracion_id": "O_012",
-          "respuesta_esperada_uch": "Shila wilk chhuñiqasi",
-          "consigna": "Traduce al uchumataqu: «Sí, yo estoy bien»",
-          "fuente_estimulo": "texto_es",
-          "refuerzo_al_fallar": {
-            "tipo": "ordenar_oracion",
-            "oracion_id": "O_012"
-          },
-          "seccion": "practica_oracion"
-        },
-        {
-          "tipo": "escucha_y_repite_oracion_asr",
-          "oracion_id": "O_014",
-          "opcional": true,
-          "seccion": "practica_oral",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "escribir_oracion",
-          "oracion_id": "O_013",
-          "respuesta_esperada_uch": "Ana wilk anachhuñi",
-          "consigna": "Escucha y escribe la oración en uchumataqu",
-          "fuente_estimulo": "audio",
-          "refuerzo_al_fallar": {
-            "tipo": "ordenar_oracion",
-            "oracion_id": "O_013"
-          },
-          "seccion": "practica_oracion"
         }
       ]
     },
     {
-      "id": "L05",
+      "id": "L04",
       "titulo": "Procedencia y Despedida",
-      "orden": 5,
+      "orden": 4,
       "familias_nuevas": [
         "chhuni_pichuchay",
         "jasiktam",
@@ -3892,8 +3660,8 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "iwaltaki",
-          "leccion_origen": "L03",
+          "familia_id": "ti_wiyanichay",
+          "leccion_origen": "L01",
           "uso": "distractor"
         },
         {
@@ -3907,18 +3675,28 @@
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuniqasi",
-          "leccion_origen": "L03",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "am",
+          "familia_id": "wilk_tho",
           "leccion_origen": "L02",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "ti_wiyanichay",
+          "familia_id": "thu",
+          "leccion_origen": "L02",
+          "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "thuni_seschay",
           "leccion_origen": "L01",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "uwapinichay",
+          "leccion_origen": "L03",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "am",
+          "leccion_origen": "L02",
           "uso": "distractor"
         },
         {
@@ -3927,18 +3705,13 @@
           "uso": "distractor"
         },
         {
-          "familia_id": "palitak",
+          "familia_id": "chhuniqasi",
+          "leccion_origen": "L03",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "wakpacha",
           "leccion_origen": "L01",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "thu",
-          "leccion_origen": "L02",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "wilk_tho",
-          "leccion_origen": "L02",
           "uso": "distractor"
         }
       ],
@@ -3962,8 +3735,8 @@
           "objetivo_id": "chhuni_pichuchay",
           "opciones_ids": [
             "chhuni_pichuchay",
-            "iwaltaki",
             "salskama",
+            "ti_wiyanichay",
             "wiyantam"
           ],
           "seccion": "palabras_nuevas",
@@ -4007,9 +3780,9 @@
           "objetivo_id": "pichuchay",
           "opciones_ids": [
             "pichuchay",
+            "pitkchay",
             "shatachay",
-            "sischay",
-            "tuqschay"
+            "sisuchay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -4017,11 +3790,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "am",
             "chhuni_pichuchay",
-            "chhuniqasi",
             "jasiktam",
-            "pichuchay"
+            "pichuchay",
+            "thu",
+            "wilk_tho"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4039,8 +3812,8 @@
           "opciones_ids": [
             "chhuni_pichuchay",
             "salskama",
-            "ti_wiyanichay",
-            "wiyantam"
+            "thuni_seschay",
+            "uwapinichay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4075,10 +3848,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "watha",
           "opciones_ids": [
-            "palitak",
+            "chhuniqasi",
             "thu",
-            "watha",
-            "wilk_tho"
+            "wakpacha",
+            "watha"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4127,7 +3900,7 @@
         {
           "tipo": "escribir_oracion",
           "oracion_id": "O_015",
-          "respuesta_esperada_uch": "Jasiktam pichuchay pedro",
+          "respuesta_esperada_uch": "Jasiktam pichuchay Pedro",
           "consigna": "Traduce al uchumataqu: «¿De dónde vienes Pedro?»",
           "fuente_estimulo": "texto_es",
           "refuerzo_al_fallar": {
@@ -4170,9 +3943,9 @@
       ]
     },
     {
-      "id": "L06",
+      "id": "L05",
       "titulo": "Pronombres y Plurales",
-      "orden": 6,
+      "orden": 5,
       "familias_nuevas": [
         "amchuki",
         "oqschay",
@@ -4190,21 +3963,21 @@
       "familias_repaso_organico": [
         {
           "familia_id": "pichuchay",
-          "leccion_origen": "L05",
+          "leccion_origen": "L04",
           "uso": "distractor"
         },
         {
-          "familia_id": "shila",
-          "leccion_origen": "L04",
+          "familia_id": "iwaltaki",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "wiyantam",
-          "leccion_origen": "L01",
+          "familia_id": "am",
+          "leccion_origen": "L02",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "anachhuni",
+          "familia_id": "ti",
           "leccion_origen": "L04",
           "uso": "emparejamiento"
         }
@@ -4248,8 +4021,8 @@
           "opciones_ids": [
             "oqschay",
             "pichuchay",
-            "sischay",
-            "sisuchay"
+            "pitkchay",
+            "sischay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4264,11 +4037,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "am",
             "amchuki",
-            "anachhuni",
+            "iwaltaki",
             "oqschay",
-            "shila",
-            "wiyantam"
+            "ti"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4315,9 +4088,9 @@
           "tipo": "emparejar_uch_es",
           "items_ids": [
             "ana",
-            "chhuni_pichuchay",
+            "palitak",
+            "sitsni",
             "uchumik",
-            "watha",
             "wisnakti"
           ],
           "seccion": "palabras_nuevas",
@@ -4393,9 +4166,9 @@
       ]
     },
     {
-      "id": "L07",
+      "id": "L06",
       "titulo": "El Núcleo Familiar",
-      "orden": 7,
+      "orden": 6,
       "familias_nuevas": [
         "apay",
         "ataluy",
@@ -4413,13 +4186,13 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "thu",
-          "leccion_origen": "L02",
+          "familia_id": "shila",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "shila",
-          "leccion_origen": "L04",
+          "familia_id": "ana",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         }
       ],
@@ -4443,8 +4216,8 @@
           "opciones_ids": [
             "apay",
             "chichalay",
-            "kayuy",
-            "palitak"
+            "palitak",
+            "yachiri"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -4462,8 +4235,8 @@
           "raiz_id": "ataluy",
           "opciones_ids": [
             "ataluychay",
-            "chhaxrananaka",
-            "chhuniqasichay",
+            "palitakchay",
+            "palitaknaka",
             "sitsninakachay"
           ],
           "seccion": "palabras_nuevas",
@@ -4480,10 +4253,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chichalay",
           "opciones_ids": [
+            "apay",
             "ataluy",
             "chichalay",
-            "kayuy",
-            "yachiri"
+            "kayuy"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4498,11 +4271,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "ana",
             "apay",
             "ataluy",
             "chichalay",
-            "shila",
-            "thu"
+            "shila"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4518,10 +4291,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "kayuy",
           "opciones_ids": [
-            "apay",
-            "ataluy",
+            "chichalay",
             "kayuy",
-            "palitak"
+            "palitak",
+            "yachiri"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -4576,7 +4349,7 @@
           "objetivo_id": "yachiri",
           "opciones_ids": [
             "apay",
-            "ataluy",
+            "kayuy",
             "palitak",
             "yachiri"
           ],
@@ -4586,9 +4359,9 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "am",
             "kayuy",
             "kusikasi",
+            "ni",
             "nis",
             "yachiri"
           ],
@@ -4679,9 +4452,9 @@
       ]
     },
     {
-      "id": "L08",
+      "id": "L07",
       "titulo": "Vestimenta Originaria 1",
-      "orden": 8,
+      "orden": 7,
       "familias_nuevas": [
         "aymilla",
         "chhaq",
@@ -4703,17 +4476,17 @@
       "familias_repaso_organico": [
         {
           "familia_id": "oqschay",
-          "leccion_origen": "L06",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "pichuchay",
           "leccion_origen": "L05",
           "uso": "distractor"
         },
         {
+          "familia_id": "pichuchay",
+          "leccion_origen": "L04",
+          "uso": "distractor"
+        },
+        {
           "familia_id": "kusikasi",
-          "leccion_origen": "L07",
+          "leccion_origen": "L06",
           "uso": "distractor"
         }
       ],
@@ -4736,8 +4509,8 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "aymilla",
           "opciones_ids": [
-            "ataluy",
             "aymilla",
+            "chhata",
             "chheqhoni",
             "eskhara"
           ],
@@ -4775,10 +4548,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chhata",
           "opciones_ids": [
-            "aymilla",
+            "ataluy",
             "chhata",
             "chheqhoni",
-            "ira"
+            "eskhara"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4794,9 +4567,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "chheqhoni",
           "opciones_ids": [
-            "aymilla",
             "chhata",
             "chheqhoni",
+            "eskhara",
             "ira"
           ],
           "seccion": "palabras_nuevas",
@@ -4820,10 +4593,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chhi",
           "opciones_ids": [
+            "chhep",
             "chhi",
             "peske",
-            "taxchuku",
-            "taxsnuku"
+            "qhalu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -4851,8 +4624,8 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "eskhara",
           "opciones_ids": [
-            "aymilla",
-            "chhata",
+            "ataluy",
+            "chheqhoni",
             "eskhara",
             "ira"
           ],
@@ -4870,8 +4643,8 @@
           "tipo": "uch_a_es",
           "objetivo_id": "ira",
           "opciones_ids": [
-            "ataluy",
-            "chheqhoni",
+            "aymilla",
+            "chhata",
             "eskhara",
             "ira"
           ],
@@ -4916,8 +4689,8 @@
           "objetivo_id": "uchs",
           "opciones_ids": [
             "chhaq",
-            "kullku",
             "kusikasi",
+            "tapha",
             "uchs"
           ],
           "seccion": "palabras_nuevas",
@@ -5056,9 +4829,9 @@
       ]
     },
     {
-      "id": "L09",
+      "id": "L08",
       "titulo": "Acciones Cotidianas",
-      "orden": 9,
+      "orden": 8,
       "familias_nuevas": [
         "axtal",
         "chirsnachay",
@@ -5083,17 +4856,17 @@
       "familias_repaso_organico": [
         {
           "familia_id": "chhaq",
-          "leccion_origen": "L08",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "kusikasi",
           "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
-          "familia_id": "apay",
+          "familia_id": "uchs",
           "leccion_origen": "L07",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "anachhuni",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         }
       ],
@@ -5118,8 +4891,8 @@
           "opciones_ids": [
             "axtal",
             "chhaq",
-            "kusikasi",
-            "lowalowa"
+            "lowalowa",
+            "uchs"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5138,7 +4911,7 @@
             "chirsnachay",
             "lasnuchay",
             "oqlaychay",
-            "purchay"
+            "satschay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -5154,8 +4927,8 @@
           "tipo": "uch_a_es",
           "objetivo_id": "lasnuchay",
           "opciones_ids": [
-            "chirsnachay",
             "lasnuchay",
+            "nonschay",
             "oqlaychay",
             "purchay"
           ],
@@ -5181,10 +4954,10 @@
           "forma_id": "lowalowapini",
           "raiz_id": "lowalowa",
           "opciones_ids": [
-            "chhaqchay",
             "chhaqpinichay",
             "kusikasichay",
-            "lowalowapini"
+            "lowalowapini",
+            "uchspinichay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -5192,7 +4965,7 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "apay",
+            "anachhuni",
             "axtal",
             "chirsnachay",
             "lasnuchay",
@@ -5212,9 +4985,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "nonschay",
           "opciones_ids": [
-            "chirsnachay",
             "lasnuchay",
             "nonschay",
+            "oqlaychay",
             "satschay"
           ],
           "seccion": "palabras_nuevas",
@@ -5231,10 +5004,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "oqlaychay",
           "opciones_ids": [
-            "chirsnachay",
             "lasnuchay",
-            "nonschay",
-            "oqlaychay"
+            "oqlaychay",
+            "purchay",
+            "satschay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5257,7 +5030,7 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "purchay",
           "opciones_ids": [
-            "lasnuchay",
+            "chirsnachay",
             "nonschay",
             "oqlaychay",
             "purchay"
@@ -5276,7 +5049,7 @@
           "tipo": "uch_a_es",
           "objetivo_id": "satschay",
           "opciones_ids": [
-            "lasnuchay",
+            "chirsnachay",
             "oqlaychay",
             "purchay",
             "satschay"
@@ -5291,7 +5064,7 @@
             "oqlaychay",
             "purchay",
             "satschay",
-            "watha"
+            "wilk"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5386,9 +5159,9 @@
       ]
     },
     {
-      "id": "L10",
+      "id": "L09",
       "titulo": "Familia Extendida",
-      "orden": 10,
+      "orden": 9,
       "familias_nuevas": [
         "achichay",
         "apichuy",
@@ -5407,17 +5180,17 @@
       "familias_repaso_organico": [
         {
           "familia_id": "nonschay",
-          "leccion_origen": "L09",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "oqlaychay",
-          "leccion_origen": "L09",
+          "familia_id": "satschay",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "purchay",
-          "leccion_origen": "L09",
+          "familia_id": "wistakchay",
+          "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
@@ -5445,7 +5218,7 @@
           "objetivo_id": "achichay",
           "opciones_ids": [
             "achichay",
-            "apichuy",
+            "chhuni",
             "sisni",
             "tololay"
           ],
@@ -5463,10 +5236,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "apichuy",
           "opciones_ids": [
+            "achichay",
             "apichuy",
-            "chhuni",
             "sisni",
-            "tololay"
+            "sitsnizoni"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5501,10 +5274,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "malaqoy",
           "opciones_ids": [
+            "achichay",
             "chhuni",
             "malaqoy",
-            "sisni",
-            "tololay"
+            "sitsnizoni"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5528,9 +5301,9 @@
           "objetivo_id": "puschay",
           "opciones_ids": [
             "nonschay",
-            "oqlaychay",
-            "purchay",
-            "puschay"
+            "puschay",
+            "satschay",
+            "wistakchay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -5580,8 +5353,8 @@
           "opciones_ids": [
             "chhuni",
             "malaqoy",
-            "sisni",
-            "sitsnizoni"
+            "sitsnizoni",
+            "tololay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5597,9 +5370,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "tololay",
           "opciones_ids": [
-            "achichay",
             "malaqoy",
             "sisni",
+            "sitsnizoni",
             "tololay"
           ],
           "seccion": "palabras_nuevas",
@@ -5758,9 +5531,9 @@
       ]
     },
     {
-      "id": "L11",
+      "id": "L10",
       "titulo": "Vestimenta Originaria 2",
-      "orden": 11,
+      "orden": 10,
       "familias_nuevas": [
         "chhasi",
         "chhuk",
@@ -5778,37 +5551,27 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "chhaq",
+          "familia_id": "lowalowa",
           "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "lowalowa",
+          "familia_id": "sisni",
           "leccion_origen": "L09",
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuni",
-          "leccion_origen": "L10",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "jakilta",
-          "leccion_origen": "L02",
+          "familia_id": "anachhuni",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "sisni",
-          "leccion_origen": "L10",
+          "familia_id": "apichuy",
+          "leccion_origen": "L09",
           "uso": "distractor"
         },
         {
           "familia_id": "chhi",
-          "leccion_origen": "L08",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "kayuy",
           "leccion_origen": "L07",
           "uso": "distractor"
         }
@@ -5831,10 +5594,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chhasi",
           "opciones_ids": [
-            "chhaq",
             "chhasi",
             "chhuk",
-            "ew"
+            "ew",
+            "lowalowa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5896,9 +5659,9 @@
           "tipo": "uch_a_es",
           "objetivo_id": "makchi",
           "opciones_ids": [
-            "chhuni",
             "makchi",
             "maxsi",
+            "sisni",
             "urkhu"
           ],
           "seccion": "palabras_nuevas",
@@ -5907,10 +5670,10 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "anachhuni",
             "chhasi",
             "chhuk",
             "ew",
-            "jakilta",
             "makchi"
           ],
           "seccion": "palabras_nuevas",
@@ -5927,9 +5690,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "maxsi",
           "opciones_ids": [
+            "apichuy",
             "makchi",
             "maxsi",
-            "sisni",
             "urkhu"
           ],
           "seccion": "palabras_nuevas",
@@ -5948,8 +5711,8 @@
           "opciones_ids": [
             "chhi",
             "peske",
-            "sanqo",
-            "taxsnuku"
+            "taxchuku",
+            "tuwqo"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -5972,7 +5735,7 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "taki",
           "opciones_ids": [
-            "chhasi",
+            "am",
             "taki",
             "tichu",
             "tila"
@@ -5991,7 +5754,7 @@
           "tipo": "uch_a_es",
           "objetivo_id": "urkhu",
           "opciones_ids": [
-            "kayuy",
+            "apichuy",
             "makchi",
             "maxsi",
             "urkhu"
@@ -6002,9 +5765,9 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "am",
             "maxsi",
             "peske",
+            "qhawschay",
             "taki",
             "urkhu"
           ],
@@ -6095,9 +5858,9 @@
       ]
     },
     {
-      "id": "L12",
+      "id": "L11",
       "titulo": "Objetos del Hogar 1",
-      "orden": 12,
+      "orden": 11,
       "familias_nuevas": [
         "chhep",
         "chusi",
@@ -6118,42 +5881,42 @@
       "familias_repaso_organico": [
         {
           "familia_id": "chhi",
-          "leccion_origen": "L08",
+          "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
           "familia_id": "peske",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuk",
-          "leccion_origen": "L11",
+          "familia_id": "chhasi",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "kusikasi",
-          "leccion_origen": "L07",
+          "familia_id": "lowalowa",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
-          "familia_id": "apay",
+          "familia_id": "eskhara",
           "leccion_origen": "L07",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "lasnuchay",
-          "leccion_origen": "L09",
+          "familia_id": "chirsnachay",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
           "familia_id": "oqlaychay",
-          "leccion_origen": "L09",
+          "leccion_origen": "L08",
           "uso": "distractor"
         },
         {
           "familia_id": "taki",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         }
       ],
@@ -6177,8 +5940,8 @@
           "opciones_ids": [
             "chhep",
             "chhi",
-            "paxpiku",
-            "peske"
+            "peske",
+            "qhalu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6195,8 +5958,8 @@
           "objetivo_id": "chusi",
           "opciones_ids": [
             "chusi",
-            "pheta",
             "qhoya",
+            "sana",
             "xorcha"
           ],
           "seccion": "palabras_nuevas",
@@ -6214,9 +5977,9 @@
           "objetivo_id": "echs",
           "opciones_ids": [
             "chhaq",
-            "chhuk",
+            "chhasi",
             "echs",
-            "kusikasi"
+            "lowalowa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6233,10 +5996,10 @@
           "forma_id": "phetanaka",
           "raiz_id": "pheta",
           "opciones_ids": [
-            "chhatanaka",
-            "chhunipinichay",
+            "maxsinaka",
             "phetanaka",
-            "yachirichay"
+            "sisnichay",
+            "sitsnizonipinichay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6251,10 +6014,10 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "apay",
             "chhep",
             "chusi",
             "echs",
+            "eskhara",
             "pheta"
           ],
           "seccion": "palabras_nuevas",
@@ -6274,7 +6037,7 @@
             "chusi",
             "pheta",
             "qhoya",
-            "sana"
+            "xorcha"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6291,9 +6054,9 @@
           "objetivo_id": "sana",
           "opciones_ids": [
             "chusi",
+            "pheta",
             "qhoya",
-            "sana",
-            "xorcha"
+            "sana"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6309,7 +6072,7 @@
           "tipo": "uch_a_es",
           "objetivo_id": "thaxchay",
           "opciones_ids": [
-            "lasnuchay",
+            "chirsnachay",
             "oqlaychay",
             "thaxchay",
             "wistakchay"
@@ -6335,7 +6098,7 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "tila",
           "opciones_ids": [
-            "echs",
+            "chhep",
             "taki",
             "tichu",
             "tila"
@@ -6356,7 +6119,7 @@
           "opciones_ids": [
             "chusi",
             "pheta",
-            "qhoya",
+            "sana",
             "xorcha"
           ],
           "seccion": "palabras_nuevas",
@@ -6470,9 +6233,9 @@
       ]
     },
     {
-      "id": "L13",
+      "id": "L12",
       "titulo": "Actividades del Hogar",
-      "orden": 13,
+      "orden": 12,
       "familias_nuevas": [
         "amaruskchay",
         "chheqets",
@@ -6501,12 +6264,12 @@
         },
         {
           "familia_id": "jasiktam",
-          "leccion_origen": "L05",
+          "leccion_origen": "L04",
           "uso": "distractor"
         },
         {
-          "familia_id": "malaqoy",
-          "leccion_origen": "L10",
+          "familia_id": "axtal",
+          "leccion_origen": "L08",
           "uso": "emparejamiento"
         }
       ],
@@ -6530,9 +6293,9 @@
           "objetivo_id": "amaruskchay",
           "opciones_ids": [
             "amaruskchay",
-            "jaxchay",
             "khitschay",
-            "purchay"
+            "piwachay",
+            "taxsnakichay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6551,7 +6314,7 @@
             "ataluy",
             "chheqets",
             "pheta",
-            "sana"
+            "wiyani"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6596,7 +6359,7 @@
             "amaruskchay",
             "jaxchay",
             "khitschay",
-            "taxsnakichay"
+            "piwachay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6605,10 +6368,10 @@
           "tipo": "emparejar_uch_es",
           "items_ids": [
             "amaruskchay",
+            "axtal",
             "chheqets",
             "chhulurasa",
-            "jaxchay",
-            "malaqoy"
+            "jaxchay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6625,8 +6388,8 @@
           "objetivo_id": "khitschay",
           "opciones_ids": [
             "amaruskchay",
-            "jaxchay",
             "khitschay",
+            "piwachay",
             "taxsnakichay"
           ],
           "seccion": "palabras_nuevas",
@@ -6643,9 +6406,9 @@
           "tipo": "uch_a_es",
           "objetivo_id": "piwachay",
           "opciones_ids": [
-            "amaruskchay",
-            "jaxchay",
+            "khitschay",
             "piwachay",
+            "purchay",
             "taxsnakichay"
           ],
           "seccion": "palabras_nuevas",
@@ -6669,8 +6432,8 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "taxsnakichay",
           "opciones_ids": [
+            "amaruskchay",
             "jaxchay",
-            "piwachay",
             "purchay",
             "taxsnakichay"
           ],
@@ -6689,10 +6452,10 @@
           "forma_id": "wiyanichay",
           "raiz_id": "wiyani",
           "opciones_ids": [
-            "chhatanaka",
+            "chhunipinichay",
             "phetanaka",
-            "wiyanichay",
-            "xorchachay"
+            "sitsnizonipinichay",
+            "wiyanichay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6799,9 +6562,9 @@
       ]
     },
     {
-      "id": "L14",
+      "id": "L13",
       "titulo": "Objetos del Hogar 2",
-      "orden": 14,
+      "orden": 13,
       "familias_nuevas": [
         "achasi",
         "chhiqha",
@@ -6822,28 +6585,28 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "sana",
-          "leccion_origen": "L12",
+          "familia_id": "chusi",
+          "leccion_origen": "L11",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "apichuy",
-          "leccion_origen": "L10",
+          "familia_id": "kayuy",
+          "leccion_origen": "L06",
           "uso": "emparejamiento"
         },
         {
           "familia_id": "chhi",
-          "leccion_origen": "L08",
+          "leccion_origen": "L07",
           "uso": "distractor"
         },
         {
           "familia_id": "peske",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "purchay",
-          "leccion_origen": "L09",
+          "familia_id": "khitschay",
+          "leccion_origen": "L12",
           "uso": "distractor"
         }
       ],
@@ -6867,8 +6630,8 @@
           "opciones_ids": [
             "achasi",
             "apay",
-            "julsnay",
-            "julsni"
+            "chhiqha",
+            "julsnay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6886,9 +6649,9 @@
           "raiz_id": "chhiqha",
           "opciones_ids": [
             "chhiqhanaka",
-            "chhunipinichay",
-            "sisnichay",
-            "sitsnizonipinichay"
+            "maxsinaka",
+            "wiyanichay",
+            "xorchachay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -6904,7 +6667,7 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "chimay",
           "opciones_ids": [
-            "chhiqha",
+            "apay",
             "chimay",
             "julsnay",
             "julsni"
@@ -6923,10 +6686,10 @@
           "tipo": "emparejar_uch_es",
           "items_ids": [
             "achasi",
-            "apichuy",
             "chhiqha",
             "chimay",
-            "sana"
+            "chusi",
+            "kayuy"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6944,8 +6707,8 @@
           "opciones_ids": [
             "achasi",
             "apay",
-            "julsnay",
-            "julsni"
+            "chimay",
+            "julsnay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -6963,7 +6726,7 @@
           "opciones_ids": [
             "achasi",
             "apay",
-            "julsnay",
+            "chimay",
             "julsni"
           ],
           "seccion": "palabras_nuevas",
@@ -6999,8 +6762,8 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "selschay",
           "opciones_ids": [
+            "khitschay",
             "piwachay",
-            "purchay",
             "selschay",
             "wistakchay"
           ],
@@ -7013,8 +6776,8 @@
             "julsnay",
             "julsni",
             "paxpiku",
-            "selschay",
-            "wistakchay"
+            "piwachay",
+            "selschay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7103,9 +6866,9 @@
       ]
     },
     {
-      "id": "L15",
+      "id": "L14",
       "titulo": "Objetos Escolares",
-      "orden": 15,
+      "orden": 14,
       "familias_nuevas": [
         "chhikhits",
         "kuskuts",
@@ -7125,48 +6888,43 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "ataluy",
-          "leccion_origen": "L07",
+          "familia_id": "peske",
+          "leccion_origen": "L10",
           "uso": "emparejamiento"
         },
         {
           "familia_id": "chhasi",
-          "leccion_origen": "L11",
+          "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "chhuk",
+          "familia_id": "echs",
           "leccion_origen": "L11",
           "uso": "distractor"
         },
         {
           "familia_id": "ew",
-          "leccion_origen": "L11",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "puschay",
           "leccion_origen": "L10",
           "uso": "distractor"
         },
         {
-          "familia_id": "taxsnakichay",
-          "leccion_origen": "L13",
+          "familia_id": "amaruskchay",
+          "leccion_origen": "L12",
           "uso": "distractor"
         },
         {
-          "familia_id": "paxpiku",
-          "leccion_origen": "L14",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "peske",
-          "leccion_origen": "L11",
+          "familia_id": "piwachay",
+          "leccion_origen": "L12",
           "uso": "distractor"
         },
         {
           "familia_id": "chhep",
-          "leccion_origen": "L12",
+          "leccion_origen": "L11",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "paxpiku",
+          "leccion_origen": "L13",
           "uso": "distractor"
         }
       ],
@@ -7191,7 +6949,7 @@
             "chhikhits",
             "kuskuts",
             "kuwarerno",
-            "papila"
+            "sitsni"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7210,7 +6968,7 @@
             "chhikhits",
             "kuskuts",
             "kuwarerno",
-            "sitsni"
+            "papila"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -7226,10 +6984,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "kuwarerno",
           "opciones_ids": [
+            "chhikhits",
             "kuskuts",
             "kuwarerno",
-            "papila",
-            "sitsni"
+            "papila"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7263,11 +7021,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "ataluy",
             "chhikhits",
             "kuskuts",
             "kuwarerno",
-            "papila"
+            "papila",
+            "peske"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7284,7 +7042,7 @@
           "objetivo_id": "saxoni",
           "opciones_ids": [
             "chhasi",
-            "chhuk",
+            "echs",
             "ew",
             "saxoni"
           ],
@@ -7302,9 +7060,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "siqetschay",
           "opciones_ids": [
-            "puschay",
+            "amaruskchay",
+            "piwachay",
             "siqetschay",
-            "taxsnakichay",
             "wistakchay"
           ],
           "seccion": "palabras_nuevas",
@@ -7328,7 +7086,7 @@
           "tipo": "uch_a_es",
           "objetivo_id": "taxchuku",
           "opciones_ids": [
-            "paxpiku",
+            "chhep",
             "peske",
             "taxchuku",
             "taxsnuku"
@@ -7347,8 +7105,8 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "taxsnuku",
           "opciones_ids": [
-            "chhep",
             "paxpiku",
+            "peske",
             "taxchuku",
             "taxsnuku"
           ],
@@ -7451,9 +7209,9 @@
       ]
     },
     {
-      "id": "L16",
+      "id": "L15",
       "titulo": "Utensilios de Cocina 1",
-      "orden": 16,
+      "orden": 15,
       "familias_nuevas": [
         "chuwa",
         "khirchula",
@@ -7472,23 +7230,28 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "peske",
-          "leccion_origen": "L11",
+          "familia_id": "apichuy",
+          "leccion_origen": "L09",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "salskama",
-          "leccion_origen": "L05",
+          "familia_id": "urkhu",
+          "leccion_origen": "L10",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "jaxchay",
-          "leccion_origen": "L13",
+          "familia_id": "siqetschay",
+          "leccion_origen": "L14",
           "uso": "distractor"
         },
         {
           "familia_id": "chhep",
-          "leccion_origen": "L12",
+          "leccion_origen": "L11",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "peske",
+          "leccion_origen": "L10",
           "uso": "distractor"
         }
       ],
@@ -7530,9 +7293,9 @@
           "forma_id": "khirchulanaka",
           "raiz_id": "khirchula",
           "opciones_ids": [
+            "achasinaka",
             "khirchulanaka",
-            "phetanaka",
-            "wiyanichay",
+            "kuwarernonaka",
             "xorchachay"
           ],
           "seccion": "palabras_nuevas",
@@ -7567,11 +7330,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "apichuy",
             "chuwa",
             "khirchula",
             "maska",
-            "peske",
-            "salskama"
+            "urkhu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7587,9 +7350,9 @@
           "tipo": "uch_a_es",
           "objetivo_id": "potschay",
           "opciones_ids": [
-            "jaxchay",
             "potschay",
             "qhawschay",
+            "siqetschay",
             "wistakchay"
           ],
           "seccion": "palabras_nuevas",
@@ -7636,11 +7399,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "ni",
             "potschay",
             "potsi",
-            "tuwqo",
-            "wistakchay"
+            "taki",
+            "taxchuku",
+            "tuwqo"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7729,9 +7492,9 @@
       ]
     },
     {
-      "id": "L17",
+      "id": "L16",
       "titulo": "Alimentos Tradicionales",
-      "orden": 17,
+      "orden": 16,
       "familias_nuevas": [
         "chalachay",
         "chiwkis",
@@ -7754,8 +7517,8 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "apay",
-          "leccion_origen": "L07",
+          "familia_id": "iwaltaki",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         }
       ],
@@ -7780,8 +7543,8 @@
           "opciones_ids": [
             "chalachay",
             "jaxchay",
-            "likschay",
-            "selschay"
+            "selschay",
+            "tuchay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -7798,10 +7561,10 @@
           "forma_id": "chiwkisnaka",
           "raiz_id": "chiwkis",
           "opciones_ids": [
-            "achasinaka",
+            "chhiqhanaka",
             "chiwkisnaka",
-            "khirchulanaka",
-            "wiyanichay"
+            "kuwarernonaka",
+            "phetanaka"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -7817,9 +7580,9 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chiwliks",
           "opciones_ids": [
-            "chiwkis",
             "chiwliks",
-            "kula",
+            "jilli",
+            "malaqoy",
             "suwa"
           ],
           "seccion": "palabras_nuevas",
@@ -7854,10 +7617,10 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "apay",
             "chalachay",
             "chiwkis",
             "chiwliks",
+            "iwaltaki",
             "jilli"
           ],
           "seccion": "palabras_nuevas",
@@ -7875,8 +7638,8 @@
           "objetivo_id": "kula",
           "opciones_ids": [
             "chiwkis",
+            "jilli",
             "kula",
-            "malaqoy",
             "sini"
           ],
           "seccion": "palabras_nuevas",
@@ -7894,8 +7657,8 @@
           "objetivo_id": "likschay",
           "opciones_ids": [
             "chalachay",
+            "jaxchay",
             "likschay",
-            "selschay",
             "tuchay"
           ],
           "seccion": "palabras_nuevas",
@@ -7913,9 +7676,9 @@
           "objetivo_id": "sini",
           "opciones_ids": [
             "jilli",
+            "kula",
             "malaqoy",
-            "sini",
-            "suwa"
+            "sini"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -7938,9 +7701,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "suwa",
           "opciones_ids": [
-            "chiwkis",
+            "chiwliks",
             "jilli",
-            "kula",
+            "malaqoy",
             "suwa"
           ],
           "seccion": "palabras_nuevas",
@@ -8079,9 +7842,9 @@
       ]
     },
     {
-      "id": "L18",
+      "id": "L17",
       "titulo": "Utensilios de Cocina 2",
-      "orden": 18,
+      "orden": 17,
       "familias_nuevas": [
         "chherchher",
         "khera",
@@ -8103,23 +7866,23 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "lowalowa",
-          "leccion_origen": "L09",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "saxoni",
-          "leccion_origen": "L15",
+          "leccion_origen": "L14",
           "uso": "distractor"
         },
         {
-          "familia_id": "uwapinichay",
-          "leccion_origen": "L03",
+          "familia_id": "chhata",
+          "leccion_origen": "L07",
           "uso": "emparejamiento"
         },
         {
+          "familia_id": "axtal",
+          "leccion_origen": "L08",
+          "uso": "distractor"
+        },
+        {
           "familia_id": "tila",
-          "leccion_origen": "L12",
+          "leccion_origen": "L11",
           "uso": "distractor"
         }
       ],
@@ -8142,7 +7905,7 @@
           "objetivo_id": "chherchher",
           "opciones_ids": [
             "chherchher",
-            "lowalowa",
+            "kullku",
             "saxoni",
             "serx"
           ],
@@ -8179,10 +7942,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "lusi",
           "opciones_ids": [
-            "chiwliks",
             "lusi",
             "qeru",
-            "suwa"
+            "suwa",
+            "warirachay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8206,8 +7969,8 @@
           "objetivo_id": "qeru",
           "opciones_ids": [
             "chiwliks",
-            "lusi",
             "qeru",
+            "suwa",
             "warirachay"
           ],
           "seccion": "palabras_nuevas",
@@ -8216,11 +7979,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "chhata",
             "chherchher",
             "khera",
             "lusi",
-            "qeru",
-            "uwapinichay"
+            "qeru"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -8236,10 +7999,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "serx",
           "opciones_ids": [
+            "axtal",
             "chherchher",
             "saxoni",
-            "serx",
-            "tapha"
+            "serx"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8255,10 +8018,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "tichu",
           "opciones_ids": [
+            "suwa",
             "taki",
             "tichu",
-            "tila",
-            "wisnakti"
+            "tila"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -8282,9 +8045,9 @@
           "objetivo_id": "warirachay",
           "opciones_ids": [
             "chiwliks",
-            "khera",
-            "suwa",
-            "warirachay"
+            "lusi",
+            "warirachay",
+            "xalsmasi"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8300,9 +8063,9 @@
           "tipo": "uch_a_es",
           "objetivo_id": "xalsmasi",
           "opciones_ids": [
+            "khera",
             "lusi",
             "qeru",
-            "warirachay",
             "xalsmasi"
           ],
           "seccion": "palabras_nuevas",
@@ -8311,8 +8074,8 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "chiwliks",
             "serx",
+            "suwa",
             "tichu",
             "warirachay",
             "xalsmasi"
@@ -8404,9 +8167,9 @@
       ]
     },
     {
-      "id": "L19",
+      "id": "L18",
       "titulo": "Alimentos de la Región",
-      "orden": 19,
+      "orden": 18,
       "familias_nuevas": [
         "arusha",
         "chukichay",
@@ -8429,23 +8192,23 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "nonschay",
+          "familia_id": "apichuy",
           "leccion_origen": "L09",
           "uso": "emparejamiento"
         },
         {
           "familia_id": "chherchher",
-          "leccion_origen": "L18",
+          "leccion_origen": "L17",
           "uso": "distractor"
         },
         {
           "familia_id": "saxoni",
-          "leccion_origen": "L15",
+          "leccion_origen": "L14",
           "uso": "distractor"
         },
         {
           "familia_id": "serx",
-          "leccion_origen": "L18",
+          "leccion_origen": "L17",
           "uso": "distractor"
         }
       ],
@@ -8470,8 +8233,8 @@
           "opciones_ids": [
             "arusha",
             "jilli",
-            "parentina",
-            "yiku"
+            "lusi",
+            "tapa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8525,9 +8288,9 @@
           "tipo": "uch_a_es",
           "objetivo_id": "parentina",
           "opciones_ids": [
-            "lusi",
+            "arusha",
             "parentina",
-            "qhasi",
+            "tapa",
             "yiku"
           ],
           "seccion": "palabras_nuevas",
@@ -8543,10 +8306,10 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "apichuy",
             "arusha",
             "chukichay",
             "lulschay",
-            "nonschay",
             "parentina"
           ],
           "seccion": "palabras_nuevas",
@@ -8563,9 +8326,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qhasi",
           "opciones_ids": [
-            "arusha",
             "lusi",
             "qhasi",
+            "tapa",
             "xawariski"
           ],
           "seccion": "palabras_nuevas",
@@ -8603,8 +8366,8 @@
           "opciones_ids": [
             "arusha",
             "jilli",
-            "lusi",
-            "tapa"
+            "tapa",
+            "xawariski"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8627,10 +8390,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "xawariski",
           "opciones_ids": [
-            "lusi",
+            "arusha",
             "parentina",
-            "xawariski",
-            "yiku"
+            "qhasi",
+            "xawariski"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -8646,9 +8409,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "yiku",
           "opciones_ids": [
-            "jilli",
-            "parentina",
-            "xawariski",
+            "lusi",
+            "qhasi",
+            "tapa",
             "yiku"
           ],
           "seccion": "palabras_nuevas",
@@ -8754,9 +8517,9 @@
       ]
     },
     {
-      "id": "L20",
+      "id": "L19",
       "titulo": "Animales Domésticos",
-      "orden": 20,
+      "orden": 19,
       "familias_nuevas": [
         "chatschay",
         "khuchhi",
@@ -8777,28 +8540,33 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "lulschay",
-          "leccion_origen": "L19",
+          "familia_id": "chukichay",
+          "leccion_origen": "L18",
           "uso": "distractor"
         },
         {
-          "familia_id": "lasnuchay",
+          "familia_id": "wisnaks",
           "leccion_origen": "L09",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "taxchuku",
-          "leccion_origen": "L15",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "taxsnuku",
+          "leccion_origen": "L14",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "tuwqo",
           "leccion_origen": "L15",
           "uso": "distractor"
         },
         {
-          "familia_id": "likschay",
-          "leccion_origen": "L17",
+          "familia_id": "taxchuku",
+          "leccion_origen": "L14",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "tuchay",
+          "leccion_origen": "L16",
           "uso": "distractor"
         }
       ],
@@ -8822,7 +8590,7 @@
           "objetivo_id": "chatschay",
           "opciones_ids": [
             "chatschay",
-            "lulschay",
+            "chukichay",
             "uyuwichay",
             "wistakchay"
           ],
@@ -8842,8 +8610,8 @@
           "opciones_ids": [
             "khuchhi",
             "masota",
-            "paku",
-            "uni"
+            "uni",
+            "wallpa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8861,8 +8629,8 @@
           "opciones_ids": [
             "khuchhi",
             "masota",
-            "paku",
-            "uni"
+            "uni",
+            "wallpa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -8879,8 +8647,8 @@
           "forma_id": "pakunaka",
           "raiz_id": "paku",
           "opciones_ids": [
-            "chiwkisnaka",
-            "kuwarernonaka",
+            "chuwanaka",
+            "khirchulanaka",
             "pakunaka",
             "yikupinichay"
           ],
@@ -8899,9 +8667,9 @@
           "items_ids": [
             "chatschay",
             "khuchhi",
-            "lasnuchay",
             "masota",
-            "paku"
+            "paku",
+            "wisnaks"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -8919,8 +8687,8 @@
           "opciones_ids": [
             "qonqo",
             "sanqo",
-            "taxchuku",
-            "taxsnuku"
+            "taxsnuku",
+            "tuwqo"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -8982,7 +8750,7 @@
           "objetivo_id": "uyuwichay",
           "opciones_ids": [
             "chatschay",
-            "likschay",
+            "tuchay",
             "uyuwichay",
             "wistakchay"
           ],
@@ -9001,8 +8769,8 @@
           "objetivo_id": "wallpa",
           "opciones_ids": [
             "khuchhi",
-            "masota",
             "paku",
+            "uni",
             "wallpa"
           ],
           "seccion": "palabras_nuevas",
@@ -9122,9 +8890,9 @@
       ]
     },
     {
-      "id": "L21",
+      "id": "L20",
       "titulo": "Ganadería y Crianza",
-      "orden": 21,
+      "orden": 20,
       "familias_nuevas": [
         "chiw",
         "choq",
@@ -9150,8 +8918,8 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "ew",
-          "leccion_origen": "L11",
+          "familia_id": "jilli",
+          "leccion_origen": "L16",
           "uso": "emparejamiento"
         }
       ],
@@ -9212,10 +8980,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "iwisa",
           "opciones_ids": [
+            "achichay",
             "iwisa",
             "murchula",
-            "qerwakha",
-            "wakha"
+            "qerwakha"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9251,9 +9019,9 @@
           "items_ids": [
             "chiw",
             "choq",
-            "ew",
             "iwisa",
-            "jilaynacha"
+            "jilaynacha",
+            "jilli"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9270,9 +9038,9 @@
           "objetivo_id": "murchula",
           "opciones_ids": [
             "apichuy",
-            "iwisa",
             "murchula",
-            "qerwakha"
+            "qerwakha",
+            "wakha"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9288,10 +9056,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qerwakha",
           "opciones_ids": [
-            "achichay",
-            "iwisa",
+            "apichuy",
+            "murchula",
             "qerwakha",
-            "wakha"
+            "xala"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -9315,8 +9083,8 @@
           "objetivo_id": "wakha",
           "opciones_ids": [
             "achichay",
+            "apichuy",
             "murchula",
-            "qerwakha",
             "wakha"
           ],
           "seccion": "palabras_nuevas",
@@ -9334,10 +9102,10 @@
           "forma_id": "xalanaka",
           "raiz_id": "xala",
           "opciones_ids": [
-            "chiwkisnaka",
-            "chuwanaka",
-            "sininaka",
-            "xalanaka"
+            "uninaka",
+            "wallpanaka",
+            "xalanaka",
+            "yikupinichay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -9444,9 +9212,9 @@
       ]
     },
     {
-      "id": "L22",
+      "id": "L21",
       "titulo": "Fauna Silvestre",
-      "orden": 22,
+      "orden": 21,
       "familias_nuevas": [
         "chunipaku",
         "phesqona",
@@ -9466,22 +9234,22 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "chichalay",
+          "familia_id": "wiyantam",
+          "leccion_origen": "L01",
+          "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "chhiqha",
+          "leccion_origen": "L13",
+          "uso": "emparejamiento"
+        },
+        {
+          "familia_id": "chheqhoni",
           "leccion_origen": "L07",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "siqetschay",
-          "leccion_origen": "L15",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "maska",
-          "leccion_origen": "L16",
-          "uso": "emparejamiento"
-        },
-        {
-          "familia_id": "lulschay",
+          "familia_id": "chatschay",
           "leccion_origen": "L19",
           "uso": "distractor"
         }
@@ -9507,7 +9275,7 @@
             "chunipaku",
             "phesqona",
             "qetsi",
-            "wiyani"
+            "xalwari"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -9541,11 +9309,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "chichalay",
+            "chheqhoni",
+            "chhiqha",
             "chunipaku",
-            "maska",
             "phesqona",
-            "siqetschay"
+            "wiyantam"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9561,7 +9329,7 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qetsi",
           "opciones_ids": [
-            "chunipaku",
+            "phesqona",
             "qetsi",
             "wiyani",
             "xalwari"
@@ -9580,8 +9348,8 @@
           "tipo": "uch_a_es",
           "objetivo_id": "ulanchay",
           "opciones_ids": [
+            "chatschay",
             "chirsnachay",
-            "lulschay",
             "satschay",
             "ulanchay"
           ],
@@ -9611,9 +9379,9 @@
           "tipo": "emparejar_uch_es",
           "items_ids": [
             "qetsi",
+            "taki",
             "ulanchay",
             "wilk",
-            "wiyani",
             "xalwari"
           ],
           "seccion": "palabras_nuevas",
@@ -9689,9 +9457,9 @@
       ]
     },
     {
-      "id": "L23",
+      "id": "L22",
       "titulo": "Aves del Ecosistema",
-      "orden": 23,
+      "orden": 22,
       "familias_nuevas": [
         "chhaqway",
         "layschay",
@@ -9712,18 +9480,18 @@
       ],
       "familias_repaso_organico": [
         {
+          "familia_id": "chherchher",
+          "leccion_origen": "L17",
+          "uso": "distractor"
+        },
+        {
           "familia_id": "choq",
-          "leccion_origen": "L21",
+          "leccion_origen": "L20",
           "uso": "distractor"
         },
         {
           "familia_id": "jilaynacha",
-          "leccion_origen": "L21",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "qotni",
-          "leccion_origen": "L19",
+          "leccion_origen": "L20",
           "uso": "distractor"
         }
       ],
@@ -9746,9 +9514,9 @@
           "objetivo_id": "chhaqway",
           "opciones_ids": [
             "chhaqway",
+            "chherchher",
             "choq",
-            "jilaynacha",
-            "qotni"
+            "jilaynacha"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9785,8 +9553,8 @@
           "opciones_ids": [
             "lloqa",
             "parina",
-            "qala",
-            "soqna"
+            "sini",
+            "wiwi"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9802,9 +9570,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "parina",
           "opciones_ids": [
-            "lloqa",
             "parina",
-            "soqna",
+            "qala",
+            "sini",
             "wesla"
           ],
           "seccion": "palabras_nuevas",
@@ -9830,7 +9598,7 @@
           "opciones_ids": [
             "lloqa",
             "qala",
-            "wesla",
+            "sini",
             "wiwi"
           ],
           "seccion": "palabras_nuevas",
@@ -9878,10 +9646,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "soqna",
           "opciones_ids": [
-            "lloqa",
             "parina",
             "qala",
-            "soqna"
+            "soqna",
+            "wiwi"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9923,10 +9691,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "wesla",
           "opciones_ids": [
-            "parina",
+            "lloqa",
+            "sini",
             "soqna",
-            "wesla",
-            "wiwi"
+            "wesla"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -9943,8 +9711,8 @@
           "objetivo_id": "wiwi",
           "opciones_ids": [
             "lloqa",
-            "parina",
-            "soqna",
+            "sini",
+            "wesla",
             "wiwi"
           ],
           "seccion": "palabras_nuevas",
@@ -10058,9 +9826,9 @@
       ]
     },
     {
-      "id": "L24",
+      "id": "L23",
       "titulo": "Especies Acuáticas",
-      "orden": 24,
+      "orden": 23,
       "familias_nuevas": [
         "chaxana",
         "chisawa",
@@ -10085,28 +9853,28 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "sisni",
-          "leccion_origen": "L10",
+          "familia_id": "ana",
+          "leccion_origen": "L03",
           "uso": "emparejamiento"
         },
         {
-          "familia_id": "paxpiku",
-          "leccion_origen": "L14",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "qonqo",
-          "leccion_origen": "L20",
+          "leccion_origen": "L19",
           "uso": "distractor"
         },
         {
           "familia_id": "sanqo",
-          "leccion_origen": "L20",
+          "leccion_origen": "L19",
           "uso": "distractor"
         },
         {
-          "familia_id": "tanachay",
-          "leccion_origen": "L23",
+          "familia_id": "tuwqo",
+          "leccion_origen": "L15",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "lulschay",
+          "leccion_origen": "L18",
           "uso": "distractor"
         }
       ],
@@ -10130,9 +9898,9 @@
           "objetivo_id": "chaxana",
           "opciones_ids": [
             "chaxana",
-            "chiwqeri",
-            "qerjina",
-            "watha"
+            "kurwina",
+            "qeri",
+            "qhathu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10148,10 +9916,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "chisawa",
           "opciones_ids": [
-            "chaxana",
             "chisawa",
-            "qerjina",
-            "wiwi"
+            "chiwqeri",
+            "kurwina",
+            "qerjina"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -10167,10 +9935,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "chiwqeri",
           "opciones_ids": [
-            "apay",
+            "ataluy",
             "chisawa",
             "chiwqeri",
-            "watha"
+            "qhathu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10190,7 +9958,7 @@
             "iwisanaka",
             "kurwinanaka",
             "wallpanaka",
-            "yikupinichay"
+            "xalanaka"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -10205,11 +9973,11 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
+            "ana",
             "chaxana",
             "chisawa",
             "chiwqeri",
-            "kurwina",
-            "sisni"
+            "kurwina"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10225,10 +9993,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qeri",
           "opciones_ids": [
-            "chaxana",
-            "chisawa",
+            "apay",
+            "ataluy",
             "qeri",
-            "wiwi"
+            "qhathu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -10244,10 +10012,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "qerjina",
           "opciones_ids": [
-            "apay",
+            "chisawa",
             "qeri",
             "qerjina",
-            "watha"
+            "qhathu"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10263,10 +10031,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qhalu",
           "opciones_ids": [
-            "paxpiku",
             "qhalu",
             "qonqo",
-            "sanqo"
+            "sanqo",
+            "tuwqo"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -10290,9 +10058,9 @@
           "objetivo_id": "qhathu",
           "opciones_ids": [
             "ataluy",
-            "chaxana",
             "qerjina",
-            "qhathu"
+            "qhathu",
+            "wiwi"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10308,7 +10076,7 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "tanschay",
           "opciones_ids": [
-            "tanachay",
+            "lulschay",
             "tanschay",
             "taxsnakichay",
             "tuchay"
@@ -10430,9 +10198,9 @@
       ]
     },
     {
-      "id": "L25",
+      "id": "L24",
       "titulo": "Flora del Altiplano",
-      "orden": 25,
+      "orden": 24,
       "familias_nuevas": [
         "achuchay",
         "chhullayku",
@@ -10461,18 +10229,13 @@
         },
         {
           "familia_id": "chhulurasa",
-          "leccion_origen": "L13",
+          "leccion_origen": "L12",
           "uso": "distractor"
         },
         {
           "familia_id": "jasiktam",
-          "leccion_origen": "L05",
+          "leccion_origen": "L04",
           "uso": "distractor"
-        },
-        {
-          "familia_id": "wistakchay",
-          "leccion_origen": "L08",
-          "uso": "emparejamiento"
         }
       ],
       "oraciones_ids": [
@@ -10533,9 +10296,9 @@
           "objetivo_id": "juwa",
           "opciones_ids": [
             "juwa",
-            "malaqoy",
-            "wiwi",
-            "yoqa"
+            "phiki",
+            "qoq",
+            "wiwi"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10571,9 +10334,9 @@
           "items_ids": [
             "achuchay",
             "chhullayku",
+            "chhulurasa",
             "juwa",
-            "pakschay",
-            "wistakchay"
+            "pakschay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10589,10 +10352,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "phiki",
           "opciones_ids": [
+            "malaqoy",
             "phiki",
-            "qanawi",
-            "qeschhala",
-            "wiwi"
+            "qoq",
+            "yoqa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10608,9 +10371,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qanawi",
           "opciones_ids": [
-            "phiki",
+            "malaqoy",
             "qanawi",
-            "qeschhala",
+            "qoq",
             "yoqa"
           ],
           "seccion": "palabras_nuevas",
@@ -10627,7 +10390,7 @@
           "tipo": "uch_a_es",
           "objetivo_id": "qeschhala",
           "opciones_ids": [
-            "juwa",
+            "qanawi",
             "qeschhala",
             "qoq",
             "yoqa"
@@ -10654,10 +10417,10 @@
           "forma_id": "qoqnaka",
           "raiz_id": "qoq",
           "opciones_ids": [
-            "kurwinanaka",
-            "pakunaka",
+            "iwisanaka",
             "qoqnaka",
-            "uninaka"
+            "uninaka",
+            "wallpanaka"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -10673,8 +10436,8 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "yoqa",
           "opciones_ids": [
-            "qanawi",
-            "qoq",
+            "malaqoy",
+            "qeschhala",
             "wiwi",
             "yoqa"
           ],
@@ -10795,9 +10558,9 @@
       ]
     },
     {
-      "id": "L26",
+      "id": "L25",
       "titulo": "Elementos de la Naturaleza",
-      "orden": 26,
+      "orden": 25,
       "familias_nuevas": [
         "anachhulu",
         "chhiri",
@@ -10818,13 +10581,13 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "tanschay",
-          "leccion_origen": "L24",
+          "familia_id": "qhorskchay",
+          "leccion_origen": "L22",
           "uso": "distractor"
         },
         {
-          "familia_id": "aymilla",
-          "leccion_origen": "L08",
+          "familia_id": "chhuni",
+          "leccion_origen": "L09",
           "uso": "emparejamiento"
         }
       ],
@@ -10848,7 +10611,7 @@
           "objetivo_id": "anachhulu",
           "opciones_ids": [
             "anachhulu",
-            "chisni",
+            "chhiri",
             "qola",
             "thuni"
           ],
@@ -10866,9 +10629,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "chhiri",
           "opciones_ids": [
+            "anachhulu",
             "chhiri",
-            "chisni",
-            "thuni",
+            "wiyani",
             "yis"
           ],
           "seccion": "palabras_nuevas",
@@ -10887,8 +10650,8 @@
           "opciones_ids": [
             "chhurpikchay",
             "chirsnachay",
-            "selschay",
-            "tanschay"
+            "qhorskchay",
+            "selschay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10924,8 +10687,8 @@
           "tipo": "emparejar_uch_es",
           "items_ids": [
             "anachhulu",
-            "aymilla",
             "chhiri",
+            "chhuni",
             "chhurpikchay",
             "chisni"
           ],
@@ -10943,10 +10706,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "qola",
           "opciones_ids": [
-            "anachhulu",
+            "chisni",
             "qola",
-            "thuni",
-            "tiku"
+            "tiku",
+            "yis"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -10965,7 +10728,7 @@
             "anachhulu",
             "chhiri",
             "thuni",
-            "yis"
+            "tiku"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -10981,10 +10744,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "tiku",
           "opciones_ids": [
-            "anachhulu",
+            "chhiri",
+            "qola",
             "tiku",
-            "titomxe",
-            "wiyani"
+            "titomxe"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -11008,9 +10771,9 @@
           "objetivo_id": "titomxe",
           "opciones_ids": [
             "chhiri",
-            "thuni",
+            "qola",
             "titomxe",
-            "wiyani"
+            "yis"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -11026,9 +10789,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "yis",
           "opciones_ids": [
-            "chisni",
-            "qola",
-            "wiyani",
+            "anachhulu",
+            "chhiri",
+            "thuni",
             "yis"
           ],
           "seccion": "palabras_nuevas",
@@ -11148,9 +10911,9 @@
       ]
     },
     {
-      "id": "L27",
+      "id": "L26",
       "titulo": "Orientación y Navegación",
-      "orden": 27,
+      "orden": 26,
       "familias_nuevas": [
         "cheqallachay",
         "chiyacharku",
@@ -11178,23 +10941,18 @@
       ],
       "familias_repaso_organico": [
         {
-          "familia_id": "ti",
+          "familia_id": "ni",
+          "leccion_origen": "L02",
+          "uso": "distractor"
+        },
+        {
+          "familia_id": "uchumik",
           "leccion_origen": "L05",
           "uso": "distractor"
         },
         {
-          "familia_id": "wisnakti",
-          "leccion_origen": "L06",
-          "uso": "distractor"
-        },
-        {
           "familia_id": "chhaqway",
-          "leccion_origen": "L23",
-          "uso": "distractor"
-        },
-        {
-          "familia_id": "chhasi",
-          "leccion_origen": "L11",
+          "leccion_origen": "L22",
           "uso": "distractor"
         }
       ],
@@ -11221,8 +10979,8 @@
           "opciones_ids": [
             "cheqallachay",
             "phawschay",
-            "tekschay",
-            "wistakchay"
+            "pichuchay",
+            "tekschay"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -11238,9 +10996,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "chiyacharku",
           "opciones_ids": [
-            "achichay",
             "chiyacharku",
-            "taxacharku",
+            "qachina",
+            "thuni",
             "xanacharku"
           ],
           "seccion": "palabras_nuevas",
@@ -11257,10 +11015,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "jipu",
           "opciones_ids": [
-            "chiyacharku",
+            "achichay",
             "jipu",
             "taxacharku",
-            "thuni"
+            "xanacharku"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -11276,10 +11034,10 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "ochapara",
           "opciones_ids": [
-            "chiyacharku",
             "ochapara",
-            "qachina",
-            "thikuchay"
+            "thikuchay",
+            "thosa",
+            "thuni"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -11322,9 +11080,9 @@
           "objetivo_id": "qachina",
           "opciones_ids": [
             "achichay",
+            "ochapara",
             "qachina",
-            "watha",
-            "xanacharku"
+            "thosa"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
@@ -11333,8 +11091,8 @@
           "tipo": "emparejar_uch_es",
           "items_ids": [
             "cheqallachay",
-            "chiyacharku",
             "jipu",
+            "ochapara",
             "phawschay",
             "qachina"
           ],
@@ -11353,9 +11111,9 @@
           "objetivo_id": "taxacharku",
           "opciones_ids": [
             "chiyacharku",
+            "jipu",
             "qachina",
-            "taxacharku",
-            "watha"
+            "taxacharku"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -11390,10 +11148,10 @@
           "tipo": "uch_a_es",
           "objetivo_id": "thikuchay",
           "opciones_ids": [
-            "achichay",
-            "qachina",
+            "ochapara",
+            "taxacharku",
             "thikuchay",
-            "xanacharku"
+            "thuni"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -11409,9 +11167,9 @@
           "tipo": "audio_a_uch",
           "objetivo_id": "thosa",
           "opciones_ids": [
-            "thikuchay",
+            "achichay",
+            "qachina",
             "thosa",
-            "thuni",
             "xanacharku"
           ],
           "seccion": "palabras_nuevas",
@@ -11436,9 +11194,9 @@
           "objetivo_id": "tuncharku",
           "opciones_ids": [
             "am",
-            "ti",
+            "ni",
             "tuncharku",
-            "wisnakti"
+            "uchumik"
           ],
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "texto_uch"
@@ -11456,7 +11214,7 @@
           "opciones_ids": [
             "chhaq",
             "chhaqway",
-            "chhasi",
+            "kullku",
             "untu"
           ],
           "seccion": "palabras_nuevas",
@@ -11473,8 +11231,8 @@
           "tipo": "uch_a_es",
           "objetivo_id": "xanacharku",
           "opciones_ids": [
-            "ochapara",
-            "taxacharku",
+            "thikuchay",
+            "thosa",
             "thuni",
             "xanacharku"
           ],
@@ -11484,10 +11242,10 @@
         {
           "tipo": "emparejar_uch_es",
           "items_ids": [
-            "taxacharku",
+            "chiyacharku",
+            "tekschay",
             "thosa",
             "tuncharku",
-            "untu",
             "xanacharku"
           ],
           "seccion": "palabras_nuevas",

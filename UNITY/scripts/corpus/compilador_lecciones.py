@@ -655,7 +655,7 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
             and f not in estado.escrituras_usadas_ids
             and normalizar_texto(palabras_map[f]["uch"]) not in estado.escrituras_usadas_uch_norm
         ]
-        if lid == "L06":
+        if lid in ["L05", "L06"] or any(x in familias_nuevas for x in ["amchuki", "wisnakti"]):
             tier1.sort(key=lambda x: (0 if x in ["amchuki", "wisnakti"] else 1, -estado.distancia_desde_evaluacion(x)))
         else:
             tier1.sort(key=lambda x: -estado.distancia_desde_evaluacion(x))

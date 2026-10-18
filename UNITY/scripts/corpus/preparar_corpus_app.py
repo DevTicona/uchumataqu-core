@@ -208,42 +208,42 @@ def generar_escenarios_ra() -> dict:
             {
                 "id": "ra_encuentro_comunicacion",
                 "titulo": "Encuentro y comunicación",
-                "lecciones_asociadas": ["L01", "L02", "L03", "L04", "L05", "L06"],
+                "lecciones_asociadas": ["L01", "L02", "L03", "L04", "L05"],
                 "objetos": [],
                 "avatar_requerido": False
             },
             {
                 "id": "ra_familia_vestimenta",
                 "titulo": "Familia y vestimenta",
-                "lecciones_asociadas": ["L07", "L08", "L09", "L10", "L11"],
+                "lecciones_asociadas": ["L06", "L07", "L08", "L09", "L10"],
                 "objetos": [],
                 "avatar_requerido": False
             },
             {
                 "id": "ra_casa_objetos",
                 "titulo": "Casa y objetos cotidianos",
-                "lecciones_asociadas": ["L12", "L13", "L14", "L15"],
+                "lecciones_asociadas": ["L11", "L12", "L13", "L14"],
                 "objetos": [],
                 "avatar_requerido": False
             },
             {
                 "id": "ra_cocina_alimentos",
                 "titulo": "Cocina y alimentos",
-                "lecciones_asociadas": ["L16", "L17", "L18", "L19"],
+                "lecciones_asociadas": ["L15", "L16", "L17", "L18"],
                 "objetos": [],
                 "avatar_requerido": False
             },
             {
                 "id": "ra_animales_ecosistema",
                 "titulo": "Animales y ecosistema",
-                "lecciones_asociadas": ["L20", "L21", "L22", "L23", "L24"],
+                "lecciones_asociadas": ["L19", "L20", "L21", "L22", "L23"],
                 "objetos": [],
                 "avatar_requerido": False
             },
             {
                 "id": "ra_naturaleza_orientacion",
                 "titulo": "Naturaleza y orientación",
-                "lecciones_asociadas": ["L25", "L26", "L27"],
+                "lecciones_asociadas": ["L24", "L25", "L26"],
                 "objetos": [],
                 "avatar_requerido": False
             }
@@ -410,11 +410,23 @@ def main():
     for t, c in sorted(tipos_global.items(), key=lambda x: -x[1]):
         print(f"    {t:<30}: {c:3d} ({c*100/total_pasos_global:5.1f}%)")
 
-    # 5. Generar escenarios de Realidad Aumentada (preservando definiciones 3D si ya existen)
+    # 5. Generar escenarios de Realidad Aumentada (preservando definiciones 3D y actualizando a 26 lecciones)
+    mapeo_escenarios_lecciones = {
+        "ra_encuentro_comunicacion": ["L01", "L02", "L03", "L04", "L05"],
+        "ra_familia_vestimenta": ["L06", "L07", "L08", "L09", "L10"],
+        "ra_casa_objetos": ["L11", "L12", "L13", "L14"],
+        "ra_cocina_alimentos": ["L15", "L16", "L17", "L18"],
+        "ra_animales_ecosistema": ["L19", "L20", "L21", "L22", "L23"],
+        "ra_naturaleza_orientacion": ["L24", "L25", "L26"]
+    }
     ruta_esc_actual = os.path.join(dir_salida, "escenarios_ra.json")
     if os.path.exists(ruta_esc_actual):
         with open(ruta_esc_actual, "r", encoding="utf-8") as f_esc:
             escenarios_ra_data = json.load(f_esc)
+        for esc in escenarios_ra_data.get("escenarios", []):
+            eid = esc.get("id")
+            if eid in mapeo_escenarios_lecciones:
+                esc["lecciones_asociadas"] = mapeo_escenarios_lecciones[eid]
     else:
         escenarios_ra_data = generar_escenarios_ra()
 
@@ -430,15 +442,16 @@ def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"[OK] Generado: {ruta_app}")
 
-    datos = {
+    guardar_json("palabras.json", {"version": 1, "palabras": palabras_json_data})
+    guardar_json("oraciones.json", {"version": 1, "oraciones": oraciones_json_data})
+    guardar_json("lecciones.json", {"version": 1, "lecciones": lecciones_json_data})
+    guardar_json("lecciones_compiladas.json", {
         "version": 4,
         "metricas_distractores": metricas_distractores,
         "informe_compilacion": informe_compilacion,
         "lecciones": lecciones_compiladas_data
-    }
-
-    # Guardar lecciones_compiladas.json
-    guardar_json("lecciones_compiladas.json", datos)
+    })
+    guardar_json("escenarios_ra.json", escenarios_ra_data)
 
     print("\n=== PROCESAMIENTO DE CORPUS APP (11 TIPOS) COMPLETADO CON ÉXITO ===\n")
 

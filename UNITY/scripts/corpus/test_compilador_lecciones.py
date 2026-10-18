@@ -88,11 +88,11 @@ class TestCompiladorLecciones(unittest.TestCase):
         self.assertLessEqual(total_pasos, 804, f"Total de pasos {total_pasos} excede el límite de 804")
         self.assertGreaterEqual(total_pasos, 500, f"Total de pasos {total_pasos} es anormalmente bajo")
 
-    def test_cobertura_27_lecciones_y_120_oraciones(self):
-        """Verifica que las 27 lecciones existan y que las 120 oraciones curriculares estén cubiertas."""
-        self.assertEqual(len(self.lecciones), 27)
+    def test_cobertura_26_lecciones_y_120_oraciones(self):
+        """Verifica que las 26 lecciones existan y que las 120 oraciones curriculares estén cubiertas."""
+        self.assertEqual(len(self.lecciones), 26)
         lids = [l["id"] for l in self.lecciones]
-        esperados_lids = [f"L{i:02d}" for i in range(1, 28)]
+        esperados_lids = [f"L{i:02d}" for i in range(1, 27)]
         self.assertEqual(lids, esperados_lids)
 
         oraciones_evaluadas = set()
@@ -177,7 +177,7 @@ class TestCompiladorLecciones(unittest.TestCase):
                     self.assertNotIn("banco_palabras", paso)
                     self.assertNotIn("palabra_oculta_id", paso)
 
-        self.assertEqual(dictados_totales, 27, f"Se esperaban 27 dictados escritos, se obtuvieron {dictados_totales}")
+        self.assertEqual(dictados_totales, 26, f"Se esperaban 26 dictados escritos, se obtuvieron {dictados_totales}")
 
     def test_refuerzos_al_fallar_validos(self):
         """Verifica que ningún refuerzo_al_fallar apunte a un tipo retirado."""
@@ -230,7 +230,7 @@ class TestCompiladorLecciones(unittest.TestCase):
                                     f"En {lec['id']}: paso ASR sin opcional=True")
 
     def test_dos_emparejamientos_por_leccion(self):
-        """Verifica que cada una de las 27 lecciones tenga exactamente 2 emparejamientos (54 en total), entre 2 y 5 parejas."""
+        """Verifica que cada una de las 26 lecciones tenga exactamente 2 emparejamientos (52 en total), entre 2 y 5 parejas."""
         total_emparejamientos = 0
         for lec in self.lecciones:
             pasos = lec.get("pasos", [])
@@ -259,17 +259,17 @@ class TestCompiladorLecciones(unittest.TestCase):
             self.assertEqual(pres_antes_emp2, n_nuevas,
                              f"En {lec['id']}: emparejamiento 2 apareció antes de completar todas las presentaciones")
 
-        self.assertEqual(total_emparejamientos, 54,
-                         f"Se esperaban exactamente 54 emparejamientos, se obtuvieron {total_emparejamientos}")
+        self.assertEqual(total_emparejamientos, 52,
+                         f"Se esperaban exactamente 52 emparejamientos, se obtuvieron {total_emparejamientos}")
 
-    def test_prioridad_escritura_l06(self):
-        """Verifica que en L06 los objetivos escritos sean de vocabulario nuevo y no repitan ana o chhuni_pichuchay."""
-        l06 = next(l for l in self.lecciones if l["id"] == "L06")
-        escrituras_palabra = [p["objetivo_id"] for p in l06.get("pasos", []) if p.get("tipo") == "escribir_palabra"]
-        self.assertNotIn("ana", escrituras_palabra, "L06 no debe escribir 'ana' (repaso)")
-        self.assertNotIn("chhuni_pichuchay", escrituras_palabra, "L06 no debe escribir 'chhuni_pichuchay' (repaso)")
+    def test_prioridad_escritura_pronombres(self):
+        """Verifica que en L05 (pronombres) los objetivos escritos sean de vocabulario nuevo y no repitan ana o chhuni_pichuchay."""
+        l05 = next(l for l in self.lecciones if l["id"] == "L05")
+        escrituras_palabra = [p["objetivo_id"] for p in l05.get("pasos", []) if p.get("tipo") == "escribir_palabra"]
+        self.assertNotIn("ana", escrituras_palabra, "L05 no debe escribir 'ana' (repaso)")
+        self.assertNotIn("chhuni_pichuchay", escrituras_palabra, "L05 no debe escribir 'chhuni_pichuchay' (repaso)")
         for obj in escrituras_palabra:
-            self.assertIn(obj, l06["familias_nuevas"], f"L06 escribió {obj} que no es familia nueva")
+            self.assertIn(obj, l05["familias_nuevas"], f"L05 escribió {obj} que no es familia nueva")
 
     def test_nombres_propios_excluidos_de_objetivos(self):
         """Verifica que ningún nombre propio contextual aparezca como objetivo_id, forma_id o en items_ids."""
@@ -290,7 +290,7 @@ class TestCompiladorLecciones(unittest.TestCase):
 
 
     def test_consignas_sin_barras_ambiguas(self):
-        """Verifica que ninguna consigna en las 27 lecciones contenga barras '/' de ambigüedad."""
+        """Verifica que ninguna consigna en las 26 lecciones contenga barras '/' de ambigüedad."""
         for lec in self.lecciones:
             for paso in lec.get("pasos", []):
                 consigna = paso.get("consigna", "")

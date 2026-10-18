@@ -29,14 +29,7 @@
       "oraciones_ids": [
         "O_008",
         "O_009",
-        "O_010"
-      ]
-    },
-    {
-      "id": "L04",
-      "titulo": "Respuestas de Bienestar",
-      "orden": 4,
-      "oraciones_ids": [
+        "O_010",
         "O_011",
         "O_012",
         "O_013",
@@ -44,9 +37,9 @@
       ]
     },
     {
-      "id": "L05",
+      "id": "L04",
       "titulo": "Procedencia y Despedida",
-      "orden": 5,
+      "orden": 4,
       "oraciones_ids": [
         "O_015",
         "O_016",
@@ -56,9 +49,9 @@
       ]
     },
     {
-      "id": "L06",
+      "id": "L05",
       "titulo": "Pronombres y Plurales",
-      "orden": 6,
+      "orden": 5,
       "oraciones_ids": [
         "O_020",
         "O_021",
@@ -67,9 +60,9 @@
       ]
     },
     {
-      "id": "L07",
+      "id": "L06",
       "titulo": "El Núcleo Familiar",
-      "orden": 7,
+      "orden": 6,
       "oraciones_ids": [
         "O_024",
         "O_025",
@@ -78,9 +71,9 @@
       ]
     },
     {
-      "id": "L08",
+      "id": "L07",
       "titulo": "Vestimenta Originaria 1",
-      "orden": 8,
+      "orden": 7,
       "oraciones_ids": [
         "O_028",
         "O_029",
@@ -90,9 +83,9 @@
       ]
     },
     {
-      "id": "L09",
+      "id": "L08",
       "titulo": "Acciones Cotidianas",
-      "orden": 9,
+      "orden": 8,
       "oraciones_ids": [
         "O_033",
         "O_034",
@@ -102,9 +95,9 @@
       ]
     },
     {
-      "id": "L10",
+      "id": "L09",
       "titulo": "Familia Extendida",
-      "orden": 10,
+      "orden": 9,
       "oraciones_ids": [
         "O_038",
         "O_039",
@@ -113,9 +106,9 @@
       ]
     },
     {
-      "id": "L11",
+      "id": "L10",
       "titulo": "Vestimenta Originaria 2",
-      "orden": 11,
+      "orden": 10,
       "oraciones_ids": [
         "O_042",
         "O_043",
@@ -124,9 +117,9 @@
       ]
     },
     {
-      "id": "L12",
+      "id": "L11",
       "titulo": "Objetos del Hogar 1",
-      "orden": 12,
+      "orden": 11,
       "oraciones_ids": [
         "O_046",
         "O_047",
@@ -135,9 +128,9 @@
       ]
     },
     {
-      "id": "L13",
+      "id": "L12",
       "titulo": "Actividades del Hogar",
-      "orden": 13,
+      "orden": 12,
       "oraciones_ids": [
         "O_050",
         "O_051",
@@ -147,9 +140,9 @@
       ]
     },
     {
-      "id": "L14",
+      "id": "L13",
       "titulo": "Objetos del Hogar 2",
-      "orden": 14,
+      "orden": 13,
       "oraciones_ids": [
         "O_055",
         "O_056",
@@ -158,9 +151,9 @@
       ]
     },
     {
-      "id": "L15",
+      "id": "L14",
       "titulo": "Objetos Escolares",
-      "orden": 15,
+      "orden": 14,
       "oraciones_ids": [
         "O_059",
         "O_060",
@@ -169,9 +162,9 @@
       ]
     },
     {
-      "id": "L16",
+      "id": "L15",
       "titulo": "Utensilios de Cocina 1",
-      "orden": 16,
+      "orden": 15,
       "oraciones_ids": [
         "O_063",
         "O_064",
@@ -180,9 +173,9 @@
       ]
     },
     {
-      "id": "L17",
+      "id": "L16",
       "titulo": "Alimentos Tradicionales",
-      "orden": 17,
+      "orden": 16,
       "oraciones_ids": [
         "O_067",
         "O_068",
@@ -192,9 +185,9 @@
       ]
     },
     {
-      "id": "L18",
+      "id": "L17",
       "titulo": "Utensilios de Cocina 2",
-      "orden": 18,
+      "orden": 17,
       "oraciones_ids": [
         "O_072",
         "O_073",
@@ -203,9 +196,9 @@
       ]
     },
     {
-      "id": "L19",
+      "id": "L18",
       "titulo": "Alimentos de la Región",
-      "orden": 19,
+      "orden": 18,
       "oraciones_ids": [
         "O_076",
         "O_077",
@@ -215,9 +208,9 @@
       ]
     },
     {
-      "id": "L20",
+      "id": "L19",
       "titulo": "Animales Domésticos",
-      "orden": 20,
+      "orden": 19,
       "oraciones_ids": [
         "O_081",
         "O_082",
@@ -227,9 +220,9 @@
       ]
     },
     {
-      "id": "L21",
+      "id": "L20",
       "titulo": "Ganadería y Crianza",
-      "orden": 21,
+      "orden": 20,
       "oraciones_ids": [
         "O_086",
         "O_087",
@@ -239,9 +232,9 @@
       ]
     },
     {
-      "id": "L22",
+      "id": "L21",
       "titulo": "Fauna Silvestre",
-      "orden": 22,
+      "orden": 21,
       "oraciones_ids": [
         "O_091",
         "O_092",
@@ -250,9 +243,9 @@
       ]
     },
     {
-      "id": "L23",
+      "id": "L22",
       "titulo": "Aves del Ecosistema",
-      "orden": 23,
+      "orden": 22,
       "oraciones_ids": [
         "O_095",
         "O_096",
@@ -261,9 +254,9 @@
       ]
     },
     {
-      "id": "L24",
+      "id": "L23",
       "titulo": "Especies Acuáticas",
-      "orden": 24,
+      "orden": 23,
       "oraciones_ids": [
         "O_099",
         "O_100",
@@ -273,9 +266,9 @@
       ]
     },
     {
-      "id": "L25",
+      "id": "L24",
       "titulo": "Flora del Altiplano",
-      "orden": 25,
+      "orden": 24,
       "oraciones_ids": [
         "O_104",
         "O_105",
@@ -285,9 +278,9 @@
       ]
     },
     {
-      "id": "L26",
+      "id": "L25",
       "titulo": "Elementos de la Naturaleza",
-      "orden": 26,
+      "orden": 25,
       "oraciones_ids": [
         "O_109",
         "O_110",
@@ -297,9 +290,9 @@
       ]
     },
     {
-      "id": "L27",
+      "id": "L26",
       "titulo": "Orientación y Navegación",
-      "orden": 27,
+      "orden": 26,
       "oraciones_ids": [
         "O_114",
         "O_115",
