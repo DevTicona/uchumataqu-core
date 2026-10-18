@@ -53,6 +53,10 @@ scratch*.py
 *.tmp
 *.bak
 
+# --- Carpetas extras / temporales ---
+extras/
+exras/
+
 # --- Archivos de sistema operativo y editores ---
 .DS_Store
 Thumbs.db
