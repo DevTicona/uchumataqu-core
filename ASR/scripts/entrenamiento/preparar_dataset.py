@@ -76,10 +76,10 @@ def cargar_diccionarios_pln(ruta_palabras_xlsx: str, ruta_oraciones_xlsx: str):
     for r in rows_o:
         if len(r) > 1 and r[0] and r[1]:
             oid = r[0].strip()
-            # Filtrar solo las 120 primeras oraciones con audio (O_001..O_120)
+            # Filtrar solo las 136 oraciones con audio (O_001..O_136)
             try:
                 num = int(re.sub(r"\D", "", oid))
-                if num > 120:
+                if num > 136:
                     continue
             except ValueError:
                 pass
@@ -263,6 +263,30 @@ def particionar_dataset(manifest_entries: list, seed: int = 42) -> tuple:
     return train_list, val_list, test_list
 
 
+def aplicar_aumento_oraciones(train_list: list, factor_aumento: int = 3) -> list:
+    """
+    Aplica data augmentation / balanceo a las oraciones del conjunto de entrenamiento.
+    Multiplica las oraciones de train por `factor_aumento` para compensar el desbalance
+    respecto a las palabras aisladas (de ~6.3:1 a ~1:1 en duración de audio acumulada).
+    Cada copia aumentada recibe un sufijo de ID único (_aug1, _aug2...) para que Lhotse
+    aplique Speed Perturbation (x0.9, x1.1) y SpecAugment de forma estocástica e
+    independiente en cada época de entrenamiento.
+    """
+    if factor_aumento <= 1:
+        return train_list
+
+    resultado = []
+    for entry in train_list:
+        resultado.append(entry)
+        if entry.get("tipo") == "oracion":
+            for aug_i in range(1, factor_aumento):
+                entry_aug = dict(entry)
+                entry_aug["utt_id"] = f"{entry['utt_id']}_aug{aug_i}"
+                resultado.append(entry_aug)
+
+    return resultado
+
+
 def exportar_formato_kaldi(split_name: str, entries: list, out_dir: str):
     """Genera los archivos wav.scp, text, utt2spk, spk2utt requeridos por Kaldi / Sherpa."""
     dir_split = os.path.join(out_dir, split_name)
@@ -300,6 +324,13 @@ def exportar_formato_kaldi(split_name: str, entries: list, out_dir: str):
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser(description="Preparación de dataset y particiones ASR Uchumataqu.")
+    parser.add_argument("--augment-oraciones", type=int, default=3,
+                        help="Factor de multiplicación de oraciones en train para balancear con palabras (def: 3)")
+    parser.add_argument("--seed", type=int, default=42, help="Semilla aleatoria para partición (def: 42)")
+    args = parser.parse_args()
+
     print("=" * 70)
     print("PREPARACIÓN DE DATASET Y PARTICIONES ASR UCHUMATAQU")
     print("=" * 70)
@@ -323,14 +354,30 @@ def main():
     print(f"Total audios recolectados y validados: {total_audios}")
     print(f"Duración total del corpus acústico: {duracion_total:.2f} s ({duracion_total / 60.0:.2f} min)")
 
-    # 3. Particionar dataset
-    train_list, val_list, test_list = particionar_dataset(entries, seed=42)
-    print(f"\nParticiones generadas:")
-    print(f"  • Train: {len(train_list)} audios ({sum(e['duracion'] for e in train_list):.1f} s, {len(train_list)/total_audios*100:.1f}%)")
-    print(f"  • Val:   {len(val_list)} audios ({sum(e['duracion'] for e in val_list):.1f} s, {len(val_list)/total_audios*100:.1f}%)")
-    print(f"  • Test:  {len(test_list)} audios ({sum(e['duracion'] for e in test_list):.1f} s, {len(test_list)/total_audios*100:.1f}%)")
+    # 3. Particionar dataset (base sin duplicados)
+    train_list_base, val_list, test_list = particionar_dataset(entries, seed=args.seed)
+    print(f"\nParticiones base generadas:")
+    print(f"  • Train (base): {len(train_list_base)} audios ({sum(e['duracion'] for e in train_list_base):.1f} s)")
+    print(f"      - Palabras : {sum(1 for e in train_list_base if e['tipo']=='palabra')} ({sum(e['duracion'] for e in train_list_base if e['tipo']=='palabra'):.1f} s)")
+    print(f"      - Oraciones: {sum(1 for e in train_list_base if e['tipo']=='oracion')} ({sum(e['duracion'] for e in train_list_base if e['tipo']=='oracion'):.1f} s)")
+    print(f"  • Val:          {len(val_list)} audios ({sum(e['duracion'] for e in val_list):.1f} s)")
+    print(f"      - Palabras : {sum(1 for e in val_list if e['tipo']=='palabra')} ({sum(e['duracion'] for e in val_list if e['tipo']=='palabra'):.1f} s)")
+    print(f"      - Oraciones: {sum(1 for e in val_list if e['tipo']=='oracion')} ({sum(e['duracion'] for e in val_list if e['tipo']=='oracion'):.1f} s)")
+    print(f"  • Test:         {len(test_list)} audios ({sum(e['duracion'] for e in test_list):.1f} s)")
+    print(f"      - Palabras : {sum(1 for e in test_list if e['tipo']=='palabra')} ({sum(e['duracion'] for e in test_list if e['tipo']=='palabra'):.1f} s)")
+    print(f"      - Oraciones: {sum(1 for e in test_list if e['tipo']=='oracion')} ({sum(e['duracion'] for e in test_list if e['tipo']=='oracion'):.1f} s)")
 
-    # 4. Guardar manifests en JSON
+    # 4. Data Augmentation en Train para oraciones
+    train_list = aplicar_aumento_oraciones(train_list_base, factor_aumento=args.augment_oraciones)
+    dur_train_pal = sum(e['duracion'] for e in train_list if e['tipo']=='palabra')
+    dur_train_ora = sum(e['duracion'] for e in train_list if e['tipo']=='oracion')
+    dur_train_tot = dur_train_pal + dur_train_ora
+    print(f"\nPartición Train Final (con factor aumento oraciones={args.augment_oraciones}x):")
+    print(f"  • Total train cuts: {len(train_list)} ({dur_train_tot:.1f} s = {dur_train_tot/60.0:.1f} min)")
+    print(f"      - Palabras : {sum(1 for e in train_list if e['tipo']=='palabra')} audios ({dur_train_pal:.1f} s, {dur_train_pal/dur_train_tot*100:.1f}%)")
+    print(f"      - Oraciones: {sum(1 for e in train_list if e['tipo']=='oracion')} audios ({dur_train_ora:.1f} s, {dur_train_ora/dur_train_tot*100:.1f}%)")
+
+    # 5. Guardar manifests en JSON
     archivos_json = {
         "all_manifest.json": entries,
         "train_manifest.json": train_list,
@@ -343,7 +390,7 @@ def main():
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"[OK] Generado: {r_json}")
 
-    # 5. Exportar manifests en formato Kaldi
+    # 6. Exportar manifests en formato Kaldi
     exportar_formato_kaldi("train", train_list, dir_kaldi)
     exportar_formato_kaldi("val", val_list, dir_kaldi)
     exportar_formato_kaldi("test", test_list, dir_kaldi)

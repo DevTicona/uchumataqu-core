@@ -293,7 +293,7 @@ def main():
     dir_oraciones_asr = os.path.join(asr_dir, "audios_oraciones")
     dir_oraciones_originales = os.path.join(asr_dir, "audios_originales", "oraciones")
 
-    todos_locutores = ["eva", "lorenzo", "pedro", "roberto", "sofia"]
+    todos_locutores = ["eva", "lorenzo", "pedro", "roberto", "sofia", "gaby"]
     if args.locutores:
         locutores_filtro = [l.strip().lower() for l in args.locutores.split(",") if l.strip()]
         locutores_palabras = [l for l in locutores_filtro if l in todos_locutores]

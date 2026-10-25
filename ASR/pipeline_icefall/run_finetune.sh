@@ -78,12 +78,9 @@ OUTPUT_DOWNSAMPLING_FACTOR="${OUTPUT_DOWNSAMPLING_FACTOR:-1}"
 #   Equivalente a perturb_speed.sh de Kaldi
 ENABLE_SPEED_PERTURB=1   # 1=activo (requiere --on-the-fly-feats 1)
 
-# MUSAN Noise Mixing: mezcla ruido/música/habla fondo con SNR 10-20 dB.
-#   Por defecto se desactiva para establecer una línea base limpia.
-# The training and evaluation recordings are clean and very short.  Start the
-# new CTC head with clean speech; MUSAN can be enabled explicitly after a
-# stable baseline has been established.
-ENABLE_MUSAN="${ENABLE_MUSAN:-0}"
+# MUSAN Noise Mixing: mezcla ruido/música/habla fondo con SNR 10-20 dB (p=0.5).
+#   Activo por defecto para robustez acústica en exteriores y entornos ruidosos.
+ENABLE_MUSAN="${ENABLE_MUSAN:-1}"
 MUSAN_CUTS="$LHOTSE_DIR/musan_cuts.jsonl.gz"
 
 # SpecAugment: enmascarado de frecuencias y tiempo en el espectrograma
@@ -91,6 +88,12 @@ MUSAN_CUTS="$LHOTSE_DIR/musan_cuts.jsonl.gz"
 #   No tiene equivalente directo en Kaldi
 ENABLE_SPEC_AUG=1
 SPEC_AUG_TIME_WARP=80
+
+# Concatenación de Cortes (CutConcatenate): une palabras aisladas con pausas/silencios
+#   generando oraciones sintéticas a partir de palabras sueltas.
+CONCATENATE_CUTS="${CONCATENATE_CUTS:-0}"
+CONCAT_GAP="${CONCAT_GAP:-0.3}"
+CONCAT_DURATION_FACTOR="${CONCAT_DURATION_FACTOR:-1.0}"
 # ─────────────────────────────────────────────────────────────────────────────
 
 # Checkpoint preentrenado ZIPA — ubicado directamente en pipeline_icefall/pretrained/
@@ -168,6 +171,9 @@ export PYTHONPATH="$ZIPFORMER_DIR:$ICEFALL_DIR:${PYTHONPATH:-}"
     --enable-musan "$ENABLE_MUSAN" \
     --enable-spec-aug "$ENABLE_SPEC_AUG" \
     --spec-aug-time-warp-factor "$SPEC_AUG_TIME_WARP" \
+    --concatenate-cuts "$CONCATENATE_CUTS" \
+    --gap "$CONCAT_GAP" \
+    --duration-factor "$CONCAT_DURATION_FACTOR" \
     --drop-last 0 \
     --num-buckets 6 \
     --log-interval 10 \

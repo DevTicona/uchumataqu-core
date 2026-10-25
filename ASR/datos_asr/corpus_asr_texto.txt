@@ -5,6 +5,7 @@ Achichay chhaq ochapara wistakchay
 Achichay uchs murchula wistakchay
 Achuchay
 Am
+Am chheqets tʼuqschay
 Am chichalay wist palitakchay
 Am ira chhaqpinichay
 Am lusi qhasi chukichay
@@ -182,12 +183,15 @@ Nis tololay sisñichay
 Nonschay
 Nï
 Nï axtal lasnuchay
+Nï pʼapi lulschay
 Nï qonqo wallpanaka wistakchay
+Nï qʼelaqʼela qhorskchay
 Nï sanqo chiw iwisanaka wistakchay
 Nï suwa chiwliks likschay
 Nï suwa qeru chiwliks likschay
 Nï taxchuku khirchulanaka wistakchay
 Nï tila chusi thaxchay
+Nï tʼutu chälachay
 Nï wist ataluychay
 Nï wist palitakchay
 Nïnaka
@@ -264,6 +268,7 @@ Qʼelaqʼela
 Qʼämirizoñi
 Salskama
 Salskama pedro
+Salskama sitsñinaka
 Sanqo
 Satschay
 Saxoni
@@ -385,8 +390,17 @@ Wilk
 Wilk ana purchay chirsnachay
 Wilk anapini chuñipaku chirsnachay
 Wilk axtal xalwari chirsnachay
+Wilk chhaq chimay piwachay
+Wilk chhuñiqasi amthü
 Wilk chhuñiqasi uwapinichay amthü
+Wilk karpinisa jaxchay
+Wilk kʼana pʼitkchay
+Wilk pheta amaruskchay
+Wilk pʼoa nonschay
+Wilk qawi chirsnachay
+Wilk qhoya qhoychay
 Wilk qolanakapini chirsnachay
+Wilk shaxara chirsnachay
 Wilk säna khitschay
 Wilk taxsnuku kuwarernonaka wistakchay
 Wilk thö lorenzo
@@ -408,11 +422,13 @@ Wist ataluy chhatanaka qhawschay
 Wist ataluy chʼaxana qerjiña taxsnakichay
 Wist ataluy wiyani taxsnakichay
 Wist chichalay watha oqlaychay
+Wist chusi chhep achasinaka wistakchay
 Wist eskhara chhaqchay
 Wist malaqoy chiwkisnaka tuchay
 Wist malaqoy qañawi achuchay
 Wist qhoya chhaqpinichay
 Wist qhoya chhep phetanaka wistakchay
+Wist qhoya peske phetanaka wistakchay
 Wist thü lorenzo
 Wist watha xanacharkuchay
 Wistakchay

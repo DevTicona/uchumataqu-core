@@ -95,6 +95,7 @@ echo "[1/2] Exportando checkpoint a ONNX con la receta oficial..."
     --tokens "$TOKENS_FILE" \
     --epoch "$EPOCH" \
     --avg "$AVG" \
+    --use-averaged-model 0 \
     --exp-dir "$EXP_DIR" \
     "$@"
 

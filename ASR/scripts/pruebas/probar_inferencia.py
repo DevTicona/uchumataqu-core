@@ -171,19 +171,34 @@ def inferir_audio_onnx(audio_path: str, model_path: str, texto_esperado: str = N
     pred_fonemas = ""
     if os.path.exists(model_path):
         try:
+            import sherpa_onnx
+            recognizer = sherpa_onnx.OfflineRecognizer.from_zipformer_ctc(
+                model=model_path,
+                tokens=ruta_tokens,
+                num_threads=2,
+                debug=False,
+            )
+            stream = recognizer.create_stream()
             import numpy as np
-            import onnxruntime as ort
-            session = ort.InferenceSession(model_path, providers=["CPUExecutionProvider"])
-            input_name = session.get_inputs()[0].name
-            # La mayoría de modelos esperan [1, T_samples] o [1, T_frames, feat_dim]
-            input_data = samples[np.newaxis, :]
-            outputs = session.run(None, {input_name: input_data})
-            logits = outputs[0]
-            pred_ids = np.argmax(logits[0], axis=-1).tolist()
-            pred_fonemas = ctc_greedy_decode_ids(pred_ids, id2token)
-            print(f"[OK] Inferencia ONNX ejecutada exitosamente.")
-        except Exception as e:
-            print(f"[AVISO] Inferencia directa ONNX falló ({e}).")
+            samples_np = np.array(samples, dtype=np.float32)
+            stream.accept_waveform(16000, samples_np)
+            recognizer.decode_stream(stream)
+            pred_fonemas = " ".join(stream.result.tokens)
+            print(f"[OK] Inferencia Sherpa-ONNX ejecutada exitosamente.")
+        except Exception as e_sherpa:
+            try:
+                import numpy as np
+                import onnxruntime as ort
+                session = ort.InferenceSession(model_path, providers=["CPUExecutionProvider"])
+                input_name = session.get_inputs()[0].name
+                input_data = samples[np.newaxis, :]
+                outputs = session.run(None, {input_name: input_data})
+                logits = outputs[0]
+                pred_ids = np.argmax(logits[0], axis=-1).tolist()
+                pred_fonemas = ctc_greedy_decode_ids(pred_ids, id2token)
+                print(f"[OK] Inferencia ONNX ejecutada exitosamente.")
+            except Exception as e:
+                print(f"[AVISO] Inferencia directa falló (Sherpa: {e_sherpa} | ONNX: {e}).")
     else:
         print(f"[INFO] Modelo ONNX {model_path} no encontrado.")
         print("  Para exportar el modelo entrenado con la receta oficial:")

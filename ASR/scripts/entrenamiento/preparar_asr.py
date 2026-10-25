@@ -138,7 +138,7 @@ def generar_tokens_txt(ruta_salida: str):
 
     with open(ruta_salida, "w", encoding="utf-8") as f:
         for idx, tok in enumerate(todos_los_tokens):
-            f.write(f"{idx}\t{tok}\n")
+            f.write(f"{tok} {idx}\n")
     print(f"[OK] Generado: {ruta_salida} ({len(todos_los_tokens)} tokens)")
 
 
@@ -195,7 +195,7 @@ def main():
     palabras_uch = [r[1].strip() for r in rows_palabras if len(r) > 1 and r[1]]
     print(f"Total palabras PLN cargadas: {len(palabras_uch)}")
 
-    # 2. Cargar oraciones de PLN (solo las primeras 120 oraciones curriculares que tienen audio)
+    # 2. Cargar oraciones de PLN (las 136 oraciones curriculares que tienen audio)
     rows_oraciones = leer_xlsx(ruta_oraciones_pln)[1:]
     oraciones_uch = []
     for r in rows_oraciones:
@@ -203,12 +203,12 @@ def main():
             oid = r[0].strip() if r[0] else ""
             try:
                 num = int(re.sub(r"\D", "", oid))
-                if num > 120:
+                if num > 136:
                     continue
             except ValueError:
                 pass
             oraciones_uch.append(r[1].strip())
-    print(f"Total oraciones PLN cargadas (primeras 120 con audio): {len(oraciones_uch)}")
+    print(f"Total oraciones PLN cargadas (136 con audio): {len(oraciones_uch)}")
 
     # 3. Generar tokens.txt
     ruta_tokens = os.path.join(dir_salida_asr, "tokens.txt")

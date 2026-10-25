@@ -70,10 +70,15 @@ fi
 # Speed y SpecAugment permanecen activos. MUSAN se habilita únicamente si el
 # audio de destino incluye ruido comparable (ENABLE_MUSAN=1).
 ENABLE_SPEED_PERTURB=1   # Speed x0.9 y x1.1 (efecto: triplica el corpus)
-ENABLE_MUSAN="${ENABLE_MUSAN:-0}"  # Activarlo sólo si el audio de destino contiene ruido
+ENABLE_MUSAN="${ENABLE_MUSAN:-1}"  # Activo por defecto: mezcla ruido/música/habla con SNR 10-20 dB (p=0.5)
 ENABLE_SPEC_AUG=1        # SpecAugment enmascarado espectrograma
 SPEC_AUG_TIME_WARP=80    # Recomendado por paper SpecAugment original
 MUSAN_CUTS="$LHOTSE_DIR/musan_cuts.jsonl.gz"
+
+# Concatenación de Cortes (CutConcatenate): une palabras aisladas con pausas/silencios
+CONCATENATE_CUTS="${CONCATENATE_CUTS:-0}"
+CONCAT_GAP="${CONCAT_GAP:-0.3}"
+CONCAT_DURATION_FACTOR="${CONCAT_DURATION_FACTOR:-1.0}"
 # ─────────────────────────────────────────────────────────────────────────────
 
 echo "======================================================================"
@@ -142,6 +147,9 @@ export PYTHONPATH="$ZIPFORMER_DIR:$ICEFALL_DIR:${PYTHONPATH:-}"
     --enable-musan "$ENABLE_MUSAN" \
     --enable-spec-aug "$ENABLE_SPEC_AUG" \
     --spec-aug-time-warp-factor "$SPEC_AUG_TIME_WARP" \
+    --concatenate-cuts "$CONCATENATE_CUTS" \
+    --gap "$CONCAT_GAP" \
+    --duration-factor "$CONCAT_DURATION_FACTOR" \
     --drop-last 0 \
     --num-buckets 6 \
     --log-interval 10 \
