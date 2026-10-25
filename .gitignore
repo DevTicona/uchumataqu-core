@@ -67,7 +67,8 @@ Thumbs.db
 .vscode/
 .idea/
 
-# --- Documentación Markdown (ignorar todos los .md excepto README.md) ---
+# --- Documentación Markdown (ignorar todos los .md excepto README.md y evidencias) ---
 *.md
 **/*.md
 !/README.md
+!evidencias_capitulo_iv/*.md
