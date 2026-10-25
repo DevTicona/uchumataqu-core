@@ -1,7 +1,7 @@
 {
   "kind": "exhaustive_lexicon_regression_not_generalization",
-  "analysis_records_checked": 325,
-  "surfaces_checked": 325,
+  "analysis_records_checked": 326,
+  "surfaces_checked": 326,
   "analysis_exact_match": 1.0,
   "generation_exact_match": 1.0,
   "optimized_parity": true,
@@ -11,11 +11,11 @@
   "audit": {
     "primary_entries": 266,
     "primary_related_forms": 55,
-    "sentences": 135,
+    "sentences": 137,
     "dictionary_entries_available": 1384,
-    "records": 325,
-    "unique_surfaces": 325,
-    "sentence_token_types": 241,
+    "records": 326,
+    "unique_surfaces": 326,
+    "sentence_token_types": 242,
     "excluded": [
       {
         "id": "p_chhuni_pichuchay",
@@ -92,7 +92,7 @@
     ],
     "record_sources": {
       "palabras.json": 317,
-      "oraciones.json": 8,
+      "oraciones.json": 9,
       "diccionario.json": 0
     },
     "linguistically_validated": 0

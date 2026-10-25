@@ -1,11 +1,11 @@
 {
   "primary_entries": 266,
   "primary_related_forms": 55,
-  "sentences": 135,
+  "sentences": 137,
   "dictionary_entries_available": 1384,
-  "records": 325,
-  "unique_surfaces": 325,
-  "sentence_token_types": 241,
+  "records": 326,
+  "unique_surfaces": 326,
+  "sentence_token_types": 242,
   "excluded": [
     {
       "id": "p_chhuni_pichuchay",
@@ -82,7 +82,7 @@
   ],
   "record_sources": {
     "palabras.json": 317,
-    "oraciones.json": 8,
+    "oraciones.json": 9,
     "diccionario.json": 0
   },
   "linguistically_validated": 0

@@ -7,6 +7,7 @@ Multichar_Symbols
 +EXPR
 +ID=o_03fd72f81572805d
 +ID=o_6270fe359522a1f4
++ID=o_72534c4a93ddc043
 +ID=o_9e010de9722a80d2
 +ID=o_b70f4e53e4a7808d
 +ID=o_cc501eaf8615e4b5
@@ -453,164 +454,165 @@ nis:nis F108 ;
 nonschay:nonschay F109 ;
 lorenzo:lorenzo F110 ;
 urus:urus F111 ;
-thö:thö F112 ;
-waki:waki F113 ;
-juana:juana F114 ;
-irohito:irohito F115 ;
-maría:maría F116 ;
-pedro:pedro F117 ;
-ochapara:ochapara F118 ;
-oqlaychay:oqlaychay F119 ;
-oqschay:oqschay F120 ;
-pakschay:pakschay F121 ;
-päku:päku F122 ;
-palitak:palitak F123 ;
-p'api:p'api F124 ;
-papila:papila F125 ;
-parentiña:parentiña F126 ;
-parina:parina F127 ;
-paxpiku:paxpiku F128 ;
-p'esaqa:p'esaqa F129 ;
-peske:peske F130 ;
-phawschay:phawschay F131 ;
-phesqoña:phesqoña F132 ;
-pheta:pheta F133 ;
-phiki:phiki F134 ;
-pichuchay:pichuchay F135 ;
-p'itkchay:p'itkchay F136 ;
-piwachay:piwachay F137 ;
-p'oa:p'oa F138 ;
-potschay:potschay F139 ;
-potsi:potsi F140 ;
-purchay:purchay F141 ;
-p'uschay:p'uschay F142 ;
-p'usu:p'usu F143 ;
-qachina:qachina F144 ;
-qala:qala F145 ;
-q'alluchay:q'alluchay F146 ;
-qälpu:qälpu F147 ;
-q'ämirizoñi:q'ämirizoñi F148 ;
-qañawi:qañawi F149 ;
-qawi:qawi F150 ;
-q'echa:q'echa F151 ;
-q'eja:q'eja F152 ;
-q'elaq'ela:q'elaq'ela F153 ;
-qeri:qeri F154 ;
-qerjiña:qerjiña F155 ;
-qeru:qeru F156 ;
-qerwakha:qerwakha F157 ;
-qeschhäla:qeschhäla F158 ;
-qetsi:qetsi F159 ;
-qhalu:qhalu F160 ;
-qhasi:qhasi F161 ;
-qhasumpek:qhasumpek F162 ;
-qhathu:qhathu F163 ;
-qhawschay:qhawschay F164 ;
-qhorskchay:qhorskchay F165 ;
-qhoya:qhoya F166 ;
-qhoychay:qhoychay F167 ;
-qola:qola F168 ;
-qonqo:qonqo F169 ;
-qoq:qoq F170 ;
-qotñi:qotñi F171 ;
-salskama:salskama F172 ;
-säna:säna F173 ;
-sanqo:sanqo F174 ;
-satschay:satschay F175 ;
-saxoni:saxoni F176 ;
-selschay:selschay F177 ;
-serx:serx F178 ;
-seschay:seschay F179 ;
-shachkuchay:shachkuchay F180 ;
-shatachay:shatachay F181 ;
-shaxara:shaxara F182 ;
-shikacha:shikacha F183 ;
-shila:shila F184 ;
-shuwani:shuwani F185 ;
-siluchay:siluchay F186 ;
-siñi:siñi F187 ;
-siqetschay:siqetschay F188 ;
-sischay:sischay F189 ;
-sisñi:sisñi F190 ;
-sisuchay:sisuchay F191 ;
-sitsñi:sitsñi F192 ;
-sitsñizoñi:sitsñizoñi F193 ;
-soqna:soqna F194 ;
-suwa:suwa F195 ;
-taki:taki F196 ;
-t'alla:t'alla F197 ;
-tanachay:tanachay F198 ;
-tanschay:tanschay F199 ;
-tapa:tapa F200 ;
-t'apha:t'apha F201 ;
-taxacharku:taxacharku F202 ;
-taxchuku:taxchuku F203 ;
-taxchukyës:taxchukyës F204 ;
-taxsnakichay:taxsnakichay F205 ;
-taxsnuku:taxsnuku F206 ;
-tekschay:tekschay F207 ;
-tësha:tësha F208 ;
-teskana:teskana F209 ;
-thaxchay:thaxchay F210 ;
-thikuchay:thikuchay F211 ;
-thosa:thosa F212 ;
-thü:thü F213 ;
-thuñi:thuñi F214 ;
-tï:tï F215 ;
-tichu:tichu F216 ;
-t'ijut'iju:t'ijut'iju F217 ;
-tiku:tiku F218 ;
-tila:tila F219 ;
-tïtomxe:tïtomxe F220 ;
-tololay:tololay F221 ;
-tuchay:tuchay F222 ;
-tüki:tüki F223 ;
-t'uku:t'uku F224 ;
-tuncharku:tuncharku F225 ;
-t'upsincha:t'upsincha F226 ;
-t'uqschay:t'uqschay F227 ;
-tüsi:tüsi F228 ;
-t'utu:t'utu F229 ;
-tüwqo:tüwqo F230 ;
-uchpü:uchpü F231 ;
-uchs:uchs F232 ;
-uchumik:uchumik F233 ;
-uchums:uchums F234 ;
-ulanchay:ulanchay F235 ;
-uñi:uñi F236 ;
-untu:untu F237 ;
-urkhu:urkhu F238 ;
-usa:usa F239 ;
-uwapinichay:uwapinichay F240 ;
-uyuwichay:uyuwichay F241 ;
-wakha:wakha F242 ;
-wakpacha:wakpacha F243 ;
-walchay:walchay F244 ;
-wallpa:wallpa F245 ;
-warirachay:warirachay F246 ;
-watha:watha F247 ;
-wësla:wësla F248 ;
-wilk:wilk F249 ;
-wisnaks:wisnaks F250 ;
-wisnakti:wisnakti F251 ;
-wist:wist F252 ;
-wistakchay:wistakchay F253 ;
-wiwi:wiwi F254 ;
-wiyani:wiyani F255 ;
-wiyantam:wiyantam F256 ;
-xala:xala F257 ;
-xalsmäsi:xalsmäsi F258 ;
-xalwari:xalwari F259 ;
-xanacharku:xanacharku F260 ;
-xawariski:xawariski F261 ;
-xorcha:xorcha F262 ;
-xürs:xürs F263 ;
-yachiri:yachiri F264 ;
-yës:yës F265 ;
-yiku:yiku F266 ;
-yïs:yïs F267 ;
-yoqa:yoqa F268 ;
-zoñchhiji:zoñchhiji F269 ;
+roberto:roberto F112 ;
+thö:thö F113 ;
+waki:waki F114 ;
+juana:juana F115 ;
+irohito:irohito F116 ;
+maría:maría F117 ;
+pedro:pedro F118 ;
+ochapara:ochapara F119 ;
+oqlaychay:oqlaychay F120 ;
+oqschay:oqschay F121 ;
+pakschay:pakschay F122 ;
+päku:päku F123 ;
+palitak:palitak F124 ;
+p'api:p'api F125 ;
+papila:papila F126 ;
+parentiña:parentiña F127 ;
+parina:parina F128 ;
+paxpiku:paxpiku F129 ;
+p'esaqa:p'esaqa F130 ;
+peske:peske F131 ;
+phawschay:phawschay F132 ;
+phesqoña:phesqoña F133 ;
+pheta:pheta F134 ;
+phiki:phiki F135 ;
+pichuchay:pichuchay F136 ;
+p'itkchay:p'itkchay F137 ;
+piwachay:piwachay F138 ;
+p'oa:p'oa F139 ;
+potschay:potschay F140 ;
+potsi:potsi F141 ;
+purchay:purchay F142 ;
+p'uschay:p'uschay F143 ;
+p'usu:p'usu F144 ;
+qachina:qachina F145 ;
+qala:qala F146 ;
+q'alluchay:q'alluchay F147 ;
+qälpu:qälpu F148 ;
+q'ämirizoñi:q'ämirizoñi F149 ;
+qañawi:qañawi F150 ;
+qawi:qawi F151 ;
+q'echa:q'echa F152 ;
+q'eja:q'eja F153 ;
+q'elaq'ela:q'elaq'ela F154 ;
+qeri:qeri F155 ;
+qerjiña:qerjiña F156 ;
+qeru:qeru F157 ;
+qerwakha:qerwakha F158 ;
+qeschhäla:qeschhäla F159 ;
+qetsi:qetsi F160 ;
+qhalu:qhalu F161 ;
+qhasi:qhasi F162 ;
+qhasumpek:qhasumpek F163 ;
+qhathu:qhathu F164 ;
+qhawschay:qhawschay F165 ;
+qhorskchay:qhorskchay F166 ;
+qhoya:qhoya F167 ;
+qhoychay:qhoychay F168 ;
+qola:qola F169 ;
+qonqo:qonqo F170 ;
+qoq:qoq F171 ;
+qotñi:qotñi F172 ;
+salskama:salskama F173 ;
+säna:säna F174 ;
+sanqo:sanqo F175 ;
+satschay:satschay F176 ;
+saxoni:saxoni F177 ;
+selschay:selschay F178 ;
+serx:serx F179 ;
+seschay:seschay F180 ;
+shachkuchay:shachkuchay F181 ;
+shatachay:shatachay F182 ;
+shaxara:shaxara F183 ;
+shikacha:shikacha F184 ;
+shila:shila F185 ;
+shuwani:shuwani F186 ;
+siluchay:siluchay F187 ;
+siñi:siñi F188 ;
+siqetschay:siqetschay F189 ;
+sischay:sischay F190 ;
+sisñi:sisñi F191 ;
+sisuchay:sisuchay F192 ;
+sitsñi:sitsñi F193 ;
+sitsñizoñi:sitsñizoñi F194 ;
+soqna:soqna F195 ;
+suwa:suwa F196 ;
+taki:taki F197 ;
+t'alla:t'alla F198 ;
+tanachay:tanachay F199 ;
+tanschay:tanschay F200 ;
+tapa:tapa F201 ;
+t'apha:t'apha F202 ;
+taxacharku:taxacharku F203 ;
+taxchuku:taxchuku F204 ;
+taxchukyës:taxchukyës F205 ;
+taxsnakichay:taxsnakichay F206 ;
+taxsnuku:taxsnuku F207 ;
+tekschay:tekschay F208 ;
+tësha:tësha F209 ;
+teskana:teskana F210 ;
+thaxchay:thaxchay F211 ;
+thikuchay:thikuchay F212 ;
+thosa:thosa F213 ;
+thü:thü F214 ;
+thuñi:thuñi F215 ;
+tï:tï F216 ;
+tichu:tichu F217 ;
+t'ijut'iju:t'ijut'iju F218 ;
+tiku:tiku F219 ;
+tila:tila F220 ;
+tïtomxe:tïtomxe F221 ;
+tololay:tololay F222 ;
+tuchay:tuchay F223 ;
+tüki:tüki F224 ;
+t'uku:t'uku F225 ;
+tuncharku:tuncharku F226 ;
+t'upsincha:t'upsincha F227 ;
+t'uqschay:t'uqschay F228 ;
+tüsi:tüsi F229 ;
+t'utu:t'utu F230 ;
+tüwqo:tüwqo F231 ;
+uchpü:uchpü F232 ;
+uchs:uchs F233 ;
+uchumik:uchumik F234 ;
+uchums:uchums F235 ;
+ulanchay:ulanchay F236 ;
+uñi:uñi F237 ;
+untu:untu F238 ;
+urkhu:urkhu F239 ;
+usa:usa F240 ;
+uwapinichay:uwapinichay F241 ;
+uyuwichay:uyuwichay F242 ;
+wakha:wakha F243 ;
+wakpacha:wakpacha F244 ;
+walchay:walchay F245 ;
+wallpa:wallpa F246 ;
+warirachay:warirachay F247 ;
+watha:watha F248 ;
+wësla:wësla F249 ;
+wilk:wilk F250 ;
+wisnaks:wisnaks F251 ;
+wisnakti:wisnakti F252 ;
+wist:wist F253 ;
+wistakchay:wistakchay F254 ;
+wiwi:wiwi F255 ;
+wiyani:wiyani F256 ;
+wiyantam:wiyantam F257 ;
+xala:xala F258 ;
+xalsmäsi:xalsmäsi F259 ;
+xalwari:xalwari F260 ;
+xanacharku:xanacharku F261 ;
+xawariski:xawariski F262 ;
+xorcha:xorcha F263 ;
+xürs:xürs F264 ;
+yachiri:yachiri F265 ;
+yës:yës F266 ;
+yiku:yiku F267 ;
+yïs:yïs F268 ;
+yoqa:yoqa F269 ;
+zoñchhiji:zoñchhiji F270 ;
 
 LEXICON F0
 +N+ID=p_achasi:0 # ;
@@ -979,500 +981,503 @@ LEXICON F111
 +UNK+ID=o_6270fe359522a1f4:0 # ;
 
 LEXICON F112
-+UNK+ID=o_9e010de9722a80d2:0 # ;
++UNK+ID=o_72534c4a93ddc043:0 # ;
 
 LEXICON F113
-+UNK+ID=o_b70f4e53e4a7808d:0 # ;
++UNK+ID=o_9e010de9722a80d2:0 # ;
 
 LEXICON F114
-+UNK+ID=o_cc501eaf8615e4b5:0 # ;
++UNK+ID=o_b70f4e53e4a7808d:0 # ;
 
 LEXICON F115
-+UNK+ID=o_da274ac86e1548cf:0 # ;
++UNK+ID=o_cc501eaf8615e4b5:0 # ;
 
 LEXICON F116
-+UNK+ID=o_edd82ab3ecfe1ad7:0 # ;
++UNK+ID=o_da274ac86e1548cf:0 # ;
 
 LEXICON F117
-+UNK+ID=o_ee5cd7d5d96c8874:0 # ;
++UNK+ID=o_edd82ab3ecfe1ad7:0 # ;
 
 LEXICON F118
-+N+ID=p_ochapara:0 # ;
++UNK+ID=o_ee5cd7d5d96c8874:0 # ;
 
 LEXICON F119
-+V+ID=p_oqlaychay:0 # ;
++N+ID=p_ochapara:0 # ;
 
 LEXICON F120
-+V+ID=p_oqschay:0 # ;
++V+ID=p_oqlaychay:0 # ;
 
 LEXICON F121
-+V+ID=p_pakschay:0 # ;
++V+ID=p_oqschay:0 # ;
 
 LEXICON F122
++V+ID=p_pakschay:0 # ;
+
+LEXICON F123
 +N+ID=p_paku:0 # ;
 +N+ID=p_pakunaka+SUF=naka:naka # ;
 
-LEXICON F123
+LEXICON F124
 +N+ID=p_palitak:0 # ;
 +N+ID=p_palitakchay+SUF=chay:chay # ;
 +N+ID=p_palitaknaka+SUF=naka:naka # ;
 
-LEXICON F124
+LEXICON F125
 +N+ID=p_papi:0 # ;
 
-LEXICON F125
+LEXICON F126
 +N+ID=p_papila:0 # ;
 
-LEXICON F126
+LEXICON F127
 +N+ID=p_parentina:0 # ;
 
-LEXICON F127
+LEXICON F128
 +N+ID=p_parina:0 # ;
 
-LEXICON F128
+LEXICON F129
 +NUM+ID=p_paxpiku:0 # ;
 
-LEXICON F129
+LEXICON F130
 +N+ID=p_pesaqa:0 # ;
 
-LEXICON F130
+LEXICON F131
 +NUM+ID=p_peske:0 # ;
 
-LEXICON F131
+LEXICON F132
 +V+ID=p_phawschay:0 # ;
 
-LEXICON F132
+LEXICON F133
 +N+ID=p_phesqona:0 # ;
 
-LEXICON F133
+LEXICON F134
 +N+ID=p_pheta:0 # ;
 +N+ID=p_phetanaka+SUF=naka:naka # ;
 
-LEXICON F134
+LEXICON F135
 +N+ID=p_phiki:0 # ;
 
-LEXICON F135
+LEXICON F136
 +V+ID=p_pichuchay:0 # ;
 
-LEXICON F136
+LEXICON F137
 +V+ID=p_pitkchay:0 # ;
 
-LEXICON F137
+LEXICON F138
 +V+ID=p_piwachay:0 # ;
 
-LEXICON F138
+LEXICON F139
 +N+ID=p_poa:0 # ;
 
-LEXICON F139
+LEXICON F140
 +V+ID=p_potschay:0 # ;
 
-LEXICON F140
+LEXICON F141
 +N+ID=p_potsi:0 # ;
 
-LEXICON F141
+LEXICON F142
 +V+ID=p_purchay:0 # ;
 
-LEXICON F142
+LEXICON F143
 +V+ID=p_puschay:0 # ;
 
-LEXICON F143
+LEXICON F144
 +ADJ+ID=p_pusu:0 # ;
 
-LEXICON F144
+LEXICON F145
 +N+ID=p_qachina:0 # ;
 
-LEXICON F145
+LEXICON F146
 +N+ID=p_qala:0 # ;
 
-LEXICON F146
+LEXICON F147
 +V+ID=p_qalluchay:0 # ;
 
-LEXICON F147
+LEXICON F148
 +N+ID=p_qalpu:0 # ;
 
-LEXICON F148
+LEXICON F149
 +N+ID=p_qamirizoni:0 # ;
 
-LEXICON F149
+LEXICON F150
 +N+ID=p_qanawi:0 # ;
 
-LEXICON F150
+LEXICON F151
 +N+ID=p_qawi:0 # ;
 
-LEXICON F151
+LEXICON F152
 +N+ID=p_qecha:0 # ;
 
-LEXICON F152
+LEXICON F153
 +N+ID=p_qeja:0 # ;
 
-LEXICON F153
+LEXICON F154
 +N+ID=p_qelaqela:0 # ;
 
-LEXICON F154
+LEXICON F155
 +N+ID=p_qeri:0 # ;
 
-LEXICON F155
+LEXICON F156
 +N+ID=p_qerjina:0 # ;
 
-LEXICON F156
+LEXICON F157
 +N+ID=p_qeru:0 # ;
 
-LEXICON F157
+LEXICON F158
 +N+ID=p_qerwakha:0 # ;
 
-LEXICON F158
+LEXICON F159
 +N+ID=p_qeschhala:0 # ;
 
-LEXICON F159
+LEXICON F160
 +N+ID=p_qetsi:0 # ;
 
-LEXICON F160
+LEXICON F161
 +NUM+ID=p_qhalu:0 # ;
 
-LEXICON F161
+LEXICON F162
 +N+ID=p_qhasi:0 # ;
 
-LEXICON F162
+LEXICON F163
 +PRONINT+ID=p_qhasumpek:0 # ;
 
-LEXICON F163
+LEXICON F164
 +N+ID=p_qhathu:0 # ;
 
-LEXICON F164
+LEXICON F165
 +V+ID=p_qhawschay:0 # ;
 
-LEXICON F165
+LEXICON F166
 +V+ID=p_qhorskchay:0 # ;
 
-LEXICON F166
+LEXICON F167
 +N+ID=p_qhoya:0 # ;
 
-LEXICON F167
+LEXICON F168
 +V+ID=p_qhoychay:0 # ;
 
-LEXICON F168
+LEXICON F169
 +N+ID=p_qola:0 # ;
 +N+ID=p_qolanakapini+SUF=naka+SUF=pini:nakapini # ;
 
-LEXICON F169
+LEXICON F170
 +NUM+ID=p_qonqo:0 # ;
 
-LEXICON F170
+LEXICON F171
 +N+ID=p_qoq:0 # ;
 +N+ID=p_qoqnaka+SUF=naka:naka # ;
 
-LEXICON F171
+LEXICON F172
 +ADJ+ID=p_qotni:0 # ;
 
-LEXICON F172
+LEXICON F173
 +EXPR+ID=p_salskama:0 # ;
 
-LEXICON F173
+LEXICON F174
 +N+ID=p_sana:0 # ;
 
-LEXICON F174
+LEXICON F175
 +NUM+ID=p_sanqo:0 # ;
 
-LEXICON F175
+LEXICON F176
 +V+ID=p_satschay:0 # ;
 
-LEXICON F176
+LEXICON F177
 +ADJ+ID=p_saxoni:0 # ;
 +ADJ+ID=p_saxonichay+SUF=chay:chay # ;
 
-LEXICON F177
+LEXICON F178
 +V+ID=p_selschay:0 # ;
 
-LEXICON F178
+LEXICON F179
 +ADJ+ID=p_serx:0 # ;
 +ADJ+ID=p_serxchay+SUF=chay:chay # ;
 
-LEXICON F179
+LEXICON F180
 +N+ID=p_seschay:0 # ;
 
-LEXICON F180
+LEXICON F181
 +N+ID=p_shachkuchay:0 # ;
 
-LEXICON F181
+LEXICON F182
 +V+ID=p_shatachay:0 # ;
 
-LEXICON F182
+LEXICON F183
 +N+ID=p_shaxara:0 # ;
 
-LEXICON F183
+LEXICON F184
 +N+ID=p_shikacha:0 # ;
 
-LEXICON F184
+LEXICON F185
 +ADV+ID=p_shila:0 # ;
 
-LEXICON F185
+LEXICON F186
 +N+ID=p_shuwani:0 # ;
 
-LEXICON F186
+LEXICON F187
 +N+ID=p_siluchay:0 # ;
 
-LEXICON F187
+LEXICON F188
 +N+ID=p_sini:0 # ;
 +N+ID=p_sininaka+SUF=naka:naka # ;
 
-LEXICON F188
+LEXICON F189
 +V+ID=p_siqetschay:0 # ;
 
-LEXICON F189
+LEXICON F190
 +V+ID=p_sischay:0 # ;
 
-LEXICON F190
+LEXICON F191
 +N+ID=p_sisni:0 # ;
 +N+ID=p_sisnichay+SUF=chay:chay # ;
 
-LEXICON F191
+LEXICON F192
 +V+ID=p_sisuchay:0 # ;
 
-LEXICON F192
+LEXICON F193
 +N+ID=p_sitsni:0 # ;
 +N+ID=p_sitsninaka+SUF=naka:naka # ;
 +N+ID=p_sitsninakachay+SUF=naka+SUF=chay:nakachay # ;
 
-LEXICON F193
+LEXICON F194
 +N+ID=p_sitsnizoni:0 # ;
 +N+ID=p_sitsnizonipinichay+SUF=pini+SUF=chay:pinichay # ;
 
-LEXICON F194
+LEXICON F195
 +N+ID=p_soqna:0 # ;
 
-LEXICON F195
+LEXICON F196
 +N+ID=p_suwa:0 # ;
 
-LEXICON F196
+LEXICON F197
 +DET+ID=p_taki:0 # ;
 
-LEXICON F197
+LEXICON F198
 +N+ID=p_talla:0 # ;
 
-LEXICON F198
+LEXICON F199
 +V+ID=p_tanachay:0 # ;
 
-LEXICON F199
+LEXICON F200
 +V+ID=p_tanschay:0 # ;
 
-LEXICON F200
+LEXICON F201
 +N+ID=p_tapa:0 # ;
 
-LEXICON F201
+LEXICON F202
 +ADJ+ID=p_tapha:0 # ;
 
-LEXICON F202
+LEXICON F203
 +N+ID=p_taxacharku:0 # ;
 
-LEXICON F203
+LEXICON F204
 +NUM+ID=p_taxchuku:0 # ;
 
-LEXICON F204
+LEXICON F205
 +N+ID=p_taxchukyes:0 # ;
 
-LEXICON F205
+LEXICON F206
 +V+ID=p_taxsnakichay:0 # ;
 
-LEXICON F206
+LEXICON F207
 +NUM+ID=p_taxsnuku:0 # ;
 
-LEXICON F207
+LEXICON F208
 +V+ID=p_tekschay:0 # ;
 
-LEXICON F208
+LEXICON F209
 +N+ID=p_tesha:0 # ;
 
-LEXICON F209
+LEXICON F210
 +N+ID=p_teskana:0 # ;
 
-LEXICON F210
+LEXICON F211
 +V+ID=p_thaxchay:0 # ;
 
-LEXICON F211
+LEXICON F212
 +N+ID=p_thikuchay:0 # ;
 
-LEXICON F212
+LEXICON F213
 +N+ID=p_thosa:0 # ;
 
-LEXICON F213
+LEXICON F214
 +N+ID=p_thu:0 # ;
 
-LEXICON F214
+LEXICON F215
 +N+ID=p_thuni:0 # ;
 
-LEXICON F215
+LEXICON F216
 +PRON+ID=p_ti:0 # ;
 
-LEXICON F216
+LEXICON F217
 +DET+ID=p_tichu:0 # ;
 
-LEXICON F217
+LEXICON F218
 +N+ID=p_tijutiju:0 # ;
 
-LEXICON F218
+LEXICON F219
 +N+ID=p_tiku:0 # ;
 
-LEXICON F219
+LEXICON F220
 +DET+ID=p_tila:0 # ;
 
-LEXICON F220
+LEXICON F221
 +N+ID=p_titomxe:0 # ;
 
-LEXICON F221
+LEXICON F222
 +N+ID=p_tololay:0 # ;
 
-LEXICON F222
+LEXICON F223
 +V+ID=p_tuchay:0 # ;
 
-LEXICON F223
+LEXICON F224
 +N+ID=p_tuki:0 # ;
 
-LEXICON F224
+LEXICON F225
 +N+ID=p_tuku:0 # ;
 
-LEXICON F225
+LEXICON F226
 +PRON+ID=p_tuncharku:0 # ;
 
-LEXICON F226
+LEXICON F227
 +N+ID=p_tupsincha:0 # ;
 
-LEXICON F227
+LEXICON F228
 +V+ID=p_tuqschay:0 # ;
 
-LEXICON F228
+LEXICON F229
 +N+ID=p_tusi:0 # ;
 
-LEXICON F229
+LEXICON F230
 +N+ID=p_tutu:0 # ;
 
-LEXICON F230
+LEXICON F231
 +NUM+ID=p_tuwqo:0 # ;
 
-LEXICON F231
+LEXICON F232
 +N+ID=p_uchpu:0 # ;
 
-LEXICON F232
+LEXICON F233
 +ADJ+ID=p_uchs:0 # ;
 +ADJ+ID=p_uchspinichay+SUF=pini+SUF=chay:pinichay # ;
 
-LEXICON F233
+LEXICON F234
 +PRON+ID=p_uchumik:0 # ;
 
-LEXICON F234
+LEXICON F235
 +DETPOSS+ID=p_uchums:0 # ;
 
-LEXICON F235
+LEXICON F236
 +V+ID=p_ulanchay:0 # ;
 
-LEXICON F236
+LEXICON F237
 +N+ID=p_uni:0 # ;
 +N+ID=p_uninaka+SUF=naka:naka # ;
 
-LEXICON F237
+LEXICON F238
 +ADJ+ID=p_untu:0 # ;
 
-LEXICON F238
+LEXICON F239
 +N+ID=p_urkhu:0 # ;
 
-LEXICON F239
+LEXICON F240
 +N+ID=p_usa:0 # ;
 +N+ID=p_usachay+SUF=chay:chay # ;
 
-LEXICON F240
+LEXICON F241
 +EXPR+ID=p_uwapinichay:0 # ;
 
-LEXICON F241
+LEXICON F242
 +V+ID=p_uyuwichay:0 # ;
 
-LEXICON F242
+LEXICON F243
 +N+ID=p_wakha:0 # ;
 +N+ID=p_wakhanaka+SUF=naka:naka # ;
 
-LEXICON F243
+LEXICON F244
 +N+ID=p_wakpacha:0 # ;
 
-LEXICON F244
+LEXICON F245
 +N+ID=p_walchay:0 # ;
 
-LEXICON F245
+LEXICON F246
 +N+ID=p_wallpa:0 # ;
 +N+ID=p_wallpanaka+SUF=naka:naka # ;
 
-LEXICON F246
+LEXICON F247
 +N+ID=p_warirachay:0 # ;
 
-LEXICON F247
+LEXICON F248
 +N+ID=p_watha:0 # ;
 
-LEXICON F248
+LEXICON F249
 +N+ID=p_wesla:0 # ;
 +N+ID=p_weslanaka+SUF=naka:naka # ;
 
-LEXICON F249
+LEXICON F250
 +PRON+ID=p_wilk:0 # ;
 
-LEXICON F250
+LEXICON F251
 +DETPOSS+ID=p_wisnaks:0 # ;
 
-LEXICON F251
+LEXICON F252
 +PRON+ID=p_wisnakti:0 # ;
 
-LEXICON F252
+LEXICON F253
 +DETPOSS+ID=p_wist:0 # ;
 
-LEXICON F253
+LEXICON F254
 +V+ID=p_wistakchay:0 # ;
 
-LEXICON F254
+LEXICON F255
 +N+ID=p_wiwi:0 # ;
 
-LEXICON F255
+LEXICON F256
 +N+ID=p_wiyani:0 # ;
 +N+ID=p_wiyanichay+SUF=chay:chay # ;
 
-LEXICON F256
+LEXICON F257
 +EXPR+ID=p_wiyantam:0 # ;
 
-LEXICON F257
+LEXICON F258
 +N+ID=p_xala:0 # ;
 +N+ID=p_xalanaka+SUF=naka:naka # ;
 
-LEXICON F258
+LEXICON F259
 +N+ID=p_xalsmasi:0 # ;
 
-LEXICON F259
+LEXICON F260
 +N+ID=p_xalwari:0 # ;
 
-LEXICON F260
+LEXICON F261
 +N+ID=p_xanacharku:0 # ;
 +N+ID=p_xanacharkuchay+SUF=chay:chay # ;
 
-LEXICON F261
+LEXICON F262
 +N+ID=p_xawariski:0 # ;
 
-LEXICON F262
+LEXICON F263
 +N+ID=p_xorcha:0 # ;
 +N+ID=p_xorchachay+SUF=chay:chay # ;
 
-LEXICON F263
+LEXICON F264
 +N+ID=p_xurs:0 # ;
 
-LEXICON F264
+LEXICON F265
 +N+ID=p_yachiri:0 # ;
 +N+ID=p_yachirichay+SUF=chay:chay # ;
 
-LEXICON F265
+LEXICON F266
 +N+ID=p_yes:0 # ;
 
-LEXICON F266
+LEXICON F267
 +N+ID=p_yiku:0 # ;
 +N+ID=p_yikupinichay+SUF=pini+SUF=chay:pinichay # ;
 
-LEXICON F267
+LEXICON F268
 +N+ID=p_yis:0 # ;
 
-LEXICON F268
+LEXICON F269
 +N+ID=p_yoqa:0 # ;
 
-LEXICON F269
+LEXICON F270
 +N+ID=p_zonchhiji:0 # ;

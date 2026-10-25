@@ -18,7 +18,7 @@
     },
     {
       "id": "O_004",
-      "uch": "Wilk thö lorenzo",
+      "uch": "Wilk thö Lorenzo",
       "es": "Yo soy Lorenzo"
     },
     {
@@ -28,7 +28,7 @@
     },
     {
       "id": "O_006",
-      "uch": "Wist thü lorenzo",
+      "uch": "Wist thü Lorenzo",
       "es": "Mi nombre es Lorenzo"
     },
     {
@@ -38,17 +38,17 @@
     },
     {
       "id": "O_008",
-      "uch": "Chhuljamachay pedro",
+      "uch": "Chhuljamachay Pedro",
       "es": "¿Cómo estás Pedro?"
     },
     {
       "id": "O_009",
-      "uch": "Wilk chhuñiqasi, uwapinichay, amthü",
-      "es": "Yo estoy bien gracias, y ¿tú?"
+      "uch": "Wilk chhuñiqasi, amthü",
+      "es": "Yo estoy bien y ¿tú?"
     },
     {
       "id": "O_010",
-      "uch": "Iwaltaki wilk chhuñiqasi",
+      "uch": "Iwaltaki, wilk chhuñiqasi",
       "es": "Igualmente, yo estoy bien"
     },
     {
@@ -58,12 +58,12 @@
     },
     {
       "id": "O_012",
-      "uch": "Shila wilk chhuñiqasi",
+      "uch": "Shila, wilk chhuñiqasi",
       "es": "Sí, yo estoy bien"
     },
     {
       "id": "O_013",
-      "uch": "Ana wilk anachhuñi",
+      "uch": "Ana, wilk anachhuñi",
       "es": "No, yo no estoy bien"
     },
     {
@@ -73,7 +73,7 @@
     },
     {
       "id": "O_015",
-      "uch": "Jasiktam pichuchay pedro",
+      "uch": "Jasiktam pichuchay Pedro",
       "es": "¿De dónde vienes Pedro?"
     },
     {
@@ -93,7 +93,7 @@
     },
     {
       "id": "O_019",
-      "uch": "Salskama pedro",
+      "uch": "Salskama Pedro",
       "es": "Hasta luego Pedro"
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "id": "O_030",
-      "uch": "Nis aymilla pedro uchspinichay",
+      "uch": "Nis aymilla Pedro uchspinichay",
       "es": "Su camisa de Pedro es muy pequeña"
     },
     {
@@ -675,6 +675,16 @@
       "id": "O_135",
       "uch": "Wist qhoya peske phetanaka wistakchay",
       "es": "Mi casa tiene dos ventanas"
+    },
+    {
+      "id": "O_136",
+      "uch": "Wilk chhuñiqasi, uwapinichay, amthü",
+      "es": "Yo estoy bien, gracias y ¿tú?"
+    },
+    {
+      "id": "O_137",
+      "uch": "Wilk thö Roberto",
+      "es": "Yo soy Roberto"
     }
   ]
 }
