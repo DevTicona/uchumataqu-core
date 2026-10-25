@@ -5,7 +5,9 @@ Sincronizador automático y seguro de contenido desde WSL hacia proyecto Unity e
 
 Sincroniza de forma controlada y eficiente:
   - Datos JSON: UNITY/datos_app/ -> Assets/Content/Data/
-    (EXCLUSIVAMENTE: lecciones_compiladas.json, palabras.json, oraciones.json)
+    (lecciones_compiladas.json, palabras.json, oraciones.json)
+  - Datos PLN (HFST): PLN/hfst/export/pln-hfst-v1/ -> Assets/Content/Data/PLN/
+    (analyses.json, lookup-index.json)
   - Audios Palabras: UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/ (*.wav)
   - Audios Oraciones: UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/ (*.wav)
 
@@ -46,6 +48,12 @@ ARCHIVOS_DATOS_PERMITIDOS = {
     "lecciones_compiladas.json",
     "palabras.json",
     "oraciones.json",
+}
+
+# Archivos PLN (HFST) permitidos para Unity
+ARCHIVOS_PLN_PERMITIDOS = {
+    "analyses.json",
+    "lookup-index.json",
 }
 
 EXTENSIONES_DATOS_PERMITIDAS = {".json"}
@@ -129,11 +137,15 @@ def validar_rutas(wsl_root: Path, unity_root: Path) -> Path:
         sys.exit(1)
 
     unity_source = obtener_directorio_fuente_unity(wsl_root)
+    pln_source = wsl_root / "PLN" / "hfst" / "export" / "pln-hfst-v1"
+    asr_source = wsl_root / "ASR" / "models" / "exported_onnx"
     rutas_wsl_requeridas = [
         unity_source,
         unity_source / "datos_app",
         unity_source / "audios_palabras",
         unity_source / "audios_oraciones",
+        pln_source,
+        asr_source,
     ]
 
     for ruta in rutas_wsl_requeridas:
@@ -148,8 +160,10 @@ def obtener_destinos_autorizados(unity_root: Path) -> list[Path]:
     """Retorna la lista de rutas base autorizadas para escritura en Unity."""
     return [
         (unity_root / "Assets" / "Content" / "Data").resolve(),
+        (unity_root / "Assets" / "Content" / "Data" / "PLN").resolve(),
         (unity_root / "Assets" / "Content" / "Audio" / "Palabras").resolve(),
         (unity_root / "Assets" / "Content" / "Audio" / "Oraciones").resolve(),
+        (unity_root / "Assets" / "StreamingAssets" / "sherpa").resolve(),
     ]
 
 
@@ -328,10 +342,77 @@ def sincronizar_categoria(
     return stats
 
 
+def sincronizar_asr_sherpa(
+    wsl_root: Path,
+    unity_root: Path,
+    authorized_roots: list[Path],
+    dry_run: bool = False,
+    verbose: bool = False,
+) -> Estadisticas:
+    """Sincroniza el modelo ASR cuantizado INT8 (model.int8.bin) y tokens.txt a Assets/StreamingAssets/sherpa/."""
+    stats = Estadisticas()
+    dest_dir = unity_root / "Assets" / "StreamingAssets" / "sherpa"
+
+    print("\n[INFO] Sincronizando modelo ASR Sherpa-ONNX (model.int8.bin, tokens.txt)...")
+
+    mapeo_archivos = [
+        (wsl_root / "ASR" / "models" / "exported_onnx" / "model.int8.onnx", dest_dir / "model.int8.bin"),
+        (wsl_root / "ASR" / "models" / "exported_onnx" / "tokens.txt", dest_dir / "tokens.txt"),
+    ]
+
+    for src_file, dst_file in mapeo_archivos:
+        if not src_file.exists():
+            print(f"[ERROR] Archivo fuente de ASR no encontrado: {src_file}")
+            sys.exit(1)
+
+        if not es_destino_autorizado(dst_file, authorized_roots):
+            print(f"[ERROR] Intento de escritura fuera de destino autorizado: {dst_file}")
+            sys.exit(1)
+
+        rel_str = dst_file.name
+        if not dst_file.exists():
+            if dry_run:
+                print(f"  [DRY-RUN][NUEVO] {rel_str}")
+            else:
+                dst_file.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src_file, dst_file)
+                print(f"  [NUEVO] {rel_str}")
+            stats.nuevos += 1
+        else:
+            tam_src = src_file.stat().st_size
+            tam_dst = dst_file.stat().st_size
+            cambiado = False
+            if tam_src != tam_dst:
+                cambiado = True
+            else:
+                sha_src = calcular_sha256(src_file)
+                sha_dst = calcular_sha256(dst_file)
+                cambiado = (sha_src != sha_dst)
+
+            if cambiado:
+                if dry_run:
+                    print(f"  [DRY-RUN][ACTUALIZAR] {rel_str}")
+                else:
+                    shutil.copy2(src_file, dst_file)
+                    print(f"  [ACTUALIZADO] {rel_str}")
+                stats.actualizados += 1
+            else:
+                if verbose:
+                    print(f"  [SIN CAMBIOS] {rel_str}")
+                stats.sin_cambios += 1
+
+    if not verbose and stats.sin_cambios > 0:
+        print(f"  ({stats.sin_cambios} archivos sin cambios no requirieron sincronización)")
+
+    return stats
+
+
 def mostrar_resumen(
     stats_datos: Estadisticas,
+    stats_pln: Estadisticas,
     stats_audios_palabras: Estadisticas,
     stats_audios_oraciones: Estadisticas,
+    stats_asr: Estadisticas,
     unity_root: Path,
     dry_run: bool,
 ) -> None:
@@ -356,6 +437,11 @@ def mostrar_resumen(
         unity_root / "Assets" / "Content" / "Data",
     )
     imprimir_bloque(
+        "Datos PLN (HFST)",
+        stats_pln,
+        unity_root / "Assets" / "Content" / "Data" / "PLN",
+    )
+    imprimir_bloque(
         "Audios Palabras",
         stats_audios_palabras,
         unity_root / "Assets" / "Content" / "Audio" / "Palabras",
@@ -365,10 +451,15 @@ def mostrar_resumen(
         stats_audios_oraciones,
         unity_root / "Assets" / "Content" / "Audio" / "Oraciones",
     )
+    imprimir_bloque(
+        "Modelo ASR (Sherpa)",
+        stats_asr,
+        unity_root / "Assets" / "StreamingAssets" / "sherpa",
+    )
 
-    total_nuevos = stats_datos.nuevos + stats_audios_palabras.nuevos + stats_audios_oraciones.nuevos
-    total_actualizados = stats_datos.actualizados + stats_audios_palabras.actualizados + stats_audios_oraciones.actualizados
-    total_sin_cambios = stats_datos.sin_cambios + stats_audios_palabras.sin_cambios + stats_audios_oraciones.sin_cambios
+    total_nuevos = stats_datos.nuevos + stats_pln.nuevos + stats_audios_palabras.nuevos + stats_audios_oraciones.nuevos + stats_asr.nuevos
+    total_actualizados = stats_datos.actualizados + stats_pln.actualizados + stats_audios_palabras.actualizados + stats_audios_oraciones.actualizados + stats_asr.actualizados
+    total_sin_cambios = stats_datos.sin_cambios + stats_pln.sin_cambios + stats_audios_palabras.sin_cambios + stats_audios_oraciones.sin_cambios + stats_asr.sin_cambios
 
     print("\n------------------------------------------------")
     print(f"TOTAL: {total_nuevos} nuevos, {total_actualizados} actualizados, {total_sin_cambios} sin cambios")
@@ -417,8 +508,10 @@ def main() -> None:
     print(f"[INFO] Proyecto Unity: {unity_root}")
     print("[INFO] Alcance:")
     print("  - Datos JSON: lecciones_compiladas.json, palabras.json, oraciones.json")
+    print("  - Datos PLN (HFST): PLN/hfst/export/pln-hfst-v1/ -> Assets/Content/Data/PLN/ (analyses.json, lookup-index.json)")
     print("  - Audios Palabras: UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/")
     print("  - Audios Oraciones: UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/")
+    print("  - Modelo ASR (Sherpa): ASR/models/exported_onnx/ -> Assets/StreamingAssets/sherpa/ (model.int8.bin, tokens.txt)")
     if args.dry_run:
         print("[INFO] Modo: SIMULACIÓN (--dry-run)")
     if args.delete:
@@ -441,7 +534,21 @@ def main() -> None:
         verbose=args.verbose,
     )
 
-    # 2. Sincronizar Audios Palabras (UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/)
+    # 2. Sincronizar datos PLN (analyses.json y lookup-index.json)
+    stats_pln = sincronizar_categoria(
+        nombre_categoria="datos PLN (analyses.json, lookup-index.json)",
+        source_dir=wsl_root / "PLN" / "hfst" / "export" / "pln-hfst-v1",
+        dest_dir=unity_root / "Assets" / "Content" / "Data" / "PLN",
+        allowed_extensions=EXTENSIONES_DATOS_PERMITIDAS,
+        authorized_roots=authorized_roots,
+        dry_run=args.dry_run,
+        delete_orphans=args.delete,
+        allowed_names=ARCHIVOS_PLN_PERMITIDOS,
+        recursive=False,
+        verbose=args.verbose,
+    )
+
+    # 3. Sincronizar Audios Palabras (UNITY/audios_palabras/ -> Assets/Content/Audio/Palabras/)
     stats_audios_palabras = sincronizar_categoria(
         nombre_categoria="audios de palabras",
         source_dir=unity_source / "audios_palabras",
@@ -454,7 +561,7 @@ def main() -> None:
         verbose=args.verbose,
     )
 
-    # 3. Sincronizar Audios Oraciones (UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/)
+    # 4. Sincronizar Audios Oraciones (UNITY/audios_oraciones/ -> Assets/Content/Audio/Oraciones/)
     stats_audios_oraciones = sincronizar_categoria(
         nombre_categoria="audios de oraciones",
         source_dir=unity_source / "audios_oraciones",
@@ -467,10 +574,21 @@ def main() -> None:
         verbose=args.verbose,
     )
 
+    # 5. Sincronizar Modelo ASR (Sherpa-ONNX model.int8.bin y tokens.txt)
+    stats_asr = sincronizar_asr_sherpa(
+        wsl_root=wsl_root,
+        unity_root=unity_root,
+        authorized_roots=authorized_roots,
+        dry_run=args.dry_run,
+        verbose=args.verbose,
+    )
+
     mostrar_resumen(
         stats_datos=stats_datos,
+        stats_pln=stats_pln,
         stats_audios_palabras=stats_audios_palabras,
         stats_audios_oraciones=stats_audios_oraciones,
+        stats_asr=stats_asr,
         unity_root=unity_root,
         dry_run=args.dry_run,
     )

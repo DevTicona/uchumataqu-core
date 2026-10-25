@@ -82,11 +82,11 @@ class TestCompiladorLecciones(unittest.TestCase):
         self.assertEqual(len(interseccion_retirados), 0,
                          f"Se detectaron tipos retirados en el compilado: {interseccion_retirados}")
 
-    def test_total_pasos_inferior_a_referencia_804(self):
-        """Verifica que el total de pasos no exceda los 804 de la referencia v4 (reducción de redundancia)."""
+    def test_total_pasos_con_cobertura_refuerzo(self):
+        """Verifica que el total de pasos refleje la cobertura de refuerzo para todas las familias nuevas (879 pasos)."""
         total_pasos = sum(len(l.get("pasos", [])) for l in self.lecciones)
-        self.assertLessEqual(total_pasos, 804, f"Total de pasos {total_pasos} excede el límite de 804")
-        self.assertGreaterEqual(total_pasos, 500, f"Total de pasos {total_pasos} es anormalmente bajo")
+        self.assertLessEqual(total_pasos, 900, f"Total de pasos {total_pasos} excede el límite de 900")
+        self.assertGreaterEqual(total_pasos, 800, f"Total de pasos {total_pasos} es menor a los 800 esperados con cobertura completa")
 
     def test_cobertura_26_lecciones_y_120_oraciones(self):
         """Verifica que las 26 lecciones existan y que las 120 oraciones curriculares estén cubiertas."""
@@ -127,12 +127,12 @@ class TestCompiladorLecciones(unittest.TestCase):
         self.assertEqual(total_presentaciones, 210, f"Se esperaban 210 presentaciones, se obtuvieron {total_presentaciones}")
 
     def test_proporcion_y_rango_escritura_libre(self):
-        """Verifica que cada lección tenga entre 4 y 6 actividades de escritura libre."""
+        """Verifica que cada lección tenga una cantidad equilibrada de escritura libre acorde a sus familias nuevas (4 a 8 escrituras)."""
         for lec in self.lecciones:
             escrituras = [p for p in lec.get("pasos", []) if p["tipo"] in {"escribir_palabra", "escribir_forma", "escribir_oracion"}]
             total_esc = len(escrituras)
-            self.assertTrue(4 <= total_esc <= 6,
-                            f"En {lec['id']}: se esperaban 4-6 escrituras libres, se obtuvieron {total_esc}")
+            self.assertTrue(4 <= total_esc <= 8,
+                            f"En {lec['id']}: se esperaban 4-8 escrituras libres, se obtuvieron {total_esc}")
 
     def test_no_duplicacion_de_objetivos_escritos(self):
         """Verifica que ningún ID ni respuesta superficial normalizada se repita en escritura libre en la misma lección."""
@@ -321,6 +321,168 @@ class TestCompiladorLecciones(unittest.TestCase):
                 self.assertEqual(len(inter), 0,
                                  f"En {lec['id']}: palabras repetidas entre Emp 1 y Emp 2: {inter}")
 
+    def test_organizacion_dos_bloques_vocabulario_y_oraciones_finales(self):
+        """
+        Verifica automáticamente las 26 lecciones según los 6 criterios del nuevo contrato:
+        1. Cada familia nueva tenga 1 presentación, 1 microactividad inicial y 1 actividad adicional (escritura o ASR).
+        2. Cada bloque (A y B) tenga su actividad emparejar_uch_es.
+        3. Las actividades de refuerzo aparezcan después del emparejamiento correspondiente.
+        4. Todas las actividades de oraciones estén al final de la lección.
+        5. No existan referencias a audios, palabras, formas u oraciones inexistentes.
+        6. Los ejercicios ASR sean compatibles con los recursos reales del modelo.
+        Y verifica que NUNCA existan dos actividades de escritura consecutivas.
+        """
+        import os
+        dir_audio = os.path.join(os.path.dirname(__file__), "..", "..", "audios_palabras")
+        audios_reales = {os.path.splitext(f)[0] for f in os.listdir(dir_audio)} if os.path.exists(dir_audio) else set()
+        ruta_lex = os.path.join(os.path.dirname(__file__), "..", "..", "..", "ASR", "datos_asr", "lexicon.txt")
+        lexicon_reales = set()
+        if os.path.exists(ruta_lex):
+            with open(ruta_lex, "r", encoding="utf-8") as f:
+                lexicon_reales = {line.split("\t")[0].strip() for line in f if "\t" in line}
+
+        TIPOS_ORACIONES = {"ordenar_oracion", "escribir_oracion", "escucha_y_repite_oracion_asr"}
+        TIPOS_ESCRITURA = {"escribir_palabra", "escribir_forma", "escribir_oracion"}
+        palabras_map = {p["id"]: p for p in self.data_palabras.get("palabras", [])}
+
+        for lec in self.lecciones:
+            pasos = lec.get("pasos", [])
+            fams = lec.get("familias_nuevas", [])
+            n_nuevas = len(fams)
+            mitad = (n_nuevas + 1) // 2
+            fams_a = fams[:mitad]
+            fams_b = fams[mitad:]
+
+            # 1. Cada familia nueva tiene 1 presentación, 1 microactividad inicial y 1 refuerzo adicional
+            for f in fams:
+                pres = [p for p in pasos if p["tipo"] == "presentacion_familia" and p.get("objetivo_id") == f]
+                self.assertEqual(len(pres), 1, f"En {lec['id']}: familia {f} tiene {len(pres)} presentaciones")
+
+                ref = [
+                    p for p in pasos
+                    if (p.get("objetivo_id") == f or p.get("raiz_id") == f)
+                    and p["tipo"] in {"escribir_palabra", "escribir_forma", "escucha_y_repite_asr"}
+                ]
+                self.assertEqual(len(ref), 1, f"En {lec['id']}: familia {f} tiene {len(ref)} refuerzos (esperado exactamente 1)")
+
+            # 2. Emparejamientos de Bloque A y Bloque B
+            emps = [p for p in pasos if p["tipo"] == "emparejar_uch_es"]
+            self.assertEqual(len(emps), 2, f"En {lec['id']}: se esperaban 2 emparejamientos, hay {len(emps)}")
+            idx_emp_a = pasos.index(emps[0])
+            idx_emp_b = pasos.index(emps[1])
+
+            # 3. Refuerzos de Bloque A aparecen después de Emparejamiento A, y los de B después de Emparejamiento B
+            for f in fams_a:
+                ref_p = next(
+                    p for p in pasos
+                    if (p.get("objetivo_id") == f or p.get("raiz_id") == f)
+                    and p["tipo"] in {"escribir_palabra", "escribir_forma", "escucha_y_repite_asr"}
+                )
+                self.assertGreater(pasos.index(ref_p), idx_emp_a,
+                                   f"En {lec['id']}: refuerzo de {f} (Bloque A) antes de emparejamiento 1")
+                self.assertLess(pasos.index(ref_p), idx_emp_b,
+                                f"En {lec['id']}: refuerzo de {f} (Bloque A) después de emparejamiento 2")
+
+            for f in fams_b:
+                ref_p = next(
+                    p for p in pasos
+                    if (p.get("objetivo_id") == f or p.get("raiz_id") == f)
+                    and p["tipo"] in {"escribir_palabra", "escribir_forma", "escucha_y_repite_asr"}
+                )
+                self.assertGreater(pasos.index(ref_p), idx_emp_b,
+                                   f"En {lec['id']}: refuerzo de {f} (Bloque B) antes de emparejamiento 2")
+
+            # 4. Todas las actividades de oraciones al final
+            idx_primer_oracion = min(i for i, p in enumerate(pasos) if p["tipo"] in TIPOS_ORACIONES)
+            for p in pasos[idx_primer_oracion:]:
+                self.assertIn(p["tipo"], TIPOS_ORACIONES,
+                              f"En {lec['id']}: paso no-oracional después de oraciones: {p['tipo']}")
+
+            # 5 & 6. Compatibilidad de audios y ASR con recursos reales del modelo
+            for p in pasos:
+                if p["tipo"] == "escucha_y_repite_asr":
+                    obj = p["objetivo_id"]
+                    self.assertIn(obj, audios_reales, f"En {lec['id']}: ASR de {obj} no tiene archivo de audio")
+                    uch_p = palabras_map[obj]["uch"].lower().strip()
+                    self.assertTrue(uch_p in lexicon_reales or obj in lexicon_reales,
+                                    f"En {lec['id']}: palabra ASR '{uch_p}' ({obj}) no compatible con lexicon ASR")
+
+            # 7. NUNCA dos actividades de escritura consecutivas
+            for idx in range(len(pasos) - 1):
+                t1 = pasos[idx]["tipo"]
+                t2 = pasos[idx + 1]["tipo"]
+                self.assertFalse(t1 in TIPOS_ESCRITURA and t2 in TIPOS_ESCRITURA,
+                                 f"En {lec['id']}, pasos {idx} y {idx+1}: dos escrituras consecutivas ('{t1}' y '{t2}')")
+
+    def test_capitalizacion_irohito_urus_en_l04(self):
+        """Verifica que el nombre propio de la comunidad 'Irohito Urus' esté correctamente capitalizado en O_016 y O_018."""
+        oraciones_map = {o["id"]: o for o in self.data_oraciones.get("oraciones", [])}
+        self.assertIn("Irohito Urus", oraciones_map["O_016"]["uch"])
+        self.assertNotIn("irohito urus", oraciones_map["O_016"]["uch"])
+        self.assertIn("Irohito Urus", oraciones_map["O_018"]["uch"])
+        self.assertNotIn("irohito urus", oraciones_map["O_018"]["uch"])
+
+        # En lecciones_compiladas.json (L04)
+        l04 = next(l for l in self.lecciones if l["id"] == "L04")
+        for paso in l04.get("pasos", []):
+            if paso.get("oracion_id") in ["O_016", "O_018"] and "respuesta_esperada_uch" in paso:
+                self.assertIn("Irohito Urus", paso["respuesta_esperada_uch"],
+                              f"L04: respuesta_esperada_uch sin capitalizar: {paso['respuesta_esperada_uch']}")
+                self.assertNotIn("irohito urus", paso["respuesta_esperada_uch"])
+
+    def test_intercalacion_actividades_oraciones(self):
+        """Verifica que ordenar_oracion se intercale con escritura y ASR, eliminando ejercicios consecutivos innecesarios."""
+        total_pares_consecutivos = 0
+        for lec in self.lecciones:
+            pasos = lec.get("pasos", [])
+            consec = 0
+            for i in range(len(pasos) - 1):
+                if pasos[i]["tipo"] == "ordenar_oracion" and pasos[i + 1]["tipo"] == "ordenar_oracion":
+                    consec += 1
+            total_pares_consecutivos += consec
+
+            # En lecciones con <= 4 oraciones reconstituibles, debe haber exactamente 0 pares consecutivos
+            n_oraciones = len(lec.get("oraciones_ids", []))
+            if n_oraciones <= 4:
+                self.assertEqual(consec, 0,
+                                 f"En {lec['id']} ({n_oraciones} oraciones): se esperaban 0 pares consecutivos de ordenar_oracion, se obtuvieron {consec}")
+
+        # Total en las 26 lecciones reducido a <= 16 (máximo teórico residual en lecciones con 5-7 oraciones)
+        self.assertLessEqual(total_pares_consecutivos, 16,
+                             f"Total de pares consecutivos de ordenar_oracion {total_pares_consecutivos} excede 16")
+
+    def test_verificacion_estricta_asr_audio_y_lexicon(self):
+        """Verifica que cada palabra y oración seleccionada para ASR tenga audio existente y compatibilidad estricta con lexicon."""
+        ruta_lex = os.path.join(PROJECT_ROOT, "ASR", "datos_asr", "lexicon.txt")
+        self.assertTrue(os.path.exists(ruta_lex), "lexicon.txt debe existir para validar ASR")
+        with open(ruta_lex, "r", encoding="utf-8") as f:
+            lexicon_set = {line.split("\t")[0].strip() for line in f if "\t" in line}
+
+        palabras_map = {p["id"]: p for p in self.data_palabras.get("palabras", [])}
+        total_asr_lexico = 0
+        total_asr_oracion = 0
+
+        for lec in self.lecciones:
+            for paso in lec.get("pasos", []):
+                t = paso["tipo"]
+                if t == "escucha_y_repite_asr":
+                    total_asr_lexico += 1
+                    fid = paso["objetivo_id"]
+                    self.assertIn(fid, self.audios_palabras,
+                                  f"En {lec['id']}: audio no encontrado para ASR léxico {fid}")
+                    p_uch = palabras_map[fid]["uch"].lower().strip()
+                    self.assertTrue(p_uch in lexicon_set or fid in lexicon_set,
+                                    f"En {lec['id']}: ASR léxico '{p_uch}' no está en lexicon ASR")
+                elif t == "escucha_y_repite_oracion_asr":
+                    total_asr_oracion += 1
+                    oid = paso["oracion_id"]
+                    self.assertIn(oid, self.audios_oraciones,
+                                  f"En {lec['id']}: audio no encontrado para ASR oración {oid}")
+
+        self.assertEqual(total_asr_lexico, 118)
+        self.assertEqual(total_asr_oracion, 26)
+
 
 if __name__ == "__main__":
     unittest.main()
+

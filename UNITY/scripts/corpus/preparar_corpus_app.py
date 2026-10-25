@@ -161,6 +161,11 @@ def extraer_oraciones_y_lecciones(rows_oraciones: list):
         o_id = r[0].strip()
         uch = normalizar_apostrofe(r[1].strip()) if len(r) > 1 else ""
         es = r[2].strip() if len(r) > 2 else ""
+
+        # Preservar mayúsculas correctas en nombres propios de comunidades como "Irohito Urus"
+        if "irohito urus" in uch.lower():
+            uch = re.sub(r"\birohito\s+urus\b", "Irohito Urus", uch, flags=re.IGNORECASE)
+
         lid_raw = r[3].strip() if len(r) > 3 and r[3] else ""
         lid = normalizar_lid(lid_raw) if lid_raw else ""
         lname = r[4].strip() if len(r) > 4 else "Lección"
