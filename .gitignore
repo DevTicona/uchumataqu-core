@@ -41,6 +41,7 @@ ASR/pipeline_icefall/pretrained/
 *.ckpt
 *.bin
 *.onnx
+*.model
 
 # --- Caches de herramientas y runtime ---
 .lhotse/
@@ -49,6 +50,7 @@ ASR/pipeline_icefall/pretrained/
 .gitconfig
 
 # --- Scripts temporales y de prueba (Scratch) ---
+scratch/
 scratch*.py
 *.tmp
 *.bak
