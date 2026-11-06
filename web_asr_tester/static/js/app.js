@@ -103,6 +103,16 @@
     decisionSubtitle: document.getElementById('decisionSubtitle'),
     meterBarFill: document.getElementById('meterBarFill'),
 
+    // Comparación Directa Objetivo vs Real
+    speechComparisonBox: document.getElementById('speechComparisonBox'),
+    compTargetText: document.getElementById('compTargetText'),
+    compTargetPhonemes: document.getElementById('compTargetPhonemes'),
+    cardSpokenResult: document.getElementById('cardSpokenResult'),
+    badgeMatchResult: document.getElementById('badgeMatchResult'),
+    compSpokenText: document.getElementById('compSpokenText'),
+    compSpokenPhonemes: document.getElementById('compSpokenPhonemes'),
+    rawReconstructedText: document.getElementById('rawReconstructedText'),
+
     // Métricas
     valPER: document.getElementById('valPER'),
     valPrecision: document.getElementById('valPrecision'),
@@ -740,17 +750,51 @@
       dom.resultDecodingChipText.textContent = `Decodificación: ${isLex ? 'Restricciones Léxicas' : 'Greedy Search'}`;
     }
 
-    // 1. Banner de Aceptación 85%
-    if (m.pasa_85) {
+    // 1. Banner de Aceptación Pedagógica (≥ 85%)
+    const esAprobado = (m.pasa_85 !== undefined)
+      ? Boolean(m.pasa_85)
+      : ((m.aprobado !== undefined) ? Boolean(m.aprobado) : (Number(m.precision_fonetica || 0) >= 85.0));
+
+    if (esAprobado) {
       dom.bannerDecision.className = 'decision-banner banner-passed';
-      dom.decisionBadgeText.textContent = 'APROBADO';
-      dom.decisionTitle.textContent = 'Cumple el umbral pedagógico (≥ 85 % de acierto)';
-      dom.decisionSubtitle.textContent = `Acierto fonético: ${m.ratio_acierto_simple}% | Precisión neta: ${m.precision_fonetica}%`;
+      dom.decisionBadgeText.textContent = 'APROBADO (≥85%)';
+      dom.decisionTitle.textContent = '¡Pronunciación Correcta!';
+      dom.decisionSubtitle.textContent = `Acierto fonético: ${m.precision_fonetica}% (≥ 85.0% requerido). Pronunciación pedagógicamente aceptable.`;
     } else {
       dom.bannerDecision.className = 'decision-banner banner-rejected';
-      dom.decisionBadgeText.textContent = 'RECHAZADO';
-      dom.decisionTitle.textContent = 'Por debajo del umbral mínimo de 85 %';
-      dom.decisionSubtitle.textContent = `Acierto fonético: ${m.ratio_acierto_simple}% | Se requiere revisión o mayor articulación.`;
+      dom.decisionBadgeText.textContent = 'RECHAZADO (<85%)';
+      dom.decisionTitle.textContent = `Pronunciación Inexacta (${m.precision_fonetica}% de precisión)`;
+      const detallesErr = [];
+      if (m.substitutions > 0) detallesErr.push(`${m.substitutions} sustitución(es)`);
+      if (m.deletions > 0) detallesErr.push(`${m.deletions} omisión(es)`);
+      if (m.insertions > 0) detallesErr.push(`${m.insertions} inserción(es)`);
+      const txtErr = detallesErr.length > 0 ? ` [${detallesErr.join(', ')}]` : '';
+      dom.decisionSubtitle.textContent = `Se requiere al menos 85% de precisión fonética. Se rechaza por discrepancias${txtErr}.`;
+    }
+
+    // 1.1. Comparación Visual Directa: Objetivo vs Lo que Realmente Repetiste
+    if (dom.compTargetText) {
+      dom.compTargetText.textContent = res.texto_objetivo || '(sin texto)';
+    }
+    if (dom.compTargetPhonemes) {
+      dom.compTargetPhonemes.textContent = (res.fonemas_esperados || []).join(' ') || '—';
+    }
+    if (dom.compSpokenText) {
+      dom.compSpokenText.textContent = res.texto_repetido_real || '(sin audio reconocido)';
+    }
+    if (dom.compSpokenPhonemes) {
+      dom.compSpokenPhonemes.textContent = (res.fonemas_predichos || []).join(' ') || '—';
+    }
+    if (dom.cardSpokenResult && dom.badgeMatchResult) {
+      if (esAprobado) {
+        dom.cardSpokenResult.className = 'speech-comp-card spoken-card comp-passed';
+        dom.badgeMatchResult.className = 'speech-comp-badge badge-comp-pass';
+        dom.badgeMatchResult.textContent = `✅ ${m.precision_fonetica}% APROBADO`;
+      } else {
+        dom.cardSpokenResult.className = 'speech-comp-card spoken-card comp-failed';
+        dom.badgeMatchResult.className = 'speech-comp-badge badge-comp-fail';
+        dom.badgeMatchResult.textContent = `❌ ${m.precision_fonetica}% (RECHAZADO)`;
+      }
     }
 
     // Barra de progreso animada
@@ -795,6 +839,9 @@
 
     // Cadenas crudas
     dom.rawExpectedPhonemes.textContent = res.fonemas_esperados.join(' ');
+    if (dom.rawReconstructedText) {
+      dom.rawReconstructedText.textContent = res.texto_repetido_real || '(vacío)';
+    }
     dom.rawPredictedPhonemes.textContent = res.fonemas_predichos.join(' ');
     dom.rawCtcString.textContent = res.salida_cruda_modelo || '(vacío)';
     if (dom.rawModelName && res.modelo_info) {
@@ -979,6 +1026,12 @@
       const tdObj = document.createElement('td');
       tdObj.textContent = item.texto_objetivo;
 
+      // 6.1. Repetido Real
+      const tdRepetido = document.createElement('td');
+      const strongRep = document.createElement('strong');
+      strongRep.textContent = item.texto_repetido_real || '(vacío)';
+      tdRepetido.appendChild(strongRep);
+
       // 7. Salida Cruda / Léxico
       const tdRaw = document.createElement('td');
       const codeRaw = document.createElement('code');
@@ -998,11 +1051,14 @@
       const tdPrec = document.createElement('td');
       tdPrec.textContent = `${item.metricas.precision_fonetica}%`;
 
-      // 10. Aprobado (≥85%)
+      // 10. Aprobado (≥ 85% pedagógico)
       const tdAprob = document.createElement('td');
       const badgeAprob = document.createElement('span');
-      badgeAprob.className = item.metricas.pasa_85 ? 'badge-table-pass' : 'badge-table-fail';
-      badgeAprob.textContent = item.metricas.resultado_85;
+      const esAprob = (item.metricas.pasa_85 !== undefined)
+        ? Boolean(item.metricas.pasa_85)
+        : ((item.metricas.aprobado !== undefined) ? Boolean(item.metricas.aprobado) : (Number(item.metricas.precision_fonetica || 0) >= 85.0));
+      badgeAprob.className = esAprob ? 'badge-table-pass' : 'badge-table-fail';
+      badgeAprob.textContent = esAprob ? 'APROBADO (≥85%)' : 'RECHAZADO (<85%)';
       tdAprob.appendChild(badgeAprob);
 
       // 11. Duración
@@ -1026,6 +1082,7 @@
       tr.appendChild(tdDec);
       tr.appendChild(tdTipo);
       tr.appendChild(tdObj);
+      tr.appendChild(tdRepetido);
       tr.appendChild(tdRaw);
       tr.appendChild(tdPER);
       tr.appendChild(tdPrec);

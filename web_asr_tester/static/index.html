@@ -106,10 +106,10 @@
                   <span>Modelo de Red Neuronal:</span>
                 </label>
                 <select id="selectModel" class="config-select">
-                  <option value="scratch_int8">⚡ Scratch INT8 (70 MB - Recomendado)</option>
-                  <option value="scratch_fp32">🏋️ Scratch FP32 Pesado (250 MB)</option>
-                  <option value="finetune_int8">🎯 Fine-Tuning INT8 (70 MB)</option>
-                  <option value="finetune_fp32">🚀 Fine-Tuning FP32 Pesado (250 MB)</option>
+                  <option value="scratch_int8" selected>⚡ Modelo de Producción (Zipformer INT8 - 69.2 MB - Recomendado)</option>
+                  <option value="scratch_fp32">🏋️ Scratch Puro Uchumataqu FP32 (250 MB)</option>
+                  <option value="finetune_int8">🎯 Fine-Tuning LibriSpeech INT8 (70 MB)</option>
+                  <option value="finetune_fp32">🚀 Fine-Tuning LibriSpeech FP32 (250 MB)</option>
                 </select>
                 <div class="config-desc" id="modelDescriptionText">
                   Cargando catálogo de modelos...
@@ -304,21 +304,49 @@
               </span>
             </div>
 
-            <!-- Banner de Decisión 85% -->
+            <!-- Banner de Decisión Pedagógica (≥85%) -->
             <div id="bannerDecision" class="decision-banner banner-passed">
               <div class="decision-content">
-                <div class="decision-badge" id="decisionBadgeText">APROBADO</div>
+                <div class="decision-badge" id="decisionBadgeText">APROBADO (≥85%)</div>
                 <div class="decision-info">
-                  <div class="decision-title" id="decisionTitle">Cumple con el criterio pedagógico (≥ 85 %)</div>
-                  <div class="decision-subtitle" id="decisionSubtitle">Precisión fonética calculada: 94.4 %</div>
+                  <div class="decision-title" id="decisionTitle">¡Pronunciación Correcta!</div>
+                  <div class="decision-subtitle" id="decisionSubtitle">Precisión fonética superior al umbral pedagógico (≥ 85%).</div>
                 </div>
               </div>
               <div class="decision-meter">
                 <div class="meter-bar-bg">
-                  <div class="meter-threshold-line" title="Umbral 85%"></div>
+                  <div class="meter-threshold-line" title="Umbral Pedagógico: 85%" style="left: 85%; transform: translateX(-50%);"></div>
                   <div class="meter-bar-fill" id="meterBarFill"></div>
                 </div>
-                <span class="meter-legend">Umbral objetivo: 85%</span>
+                <span class="meter-legend" id="meterLegend">Umbral pedagógico requerido: ≥ 85% de acierto fonético</span>
+              </div>
+            </div>
+
+            <!-- Comparación Visual Directa: Objetivo vs Real Repetido -->
+            <div class="speech-comparison-box" id="speechComparisonBox">
+              <div class="speech-comp-card target-card">
+                <div class="speech-comp-header">
+                  <span class="speech-comp-icon">🎯</span>
+                  <span class="speech-comp-label">LO QUE DEBÍAS DECIR (OBJETIVO)</span>
+                </div>
+                <div class="speech-comp-text" id="compTargetText">—</div>
+                <div class="speech-comp-phonemes">
+                  <span class="phonemes-label">Fonemas esperados (G2P):</span>
+                  <code class="phonemes-code" id="compTargetPhonemes">—</code>
+                </div>
+              </div>
+
+              <div class="speech-comp-card spoken-card" id="cardSpokenResult">
+                <div class="speech-comp-header">
+                  <span class="speech-comp-icon">🎙️</span>
+                  <span class="speech-comp-label">LO QUE REALMENTE REPETISTE</span>
+                  <span class="speech-comp-badge badge-comp-pass" id="badgeMatchResult">CORRECTO (≥85%)</span>
+                </div>
+                <div class="speech-comp-text" id="compSpokenText">—</div>
+                <div class="speech-comp-phonemes">
+                  <span class="phonemes-label">Fonemas acústicos reconocidos:</span>
+                  <code class="phonemes-code code-spoken" id="compSpokenPhonemes">—</code>
+                </div>
               </div>
             </div>
 
@@ -393,6 +421,10 @@
                 <div class="raw-row">
                   <span class="raw-label">Esperado (G2P):</span>
                   <code class="raw-code" id="rawExpectedPhonemes">-</code>
+                </div>
+                <div class="raw-row">
+                  <span class="raw-label">Texto Reconstruido Real:</span>
+                  <code class="raw-code" id="rawReconstructedText">-</code>
                 </div>
                 <div class="raw-row">
                   <span class="raw-label">Fonemas Evaluados:</span>
@@ -487,17 +519,18 @@
                 <th>Decodificación</th>
                 <th>Tipo</th>
                 <th>Texto Objetivo</th>
+                <th>Repetido Real</th>
                 <th>Salida Cruda / Léxico</th>
                 <th>PER</th>
                 <th>Precisión</th>
-                <th>Aprobado (≥85%)</th>
+                <th>Aprobado (100%)</th>
                 <th>Duración</th>
                 <th>Acción</th>
               </tr>
             </thead>
             <tbody id="historyTableBody">
               <tr class="empty-row">
-                <td colspan="12">No hay pruebas registradas en esta sesión todavía.</td>
+                <td colspan="13">No hay pruebas registradas en esta sesión todavía.</td>
               </tr>
             </tbody>
           </table>
@@ -578,8 +611,8 @@
           </div>
 
           <div class="tech-card">
-            <h3>Criterio de Entrega y Tolerancia</h3>
-            <p>El criterio formal pedagógico establece un <strong>85 % de aceptación fonética</strong> en condiciones reales.</p>
+            <h3>Criterio de Evaluación y Aprobación</h3>
+            <p>Se aplica un <strong>criterio estricto del 100 % de acierto fonético</strong> (cero sustituciones, eliminaciones o inserciones). Si la pronunciación difiere en un solo fonema, la evaluación resulta en <strong>RECHAZADO</strong>.</p>
             <p>Hallazgos clave de evaluación:</p>
             <ul class="tech-list">
               <li><strong>Palabras aisladas:</strong> Los modelos Scratch alcanzan 100% de precisión en condiciones limpias.</li>

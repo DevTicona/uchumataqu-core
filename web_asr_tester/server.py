@@ -52,12 +52,14 @@ DIR_AUDIOS_ORACIONES = os.path.join(BASE_DIR, "ASR", "audios_oraciones")
 DIR_AUDIOS_PALABRAS = os.path.join(BASE_DIR, "ASR", "audios_palabras")
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
 
+DEFAULT_MODEL_ID = "scratch_int8"
+
 # Catálogo oficial de modelos disponibles
 MODELS_CATALOG = {
     "scratch_int8": {
         "id": "scratch_int8",
-        "nombre": "Entrenamiento desde Cero (INT8 - 72 MB)",
-        "descripcion": "Zipformer CTC entrenado 100 épocas desde cero. Optimizado para móvil y Unity (INT8).",
+        "nombre": "Entrenamiento desde Cero Uchumataqu (INT8 - 72 MB)",
+        "descripcion": "Zipformer CTC entrenado 100 épocas en Uchumataqu. Modelo de producción desplegado en móvil y Unity (INT8).",
         "model_path": os.path.join(BASE_DIR, "ASR", "models", "exported_onnx", "model.int8.onnx"),
         "tokens_path": os.path.join(BASE_DIR, "ASR", "models", "exported_onnx", "tokens.txt"),
         "lexicon_path": os.path.join(BASE_DIR, "ASR", "models", "exported_onnx", "lexicon.txt"),
@@ -67,8 +69,8 @@ MODELS_CATALOG = {
     },
     "scratch_fp32": {
         "id": "scratch_fp32",
-        "nombre": "Entrenamiento desde Cero (FP32 Pesado - 262 MB)",
-        "descripcion": "Zipformer CTC entrenado 100 épocas desde cero. Precisión completa de punto flotante Float32.",
+        "nombre": "Entrenamiento desde Cero Uchumataqu (FP32 Pesado - 262 MB)",
+        "descripcion": "Zipformer CTC entrenado 100 épocas en Uchumataqu. Precisión completa Float32.",
         "model_path": os.path.join(BASE_DIR, "ASR", "models", "exported_onnx", "model.onnx"),
         "tokens_path": os.path.join(BASE_DIR, "ASR", "models", "exported_onnx", "tokens.txt"),
         "lexicon_path": os.path.join(BASE_DIR, "ASR", "models", "exported_onnx", "lexicon.txt"),
@@ -222,6 +224,76 @@ def texto_a_fonemas_completo(texto: str):
         "desglose": desglose_palabras
     }
 
+# Mapeo fonema canónico -> grafema natural Uchumataqu para reconstrucción de audio repetido
+FONEMA_A_UCHUMATAQU = {
+    # Vocales cortas
+    "A": "a", "E": "e", "I": "i", "O": "o", "U": "u",
+    # Vocales largas nativas (ortografía pedagógica con diéresis)
+    "AA": "ä", "EE": "ë", "II": "ï", "OO": "ö", "UU": "ü",
+    # Consonantes simples
+    "P": "p", "T": "t", "K": "k", "Q": "q",
+    "M": "m", "N": "n", "R": "r", "S": "s", "X": "x", "J": "j",
+    "L": "l", "LL": "ll", "Y": "y", "W": "w",
+    # Dígrafos
+    "TS": "ts", "CH": "ch", "SH": "sh", "NY": "ñ",
+    # Aspiradas
+    "PH": "ph", "TH": "th", "KH": "kh", "QH": "qh", "CHH": "chh",
+    # Eyectivas
+    "P_EJ": "pʼ", "T_EJ": "tʼ", "K_EJ": "kʼ", "Q_EJ": "qʼ", "CH_EJ": "chʼ",
+}
+
+def reconstruir_texto_repetido(fonemas_predichos: list, texto_objetivo: str = "", alineacion: list = None) -> str:
+    """
+    Reconstruye el texto real emitido por el usuario en ortografía Uchumataqu legible,
+    respetando los espacios y límites de palabras si existe un texto objetivo.
+    """
+    if not fonemas_predichos:
+        return "(sin audio reconocido)"
+    if not texto_objetivo or not alineacion:
+        return "".join(FONEMA_A_UCHUMATAQU.get(f, f.lower()) for f in fonemas_predichos)
+
+    desglose = texto_a_fonemas_completo(texto_objetivo).get("desglose", [])
+    if not desglose:
+        return "".join(FONEMA_A_UCHUMATAQU.get(f, f.lower()) for f in fonemas_predichos)
+
+    palabras = [d["palabra"] for d in desglose]
+    fonemas_por_palabra = [d["fonemas"] for d in desglose]
+
+    idx_a_palabra = []
+    for p_idx, f_list in enumerate(fonemas_por_palabra):
+        for _ in f_list:
+            idx_a_palabra.append(p_idx)
+
+    palabras_reconstruidas = [[] for _ in palabras]
+    palabra_actual = 0
+    ref_idx = 0
+
+    for step in alineacion:
+        t = step["tipo"]
+        if t in ("match", "substitution"):
+            if ref_idx < len(idx_a_palabra):
+                palabra_actual = idx_a_palabra[ref_idx]
+            palabras_reconstruidas[palabra_actual].append(step["predicho"])
+            ref_idx += 1
+        elif t == "deletion":
+            if ref_idx < len(idx_a_palabra):
+                palabra_actual = idx_a_palabra[ref_idx]
+            ref_idx += 1
+        elif t == "insertion":
+            palabras_reconstruidas[palabra_actual].append(step["predicho"])
+
+    resultado = []
+    for p_idx, f_list in enumerate(palabras_reconstruidas):
+        if not f_list:
+            continue
+        txt = "".join(FONEMA_A_UCHUMATAQU.get(f, f.lower()) for f in f_list)
+        if p_idx < len(palabras) and palabras[p_idx] and palabras[p_idx][0].isupper() and txt:
+            txt = txt[0].upper() + txt[1:]
+        resultado.append(txt)
+
+    texto_final = " ".join(resultado)
+    return texto_final if texto_final else "".join(FONEMA_A_UCHUMATAQU.get(f, f.lower()) for f in fonemas_predichos)
+
 # ===========================================================================
 # 2. ALGORITMO DE ALINEACIÓN FONÉTICA Y CÁLCULO DE MÉTRICAS (PER, WER, CER)
 # ===========================================================================
@@ -311,7 +383,11 @@ def calcular_metricas(referencia: list, hipotesis: list, texto_ref: str = "", to
         precision_fonetica = 100.0 if n_hyp == 0 else 0.0
         ratio_acierto_simple = 100.0 if n_hyp == 0 else 0.0
 
-    pasa_85_acierto = ratio_acierto_simple >= 85.0
+    # Criterio estricto de aprobación: 100% exacto (cero errores fonéticos)
+    pasa_100 = (hits == n_ref) and (substitutions == 0) and (deletions == 0) and (insertions == 0) and (n_ref > 0)
+    resultado_100 = "APROBADO" if pasa_100 else "RECHAZADO"
+
+    pasa_85_acierto = precision_fonetica >= 85.0
     resultado_85 = "APROBADO" if pasa_85_acierto else "RECHAZADO"
 
     ref_str = "".join(referencia)
@@ -353,6 +429,10 @@ def calcular_metricas(referencia: list, hipotesis: list, texto_ref: str = "", to
         "precision_fonetica": round(precision_fonetica, 2),
         "ratio_acierto_simple": round(ratio_acierto_simple, 2),
         "cer": round(cer, 2),
+        "pasa_100": pasa_100,
+        "resultado_100": resultado_100,
+        "aprobado": pasa_85_acierto,
+        "resultado": resultado_85,
         "pasa_85": pasa_85_acierto,
         "resultado_85": resultado_85,
         "total_referencia": n_ref,
@@ -495,7 +575,7 @@ class MultiModelASRManager:
                 }
 
         # Pre-cargar el modelo por defecto (scratch_int8)
-        self.get_recognizer("scratch_int8")
+        self.get_recognizer(DEFAULT_MODEL_ID)
         print(f"Gestor Multi-Modelo inicializado con {len(self.models_info)} modelos.")
 
     def _calcular_sha256(self, filepath: str) -> str:
@@ -517,10 +597,10 @@ class MultiModelASRManager:
         else:
             print(f"[AVISO] No se encontró lexicon en: {ruta_lexicon}")
 
-    def get_recognizer(self, model_id: str = "scratch_int8"):
+    def get_recognizer(self, model_id: str = DEFAULT_MODEL_ID):
         """Retorna o instancia perezosamente el reconocedor del modelo solicitado."""
         if model_id not in MODELS_CATALOG:
-            model_id = "scratch_int8"
+            model_id = DEFAULT_MODEL_ID
 
         cfg = MODELS_CATALOG[model_id]
         if not os.path.exists(cfg["model_path"]):
@@ -539,7 +619,7 @@ class MultiModelASRManager:
 
         return self.recognizers[model_id]
 
-    def transcribir_muestras_16k(self, muestras_float: list, model_id: str = "scratch_int8"):
+    def transcribir_muestras_16k(self, muestras_float: list, model_id: str = DEFAULT_MODEL_ID):
         """Ejecuta la inferencia acústica cruda con el modelo seleccionado."""
         recognizer = self.get_recognizer(model_id)
         stream = recognizer.create_stream()
@@ -643,6 +723,8 @@ def dp_levenshtein_list(s1: list, s2: list) -> int:
             else:
                 dp[i][j] = 1 + min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1])
     return dp[m][n]
+
+SherpaOnnxManager = MultiModelASRManager
 
 # ===========================================================================
 # 5. GESTIÓN DEL CORPUS Y AUDIOS PRE-GRABADOS
@@ -775,15 +857,18 @@ def evaluar_audio_con_modelo(
     audio_bytes: bytes,
     extension: str,
     texto_objetivo: str,
-    multi_mgr: MultiModelASRManager,
-    model_id: str = "scratch_int8",
-    decoding_mode: str = "greedy_search"
+    multi_mgr: MultiModelASRManager = None,
+    model_id: str = DEFAULT_MODEL_ID,
+    decoding_mode: str = "greedy_search",
+    sherpa_mgr: MultiModelASRManager = None
 ):
+    if multi_mgr is None:
+        multi_mgr = sherpa_mgr
     """
     Flujo central de evaluación:
     1. Transcodifica audio a 16 kHz Mono.
     2. Diagnostica acústica (duración, silencios).
-    3. Inferencia con el modelo seleccionado (Scratch / Fine-tune, INT8 / FP32).
+    3. Inferencia con el modelo seleccionado (Bilingüe / Scratch / Fine-tune, INT8 / FP32).
     4. Decodificación según modo (greedy_search o con_restricciones).
     5. G2P del texto objetivo.
     6. Alineación fonética y cálculo de métricas.
@@ -806,12 +891,14 @@ def evaluar_audio_con_modelo(
         tokens_crudos = res_inferencia["tokens"]
 
         # 2. Decodificación según modo
+        # Para evaluar lo que REALMENTE se repitió, preservamos los fonemas acústicos reales
+        # como base de la evaluación y del cálculo de PER y precisión fonética.
         if decoding_mode == "con_restricciones":
-            palabras_reconocidas, tokens_decodificados = multi_mgr.decodificar_con_restricciones_lexico(tokens_crudos)
-            fonemas_predichos = tokens_decodificados
+            palabras_reconocidas, _ = multi_mgr.decodificar_con_restricciones_lexico(tokens_crudos)
         else:
             palabras_reconocidas = []
-            fonemas_predichos = tokens_crudos
+
+        fonemas_predichos = tokens_crudos
 
         # 3. G2P del texto objetivo
         res_g2p = texto_a_fonemas_completo(texto_objetivo)
@@ -825,8 +912,15 @@ def evaluar_audio_con_modelo(
             tokens_predichos=fonemas_predichos
         )
 
+        # 5. Reconstrucción fiel de lo que realmente se repitió
+        texto_repetido_real = reconstruir_texto_repetido(
+            fonemas_predichos=fonemas_predichos,
+            texto_objetivo=texto_objetivo,
+            alineacion=metricas["alineacion"]
+        )
+
         diag_ret = {k: v for k, v in diag_acustico.items() if k != "muestras"}
-        info_mod = multi_mgr.models_info.get(model_id, MODELS_CATALOG.get("scratch_int8", {}))
+        info_mod = multi_mgr.models_info.get(model_id, MODELS_CATALOG.get(DEFAULT_MODEL_ID, {}))
 
         return {
             "texto_objetivo": texto_objetivo,
@@ -835,6 +929,7 @@ def evaluar_audio_con_modelo(
             "salida_cruda_modelo": res_inferencia["texto_crudo"],
             "tokens_crudos_ctc": tokens_crudos,
             "fonemas_predichos": fonemas_predichos,
+            "texto_repetido_real": texto_repetido_real,
             "palabras_reconocidas_lexico": palabras_reconocidas,
             "modo_decodificacion": decoding_mode,
             "timestamps": res_inferencia["timestamps"],
@@ -861,9 +956,12 @@ class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
 
 class ASRRequestHandler(SimpleHTTPRequestHandler):
     multi_mgr = None
+    sherpa_mgr = None
     corpus_mgr = None
 
     def __init__(self, *args, **kwargs):
+        if self.multi_mgr is None and self.sherpa_mgr is not None:
+            self.multi_mgr = self.sherpa_mgr
         super().__init__(*args, directory=STATIC_DIR, **kwargs)
 
     def _responder_json(self, status_code: int, datos: dict):
@@ -893,10 +991,19 @@ class ASRRequestHandler(SimpleHTTPRequestHandler):
         if path == "/api/info":
             ip_local = self._obtener_ip_local()
             modelos_lista = list(self.multi_mgr.models_info.values())
+            m_def = self.multi_mgr.models_info.get(DEFAULT_MODEL_ID) or self.multi_mgr.models_info.get("scratch_int8", {})
+            modelo_compat = {
+                "archivo": m_def.get("model_path", ""),
+                "sha256": m_def.get("sha256", ""),
+                "tamano_mb": m_def.get("tamano_mb", 0.0),
+                "tokens": m_def.get("tokens_path", ""),
+                "tokens_sha256": m_def.get("tokens_sha256", "")
+            }
             self._responder_json(200, {
                 "estado": "en_linea",
+                "modelo": modelo_compat,
                 "modelos": modelos_lista,
-                "modelo_activo_default": "scratch_int8",
+                "modelo_activo_default": DEFAULT_MODEL_ID if DEFAULT_MODEL_ID in self.multi_mgr.models_info else "scratch_int8",
                 "modos_decodificacion": [
                     {
                         "id": "greedy_search",
@@ -978,7 +1085,7 @@ class ASRRequestHandler(SimpleHTTPRequestHandler):
                 content_type = self.headers.get("Content-Type", "")
                 longitud = int(self.headers.get("Content-Length", 0))
 
-                model_id = "scratch_int8"
+                model_id = DEFAULT_MODEL_ID
                 decoding_mode = "greedy_search"
 
                 if "application/json" in content_type:
@@ -987,7 +1094,7 @@ class ASRRequestHandler(SimpleHTTPRequestHandler):
                     texto_objetivo = payload.get("texto_objetivo", "").strip()
                     audio_b64 = payload.get("audio_base64", "")
                     formato = payload.get("formato", "webm")
-                    model_id = payload.get("modelo", "scratch_int8")
+                    model_id = payload.get("modelo", DEFAULT_MODEL_ID)
                     decoding_mode = payload.get("decodificacion", "greedy_search")
 
                     import base64
@@ -1062,13 +1169,14 @@ class ASRRequestHandler(SimpleHTTPRequestHandler):
                 pruebas = json.loads(cuerpo).get("pruebas", [])
 
                 lineas = [
-                    "id,fecha,tipo,modelo,decodificacion,objetivo_uch,objetivo_fonemas,salida_cruda,palabras_lexico,tokens_evaluados,PER,precision,resultado_85,duracion_s,hash_modelo"
+                    "id,fecha,tipo,modelo,decodificacion,objetivo_uch,repetido_real,objetivo_fonemas,salida_cruda,palabras_lexico,tokens_evaluados,PER,precision,resultado_100,resultado_85,duracion_s,hash_modelo"
                 ]
 
                 for p in pruebas:
                     obj_fon = " ".join(p.get("fonemas_esperados", []))
                     tok_pred = " ".join(p.get("fonemas_predichos", []))
                     pal_lex = " ".join(p.get("palabras_reconocidas_lexico", []))
+                    repetido_real = p.get("texto_repetido_real", "")
                     met = p.get("metricas", {})
                     diag = p.get("diagnostico_audio", {})
                     mod = p.get("modelo_info", {})
@@ -1080,12 +1188,14 @@ class ASRRequestHandler(SimpleHTTPRequestHandler):
                         f'"{mod.get("nombre", "")}"',
                         f'"{p.get("modo_decodificacion", "greedy_search")}"',
                         f'"{p.get("texto_objetivo", "")}"',
+                        f'"{repetido_real}"',
                         f'"{obj_fon}"',
                         f'"{p.get("salida_cruda_modelo", "")}"',
                         f'"{pal_lex}"',
                         f'"{tok_pred}"',
                         str(met.get("per", "")),
                         str(met.get("precision_fonetica", "")),
+                        str(met.get("resultado_100", met.get("resultado", ""))),
                         str(met.get("resultado_85", "")),
                         str(diag.get("duracion_s", "")),
                         str(mod.get("sha256", ""))[:16]
