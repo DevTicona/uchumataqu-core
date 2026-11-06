@@ -29,11 +29,11 @@
       "pasos_por_tipo": {
         "presentacion_familia": 6,
         "uch_a_es": 3,
-        "audio_a_forma": 1,
         "audio_a_uch": 2,
         "emparejar_uch_es": 2,
         "escucha_y_repite_asr": 4,
         "escribir_palabra": 2,
+        "audio_a_forma": 1,
         "ordenar_oracion": 3,
         "escribir_oracion": 2,
         "escucha_y_repite_oracion_asr": 1
@@ -49,22 +49,22 @@
         {
           "tipo": "escucha_y_repite_asr",
           "pos": 7,
-          "target": "sitsni"
-        },
-        {
-          "tipo": "escucha_y_repite_asr",
-          "pos": 9,
-          "target": "palitak"
-        },
-        {
-          "tipo": "escucha_y_repite_asr",
-          "pos": 17,
           "target": "wakpacha"
         },
         {
           "tipo": "escucha_y_repite_asr",
-          "pos": 19,
+          "pos": 9,
           "target": "wiyantam"
+        },
+        {
+          "tipo": "escucha_y_repite_asr",
+          "pos": 17,
+          "target": "sitsni"
+        },
+        {
+          "tipo": "escucha_y_repite_asr",
+          "pos": 19,
+          "target": "palitak"
         },
         {
           "tipo": "escucha_y_repite_oracion_asr",
@@ -75,14 +75,14 @@
       "objetivos_escritura": [
         {
           "tipo": "escribir_palabra",
-          "objetivo": "thuni_seschay",
-          "respuesta": "Thuñi seschay",
+          "objetivo": "ti_wiyanichay",
+          "respuesta": "Tï wiyanichay",
           "fuente_estimulo": "texto_es"
         },
         {
           "tipo": "escribir_palabra",
-          "objetivo": "ti_wiyanichay",
-          "respuesta": "Tï wiyanichay",
+          "objetivo": "thuni_seschay",
+          "respuesta": "Thuñi seschay",
           "fuente_estimulo": "audio"
         },
         {
@@ -3143,12 +3143,12 @@
       "titulo": "Saludos Básicos",
       "orden": 1,
       "familias_nuevas": [
-        "palitak",
-        "sitsni",
-        "thuni_seschay",
+        "wiyantam",
         "ti_wiyanichay",
         "wakpacha",
-        "wiyantam"
+        "palitak",
+        "sitsni",
+        "thuni_seschay"
       ],
       "familias_repaso": [],
       "familias_repaso_organico": [],
@@ -3160,22 +3160,115 @@
       "pasos": [
         {
           "tipo": "presentacion_familia",
+          "objetivo_id": "wiyantam",
+          "tiene_formas": false,
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "uch_a_es",
+          "objetivo_id": "wiyantam",
+          "opciones_ids": [
+            "thuni_seschay",
+            "ti_wiyanichay",
+            "uwapinichay",
+            "wiyantam"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "texto_uch"
+        },
+        {
+          "tipo": "presentacion_familia",
+          "objetivo_id": "ti_wiyanichay",
+          "tiene_formas": false,
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "audio_a_uch",
+          "objetivo_id": "ti_wiyanichay",
+          "opciones_ids": [
+            "chhuni_pichuchay",
+            "thuni_seschay",
+            "ti_wiyanichay",
+            "wiyantam"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "presentacion_familia",
+          "objetivo_id": "wakpacha",
+          "tiene_formas": false,
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "uch_a_es",
+          "objetivo_id": "wakpacha",
+          "opciones_ids": [
+            "palitak",
+            "shachkuchay",
+            "sitsni",
+            "wakpacha"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "texto_uch"
+        },
+        {
+          "tipo": "emparejar_uch_es",
+          "items_ids": [
+            "ti_wiyanichay",
+            "wakpacha",
+            "wiyantam"
+          ],
+          "seccion": "palabras_nuevas",
+          "fuente_estimulo": "texto_uch"
+        },
+        {
+          "tipo": "escucha_y_repite_asr",
+          "objetivo_id": "wakpacha",
+          "opcional": true,
+          "seccion": "practica_oral",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "escribir_palabra",
+          "objetivo_id": "ti_wiyanichay",
+          "respuesta_esperada_uch": "Tï wiyanichay",
+          "consigna": "Escribe en uchumataqu: «Buenas noches»",
+          "fuente_estimulo": "texto_es",
+          "refuerzo_al_fallar": {
+            "tipo": "audio_a_uch",
+            "objetivo_id": "ti_wiyanichay"
+          },
+          "seccion": "palabras_nuevas"
+        },
+        {
+          "tipo": "escucha_y_repite_asr",
+          "objetivo_id": "wiyantam",
+          "opcional": true,
+          "seccion": "practica_oral",
+          "fuente_estimulo": "audio"
+        },
+        {
+          "tipo": "presentacion_familia",
           "objetivo_id": "palitak",
           "tiene_formas": true,
           "seccion": "palabras_nuevas",
           "fuente_estimulo": "audio"
         },
         {
-          "tipo": "uch_a_es",
+          "tipo": "audio_a_uch",
           "objetivo_id": "palitak",
           "opciones_ids": [
+            "kuti",
             "palitak",
             "sitsni",
-            "tupsincha",
             "wakpacha"
           ],
           "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
+          "fuente_estimulo": "audio"
         },
         {
           "tipo": "presentacion_familia",
@@ -3205,16 +3298,16 @@
           "fuente_estimulo": "audio"
         },
         {
-          "tipo": "audio_a_uch",
+          "tipo": "uch_a_es",
           "objetivo_id": "thuni_seschay",
           "opciones_ids": [
-            "amthu",
+            "salskama",
             "thuni_seschay",
             "ti_wiyanichay",
             "wiyantam"
           ],
           "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
+          "fuente_estimulo": "texto_uch"
         },
         {
           "tipo": "emparejar_uch_es",
@@ -3237,10 +3330,10 @@
           "tipo": "escribir_palabra",
           "objetivo_id": "thuni_seschay",
           "respuesta_esperada_uch": "Thuñi seschay",
-          "consigna": "Escribe en uchumataqu: «Buenas tardes»",
-          "fuente_estimulo": "texto_es",
+          "consigna": "Escucha y escribe la palabra en uchumataqu",
+          "fuente_estimulo": "audio",
           "refuerzo_al_fallar": {
-            "tipo": "audio_a_uch",
+            "tipo": "uch_a_es",
             "objetivo_id": "thuni_seschay"
           },
           "seccion": "palabras_nuevas"
@@ -3248,99 +3341,6 @@
         {
           "tipo": "escucha_y_repite_asr",
           "objetivo_id": "palitak",
-          "opcional": true,
-          "seccion": "practica_oral",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "presentacion_familia",
-          "objetivo_id": "ti_wiyanichay",
-          "tiene_formas": false,
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "uch_a_es",
-          "objetivo_id": "ti_wiyanichay",
-          "opciones_ids": [
-            "thuni_seschay",
-            "ti_wiyanichay",
-            "uwapinichay",
-            "wiyantam"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "presentacion_familia",
-          "objetivo_id": "wakpacha",
-          "tiene_formas": false,
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "audio_a_uch",
-          "objetivo_id": "wakpacha",
-          "opciones_ids": [
-            "palitak",
-            "papi",
-            "sitsni",
-            "wakpacha"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "presentacion_familia",
-          "objetivo_id": "wiyantam",
-          "tiene_formas": false,
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "uch_a_es",
-          "objetivo_id": "wiyantam",
-          "opciones_ids": [
-            "amthu",
-            "thuni_seschay",
-            "ti_wiyanichay",
-            "wiyantam"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "emparejar_uch_es",
-          "items_ids": [
-            "ti_wiyanichay",
-            "wakpacha",
-            "wiyantam"
-          ],
-          "seccion": "palabras_nuevas",
-          "fuente_estimulo": "texto_uch"
-        },
-        {
-          "tipo": "escucha_y_repite_asr",
-          "objetivo_id": "wakpacha",
-          "opcional": true,
-          "seccion": "practica_oral",
-          "fuente_estimulo": "audio"
-        },
-        {
-          "tipo": "escribir_palabra",
-          "objetivo_id": "ti_wiyanichay",
-          "respuesta_esperada_uch": "Tï wiyanichay",
-          "consigna": "Escucha y escribe la palabra en uchumataqu",
-          "fuente_estimulo": "audio",
-          "refuerzo_al_fallar": {
-            "tipo": "uch_a_es",
-            "objetivo_id": "ti_wiyanichay"
-          },
-          "seccion": "palabras_nuevas"
-        },
-        {
-          "tipo": "escucha_y_repite_asr",
-          "objetivo_id": "wiyantam",
           "opcional": true,
           "seccion": "practica_oral",
           "fuente_estimulo": "audio"

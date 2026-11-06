@@ -500,6 +500,9 @@ def compilar_lecciones_curriculares(palabras_lista: list, lecciones_lista: list,
                 ))
 
         familias_nuevas = sorted(list(familias_en_leccion - familias_presentadas_global))
+        if lid == "L01":
+            # Orden curricular de L01 (Saludos Básicos): presentar primero saludos (wiyantam) trayendo Grupo 2 a Grupo 1
+            familias_nuevas = ["wiyantam", "ti_wiyanichay", "wakpacha", "palitak", "sitsni", "thuni_seschay"]
         familias_repaso = sorted(list(familias_en_leccion & familias_presentadas_global))
         familias_futuras = familias_curriculares - familias_presentadas_global - set(familias_en_leccion)
 
