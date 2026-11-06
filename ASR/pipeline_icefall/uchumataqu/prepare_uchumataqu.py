@@ -156,17 +156,24 @@ def crear_enlace_o_copia(src: str, dst: str):
         shutil.copyfile(src, dst)
 
 
-def crear_aliases_receta_librispeech(output_dir: str):
+def crear_aliases_receta_librispeech(output_dir: str, use_pitch_aug: bool = False):
     """
     Crea los archivos con nombres esperados por LibriSpeechAsrDataModule:
-    - librispeech_cuts_train-clean-100.jsonl.gz -> uchumataqu_cuts_train.jsonl.gz
-    - librispeech_cuts_train-all-shuf.jsonl.gz  -> uchumataqu_cuts_train.jsonl.gz
+    - librispeech_cuts_train-clean-100.jsonl.gz -> uchumataqu_cuts_train.jsonl.gz (o _pitch)
+    - librispeech_cuts_train-all-shuf.jsonl.gz  -> uchumataqu_cuts_train.jsonl.gz (o _pitch)
     - librispeech_cuts_dev-clean.jsonl.gz      -> uchumataqu_cuts_val.jsonl.gz
     - librispeech_cuts_dev-other.jsonl.gz      -> archivo gzip vacío
     - librispeech_cuts_test-clean.jsonl.gz     -> uchumataqu_cuts_test.jsonl.gz
     - librispeech_cuts_test-other.jsonl.gz     -> archivo gzip vacío
     """
     train_src = os.path.join(output_dir, "uchumataqu_cuts_train.jsonl.gz")
+    pitch_src = os.path.join(output_dir, "uchumataqu_cuts_train_pitch.jsonl.gz")
+    if use_pitch_aug and os.path.exists(pitch_src):
+        train_src = pitch_src
+        print(f"  [OK] Aliases de entrenamiento configurados con PITCH SHIFTING ({os.path.basename(pitch_src)})")
+    else:
+        print(f"  [OK] Aliases de entrenamiento configurados con audio estándar ({os.path.basename(train_src)})")
+
     val_src = os.path.join(output_dir, "uchumataqu_cuts_val.jsonl.gz")
     test_src = os.path.join(output_dir, "uchumataqu_cuts_test.jsonl.gz")
 
@@ -284,6 +291,12 @@ def main():
         default=os.path.join(asr_dir, "data", "lang_bpe"),
         help="Directorio lang para bpe.model, tokens.txt y words.txt"
     )
+    parser.add_argument(
+        "--use_pitch_aug",
+        type=int,
+        default=0,
+        help="Si es 1, enlaza los aliases de entrenamiento al dataset aumentado por Pitch Shifting"
+    )
     args = parser.parse_args()
 
     print("=" * 70)
@@ -310,7 +323,7 @@ def main():
         total += n
 
     # Generar aliases para que las recetas oficiales lean los cortes
-    crear_aliases_receta_librispeech(args.output_dir)
+    crear_aliases_receta_librispeech(args.output_dir, use_pitch_aug=(args.use_pitch_aug == 1))
 
     # Preparar lang_bpe
     preparar_lang_bpe(args.lang_dir)

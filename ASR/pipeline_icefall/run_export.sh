@@ -47,6 +47,10 @@ while [[ $# -gt 0 ]]; do
             OUTPUT_DOWNSAMPLING_FACTOR="$2"
             shift 2
             ;;
+        --output-dir)
+            OUTPUT_DIR="$2"
+            shift 2
+            ;;
         *)
             break
             ;;

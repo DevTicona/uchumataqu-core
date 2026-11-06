@@ -15,7 +15,7 @@ Salidas en Para_ASR/datos_asr/:
   - lexicon.txt: Diccionario de pronunciación fonética (palabra -> fonemas)
   - corpus_asr_texto.txt: Corpus textual limpio para modelo de lenguaje y entrenamiento
 """
-
+ 
 import os
 import re
 import sys

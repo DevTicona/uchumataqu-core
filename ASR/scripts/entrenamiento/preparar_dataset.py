@@ -17,7 +17,7 @@ Salidas en Para_ASR/data/manifests/:
   - test_manifest.json
   - kaldi/{train, val, test}/{wav.scp, text, utt2spk, spk2utt}
 """
-
+ 
 import os
 import re
 import json

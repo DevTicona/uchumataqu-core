@@ -75,12 +75,17 @@ ENABLE_SPEC_AUG=1        # SpecAugment enmascarado espectrograma
 SPEC_AUG_TIME_WARP=80    # Recomendado por paper SpecAugment original
 MUSAN_CUTS="$LHOTSE_DIR/musan_cuts.jsonl.gz"
 
+# Pitch Perturbation / Shifting: amplía el corpus con variaciones de tono
+#   (+2.0 st femenina/aguda, +4.0 st infantil/niños, -2.0 st masculina profunda)
+ENABLE_PITCH_AUG="${ENABLE_PITCH_AUG:-1}"
+PITCH_CUTS="$LHOTSE_DIR/uchumataqu_cuts_train_pitch.jsonl.gz"
+
 # Concatenación de Cortes (CutConcatenate): une palabras aisladas con pausas/silencios
 CONCATENATE_CUTS="${CONCATENATE_CUTS:-0}"
 CONCAT_GAP="${CONCAT_GAP:-0.3}"
 CONCAT_DURATION_FACTOR="${CONCAT_DURATION_FACTOR:-1.0}"
 # ─────────────────────────────────────────────────────────────────────────────
-
+ 
 echo "======================================================================"
 echo "  ENTRENAMIENTO ZIPFORMER OFICIAL (k2-fsa/icefall) — DESDE CERO"
 echo "  Repositorio: $ICEFALL_DIR"
@@ -88,17 +93,34 @@ echo "  Experimento: $EXP_DIR"
 echo "  Épocas: $NUM_EPOCHS | Batch max_duration: $MAX_DURATION s | LR base: $BASE_LR"
 echo "  Data Augmentation:"
 echo "    Speed Perturbation : $ENABLE_SPEED_PERTURB (x0.9, x1.1 on-the-fly)"
+echo "    Pitch Shifting     : $ENABLE_PITCH_AUG (+2.0, +4.0, -2.0 semitonos / infantil)"
 echo "    MUSAN Noise Mixing : $ENABLE_MUSAN (SNR 10-20 dB, p=0.5)"
 echo "    SpecAugment        : $ENABLE_SPEC_AUG (time_warp=$SPEC_AUG_TIME_WARP)"
 echo "======================================================================"
 
-# 1. Verificar prerrequisitos de Lhotse y Lang
+# 1. Generar Pitch Augmentation si está habilitado y aún no existe
+if [ "$ENABLE_PITCH_AUG" = "1" ] && [ ! -f "$PITCH_CUTS" ]; then
+    echo "[PASO PREVIO] Generando dataset aumentado por Pitch Shifting para voces infantiles/agudas..."
+    "$PYTHON_BIN" "$SCRIPT_DIR/uchumataqu/prepare_pitch_augmentation.py" \
+        --manifests_dir "$MANIFEST_DIR" \
+        --output_lhotse_dir "$LHOTSE_DIR"
+fi
+
+# 1b. Verificar prerrequisitos de Lhotse y Lang
 if [ ! -f "$LHOTSE_DIR/uchumataqu_cuts_train.jsonl.gz" ] || [ ! -f "$LANG_DIR/words.txt" ]; then
     echo "[PASO PREVIO] Generando manifests Lhotse y directorio lang_bpe..."
     "$PYTHON_BIN" "$SCRIPT_DIR/uchumataqu/prepare_uchumataqu.py" \
         --manifests_dir "$MANIFEST_DIR" \
         --output_dir "$LHOTSE_DIR" \
-        --lang_dir "$LANG_DIR"
+        --lang_dir "$LANG_DIR" \
+        --use_pitch_aug "$ENABLE_PITCH_AUG"
+else
+    # Asegurar que los aliases apunten a la versión deseada (pitch o estándar)
+    "$PYTHON_BIN" -c "
+import sys; sys.path.insert(0, '$SCRIPT_DIR/uchumataqu')
+from prepare_uchumataqu import crear_aliases_receta_librispeech
+crear_aliases_receta_librispeech('$LHOTSE_DIR', use_pitch_aug=($ENABLE_PITCH_AUG == 1))
+"
 fi
 
 # 1b. Verificar y generar manifest de MUSAN (para noise augmentation)
