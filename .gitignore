@@ -67,8 +67,25 @@ Thumbs.db
 .vscode/
 .idea/
 
-# --- Documentación Markdown (ignorar todos los .md excepto README.md y evidencias) ---
+# --- Documentación Markdown (ignorar todos los .md excepto README.md) ---
 *.md
 **/*.md
 !/README.md
-!evidencias_capitulo_iv/*.md
+
+# --- Documentos ofimática y binarios de evidencia ---
+evidencias_capitulo_iv/*.docx
+evidencias_capitulo_iv/*.docx:*
+
+# --- Audio aumentado generado localmente ---
+ASR/data/audio_augmented/
+
+# --- Experimentos y pruebas multilingües (Aymara) ---
+ASR/data/aymara/
+ASR/data/aymara
+ASR/models/exported_bilingue/
+ASR/models/exported_bilingue
+ASR/pipeline_icefall/aymara/
+ASR/pipeline_icefall/aymara
+ASR/pipeline_icefall/exp_aymara_uchumataqu/
+ASR/pipeline_icefall/exp_aymara_uchumataqu
+ASR/pipeline_icefall/run_train_aymara_uchumataqu.sh
