@@ -1,0 +1,51 @@
+Nro,Hablante,Palabra_Referencia,Fonemas_Referencia,Hipotesis_Greedy,Hipotesis_Lexico,Fonemas_Predichos,S_D_I_N_Word,WER_Greedy_pct,WER_Lexico_pct,CER_pct,PER_pct,Precision_pct,Estado_85,Latencia_ms
+1,Pedro,Ana,A N A,Ana,ana,A N A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,648.7
+2,Pedro,Jilli,J I LL I,Jilli,jilli,J I LL I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,78.4
+3,Pedro,Qhoya,QH O Y A,Qhoya,qhoya,QH O Y A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,73.7
+4,Pedro,Uchpü,U CH P UU,Uchpü,uchpü,U CH P UU,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,76.0
+5,Pedro,Sitsñi,S I TS NY I,Sitsñi,sitsñi,S I TS NY I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,77.4
+6,Pedro,Jaxchay,J A X CH A Y,Jaxchay,jaxchay,J A X CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.8
+7,Pedro,Wiyani,W I Y A N I,Wiyani,wiyani,W I Y A N I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.2
+8,Pedro,Siluchay,S I L U CH A Y,Siluchay,siluchay,S I L U CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,72.8
+9,Pedro,Lowalowa,L O W A L O W A,Lowalowa,lowalowa,L O W A L O W A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,73.8
+10,Pedro,Saxonichay,S A X O N I CH A Y,Saxonichay,saxonichay,S A X O N I CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,79.7
+11,Sofia,Am,A M,Am,am,A M,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.6
+12,Sofia,Chʼisi,CH_EJ I S I,Chʼisi,chʼisi,CH_EJ I S I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,78.3
+13,Sofia,Wist,W I S T,Wist,wist,W I S T,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,72.7
+14,Sofia,Achichay,A CH I CH A Y,Achichay,achichay,A CH I CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,78.9
+15,Sofia,Walchay,W A L CH A Y,Walchay,walchay,W A L CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,79.0
+16,Sofia,Malaqoy,M A L A Q O Y,Malaqoy,malaqoy,M A L A Q O Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.7
+17,Sofia,Uñinaka,U NY I N A K A,Uñinaka,uñinaka,U NY I N A K A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,90.2
+18,Sofia,Qhorskchay,QH O R S K CH A Y,Qhorskchay,qhorskchay,QH O R S K CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,86.3
+19,Sofia,Kuwarerno,K U W A R E R N O,Kuwarerno,kuwarerno,K U W A R E R N O,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,75.2
+20,Sofia,Amaruskchay,A M A R U S K CH A Y,Amaruskchay,amaruskchay,A M A R U S K CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,82.1
+21,Eva,Ira,I R A,Ira,ira,I R A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,72.8
+22,Eva,Kʼana,K_EJ A N A,Kʼana,kʼana,K_EJ A N A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,69.8
+23,Eva,Qala,Q A L A,Qala,qala,Q A L A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,68.7
+24,Eva,Wakha,W A KH A,Wakha,wakha,W A KH A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,68.4
+25,Eva,Wallpa,W A LL P A,Wallpa,wallpa,W A LL P A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,67.1
+26,Eva,Pʼuschay,P_EJ U S CH A Y,Pʼuschay,pʼuschay,P_EJ U S CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,75.5
+27,Eva,Lorenzo,L O R E N S O,Lorenso,lorenzo,L O R E N S O,0/0/0/1,100.0,0.0,14.3,0.0,100.0,APROBADO,72.6
+28,Eva,Teskana,T E S K A N A,Teskana,teskana,T E S K A N A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.8
+29,Eva,Uyuwichay,U Y U W I CH A Y,Ewchay,ewchay,E W CH A Y,1/0/0/1,100.0,100.0,44.4,50.0,50.0,RECHAZADO,69.5
+30,Eva,Chhuljamachay,CHH U L J A M A CH A Y,Chhuljamachay,chhuljamachay,CHH U L J A M A CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,72.6
+31,Lorenzo,Nï,N II,Nï,nï,N II,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,68.8
+32,Lorenzo,Choq,CH O Q,Choq,choq,CH O Q,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,65.7
+33,Lorenzo,Qeri,Q E R I,Qeri,qeri,Q E R I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,69.3
+34,Lorenzo,Tuchay,T U CH A Y,Tuchay,tuchay,T U CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,69.4
+35,Lorenzo,Chheqhoñi,CHH E QH O NY I,Chheqhoñi,chheqhoñi,CHH E QH O NY I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,67.7
+36,Lorenzo,Thaxchay,TH A X CH A Y,Thaxchay,thaxchay,TH A X CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,69.6
+37,Lorenzo,Murchula,M U R CH U L A,Murchula,murchula,M U R CH U L A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,76.3
+38,Lorenzo,Tololay,T O L O L A Y,Tololay,tololay,T O L O L A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,69.3
+39,Lorenzo,Wisnakti,W I S N A K T I,Wisnakti,wisnakti,W I S N A K T I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,76.7
+40,Lorenzo,Uwapinichay,U W A P I N I CH A Y,Uwapinichay,uwapinichay,U W A P I N I CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,70.4
+41,Roberto,Chhi,CHH I,Chhi,chhi,CHH I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,65.4
+42,Roberto,Chuwa,CH U W A,Chuwa,chuwa,CH U W A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,69.0
+43,Roberto,Siñi,S I NY I,Siñi,siñi,S I NY I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,73.4
+44,Roberto,Waki,W A K I,Waki,waki,W A K I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.6
+45,Roberto,Chimay,CH I M A Y,Chimay,chimay,CH I M A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,74.9
+46,Roberto,Amchuki,A M CH U K I,Amchuki,amchuki,A M CH U K I,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,77.6
+47,Roberto,Satschay,S A TS CH A Y,Satschay,satschay,S A TS CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,80.8
+48,Roberto,Layschay,L A Y S CH A Y,Layschay,layschay,L A Y S CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,98.0
+49,Roberto,Oqlaychay,O Q L A Y CH A Y,Oqlaychay,oqlaychay,O Q L A Y CH A Y,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,90.4
+50,Roberto,Chhikhitsnaka,CHH I KH I TS N A K A,Chhikhitsnaka,chhikhitsnaka,CHH I KH I TS N A K A,0/0/0/1,0.0,0.0,0.0,0.0,100.0,APROBADO,88.9
