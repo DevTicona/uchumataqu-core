@@ -26,6 +26,8 @@ PLN/seq2seq/tools/
 PLN/seq2seq/runs/**/*.pt
 PLN/seq2seq/runs/selected.pt
 PLN/hfst/build/
+PLN/**/licenses/
+PLN/hfst/baseline/
 
 # --- Datasets de audio masivos externos (>10 GB) ---
 musan/
@@ -67,14 +69,31 @@ Thumbs.db
 .vscode/
 .idea/
 
-# --- Documentación Markdown (ignorar todos los .md excepto README.md) ---
-*.md
-**/*.md
-!/README.md
+# --- Documentación complementaria y capítulos de tesis ---
+docs/
+Specifications/
+evidencias_capitulo_iv/
+REPORTE_*.md
+*.docx
+*.docx:*
 
-# --- Documentos ofimática y binarios de evidencia ---
-evidencias_capitulo_iv/*.docx
-evidencias_capitulo_iv/*.docx:*
+# --- Reportes de pruebas, auditorías acústicas y métricas intermedias ---
+ASR/reportes/
+UNITY/reportes/
+**/reportes/
+**/reports/
+reports/
+reportes/
+PLN/reports_benchmark_comparison.json
+*.log
+*.xml
+
+# --- Instrucciones de agente y planes externos de trabajo ---
+*INSTRUCCIONES*
+*instrucciones*
+*agente*
+PLN/hfst/01-construccion-hfst-externo.md
+PLN/seq2seq/02-entrenamiento-ia-externo.md
 
 # --- Audio aumentado generado localmente ---
 ASR/data/audio_augmented/
