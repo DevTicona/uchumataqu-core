@@ -10,7 +10,7 @@ Entradas:
   - excel/palabras_pln.xlsx
   - excel/oraciones.xlsx
 
-Salidas en Para_ASR/datos_asr/:
+Salidas en ASR/datos_asr/:
   - tokens.txt: Inventario de 42 tokens (índices 0 a 41: especiales + 38 fonemas canónicos ASCII)
   - lexicon.txt: Diccionario de pronunciación fonética (palabra -> fonemas)
   - corpus_asr_texto.txt: Corpus textual limpio para modelo de lenguaje y entrenamiento

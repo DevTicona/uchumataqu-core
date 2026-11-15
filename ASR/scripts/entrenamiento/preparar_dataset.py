@@ -4,13 +4,13 @@ Genera los manifests estructurados (JSON y formato Kaldi) y las particiones de
 entrenamiento (train, val, test) para el módulo ASR de Uchumataqu.
 
 Fuentes:
-  - Para_ASR/audios_palabras/{lorenzo, pedro, roberto, sofia}/*.wav
-  - Para_ASR/audios_oraciones/pedro/*.wav
+  - ASR/audios_palabras/{eva, gaby, lorenzo, pedro, roberto, sofia}/*.wav
+  - ASR/audios_oraciones/{gaby, pedro, roberto, sofia}/*.wav
   - excel/palabras_pln.xlsx
   - excel/oraciones.xlsx
-  - Para_ASR/datos_asr/tokens.txt
+  - ASR/datos_asr/tokens.txt
 
-Salidas en Para_ASR/data/manifests/:
+Salidas en ASR/data/manifests/:
   - all_manifest.json
   - train_manifest.json
   - val_manifest.json

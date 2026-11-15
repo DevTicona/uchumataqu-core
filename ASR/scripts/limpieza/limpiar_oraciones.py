@@ -9,7 +9,7 @@ Procesa grabaciones originales de oraciones siguiendo el flujo:
   4. Agrega un margen de silencio exacto de 300 ms al inicio y al final.
   5. Exporta los archivos a:
      - ASR/audios_oraciones/{locutor}/{id}_01.wav, {id}_02.wav, {id}_03.wav
-     - (Opcional con --app) Para_Unity/oraciones/{id}.wav (toma canónica 01)
+     - (Opcional con --app) UNITY/audios_oraciones/{id}.wav (toma canónica 01)
 
 Uso:
   python3 ASR/scripts/limpieza/limpiar_oraciones.py --locutor roberto
@@ -278,7 +278,7 @@ def main():
     parser.add_argument("--max_chunks", type=int, default=None,
                         help="Número de repeticiones esperadas por archivo (por defecto 3)")
     parser.add_argument("--app", action="store_true",
-                        help="Si se activa, copia la primera toma a Para_Unity/oraciones/{id}.wav")
+                        help="Si se activa, copia la primera toma a UNITY/audios_oraciones/{id}.wav")
     args = parser.parse_args()
 
     setup_ffmpeg()
@@ -299,7 +299,7 @@ def main():
         input_dir = next((c for c in candidatos if os.path.exists(c)), candidatos[0])
 
     output_dir = args.output or os.path.join(asr_dir, "audios_oraciones", locutor_nombre)
-    app_dir = os.path.join(project_root, "Para_Unity", "oraciones") if args.app else None
+    app_dir = os.path.join(project_root, "UNITY", "audios_oraciones") if args.app else None
 
     os.makedirs(output_dir, exist_ok=True)
     if app_dir:

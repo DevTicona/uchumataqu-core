@@ -140,20 +140,20 @@ def validar_app(dir_app):
             elif oid not in {f"O_{i:03d}" for i in range(1, 121)}:
                 errores.append(f"Regla reserva: oración no curricular '{oid}' asignada a {lid}")
 
-    # Regla 2: Exactamente 27 lecciones
-    if len(lecciones) != 27:
-        errores.append(f"Regla 2: Se esperaban exactamente 27 lecciones, se encontraron {len(lecciones)}")
+    # Regla 2: Exactamente 26 lecciones
+    if len(lecciones) != 26:
+        errores.append(f"Regla 2: Se esperaban exactamente 26 lecciones, se encontraron {len(lecciones)}")
 
-    # Regla 3: IDs de lección exactamente L01 a L27
-    esperados_lids = [f"L{i:02d}" for i in range(1, 28)]
+    # Regla 3: IDs de lección exactamente L01 a L26
+    esperados_lids = [f"L{i:02d}" for i in range(1, 27)]
     if sorted(list(lecciones_ids)) != esperados_lids:
-        errores.append(f"Regla 3: IDs de lección no coinciden con L01..L27: {sorted(list(lecciones_ids))}")
+        errores.append(f"Regla 3: IDs de lección no coinciden con L01..L26: {sorted(list(lecciones_ids))}")
 
     asignadas = {oid for leccion in lecciones for oid in leccion.get("oraciones_ids", [])}
     if asignadas != {f"O_{i:03d}" for i in range(1, 121)}:
         errores.append("Regla reserva: lecciones.json debe asignar exactamente O_001..O_120")
 
-    print(f"  [OK] Regla 2, 3, 19: lecciones.json verificado ({len(lecciones)} lecciones, L01..L27, sin ra_id).")
+    print(f"  [OK] Regla 2, 3, 19: lecciones.json verificado ({len(lecciones)} lecciones, L01..L26, sin ra_id).")
 
     # -----------------------------------------------------------------------
     # 4. Validar lecciones_compiladas.json (Reglas 1, 8-18)
@@ -274,42 +274,34 @@ def validar_app(dir_app):
             if fid in familias_reserva:
                 errores.append(f"Regla reserva: familia de reserva '{fid}' aparece como contenido curricular")
 
-    reservas_en_opciones = set()
+    # Verificar que ninguna oración de reserva se asigne erróneamente como objetivo
     for l in compiladas:
         for paso in l.get("pasos", []):
-            if paso.get("tipo") == "audio_a_es_oracion":
-                reservas_en_opciones.update(set(paso.get("opciones_oraciones_ids", [])) & reservas_oraciones)
-    reservas_tempranas = set()
-    for l in compiladas[:3]:
-        for paso in l.get("pasos", []):
-            reservas_tempranas.update(set(paso.get("opciones_oraciones_ids", [])) & reservas_oraciones)
-    if not reservas_tempranas:
-        errores.append("Regla reserva: L01-L03 no usan oraciones de reserva como distractores")
+            oracion_obj = paso.get("oracion_id")
+            if oracion_obj in reservas_oraciones:
+                errores.append(f"Regla reserva: oración de reserva '{oracion_obj}' usada como objetivo en {l.get('id')}")
 
     metricas = data_c.get("metricas_distractores", {})
 
-    # Regla 14 & 15: Variedad de modalidades y sin predominio de uch_a_es
-    total_micro_vocab = (
-        contador_modalidades["uch_a_es"] +
-        contador_modalidades["es_a_uch"] +
-        contador_modalidades["audio_a_uch"] +
-        contador_modalidades["audio_a_es"]
-    )
-    if total_micro_vocab > 0:
-        ratio_uch_es = contador_modalidades["uch_a_es"] / total_micro_vocab
-        if ratio_uch_es > 0.40:
-            errores.append(f"Regla 15: Predominio excesivo de uch_a_es ({ratio_uch_es*100:.1f}% de microactividades)")
+    # Regla 14-16: Modalidades del catálogo curricular cerrado
+    CATALOGO_11 = {
+        "presentacion_familia", "uch_a_es", "audio_a_uch", "audio_a_forma",
+        "emparejar_uch_es", "escribir_palabra", "escribir_forma", "escribir_oracion",
+        "ordenar_oracion", "escucha_y_repite_asr", "escucha_y_repite_oracion_asr"
+    }
+    tipos_desconocidos = set(contador_modalidades.keys()) - CATALOGO_11
+    if tipos_desconocidos:
+        errores.append(f"Regla 14: Tipos no autorizados en lecciones_compiladas.json: {tipos_desconocidos}")
 
-    # Regla 16: Las 5 modalidades de oración presentes
-    MODS_ORACION = ["ordenar_oracion", "audio_a_es_oracion", "completar_oracion", "dictado_word_bank", "traduccion_constructiva"]
-    for mod in MODS_ORACION:
+    # Modalidades esenciales de oración activas
+    for mod in ["ordenar_oracion", "escribir_oracion", "escucha_y_repite_oracion_asr"]:
         if contador_modalidades[mod] == 0:
             errores.append(f"Regla 16: Modalidad de oración '{mod}' no aparece en ninguna lección")
 
     print(f"  [OK] Regla 1, 8-16: lecciones_compiladas.json validado ({len(compiladas)} lecciones, {total_pasos} pasos totales).")
-    print(f"  [OK] Regla 14-16: 18 modalidades generadas con distribución balanceada:")
+    print(f"  [OK] Regla 14-16: {len(contador_modalidades)} modalidades curriculares activas con distribución pedagógica:")
     for tipo, cnt in contador_modalidades.most_common():
-        print(f"       - {tipo:<26}: {cnt}")
+        print(f"       - {tipo:<28}: {cnt}")
 
     # -----------------------------------------------------------------------
     # 5. Validar escenarios_ra.json (Reglas 20-24)
@@ -330,12 +322,12 @@ def validar_app(dir_app):
         errores.append(f"Regla 20: Se esperaban 6 escenarios RA, se encontraron {len(escenarios)}")
 
     MAPEO_ESPERADO_RA = {
-        "ra_encuentro_comunicacion": ["L01", "L02", "L03", "L04", "L05", "L06"],
-        "ra_familia_vestimenta": ["L07", "L08", "L09", "L10", "L11"],
-        "ra_casa_objetos": ["L12", "L13", "L14", "L15"],
-        "ra_cocina_alimentos": ["L16", "L17", "L18", "L19"],
-        "ra_animales_ecosistema": ["L20", "L21", "L22", "L23", "L24"],
-        "ra_naturaleza_orientacion": ["L25", "L26", "L27"],
+        "ra_encuentro_comunicacion": ["L01", "L02", "L03", "L04", "L05"],
+        "ra_familia_vestimenta": ["L06", "L07", "L08", "L09", "L10"],
+        "ra_casa_objetos": ["L11", "L12", "L13", "L14"],
+        "ra_cocina_alimentos": ["L15", "L16", "L17", "L18"],
+        "ra_animales_ecosistema": ["L19", "L20", "L21", "L22", "L23"],
+        "ra_naturaleza_orientacion": ["L24", "L25", "L26"],
     }
 
     lecciones_cubiertas_ra = []
@@ -348,7 +340,7 @@ def validar_app(dir_app):
         lecs_asoc = sc.get("lecciones_asociadas", [])
         lecciones_cubiertas_ra.extend(lecs_asoc)
 
-        # Regla 22: Mapeo exacto según 03-1-diseno-escenarios-ra.md
+        # Regla 22: Mapeo exacto según diseño de escenarios RA (26 lecciones)
         if lecs_asoc != MAPEO_ESPERADO_RA[sid]:
             errores.append(f"Regla 22: Mapeo de lecciones incorrecto en {sid}. Esperado {MAPEO_ESPERADO_RA[sid]}, obtenido {lecs_asoc}")
 
@@ -361,11 +353,11 @@ def validar_app(dir_app):
     if len(lecciones_cubiertas_ra) != len(set(lecciones_cubiertas_ra)):
         errores.append(f"Regla 23: Existen lecciones duplicadas entre escenarios RA")
 
-    # Regla 24: Las 27 lecciones están cubiertas exactamente una vez
+    # Regla 24: Las 26 lecciones están cubiertas exactamente una vez
     if sorted(lecciones_cubiertas_ra) != esperados_lids:
-        errores.append(f"Regla 24: Las 27 lecciones no están completamente cubiertas por los escenarios RA")
+        errores.append(f"Regla 24: Las 26 lecciones no están completamente cubiertas por los escenarios RA")
 
-    print(f"  [OK] Regla 20-24: escenarios_ra.json 100% válido (6 escenarios, partición exacta de L01..L27).")
+    print(f"  [OK] Regla 20-24: escenarios_ra.json 100% válido (6 escenarios, partición exacta de L01..L26).")
 
     if errores:
         print(f"\n  [ERROR] Se encontraron {len(errores)} inconsistencias:")

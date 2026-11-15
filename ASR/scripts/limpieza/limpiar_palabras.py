@@ -7,8 +7,8 @@ Procesa grabaciones originales de palabras siguiendo el flujo:
   3. Recorta cada repetición correctamente desde su inicio y fin.
   4. Agrega un margen de silencio exacto de 250 ms al inicio y al final.
   5. Exporta los archivos a:
-     - Para_ASR/audios_palabras/{locutor}/{id}_01.wav, {id}_02.wav, ...
-     - (Opcional con --app) Para_Unity/palabras/{id}.wav (toma canónica 01)
+     - ASR/audios_palabras/{locutor}/{id}_01.wav, {id}_02.wav, ...
+     - (Opcional con --app) UNITY/audios_palabras/{id}.wav (toma canónica 01)
 
 Reglas de locutores:
   - Las primeras 19 palabras de Eva tienen 3 repeticiones (_01, _02, _03).
@@ -247,7 +247,7 @@ def main():
     parser.add_argument("--input", default=None, help="Carpeta con grabaciones originales")
     parser.add_argument("--output", default=None, help="Carpeta de destino ASR")
     parser.add_argument("--max_chunks", type=int, default=None, help="Número de repeticiones esperadas por archivo (automático por locutor si no se especifica)")
-    parser.add_argument("--app", action="store_true", help="Si se activa, copia la primera toma a Para_Unity/palabras/{id}.wav")
+    parser.add_argument("--app", action="store_true", help="Si se activa, copia la primera toma a UNITY/audios_palabras/{id}.wav")
     args = parser.parse_args()
 
     setup_ffmpeg()
@@ -267,7 +267,7 @@ def main():
         input_dir = next((c for c in candidatos if os.path.exists(c)), candidatos[0])
 
     output_dir = args.output or os.path.join(asr_dir, "audios_palabras", locutor_nombre)
-    app_dir = os.path.join(project_root, "Para_Unity", "palabras") if args.app else None
+    app_dir = os.path.join(project_root, "UNITY", "audios_palabras") if args.app else None
 
     os.makedirs(output_dir, exist_ok=True)
     if app_dir:

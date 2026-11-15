@@ -1,11 +1,11 @@
 """
 verificar_audios_asr.py
 Verificación exhaustiva de audios para el módulo ASR (Reconocimiento Automático de Voz).
-Compara los archivos de audio en Para_ASR/ contra:
+Compara los archivos de audio en ASR/ contra:
   - excel/palabras_pln.xlsx (325 entradas léxicas de entrenamiento/evaluación)
-  - excel/oraciones.xlsx (130 oraciones completas con transcripción)
+  - excel/oraciones.xlsx (137 oraciones: 120 curriculares + 17 reserva)
 
-Genera un reporte detallado en Para_ASR/reportes/reporte_audios_asr.txt indicando por locutor:
+Genera un reporte detallado en ASR/reportes/reporte_audios_asr.txt indicando por locutor:
   - Cobertura completa (3 tomas por item: _01, _02, _03).
   - Cobertura parcial (1 o 2 tomas).
   - Items faltantes en audios.

@@ -18,7 +18,7 @@ Entradas:
 Salidas en datos_app/:
   - palabras.json: Raíces léxicas y formas documentadas (v1)
   - oraciones.json: Oraciones canónicas (id, uch, es) (v1)
-  - lecciones.json: Definición curricular de 27 lecciones (v1)
+  - lecciones.json: Definición curricular de 26 lecciones (v1)
   - lecciones_compiladas.json: Secuencia pedagógica completa y determinista para Unity (v3)
   - escenarios_ra.json: Definición de los 6 escenarios RA independientes (v1)
 """
